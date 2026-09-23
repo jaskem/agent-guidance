@@ -1,5 +1,5 @@
 {
-  "guidance_version": "0.1.0",
+  "guidance_version": "0.1.1",
   "modules": [
     {
       "id": "kernel",
