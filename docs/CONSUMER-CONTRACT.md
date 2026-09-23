@@ -47,6 +47,19 @@ The tool copies selected module bytes without rewriting them, writes a determini
 
 This is drift/integrity checking, not a security boundary: a deliberate lock+file change is visible repository change and must be reviewed normally.
 
+## Guidance consumption observability
+
+Vendored or catalogued guidance is available guidance, not automatically active guidance.
+
+For substantive work, a consumer must:
+
+- resolve the relevant shared route before relying on specialist guidance;
+- load the selected expert model, roles, and playbooks into the current working context;
+- avoid treating a module as active merely because it is vendored, listed, or mentioned in historical checkpoint evidence;
+- record, in the consumer's existing durable batch record or checkpoint, only the shared modules actually consumed and any material route expansion.
+
+This requires no lock-schema change and no separate telemetry system. The durable record is evidence that guidance was reached and made available to the decision process; it is not proof that the guidance was interpreted or applied correctly.
+
 ## Update flow
 
 1. Review/merge canonical guidance change.
