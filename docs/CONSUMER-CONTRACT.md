@@ -1,0 +1,64 @@
+# Consumer contract
+
+## Goal
+
+A consumer must get stable local instructions without runtime dependence on another repository, while shared guidance retains one canonical owner.
+
+## Required consumer surfaces
+
+A migrated consumer has:
+
+- a local `AGENTS.md` that always loads the vendored shared `KERNEL.md` and owns repo-specific routing;
+- its own repository workflow and product/architecture sources of truth;
+- `.agent-guidance.lock.json` at repository root;
+- shared files under a dedicated destination such as `docs/agent/shared/`;
+- `tools/verify_agent_guidance.py`, vendored from this repository;
+- repository-local overlays outside the shared destination.
+
+## Pinning
+
+The lock must contain:
+
+- `schema_version`;
+- canonical `repository`;
+- exact lowercase 40-character `commit` SHA;
+- optional human-readable `version`/tag;
+- destination root;
+- selected module IDs, canonical source paths, consumer destination paths, and SHA-256 hashes;
+- vendored verifier path/hash.
+
+The commit pin is authoritative. A tag alone is never sufficient.
+
+## Vendoring
+
+Vendoring runs from a **local checkout of the canonical repository at the exact pinned commit**. The canonical checkout must be clean. `tools/vendor_guidance.py` refuses to vendor if HEAD differs from the requested pin.
+
+The tool copies selected module bytes without rewriting them, writes a deterministic lock (sorted keys/modules and final newline), and vendors the verifier. The shared destination is dedicated to generated canonical files; consumer-specific guidance must live elsewhere.
+
+## Drift verification
+
+`tools/verify_agent_guidance.py` runs entirely from the consumer repository. It:
+
+- validates lock shape and exact commit syntax;
+- verifies every listed vendored file hash;
+- verifies the vendored verifier's own pinned hash;
+- rejects duplicate/unsafe destinations;
+- rejects unexpected files under the dedicated shared destination.
+
+This is drift/integrity checking, not a security boundary: a deliberate lock+file change is visible repository change and must be reviewed normally.
+
+## Update flow
+
+1. Review/merge canonical guidance change.
+2. Create a canonical version/tag when appropriate.
+3. In one consumer migration/update batch, checkout the exact canonical commit.
+4. Run vendoring for that consumer's explicit module selection.
+5. Update local routing only where needed.
+6. Run local drift verification plus consumer-specific process checks.
+7. Review/merge as an explicit consumer PR.
+
+No consumer changes silently when canonical `main` moves.
+
+## Ownership test
+
+Before adding a rule to shared guidance ask: would this still be correct in an unrelated product/runtime repository? If not, it belongs in a consumer overlay or product source of truth.

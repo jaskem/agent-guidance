@@ -1,0 +1,107 @@
+{
+  "guidance_version": "0.1.0",
+  "modules": [
+    {
+      "id": "kernel",
+      "kind": "kernel",
+      "path": "guidance/KERNEL.md"
+    },
+    {
+      "id": "expert-operating-model",
+      "kind": "model",
+      "path": "guidance/EXPERT-OPERATING-MODEL.md"
+    },
+    {
+      "id": "accessibility",
+      "kind": "role",
+      "path": "guidance/roles/accessibility.md"
+    },
+    {
+      "id": "architecture-engineering",
+      "kind": "role",
+      "path": "guidance/roles/architecture-engineering.md"
+    },
+    {
+      "id": "content-design",
+      "kind": "role",
+      "path": "guidance/roles/content-design.md"
+    },
+    {
+      "id": "design-systems",
+      "kind": "role",
+      "path": "guidance/roles/design-systems.md"
+    },
+    {
+      "id": "developer-experience",
+      "kind": "role",
+      "path": "guidance/roles/developer-experience.md"
+    },
+    {
+      "id": "domain-data-contracts",
+      "kind": "role",
+      "path": "guidance/roles/domain-data-contracts.md"
+    },
+    {
+      "id": "interaction-information-architecture",
+      "kind": "role",
+      "path": "guidance/roles/interaction-information-architecture.md"
+    },
+    {
+      "id": "local-first-sync-recovery",
+      "kind": "role",
+      "path": "guidance/roles/local-first-sync-recovery.md"
+    },
+    {
+      "id": "observability",
+      "kind": "role",
+      "path": "guidance/roles/observability.md"
+    },
+    {
+      "id": "performance",
+      "kind": "role",
+      "path": "guidance/roles/performance.md"
+    },
+    {
+      "id": "product-strategy-discovery",
+      "kind": "role",
+      "path": "guidance/roles/product-strategy-discovery.md"
+    },
+    {
+      "id": "quality-release",
+      "kind": "role",
+      "path": "guidance/roles/quality-release.md"
+    },
+    {
+      "id": "security-privacy",
+      "kind": "role",
+      "path": "guidance/roles/security-privacy.md"
+    },
+    {
+      "id": "ux-research",
+      "kind": "role",
+      "path": "guidance/roles/ux-research.md"
+    },
+    {
+      "id": "visual-design",
+      "kind": "role",
+      "path": "guidance/roles/visual-design.md"
+    },
+    {
+      "id": "change-closure",
+      "kind": "playbook",
+      "path": "guidance/playbooks/change-closure.md"
+    },
+    {
+      "id": "interruption-recovery",
+      "kind": "playbook",
+      "path": "guidance/playbooks/interruption-recovery.md"
+    },
+    {
+      "id": "research-verification",
+      "kind": "playbook",
+      "path": "guidance/playbooks/research-verification.md"
+    }
+  ],
+  "schema_version": 1,
+  "source_repository": "jaskem/agent-guidance"
+}

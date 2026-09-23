@@ -1,0 +1,42 @@
+# Agent Guidance workflow
+
+## Source of truth
+
+1. Current user instruction and explicitly named checkpoint constraints.
+2. `AGENTS.md`, this workflow, and `docs/CONSUMER-CONTRACT.md` when the consumer contract is affected.
+3. `guidance/catalog.json`, shared source files, schemas, tools, and tests on the exact repository head.
+4. Durable checkpoints and exact repository delta.
+5. Conversation memory only as orientation.
+
+## Bounded scenarios
+
+- **F0 — guidance design:** change shared behavior/role/playbook semantics. Verify repository-neutrality, ownership, overlap, and module catalog consistency.
+- **F1 — consumer contract/tooling:** change lock schema, vendoring, verification, or versioning. Run foundation checks and focused tooling tests.
+- **F2 — foundation/repository process:** change this repository's own workflow/CI/maintenance docs. Verify only affected process guarantees.
+- **F3 — release/version:** bump guidance version/tag after prior change evidence is complete; do not mix unrelated guidance changes into release closure.
+
+Use the union when scenarios overlap; do not duplicate checks.
+
+## Shared-guidance change discipline
+
+- A module must be repository-independent and have one clear responsibility.
+- Add/split a role only when it has a recurring, materially distinct decision model.
+- Add a playbook only for a recurring situation that is not a discipline.
+- Prefer references to the canonical owner over repeated normative rules.
+- Treat renamed/removed module IDs, lock-schema changes, or changed mandatory behavior as migration-impacting.
+- Do not edit consumer vendored copies here; the canonical source lives under `guidance/`.
+
+## Verification
+
+For F0/F1 run:
+
+```text
+python tools/check_foundation.py
+python -m unittest discover -s tests -v
+```
+
+The checks prove structure, catalog/version consistency, repository-neutral shared guidance, deterministic lock generation, and local drift detection. They do not prove consumer-specific routing; that belongs to each migration batch.
+
+## Checkpoint
+
+Record exact head, changed files, scenario, checks actually run, compatibility/migration impact, what was not done, and exactly one next technical step.
