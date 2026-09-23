@@ -1,0 +1,49 @@
+name: Bootstrap canonical foundation
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/bootstrap.yml
+      - bootstrap/chunks/**
+
+permissions:
+  contents: write
+
+jobs:
+  bootstrap:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Reassemble and verify bootstrap archive
+        run: |
+          cat bootstrap/chunks/* > /tmp/agent-guidance-foundation.b64
+          base64 -d /tmp/agent-guidance-foundation.b64 > /tmp/agent-guidance-foundation.tar.gz
+          echo "b1c87281f5b97eafa0ab3b2e42fe55e66f86c0a31d920e6060b79bdd35f4c075  /tmp/agent-guidance-foundation.tar.gz" | sha256sum -c -
+      - name: Replace bootstrap state with validated foundation tree
+        run: |
+          find . -mindepth 1 -maxdepth 1 ! -name .git -exec rm -rf {} +
+          tar -xzf /tmp/agent-guidance-foundation.tar.gz
+      - name: Verify foundation
+        run: |
+          python tools/check_foundation.py
+          python -m unittest discover -s tests -v
+      - name: Commit canonical v0.1.0 foundation
+        run: |
+          if git rev-parse -q --verify refs/tags/v0.1.0 >/dev/null; then
+            echo "v0.1.0 already exists; refusing to move an existing release tag" >&2
+            exit 1
+          fi
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A
+          if git diff --cached --quiet; then
+            echo "bootstrap produced no repository delta" >&2
+            exit 1
+          fi
+          git commit -m "chore: bootstrap canonical agent guidance v0.1.0"
+          git tag v0.1.0
+          git push origin HEAD:main
+          git push origin refs/tags/v0.1.0
