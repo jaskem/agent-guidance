@@ -17,8 +17,8 @@ Shared guidance is **vendored, not remotely imported at runtime**. Consumers pin
 
 ## Canonical source
 
-- `guidance/KERNEL.md` — small always-on cross-repository behavior.
-- `guidance/EXPERT-OPERATING-MODEL.md` — senior multidisciplinary decision behavior for substantive work.
+- `guidance/KERNEL.md` — small always-on cross-repository senior-collaborator behavior.
+- `guidance/EXPERT-OPERATING-MODEL.md` — deprecated compatibility module; it adds no behavior beyond the kernel and remains temporarily for explicit consumer migration.
 - `guidance/roles/` — reusable decision lenses.
 - `guidance/playbooks/` — reusable situation procedures.
 - `guidance/catalog.json` — machine-readable module catalog and guidance version.
