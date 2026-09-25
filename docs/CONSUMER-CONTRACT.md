@@ -54,9 +54,11 @@ Vendored or catalogued guidance is available guidance, not automatically active 
 For substantive work, a consumer must:
 
 - resolve the relevant shared route before relying on specialist guidance;
-- load the selected expert model, roles, and playbooks into the current working context;
+- load only the selected roles and playbooks whose omission could materially alter the outcome into the current working context;
 - avoid treating a module as active merely because it is vendored, listed, or mentioned in historical checkpoint evidence;
 - record, in the consumer's existing durable batch record or checkpoint, only the shared modules actually consumed and any material route expansion.
+
+The always-on senior-collaborator behavior is owned by `KERNEL.md`; it must not depend on a separately routed expert model. The retained `expert-operating-model` module is a compatibility module only and adds no behavior beyond the kernel. Consumers should remove it from their selected modules when they explicitly migrate to a canonical commit with this kernel ownership.
 
 This requires no lock-schema change and no separate telemetry system. The durable record is evidence that guidance was reached and made available to the decision process; it is not proof that the guidance was interpreted or applied correctly.
 
