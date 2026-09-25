@@ -7,9 +7,11 @@
       "path": "guidance/KERNEL.md"
     },
     {
+      "deprecated": true,
       "id": "expert-operating-model",
       "kind": "model",
-      "path": "guidance/EXPERT-OPERATING-MODEL.md"
+      "path": "guidance/EXPERT-OPERATING-MODEL.md",
+      "replacement": "kernel"
     },
     {
       "id": "accessibility",
