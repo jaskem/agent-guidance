@@ -2,6 +2,18 @@
   "guidance_version": "0.2.0",
   "modules": [
     {
+      "id": "kernel",
+      "kind": "kernel",
+      "path": "guidance/KERNEL.md"
+    },
+    {
+      "deprecated": true,
+      "id": "expert-operating-model",
+      "kind": "model",
+      "path": "guidance/EXPERT-OPERATING-MODEL.md",
+      "replacement": "kernel"
+    },
+    {
       "id": "accessibility",
       "kind": "role",
       "path": "guidance/roles/accessibility.md"
@@ -10,11 +22,6 @@
       "id": "architecture-engineering",
       "kind": "role",
       "path": "guidance/roles/architecture-engineering.md"
-    },
-    {
-      "id": "change-closure",
-      "kind": "playbook",
-      "path": "guidance/playbooks/change-closure.md"
     },
     {
       "id": "content-design",
@@ -37,31 +44,9 @@
       "path": "guidance/roles/domain-data-contracts.md"
     },
     {
-      "deprecated": true,
-      "id": "expert-operating-model",
-      "kind": "model",
-      "path": "guidance/EXPERT-OPERATING-MODEL.md",
-      "replacement": "kernel"
-    },
-    {
-      "id": "instruction-feedback-loop",
-      "kind": "playbook",
-      "path": "guidance/playbooks/instruction-feedback-loop.md"
-    },
-    {
       "id": "interaction-information-architecture",
       "kind": "role",
       "path": "guidance/roles/interaction-information-architecture.md"
-    },
-    {
-      "id": "interruption-recovery",
-      "kind": "playbook",
-      "path": "guidance/playbooks/interruption-recovery.md"
-    },
-    {
-      "id": "kernel",
-      "kind": "kernel",
-      "path": "guidance/KERNEL.md"
     },
     {
       "id": "local-first-sync-recovery",
@@ -89,11 +74,6 @@
       "path": "guidance/roles/quality-release.md"
     },
     {
-      "id": "research-verification",
-      "kind": "playbook",
-      "path": "guidance/playbooks/research-verification.md"
-    },
-    {
       "id": "security-privacy",
       "kind": "role",
       "path": "guidance/roles/security-privacy.md"
@@ -107,6 +87,26 @@
       "id": "visual-design",
       "kind": "role",
       "path": "guidance/roles/visual-design.md"
+    },
+    {
+      "id": "change-closure",
+      "kind": "playbook",
+      "path": "guidance/playbooks/change-closure.md"
+    },
+    {
+      "id": "instruction-feedback-loop",
+      "kind": "playbook",
+      "path": "guidance/playbooks/instruction-feedback-loop.md"
+    },
+    {
+      "id": "interruption-recovery",
+      "kind": "playbook",
+      "path": "guidance/playbooks/interruption-recovery.md"
+    },
+    {
+      "id": "research-verification",
+      "kind": "playbook",
+      "path": "guidance/playbooks/research-verification.md"
     }
   ],
   "schema_version": 1,
