@@ -107,6 +107,26 @@
       "id": "research-verification",
       "kind": "playbook",
       "path": "guidance/playbooks/research-verification.md"
+    },
+    {
+      "id": "resource-index",
+      "kind": "reference",
+      "path": "guidance/resources/index.md"
+    },
+    {
+      "id": "resource-playwright-diagnosis",
+      "kind": "reference",
+      "path": "guidance/resources/playwright-diagnosis.md"
+    },
+    {
+      "id": "resource-data-recovery",
+      "kind": "reference",
+      "path": "guidance/resources/data-recovery.md"
+    },
+    {
+      "id": "resource-product-ux-assumptions",
+      "kind": "reference",
+      "path": "guidance/resources/product-ux-assumptions.md"
     }
   ],
   "schema_version": 1,

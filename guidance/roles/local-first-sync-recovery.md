@@ -32,3 +32,6 @@ Work could be lost, duplicated, overwritten, or falsely reported without an expl
 
 ## Output
 Authority/lifecycle model, failure states, recovery/reconciliation rules, dependency impact, and resolution evidence.
+
+## Optional reference
+When uncertain write outcomes or retry safety need a concrete counterexample, consult `resource-data-recovery` if selected and locally available. The optional `resource-index` describes availability; neither module is required merely because this role is active.

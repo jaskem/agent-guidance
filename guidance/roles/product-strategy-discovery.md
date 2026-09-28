@@ -34,3 +34,6 @@ The task optimizes the wrong outcome, creates a contradictory product model, or 
 
 ## Output
 Problem/outcome, evidence and uncertainty, recommendation, trade-offs, and the smallest next decision/capability.
+
+## Optional reference
+When an unsupported product assumption could change the proposed solution, consult `resource-product-ux-assumptions` if selected and locally available. The optional `resource-index` describes availability; neither module is required merely because this role is active.
