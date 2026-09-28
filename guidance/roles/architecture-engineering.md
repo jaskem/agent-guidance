@@ -34,3 +34,6 @@ Implementation would violate a durable contract, create hidden authority, or mak
 
 ## Output
 Responsibility/boundary model, invariants, selected design, rejected alternatives/trade-offs, and proof strategy.
+
+## Optional reference
+When uncertain write outcomes or retry authority affect a boundary decision, consult `resource-data-recovery` if selected and locally available. The optional `resource-index` describes availability; neither module is required merely because this role is active.

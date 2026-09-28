@@ -31,3 +31,6 @@ An invariant cannot be stated, identity/authority is ambiguous, or compatibility
 
 ## Output
 Semantic model, invariants, contract states, normalization/compatibility rules, and proof cases.
+
+## Optional reference
+When the evidence needed to distinguish write outcome from current state is unresolved, consult `resource-data-recovery` if selected and locally available. The optional `resource-index` describes availability; neither module is required merely because this role is active.

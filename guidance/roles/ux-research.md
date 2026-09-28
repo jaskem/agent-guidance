@@ -30,3 +30,6 @@ A high-impact hard-to-reverse decision rests mainly on an untested user assumpti
 
 ## Output
 Question/hypothesis, method, observations, limits, interpretation, and decision implication.
+
+## Optional reference
+When competing explanations require different kinds of user evidence, consult `resource-product-ux-assumptions` if selected and locally available. The optional `resource-index` describes availability; neither module is required merely because this role is active.
