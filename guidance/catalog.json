@@ -94,6 +94,11 @@
       "path": "guidance/playbooks/change-closure.md"
     },
     {
+      "id": "instruction-feedback-loop",
+      "kind": "playbook",
+      "path": "guidance/playbooks/instruction-feedback-loop.md"
+    },
+    {
       "id": "interruption-recovery",
       "kind": "playbook",
       "path": "guidance/playbooks/interruption-recovery.md"
