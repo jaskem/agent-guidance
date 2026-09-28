@@ -9,3 +9,5 @@ A shared guidance change is a behavioral API change for consumers. Keep one norm
 Shared files under `guidance/` must remain repository-neutral. Consumer overlays belong in the consumer repository.
 
 Use one bounded objective per batch. Do not migrate consumers while changing the canonical foundation unless that migration is the explicit batch objective.
+
+When real work exposes reusable instruction-system friction, a user correction that may generalise, or a missing/stale/misrouted rule whose repair is outside the active scope, load `guidance/playbooks/instruction-feedback-loop.md`. Use it to preserve evidence and identify the true owner, not to expand the current task.
