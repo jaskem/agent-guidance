@@ -18,5 +18,8 @@ jobs:
           python-version: '3.13'
       - name: Check foundation
         run: python tools/check_foundation.py
+      - name: Check skill packages
+        run: python tools/check_skills.py
       - name: Test vendoring contract
         run: python -m unittest discover -s tests -v
+

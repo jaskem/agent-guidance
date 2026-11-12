@@ -15,7 +15,16 @@ Each consumer repository keeps a small local `AGENTS.md` that:
 
 Shared guidance is **vendored, not remotely imported at runtime**. Consumers pin an exact canonical commit and optional human-readable version in `.agent-guidance.lock.json`. The vendored files and verifier are byte-hashed. Updating guidance is an explicit consumer repository change/PR.
 
-## Canonical source
+## Installable skills
+
+Use [the skill workflow](docs/SKILL-WORKFLOW.md) for source ownership, installation and validation. This repository also owns two optional, self-contained packages:
+
+- [evidence-driven-development](skills/evidence-driven-development/SKILL.md): implement or review a substantive change with behavior evidence and separate requirements/quality checks.
+- [maintain-agent-instructions](skills/maintain-agent-instructions/SKILL.md): diagnose and repair instruction routing or skills at their canonical owner.
+
+These are original adaptations informed by a pinned review of Matt Pocock's skills, not a bulk import. See the [audit](docs/SKILLS-AUDIT-2026-11-12.md). Installing one is separate from migrating a consumer's vendored guidance. The shared catalog and lock contract remain unchanged.
+
+## Shared source
 
 - `guidance/KERNEL.md` — small always-on cross-repository senior-collaborator behavior.
 - `guidance/EXPERT-OPERATING-MODEL.md` — deprecated compatibility module; it adds no behavior beyond the kernel and remains temporarily for explicit consumer migration.
@@ -57,3 +66,4 @@ During `0.x`, any materially behavioral change should be treated as migration-wo
 ## Bootstrap
 
 The first durable commit should be tagged `v0.1.0` after foundation verification. Consumer migration happens in separate repository-specific batches.
+

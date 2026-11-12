@@ -1,0 +1,7 @@
+interface:
+  display_name: "Onderbouwd ontwikkelen"
+  short_description: "Bouw en controleer kleine werkende wijzigingen"
+  default_prompt: "Gebruik $evidence-driven-development om deze wijziging uit te voeren en aantoonbaar te controleren."
+
+policy:
+  allow_implicit_invocation: true
