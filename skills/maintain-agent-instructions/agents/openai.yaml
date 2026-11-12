@@ -1,0 +1,7 @@
+interface:
+  display_name: "Instructies onderhouden"
+  short_description: "Verbeter instructies en skills zonder dubbel beheer"
+  default_prompt: "Gebruik $maintain-agent-instructions om mijn instructies en skills te onderzoeken en te verbeteren."
+
+policy:
+  allow_implicit_invocation: true

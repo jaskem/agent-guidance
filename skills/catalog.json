@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "source_repository": "jaskem/agent-guidance",
+  "upstream_review": {
+    "repository": "mattpocock/skills",
+    "commit": "5863806dd4e15c63174bee4e7515a4256792ecfa",
+    "date": "2026-11-12",
+    "mode": "original-adaptation"
+  },
+  "skills": [
+    {
+      "name": "evidence-driven-development",
+      "path": "skills/evidence-driven-development",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true
+    },
+    {
+      "name": "maintain-agent-instructions",
+      "path": "skills/maintain-agent-instructions",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true
+    }
+  ]
+}

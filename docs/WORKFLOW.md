@@ -39,4 +39,7 @@ The checks prove structure, catalog/version consistency, repository-neutral shar
 
 ## Checkpoint
 
+For changes under `skills/`, its catalog or package tooling, also run `python tools/check_skills.py` and the tests above. Follow `docs/SKILL-WORKFLOW.md` for behavior trials and distribution. These packages have their own versions; shared-guidance `VERSION` changes only when shared guidance changes.
+
 Record exact head, changed files, scenario, checks actually run, compatibility/migration impact, what was not done, and exactly one next technical step.
+
