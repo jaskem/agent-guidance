@@ -1,0 +1,7 @@
+interface:
+  display_name: "Maintain project context"
+  short_description: "Reconcile project homes with their verified sources"
+  default_prompt: "Use $maintain-project-context to reconcile my projects with their existing homes and source owners."
+
+policy:
+  allow_implicit_invocation: true

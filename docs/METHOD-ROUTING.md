@@ -12,6 +12,7 @@ This router owns selection, not a second implementation of each method. Read the
 | Domain identity, vocabulary or contracts | [domain-modeling](../skills/domain-modeling/SKILL.md) | Terms and edge cases reconciled with authoritative domain source |
 | A design question needs concrete evidence | [prototype](../skills/prototype/SKILL.md) | Question answered by inspectable prototype; production status explicit |
 | Review a change | [code-review](../skills/code-review/SKILL.md) | Requirements and quality assessed against fixed sources |
+| Reconcile project homes or portfolio context | [maintain-project-context](../skills/maintain-project-context/SKILL.md) | Verified source owners, dated home links and explicit coverage gaps |
 | Resume or hand work over | [handoff](../skills/handoff/SKILL.md) | Current state checked and first unproven action identified |
 | Learn through project code | [teach](../skills/teach/SKILL.md) | One bounded concept explained from actual source and exercised |
 
@@ -43,7 +44,7 @@ The role files remain their single normative owners. Reuse the consumer's pinned
 
 ## Preserve local ownership
 
-Follow the existing product plan, terminology, task tracker, decision records and closure workflow. A Notion navigation page can link to those sources and give a dated summary; it cannot silently become a second task or product-contract owner. Preserve the distinction between proposed, accepted, implemented, checked and published.
+Follow the existing product plan, terminology, task tracker, decision records and closure workflow. Ownership is project-specific: a local-code project can use Notion tasks while a repository project uses issues. A Notion navigation page can link to those sources and give a dated summary; it cannot silently become a second task or product-contract owner. Preserve the distinction between proposed, accepted, implemented, checked and published.
 
 Research, recovery, closure and instruction feedback already have [playbook owners](../guidance/catalog.json). Load the applicable procedure through the consumer route rather than inventing another. Package-specific steps should invoke that role or procedure when available; their self-contained task steps must retain safe handling when a host lacks it.
 
