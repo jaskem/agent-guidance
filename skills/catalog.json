@@ -58,6 +58,12 @@
       "path": "skills/teach",
       "version": "1.0.0",
       "allow_implicit_invocation": true
+    },
+    {
+      "name": "maintain-project-context",
+      "path": "skills/maintain-project-context",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true
     }
   ]
 }
