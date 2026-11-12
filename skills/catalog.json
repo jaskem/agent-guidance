@@ -11,13 +11,52 @@
     {
       "name": "evidence-driven-development",
       "path": "skills/evidence-driven-development",
-      "version": "1.0.0",
-      "allow_implicit_invocation": true
+      "version": "1.1.0",
+      "allow_implicit_invocation": true,
+      "dependencies": [
+        "code-review"
+      ]
     },
     {
       "name": "maintain-agent-instructions",
       "path": "skills/maintain-agent-instructions",
       "version": "1.0.1",
+      "allow_implicit_invocation": true
+    },
+    {
+      "name": "plan-work",
+      "path": "skills/plan-work",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true
+    },
+    {
+      "name": "domain-modeling",
+      "path": "skills/domain-modeling",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true
+    },
+    {
+      "name": "prototype",
+      "path": "skills/prototype",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true
+    },
+    {
+      "name": "code-review",
+      "path": "skills/code-review",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true
+    },
+    {
+      "name": "handoff",
+      "path": "skills/handoff",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true
+    },
+    {
+      "name": "teach",
+      "path": "skills/teach",
+      "version": "1.0.0",
       "allow_implicit_invocation": true
     }
   ]

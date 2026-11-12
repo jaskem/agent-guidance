@@ -1,0 +1,6 @@
+interface:
+  display_name: "Domain modeling"
+  short_description: "Clarify terms, identity and domain rules"
+  default_prompt: "Use $domain-modeling to clarify these terms and edge cases."
+policy:
+  allow_implicit_invocation: true

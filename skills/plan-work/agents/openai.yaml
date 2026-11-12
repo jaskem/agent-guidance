@@ -1,0 +1,6 @@
+interface:
+  display_name: "Plan work"
+  short_description: "Turn agreed goals into executable work"
+  default_prompt: "Use $plan-work to turn this discussion into a bounded plan."
+policy:
+  allow_implicit_invocation: true
