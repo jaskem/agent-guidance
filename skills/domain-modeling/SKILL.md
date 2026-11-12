@@ -7,6 +7,8 @@ description: Clarify or change domain terminology, identity, relationships and i
 
 ## 1. Locate the owner
 
+Follow the user's configured operating guide once per session, including its required tool-call version. Reuse verified context; load project and task owners only when relevant, refreshing them after a project/scope change or material new evidence. Use the routed context-entry playbook when available. If required context is inaccessible, disclose the gap and continue only independent work.
+
 Read the project router, relevant domain/data role and existing glossary, central concept, contract or decision record. Use their actual locations; do not impose a new glossary or ADR directory. Identify whether the current discussion changes meaning or only asks for an explanation.
 
 ## 2. Separate concepts using evidence

@@ -7,6 +7,8 @@ description: Audit or improve AGENTS.md, instruction routing, reusable skills an
 
 ## 1. Reconstruct the current route
 
+Follow the user's configured operating guide once per session, including its required tool-call version. Reuse verified context; load project and task owners only when relevant, refreshing them after a project/scope change or material new evidence. Use the routed context-entry playbook when available. If required context is inaccessible, disclose the gap and continue only independent work.
+
 Read the current request, applicable `AGENTS.md` and referenced workflow. Inventory the accessible repositories, instruction files, actual `SKILL.md` packages, installed copies and enabled Notion skills relevant to the task. Record exact source revisions and access gaps. A role document or a folder called skills is not proof of an installed skill. Search/fetch failures are unknown state, not absence.
 
 Load an existing instruction-feedback playbook when routed. Reuse its observation record and owner rules. Do not start a competing maintenance backlog.
@@ -29,7 +31,7 @@ Use the host's skill-authoring and installation workflow. When GitHub owns the s
 
 ## 4. Verify what changed
 
-Run the existing repository and host checks for the touched surface. Check descriptions, local references, package completeness and invocation metadata. Exercise representative positive, negative and missing-input cases. For substantial revisions use fresh-context forward tests when delegation is authorized; supply the raw task and artifacts without the expected answer. Without an independent run, label the check a walkthrough.
+Run the existing repository and host checks for the touched surface. Check descriptions, local references, package completeness and invocation metadata. Exercise representative positive, negative and missing-input cases. For substantial revisions use fresh-context forward tests when delegation is available and authorized, following the selected delegation playbook. Without that playbook, keep the trial read-only with a bounded task and raw artifacts, no expected answer, and verify the returned evidence. Without an independent run, label the check a walkthrough.
 
 Structure checks prove structure, not reasoning reliability. Record behavioral observations separately. Resolve findings before installation and verify the saved remote package and enabled state before claiming availability. On uncertain writes, inspect the target before retrying.
 

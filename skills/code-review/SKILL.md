@@ -7,6 +7,8 @@ description: Review a code change against its originating requirements and repos
 
 ## 1. Fix the review scope
 
+Follow the user's configured operating guide once per session, including its required tool-call version. Reuse verified context; load project and task owners only when relevant, refreshing them after a project/scope change or material new evidence. Use the routed context-entry playbook when available. If required context is inaccessible, disclose the gap and continue only independent work.
+
 Resolve the repository, actual changed files and comparison baseline from the request, PR or existing task. Pin the base and reviewed head. Inspect local changes when relevant. Do not guess an arbitrary baseline or claim an unobserved diff. An empty change can be reported directly.
 
 Read the applicable router and originating requirements, accepted decisions and relevant standards. Resolve references before asking the user. If requirements cannot be found, perform the supported quality review and mark requirements coverage unavailable; do not invent a spec. If the change itself is unavailable, identify that blocker and avoid findings about unseen code.
@@ -15,7 +17,7 @@ Read the applicable router and originating requirements, accepted decisions and 
 
 Use [review axes](references/axes.md). Requirements review checks missing, incorrect and unrequested behavior. Quality review checks correctness, maintainability and applicable repository rules. Inspect the real call paths and existing tests; passing tests are evidence for their cases, not proof the requirements are met.
 
-For substantial changes, use separate fresh-context reviewers when delegation is available and authorized, giving each the exact diff, relevant source pointers and its own axis. Otherwise review the axes separately and disclose that they were not independently assessed. The integrating agent remains accountable for verifying findings.
+Use a separate fresh-context reviewer when material risk or an independent question justifies it and delegation is available and authorized; change size alone is insufficient. Follow the selected delegation playbook. If unavailable, give the reviewer a bounded read-only question, exact base/head, relevant requirements and raw evidence; verify its findings before integration. Assess both axes even with one reviewer. Distinguish self-review, separate-agent review with shared context and fresh-context review; loading this skill alone establishes none of that independence.
 
 ## 3. Substantiate findings
 

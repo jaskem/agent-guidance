@@ -7,6 +7,8 @@ description: Build a bounded prototype to answer an unresolved UI, interaction, 
 
 ## 1. Name the question
 
+Follow the user's configured operating guide once per session, including its required tool-call version. Reuse verified context; load project and task owners only when relevant, refreshing them after a project/scope change or material new evidence. Use the routed context-entry playbook when available. If required context is inaccessible, disclose the gap and continue only independent work.
+
 Read the current goal, accepted design constraints and relevant project route. State the single question the prototype will answer and how the user can judge it. Choose [UI comparison](references/ui.md) or [logic exploration](references/logic.md). If the choice is unclear, inspect the existing app and ask only when the answer changes the artifact.
 
 Use the host's supported preview or site workflow and existing project tools. Do not require the user to install a local runtime. Load routed interaction, visual, accessibility or domain guidance only where its omission could change the answer.

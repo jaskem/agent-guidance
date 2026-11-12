@@ -2,6 +2,10 @@
 
 This router owns selection, not a second implementation of each method. Read the consumer's current instructions and accepted scope first. Load only the selected method body and materially relevant roles. Installed, enabled and actually read are different states. A method never adds permission to implement, publish or schedule.
 
+## Establish configured context
+
+Follow the user's configured operating guide at the start of a session, then the relevant project home and current task owner. Use the selected [context-entry playbook](../guidance/playbooks/context-entry.md) through the consumer's local route; this central link does not override a pin. Reuse verified context until the project, scope or material facts change. A general question needs no project scan. If a required source is unavailable, disclose the access gap and pause only dependent work; do not report a remembered source as freshly read.
+
 ## Select the work
 
 | Request | Method | Observable finish |
@@ -44,8 +48,8 @@ The role files remain their single normative owners. Reuse the consumer's pinned
 
 ## Preserve local ownership
 
-Follow the existing product plan, terminology, task tracker, decision records and closure workflow. Ownership is project-specific: a local-code project can use Notion tasks while a repository project uses issues. A Notion navigation page can link to those sources and give a dated summary; it cannot silently become a second task or product-contract owner. Preserve the distinction between proposed, accepted, implemented, checked and published.
+Follow the existing product plan, terminology, task tracker, decision records and closure workflow. Ownership is project-specific: code may live in a repository while Notion owns tasks and decisions. Resolve each owner separately. A navigation page can link to those sources and give a dated summary; it cannot silently become a second task or product-contract owner. Preserve the distinction between proposed, accepted, implemented, checked and published.
 
 Research, recovery, closure and instruction feedback already have [playbook owners](../guidance/catalog.json). Load the applicable procedure through the consumer route rather than inventing another. Package-specific steps should invoke that role or procedure when available; their self-contained task steps must retain safe handling when a host lacks it.
 
-Delegate only independent work where authorized, with non-overlapping ownership and raw evidence for reviewers. Integrate findings in the main task. Availability of several roles is not authorization to create a standing agent team.
+Before delegating, follow the selected [delegation playbook](../guidance/playbooks/delegation.md) through the consumer's local route. If unavailable, retain bounded assignments, non-overlapping writes, explicit evidence and parent verification. Availability of several roles is not authorization to create a standing agent team. A skill call is not a separate agent; a separate agent sharing the author's context is not a fresh-context review. Choose delegation for independent useful work or material review value, not role count or task size alone.

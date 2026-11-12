@@ -1,5 +1,5 @@
 {
-  "guidance_version": "0.4.0",
+  "guidance_version": "0.5.0",
   "modules": [
     {
       "id": "kernel",
@@ -92,6 +92,16 @@
       "id": "change-closure",
       "kind": "playbook",
       "path": "guidance/playbooks/change-closure.md"
+    },
+    {
+      "id": "context-entry",
+      "kind": "playbook",
+      "path": "guidance/playbooks/context-entry.md"
+    },
+    {
+      "id": "delegation",
+      "kind": "playbook",
+      "path": "guidance/playbooks/delegation.md"
     },
     {
       "id": "instruction-feedback-loop",

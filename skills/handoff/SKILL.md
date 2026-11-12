@@ -7,7 +7,9 @@ description: Prepare a durable handoff or resume interrupted work from verified 
 
 ## 1. Choose prepare or resume
 
-Read the current instruction and the latest relevant durable work record. Follow the repository's existing interruption-recovery procedure when routed. Preserve its checkpoint destination and scope boundaries. Use the available operating guide to locate personal context, not to replace current project evidence.
+Follow the user's configured operating guide once per session, including its required tool-call version. Reuse verified context; load project and task owners only when relevant, refreshing them after a project/scope change or material new evidence. Use the routed context-entry playbook when available. If required context is inaccessible, disclose the gap and continue only independent work.
+
+Read the current instruction and the latest relevant durable work record. Follow the existing interruption-recovery procedure when routed. Preserve its checkpoint destination and scope boundaries; personal context does not replace current project evidence.
 
 For preparing a handoff, inspect the state needed by the next task. For resuming, compare the recorded baseline with current head, branch, PR, checks or exact external target as relevant. Restrict reconstruction to facts that can change the next action.
 
@@ -19,7 +21,7 @@ Use [handoff record](references/record.md). Link existing plans, decisions, comm
 
 ## 3. Save or continue
 
-Prepare a durable record at the existing project checkpoint/issue location, or the established private document destination when no repository owns the work. A chat response can be the requested handoff, but do not claim durable external storage unless it succeeded. Keep Notion as a dated pointer to repository-owned state rather than a second task ledger.
+Prepare a durable record at the verified project checkpoint/task owner, which may be Notion even when code lives in a repository. A chat response can be the requested handoff, but do not claim durable external storage unless it succeeded. Link evidence at its source and update the existing task; do not create a second ledger.
 
 For resuming, act on the first unproven authorized step after the minimum necessary verification. If blocked, report the exact missing fact or capability and continue independent work. Recovery is a prelude to the task, not a new audit campaign or reason to stop after one checkpoint.
 
