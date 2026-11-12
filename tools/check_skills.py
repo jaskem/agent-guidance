@@ -121,6 +121,37 @@ def check(root: Path) -> list[str]:
                 elif not destination.is_file():
                     errors.append(f'{name}: missing reference: {target}')
 
+    dependencies = {}
+    for entry in entries:
+        if (not isinstance(entry, dict) or not isinstance(entry.get('name'), str)
+                or entry['name'] not in seen):
+            continue
+        name = entry['name']
+        required = entry.get('dependencies', [])
+        if not isinstance(required, list) or any(not isinstance(x, str) for x in required):
+            errors.append(f'{name}: dependencies must be a list of skill names')
+            continue
+        if len(set(required)) != len(required):
+            errors.append(f'{name}: duplicate dependency')
+        for dependency in required:
+            if dependency not in seen:
+                errors.append(f'{name}: unknown dependency: {dependency}')
+        dependencies[name] = required
+    visited, active = set(), set()
+    def visit(name):
+        if name in active:
+            errors.append(f'{name}: cyclic skill dependency')
+            return
+        if name in visited:
+            return
+        active.add(name)
+        for dependency in dependencies.get(name, []):
+            visit(dependency)
+        active.remove(name)
+        visited.add(name)
+    for name in dependencies:
+        visit(name)
+
     actual = set((root / 'skills').glob('*/SKILL.md'))
     if actual != listed:
         errors.append('catalog/package mismatch: ' + str(sorted(str(p) for p in actual ^ listed)))

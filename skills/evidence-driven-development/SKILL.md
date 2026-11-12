@@ -1,6 +1,6 @@
 ---
 name: evidence-driven-development
-description: Execute an authorized software change, diagnose a reported bug, or review an implementation with observable evidence. Use for substantive repository implementation and bug fixes. Exclude planning-only requests, ordinary factual questions, and trivial editorial edits.
+description: Execute an authorized software change or diagnose a reported bug with observable evidence. Use for substantive repository implementation and bug fixes. Route review-only requests to code-review; exclude planning-only requests, ordinary factual questions, and trivial editorial edits.
 ---
 
 # Evidence-driven development
@@ -17,7 +17,7 @@ Complete this step when the target behavior and its owning source are identifiab
 
 - **Reported bug or regression:** read [diagnosis](references/diagnosis.md), then reproduce the reported symptom before claiming a cause or a fix.
 - **Feature or refactor:** choose one usable slice through the relevant public interface. Retain existing domain terms and interfaces unless changing them is part of the request. Compare simpler alternatives when the interface or dependency direction changes. Keep detailed internals behind a small understandable interface.
-- **Review only:** skip implementation. Pin both ends of the comparison, include relevant staged/unstaged changes when requested, then go to step 4.
+- **Review only:** load the `code-review` method and follow its review-only route; do not start implementation.
 
 ## 3. Implement and observe
 
@@ -27,16 +27,11 @@ Work one slice at a time. Confirm the slice before extending it. For behavior-pr
 
 Keep code, repository plans and decisions in their existing repository owners. Personal memory or a Notion copy may point to them; it must not replace a product contract or claim an unmerged proposal is current behavior.
 
-## 4. Review twice
+## 4. Load the review owner
 
-Assess the actual change separately against:
+Load the separately installed `code-review` method for the actual change. Its package owns requirements and implementation-quality review; use the repository's applicable roles and acceptance sources through that method. An available name is not proof that its instructions were read.
 
-1. **Requirements:** intended behavior, acceptance checks, missing work and accidental scope expansion.
-2. **Implementation quality:** repository conventions, correctness, compatibility, readability, unnecessary coupling and the real failure paths.
-
-Keep findings attributable to their axis. A passing test does not settle either review by itself. Use separate fresh-context reviewers only when delegation is authorized and useful. Give them raw requirements and the exact diff, not your expected verdict. Otherwise perform both passes yourself and state that they were not independent reviews.
-
-Fix material findings within scope. A local pass does not establish remote CI, a merge, deployment, or live behavior.
+If the method is unavailable, resolve its exact canonical source from the current distribution record and read that revision. If the source cannot be reached, continue independent repository checks and report the shared review as incomplete; do not silently replace it with a second review procedure. Fix material findings within the authorized implementation scope, then rerun affected checks. A review-only request does not authorize applying its findings.
 
 ## 5. Close the actual change
 

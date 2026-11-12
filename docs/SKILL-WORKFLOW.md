@@ -12,16 +12,17 @@ This document owns packaging and distribution of this repository's optional skil
 | Installable engineering methods | `skills/<name>/` and `skills/catalog.json` here | Host personal-skill installations and private Notion Skill distributions |
 | Context and documents without a repository owner | Existing private document/memory destinations | Avoid independently maintained copies |
 
-For these two repository-owned skills, GitHub is the source and Notion is a distribution. This exception prevents a second editable master. A separate personal skill can have Notion as its owner; record that choice before creating copies.
+For these repository-owned skills, GitHub is the source and Notion is a distribution. This exception prevents a second editable master. A separate personal skill can have Notion as its owner; record that choice before creating copies.
 
 ## Selecting a method
 
-- Substantive authorized feature, bug fix or implementation review: [evidence-driven-development](../skills/evidence-driven-development/SKILL.md).
+- Substantive authorized feature or bug fix: [evidence-driven-development](../skills/evidence-driven-development/SKILL.md).
 - Explicit instruction-system review or a recurring instruction defect: [maintain-agent-instructions](../skills/maintain-agent-instructions/SKILL.md).
+- Planning, domain decisions, prototypes, review-only, durable resumption and guided learning: use the [method router](METHOD-ROUTING.md).
 - Ordinary explanation or small editorial change: use repository instructions; do not initiate a development ceremony.
 - Planning-only: retain the user's planning boundary. A skill never supplies implementation, merge, deployment or scheduling permission.
 
-Both packages permit implicit selection when their descriptions match. The host may cache its skill list. Being present in GitHub, installed, enabled and actually loaded are distinct states. If the same name is available from a personal installation and Notion, use one source for the task, not both. Check recorded revision/hash if they disagree; do not automatically prefer the more recently edited copy.
+Packages permit implicit selection when their descriptions match. The host may cache its skill list. Being present in GitHub, installed, enabled and actually loaded are distinct states. If the same name is available from a personal installation and Notion, use one source for the task, not both. Check recorded revision/hash if they disagree; do not automatically prefer the more recently edited copy.
 
 ## Authoring and updating
 

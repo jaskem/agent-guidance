@@ -2,7 +2,7 @@
 
 Read `guidance/KERNEL.md`, then `docs/WORKFLOW.md`. For changes to vendoring/versioning also read `docs/CONSUMER-CONTRACT.md`.
 
-For skill packages, installation copies or cross-host routing, read `docs/SKILL-WORKFLOW.md`. The two packages under `skills/` are task-scoped methods; they do not replace consumer instructions or silently change pinned guidance.
+For skill packages, installation copies or cross-host routing, read `docs/SKILL-WORKFLOW.md`. The packages under `skills/` are task-scoped methods; they do not replace consumer instructions or silently change pinned guidance.
 
 This repository is the canonical owner only for repository-independent AI guidance. Never pull product semantics, repository workflow scenarios, roadmaps, architecture invariants, or consumer-specific rules into shared modules merely to reduce duplication.
 

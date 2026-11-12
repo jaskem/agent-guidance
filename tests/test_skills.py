@@ -20,6 +20,22 @@ class SkillPackageTests(unittest.TestCase):
     def test_complete_packages(self):
         self.assertEqual(check(self.root), [])
 
+    def test_unknown_dependency_is_rejected(self):
+        p = self.root / 'skills/catalog.json'
+        catalog = json.loads(p.read_text())
+        catalog['skills'][0]['dependencies'] = ['missing-method']
+        p.write_text(json.dumps(catalog))
+        self.assertTrue(any('unknown dependency' in e for e in check(self.root)))
+
+    def test_circular_dependency_is_rejected(self):
+        p = self.root / 'skills/catalog.json'
+        catalog = json.loads(p.read_text())
+        first, second = catalog['skills'][:2]
+        first['dependencies'] = [second['name']]
+        second['dependencies'] = [first['name']]
+        p.write_text(json.dumps(catalog))
+        self.assertTrue(any('cyclic skill dependency' in e for e in check(self.root)))
+
     def test_missing_disclosed_reference_is_rejected(self):
         (self.package / 'references/diagnosis.md').unlink()
         self.assertTrue(any('missing reference' in e for e in check(self.root)))
