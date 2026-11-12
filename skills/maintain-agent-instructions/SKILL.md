@@ -7,7 +7,7 @@ description: Audit or improve AGENTS.md, instruction routing, reusable skills an
 
 ## 1. Reconstruct the current route
 
-Read the current request, applicable AGENTS.md and referenced workflow. Inventory the accessible repositories, instruction files, actual SKILL.md packages, installed copies and enabled Notion skills relevant to the task. Record exact source revisions and access gaps. A role document or a folder called skills is not proof of an installed skill. Search/fetch failures are unknown state, not absence.
+Read the current request, applicable `AGENTS.md` and referenced workflow. Inventory the accessible repositories, instruction files, actual `SKILL.md` packages, installed copies and enabled Notion skills relevant to the task. Record exact source revisions and access gaps. A role document or a folder called skills is not proof of an installed skill. Search/fetch failures are unknown state, not absence.
 
 Load an existing instruction-feedback playbook when routed. Reuse its observation record and owner rules. Do not start a competing maintenance backlog.
 
