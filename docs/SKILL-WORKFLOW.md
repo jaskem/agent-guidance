@@ -7,7 +7,8 @@ This document owns packaging and distribution of this repository's optional skil
 | Material | Canonical owner | Other locations |
 | --- | --- | --- |
 | Personal preferences and cross-project navigation | User's private operating guide and memory | Short pointer in the user's custom instructions |
-| Product semantics, code, acceptance and repository work state | Existing consumer repository owner | Links and dated summaries only |
+| Product semantics, code and technical evidence | Existing project source owner | Links and dated summaries only |
+| Plans, tasks, decisions and progress | Verified project-specific owner, including Notion when established | One owner per record; no parallel tracker |
 | Cross-repository shared roles and playbooks | `guidance/` | Exact pinned vendored consumers |
 | Installable engineering methods | `skills/<name>/` and `skills/catalog.json` here | Host personal-skill installations and private Notion Skill distributions |
 | Context and documents without a repository owner | Existing private document/memory destinations | Avoid independently maintained copies |
@@ -15,6 +16,8 @@ This document owns packaging and distribution of this repository's optional skil
 For these repository-owned skills, GitHub is the source and Notion is a distribution. This exception prevents a second editable master. A separate personal skill can have Notion as its owner; record that choice before creating copies.
 
 ## Selecting a method
+
+Start with the configured context route in [METHOD-ROUTING.md](METHOD-ROUTING.md), reusing this session's verified guide and fetching only relevant project/task context. Skill availability does not prove that a host read the guide or applied the method.
 
 - Substantive authorized feature or bug fix: [evidence-driven-development](../skills/evidence-driven-development/SKILL.md).
 - Explicit instruction-system review or a recurring instruction defect: [maintain-agent-instructions](../skills/maintain-agent-instructions/SKILL.md).

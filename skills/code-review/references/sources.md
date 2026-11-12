@@ -1,6 +1,6 @@
 # Sources and adaptation
 
-Canonical owner: [jaskem/agent-guidance](https://github.com/jaskem/agent-guidance/tree/main/skills/code-review). Package version 1.0.0. The distribution record identifies the released source commit; main is a navigation pointer, not a version pin.
+Canonical owner: [jaskem/agent-guidance](https://github.com/jaskem/agent-guidance/tree/main/skills/code-review). Package version 1.0.1. The distribution record identifies the released source commit; main is a navigation pointer, not a version pin.
 
 Original adaptation informed by the following Matt Pocock sources, reviewed at commit `5863806dd4e15c63174bee4e7515a4256792ecfa`:
 

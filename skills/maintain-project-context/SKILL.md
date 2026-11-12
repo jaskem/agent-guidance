@@ -7,7 +7,9 @@ description: Reconcile project homes and portfolio navigation with verified sour
 
 ## 1. Establish coverage
 
-Read the user's scope, operating guide and existing project index. Enumerate the requested sources with available capabilities; follow pagination. Record which surfaces were listed, searched, fetched or inaccessible. Treat memory as leads. A partial search or a Spaces listing does not establish the complete ChatGPT Projects inventory.
+Follow the user's configured operating guide once per session, including its required tool-call version. Reuse verified context; load project and task owners only when relevant, refreshing them after a project/scope change or material new evidence. Use the routed context-entry playbook when available. If required context is inaccessible, disclose the gap and continue only independent work.
+
+Read the user's scope and existing project index. Enumerate the requested sources with available capabilities; follow pagination. Record which surfaces were listed, searched, fetched or inaccessible. Treat memory as leads. A partial search or a Spaces listing does not establish the complete ChatGPT Projects inventory.
 
 Finish with a bounded candidate list and explicit access gaps. Continue accessible work; ask only for information that changes identity, ownership or the requested coverage.
 

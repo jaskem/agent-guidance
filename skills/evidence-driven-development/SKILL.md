@@ -7,6 +7,8 @@ description: Execute an authorized software change or diagnose a reported bug wi
 
 ## 1. Establish the work
 
+Follow the user's configured operating guide once per session, including its required tool-call version. Reuse verified context; load project and task owners only when relevant, refreshing them after a project/scope change or material new evidence. Use the routed context-entry playbook when available. If required context is inaccessible, disclose the gap and continue only independent work.
+
 Read the applicable repository instructions and follow their route to the existing plan, contracts, glossary, decisions, source and tests. Identify repository, branch, exact starting revision and uncommitted work. Preserve unrelated changes. Use the current request as the scope; an audit or planning-only request does not authorize product implementation.
 
 Locate the existing issue, plan or checkpoint before creating another. Write a compact acceptance statement there when the repository requires it; otherwise keep it in the working conversation: input or user action, expected observable result, invariants, and the check that can distinguish success from failure. Resolve ordinary reversible choices from the evidence. Ask only about an unresolved material requirement, authority boundary or domain meaning.
@@ -25,7 +27,7 @@ Use the repository's test framework and risk-based checks. For changed behavior 
 
 Work one slice at a time. Confirm the slice before extending it. For behavior-preserving refactors, capture the existing behavior and require it to remain unchanged; artificial failing tests are unnecessary. Use direct inspection for low-impact editorial changes. Run the broader checks required by the repository once the changed slices work. Do not invent blanket test or approval requirements.
 
-Keep code, repository plans and decisions in their existing repository owners. Personal memory or a Notion copy may point to them; it must not replace a product contract or claim an unmerged proposal is current behavior.
+Keep code, plans, task status and decisions with their verified owners. A repository may own code while Notion owns tasks; do not create a parallel tracker or silently migrate ownership. Context summaries must not replace a product contract or claim an unmerged proposal is current behavior.
 
 ## 4. Load the review owner
 

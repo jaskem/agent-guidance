@@ -7,7 +7,9 @@ description: Turn a discussion or substantial goal into a bounded plan, specific
 
 ## 1. Recover the intended outcome
 
-Read the current request, applicable repository router and existing central plan or issue. Resolve current facts from their owner before asking the user. Identify desired behavior, accepted decisions, scope limits and evidence still missing. Treat memory and Notion summaries as pointers until the current source confirms them.
+Follow the user's configured operating guide once per session, including its required tool-call version. Reuse verified context; load project and task owners only when relevant, refreshing them after a project/scope change or material new evidence. Use the routed context-entry playbook when available. If required context is inaccessible, disclose the gap and continue only independent work.
+
+Read the current request, applicable project router and existing central plan or task. Resolve current facts from their owner before asking the user. Identify desired behavior, accepted decisions, scope limits and evidence still missing. Notion may own tasks or decisions; verify the ownership map rather than treating every Notion record as secondary. Treat memory and derived summaries as pointers until their source confirms them.
 
 Distinguish planning-only from authorized execution. This method does not grant implementation, publication or scheduling permission. A clear small task can proceed through its existing execution route without a new specification.
 

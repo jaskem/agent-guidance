@@ -7,6 +7,8 @@ description: Teach a bounded concept through verified examples, especially the u
 
 ## 1. Ground the learning goal
 
+Follow the user's configured operating guide once per session, including its required tool-call version. Reuse verified context; load project and task owners only when relevant, refreshing them after a project/scope change or material new evidence. Use the routed context-entry playbook when available. If required context is inaccessible, disclose the gap and continue only independent work.
+
 Use the user's question and known preferences to identify one practical outcome, such as explaining a data flow to IT. Read any existing technical guide, learning goal and relevant current source. Do not start a course or interview when the question already supplies the goal.
 
 For project explanations, trace actual files and behavior. State when code or evidence is unavailable; use a labelled generic example rather than implying it describes the project. Check current technical facts with primary sources as appropriate.
