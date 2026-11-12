@@ -35,6 +35,8 @@ Both packages permit implicit selection when their descriptions match. The host 
 
 An upstream update is a candidate for review, never a silent replacement. Preserve user changes, compare to the last imported version and resolve material conflicts. Stop only the blocked operation if tools or sources are unavailable; report the actual limitation. Do not broaden scheduled maintenance to GitHub or skill upgrades without a separate schedule authorization.
 
+Readback must account for host serialization: Notion exports may add a page ID and use block-style YAML scalars; personal-skill hosts may regenerate UI metadata and icons. Compare method bodies, parsed name/description and supporting references against the canonical package, and record host-owned differences separately. Put literal filenames in inline code so rich-text imports do not turn them into unintended web links.
+
 ## Verification limits
 
 File checks detect structural drift, missing dependencies and invocation mismatch. Behavioral trials cover their specific cases. Neither guarantees future reasoning or correct use in every host. Keep post-installation failures as evidence for the existing instruction feedback loop.

@@ -17,7 +17,7 @@
     {
       "name": "maintain-agent-instructions",
       "path": "skills/maintain-agent-instructions",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "allow_implicit_invocation": true
     }
   ]
