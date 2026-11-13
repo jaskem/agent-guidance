@@ -64,6 +64,18 @@
       "path": "skills/maintain-project-context",
       "version": "1.0.1",
       "allow_implicit_invocation": true
+    },
+    {
+      "name": "audit-ui-ux",
+      "path": "skills/audit-ui-ux",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true
+    },
+    {
+      "name": "design-ui-improvements",
+      "path": "skills/design-ui-improvements",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true
     }
   ]
 }

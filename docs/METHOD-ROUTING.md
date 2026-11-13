@@ -15,6 +15,8 @@ Follow the user's configured operating guide at the start of a session, then the
 | Design or delivery plan | [plan-work](../skills/plan-work/SKILL.md) | Decisions, open questions and executable scope at existing owner |
 | Domain identity, vocabulary or contracts | [domain-modeling](../skills/domain-modeling/SKILL.md) | Terms and edge cases reconciled with authoritative domain source |
 | A design question needs concrete evidence | [prototype](../skills/prototype/SKILL.md) | Question answered by inspectable prototype; production status explicit |
+| Audit an existing interface | [audit-ui-ux](../skills/audit-ui-ux/SKILL.md) | Dated observations, prioritized findings and explicit evidence gaps |
+| Visual UI improvement proposals | [design-ui-improvements](../skills/design-ui-improvements/SKILL.md) | Inspectable proposals tied to findings and acceptance checks |
 | Review a change | [code-review](../skills/code-review/SKILL.md) | Requirements and quality assessed against fixed sources |
 | Reconcile project homes or portfolio context | [maintain-project-context](../skills/maintain-project-context/SKILL.md) | Verified source owners, dated home links and explicit coverage gaps |
 | Resume or hand work over | [handoff](../skills/handoff/SKILL.md) | Current state checked and first unproven action identified |
@@ -53,3 +55,4 @@ Follow the existing product plan, terminology, task tracker, decision records an
 Research, recovery, closure and instruction feedback already have [playbook owners](../guidance/catalog.json). Load the applicable procedure through the consumer route rather than inventing another. Package-specific steps should invoke that role or procedure when available; their self-contained task steps must retain safe handling when a host lacks it.
 
 Before delegating, follow the selected [delegation playbook](../guidance/playbooks/delegation.md) through the consumer's local route. If unavailable, retain bounded assignments, non-overlapping writes, explicit evidence and parent verification. Availability of several roles is not authorization to create a standing agent team. A skill call is not a separate agent; a separate agent sharing the author's context is not a fresh-context review. Choose delegation for independent useful work or material review value, not role count or task size alone.
+
