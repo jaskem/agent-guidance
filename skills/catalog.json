@@ -76,6 +76,46 @@
       "path": "skills/design-ui-improvements",
       "version": "1.0.0",
       "allow_implicit_invocation": true
+    },
+    {
+      "name": "improve-codebase-architecture",
+      "path": "skills/improve-codebase-architecture",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true
+    },
+    {
+      "name": "implement-spec",
+      "path": "skills/implement-spec",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true,
+      "dependencies": [
+        "evidence-driven-development",
+        "code-review"
+      ]
+    },
+    {
+      "name": "triage",
+      "path": "skills/triage",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true
+    },
+    {
+      "name": "research",
+      "path": "skills/research",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true
+    },
+    {
+      "name": "to-questionnaire",
+      "path": "skills/to-questionnaire",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true
+    },
+    {
+      "name": "wayfinder",
+      "path": "skills/wayfinder",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true
     }
   ]
 }

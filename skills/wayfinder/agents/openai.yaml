@@ -1,0 +1,6 @@
+interface:
+  display_name: "Find a decision route"
+  short_description: "Maak grote onzekere doelen stapsgewijs beslisbaar"
+  default_prompt: "Use $wayfinder for this task."
+policy:
+  allow_implicit_invocation: true

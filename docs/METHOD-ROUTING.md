@@ -21,8 +21,18 @@ Follow the user's configured operating guide at the start of a session, then the
 | Reconcile project homes or portfolio context | [maintain-project-context](../skills/maintain-project-context/SKILL.md) | Verified source owners, dated home links and explicit coverage gaps |
 | Resume or hand work over | [handoff](../skills/handoff/SKILL.md) | Current state checked and first unproven action identified |
 | Learn through project code | [teach](../skills/teach/SKILL.md) | One bounded concept explained from actual source and exercised |
+| Investigate existing architectural friction | [improve-codebase-architecture](../skills/improve-codebase-architecture/SKILL.md) | Traceable current structure and bounded before/after options |
+| Complete an authorized specification or task graph | [implement-spec](../skills/implement-spec/SKILL.md) | Integrated acceptance per task, or exact remaining blockers |
+| Organize incoming reports or unclear requests | [triage](../skills/triage/SKILL.md) | Every report maps to evidence and one owning task or question |
+| Research a consequential technical question | [research](../skills/research/SKILL.md) | Dated primary-source conclusion and decision implications |
+| Prepare questions for a knowledgeable recipient | [to-questionnaire](../skills/to-questionnaire/SKILL.md) | Decision gaps covered by a usable questionnaire draft |
+| Find a route through a large uncertain goal | [wayfinder](../skills/wayfinder/SKILL.md) | Ready decisions and evidence dependencies at the existing owner |
 
 Small factual questions and editorial changes need no full workflow. A clear implementation task does not first require an interview. A planning-only request remains planning-only. A large authorized implementation continues through its work packages; neither a new session nor creating an issue is a reason to stop by itself.
+
+Select by the requested result. `wayfinder` resolves a direction that is not yet clear; `plan-work` turns a sufficiently clear direction into executable scope; `implement-spec` sequences an already authorized task graph; `evidence-driven-development` executes one substantive change. `triage` owns intake coverage and delegates bounded diagnosis rather than duplicating it. `research` supplies a decision brief using the existing research-verification criteria. `to-questionnaire` prepares a draft, never sends it by implication. Architecture proposals remain proposals until implementation is authorized.
+
+The six additional packages permit implicit selection for these discriminating descriptions. This is permission to choose a relevant method within the request, not to start unrelated scans or background work. Existing project and tracker owners remain authoritative. Personal/Notion registration and saved package verification are separate from this router; current client registries can be cached.
 
 `evidence-driven-development` declares `code-review` as a required method in the skill catalog. Resolve the installed version against its distribution record. If unavailable, read the pinned canonical source recorded there; if that source cannot be reached, report the dependent review as incomplete and continue independent work. Other methods are selected as needed, not a mandatory dependency chain.
 

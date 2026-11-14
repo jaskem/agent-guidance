@@ -1,0 +1,6 @@
+interface:
+  display_name: "Triage requests"
+  short_description: "Maak meldingen en verbeterwensen uitvoerbaar"
+  default_prompt: "Use $triage for this task."
+policy:
+  allow_implicit_invocation: true

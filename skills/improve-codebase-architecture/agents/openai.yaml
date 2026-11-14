@@ -1,0 +1,6 @@
+interface:
+  display_name: "Improve codebase architecture"
+  short_description: "Onderzoek eenvoudiger en onderhoudbare architectuur"
+  default_prompt: "Use $improve-codebase-architecture for this task."
+policy:
+  allow_implicit_invocation: true
