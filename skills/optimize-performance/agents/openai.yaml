@@ -1,0 +1,7 @@
+interface:
+  display_name: "Prestaties verbeteren"
+  short_description: "Meet vertraging en controleer gerichte verbetering"
+  default_prompt: "Gebruik $optimize-performance om deze vertraging te meten en gericht te verbeteren."
+
+policy:
+  allow_implicit_invocation: true

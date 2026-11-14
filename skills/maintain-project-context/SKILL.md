@@ -9,6 +9,8 @@ description: Reconcile project homes and portfolio navigation with verified sour
 
 Follow the user's configured operating guide once per session, including its required tool-call version. Reuse verified context; load project and task owners only when relevant, refreshing them after a project/scope change or material new evidence. Use the routed context-entry playbook when available. If required context is inaccessible, disclose the gap and continue only independent work.
 
+Use available agents without waiting for an explicit user request when this method calls for independent fact-finding or when a bounded parallel task or separate check would improve the result. Follow the routed delegation procedure; give each worker a source/revision, scope, allowed actions and expected evidence. Keep one writer per shared object, use the current host capabilities and let the parent verify and integrate the result. If delegation is unavailable, continue supported work and state any required independence that remains unproven.
+
 Read the user's scope and existing project index. Enumerate the requested sources with available capabilities; follow pagination. Record which surfaces were listed, searched, fetched or inaccessible. Treat memory as leads. A partial search or a Spaces listing does not establish the complete ChatGPT Projects inventory.
 
 Finish with a bounded candidate list and explicit access gaps. Continue accessible work; ask only for information that changes identity, ownership or the requested coverage.
@@ -17,7 +19,7 @@ Finish with a bounded candidate list and explicit access gaps. Continue accessib
 
 Match each candidate to existing homes using canonical source IDs or URLs, then verify aliases. Equal names alone do not establish identity. Reuse the existing home; flag unresolved duplicates before creating another.
 
-For each project, locate the actual owners of code, tasks, decisions and durable context. A repository can own code while Notion owns tasks. Link repository-owned issues instead of opening a parallel tracker. Use [project record](references/project-record.md) when a home is missing or its source mapping is unclear.
+For each project, locate the actual owners of code, tasks, decisions and durable context. A repository can own code while Notion owns tasks. Link repository-owned issues instead of opening a parallel tracker. Preserve one owner for each skill or instruction too; an enabled distribution is a route to a versioned package, not a second editable master. Use [project record](references/project-record.md) when a home is missing or its source mapping is unclear.
 
 Finish when every candidate has a verified home/owner mapping or a named unresolved fact.
 
@@ -31,7 +33,7 @@ Finish when each authorized change has evidence, an owner and a minimal destinat
 
 ## 4. Verify the route
 
-Read back saved targets and check project-to-home-to-source links. For uncertain writes, inspect the exact target and identifiers before retrying; avoid duplicate creation. Record unconfirmed writes as unresolved.
+Read back saved targets and check project-to-home-to-source links. Verify the route points to the intended current method catalog rather than an obsolete parallel process; test only the links and destinations affected by the repair. For uncertain writes, inspect the exact target and identifiers before retrying; avoid duplicate creation. Record unconfirmed writes as unresolved.
 
 Report verified coverage, access gaps, changes and the next actionable source per project. Claim complete coverage only when the requested inventory was fully enumerated and reconciled. A dated summary is a snapshot, not automatic synchronization.
 

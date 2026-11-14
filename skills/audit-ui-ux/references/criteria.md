@@ -19,3 +19,4 @@ For dense desktop tools, distinguish navigation, edit commands, object propertie
 
 Verify the exact applicable standard, criterion, level, exceptions and units before prescribing accessibility minima. Contrast needs actual foreground/background and rendering context; antialiased edge pixels are insufficient. Static images reveal risks, not full accessibility conformance.
 
+For browser or native semantics inspect meaningful control names, role/state, keyboard activation, focus entry/return, modal behavior and error recovery with available platform tools. Source-level ARIA or a screenshot alone does not establish the rendered accessibility tree or usable interaction. Use test-user-flows for a distinct repeatable journey and retain this audit as the owner of task-based usability interpretation.

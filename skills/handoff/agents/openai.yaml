@@ -2,5 +2,6 @@ interface:
   display_name: "Handoff"
   short_description: "Preserve evidence and resume the next step"
   default_prompt: "Use $handoff to prepare or resume this work safely."
+
 policy:
   allow_implicit_invocation: true

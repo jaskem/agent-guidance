@@ -12,3 +12,7 @@ For each candidate ask:
 Classify computation, local I/O, owned remote services and third-party dependencies before proposing test substitutes. A fake does not qualify real network, filesystem or device behavior. Preserve regression coverage until equivalent coverage is demonstrated; changing module structure is not itself a reason to delete tests.
 
 Use a compact candidate record: observed friction and source; representative change; current/alternative shape; compatibility and recovery; expected benefit versus cost; confidence; acceptance evidence. A diagram is explanatory evidence about the proposal, not proof that it works.
+
+For a behavior-preserving simplification, compare return shape, error timing, ordering, resource lifetime, side effects and persisted representation, not only ordinary outputs. Prefer direct control flow, existing primitives and the project's existing language before adding a wrapper or framework. Remove only complexity whose responsibility is understood; lower line counts are not evidence of easier maintenance.
+
+State which consumer cases and supported data versions must survive. A migration proposal needs compatibility, interruption and recovery evidence appropriate to the actual environment. Real file-share, service and device behavior cannot be qualified by an in-memory substitute.

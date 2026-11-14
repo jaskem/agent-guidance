@@ -13,3 +13,9 @@ Possible duplication, scattered edits, misleading names, needless indirection an
 ## Evidence record
 
 Record axis, severity grounded in impact, location, requirement/rule, triggering case and supporting observation. If verification could not run, name the limitation. Prefer a few defensible findings to exhaustive speculative lists.
+
+## Selected technical depth
+
+For changed interfaces inspect caller knowledge, error/timeout behavior, retries and old consumers; use design-interfaces for a separate unresolved contract. For untrusted inputs or writes, trace trust boundaries and recovery; use review-security for a distinct bounded assessment. Check performance claims against comparable workloads through optimize-performance, rather than assuming cache or line-count changes are faster. Runtime user journeys can be verified with test-user-flows. Load only a method whose specific result is needed; these are not mandatory review stages.
+
+Preserve existing measurable quality constraints and required tests. Example thresholds from a provider are not new project requirements. Distinguish missing acceptance from a low-priority improvement; neither a complexity-only review nor a documented exception proves that an unmet criterion passed.

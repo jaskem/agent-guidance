@@ -7,3 +7,5 @@ Ready means prerequisites proven, authority established and resources available.
 An implementation can be locally checked yet await integration or device acceptance. Do not close a parent on the strength of child completion alone. For a failed or interrupted operation record the exact destination, intended delta, known saved state and uncertainty. Inspect that destination before retrying; a missing acknowledgement does not imply missing work.
 
 Fallback when parallelism is unavailable: execute ready tasks sequentially with the same acceptance and checkpoint rules. Fallback when the tracker is inaccessible: preserve a handoff where already authorized, report unrecorded state and avoid claiming the tracker changed.
+
+A review-loop limit, ruling, waived reviewer comment or worker completion only describes process state. Keep a required product check open until evidence exists or its acceptance criterion is explicitly changed by the authorized owner. Preserve ledgers, logs and reports needed to resume before any owned-workspace cleanup; ignored files are not automatically stored by Git.

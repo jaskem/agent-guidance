@@ -1,0 +1,7 @@
+interface:
+  display_name: "Grill me"
+  short_description: "Scherp een plan aan met gerichte vraagrondes"
+  default_prompt: "Gebruik $grill-me om dit plan met gerichte vraagrondes aan te scherpen."
+
+policy:
+  allow_implicit_invocation: false

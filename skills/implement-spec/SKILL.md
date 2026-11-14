@@ -17,13 +17,13 @@ Finish with authorized tasks, their true blockers and observable completion. Mis
 
 Use [task state and recovery](references/task-state.md). Re-read mutable task state before claiming it. A task is ready only when its prerequisites have acceptance evidence and its resources are available. Detect missing references and dependency cycles. Prefer accepted priority, then dependency order; explain a material departure from numbering at the task owner.
 
-Choose one coherent ready task or independent bounded tasks. Delegate only when useful and permitted, following the routed delegation playbook. Assign one writer per file, task record, browser or desktop. Separate code worktrees do not isolate shared external objects. Do not reset another worker's changes. Finish with explicit ownership and an integration point.
+Choose one coherent ready task or independent bounded tasks. Use available agents on your own initiative when this method calls for separate work or when bounded independent work or review would improve the result; no explicit user request is needed. Follow the routed delegation rules. Give each worker the relevant source, question, allowed actions, owned objects and expected evidence; keep one writer per shared object and verify the combined result in the parent. Use the actual host capabilities and model/fork rules. If agents are unavailable, continue supported work without claiming an independent review. Separate code worktrees do not isolate shared external pages, browsers or desktops. Do not reset another worker's changes. Finish with explicit ownership and an integration point.
 
 ## 3. Implement and integrate
 
 Load evidence-driven-development for each substantive change and code-review for review. Resolve their installed versions against the distribution record. If unavailable, read the recorded canonical revision; if that too is unavailable, leave the dependent work incomplete and continue independent checks. This method owns sequencing, not a second development or review procedure.
 
-Use the repository's branch/integration route. Merge or combine task results only within existing authorization, inspect the actual changes and check the combined current revision. Individual green tests do not establish integration. Record each task's implemented, checked and accepted state distinctly; keep unproven parent criteria open. Continue newly ready authorized tasks without an artificial session stop.
+Use [delivery techniques](references/delivery-techniques.md) for safe slices, isolated work, migrations and existing CI. Follow the repository's branch/integration route. Merge or combine task results only within existing authorization, inspect the actual changes and check the combined current revision. Individual green tests do not establish integration. Record each task's implemented, checked and accepted state distinctly; keep unproven parent criteria open. Continue newly ready authorized tasks without an artificial session stop.
 
 ## 4. Handle interruption and blockers
 

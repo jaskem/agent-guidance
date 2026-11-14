@@ -10,3 +10,4 @@ Describe changed interactions through starting state, action, result, cancellati
 
 Resolve grouping/layout before component polish. Map delivery slices to evidence and acceptance. Unseen dialogs, physical DPI, assistive technology and user testing stay explicit coverage gaps.
 
+Carry component state and semantics into the handoff: accessible name, keyboard activation, focus entry/return, selection and error feedback. Use the existing component/design vocabulary and central state owner. Avoid framework, file-size, spacing or breakpoint mandates copied from unrelated examples; choose values and checks that fit this product's actual platform and density.

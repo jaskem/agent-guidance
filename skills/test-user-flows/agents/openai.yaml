@@ -1,0 +1,7 @@
+interface:
+  display_name: "Gebruikershandelingen testen"
+  short_description: "Controleer echte gebruikersroutes en herstel"
+  default_prompt: "Gebruik $test-user-flows om deze gebruikershandelingen in de werkelijke app te controleren."
+
+policy:
+  allow_implicit_invocation: true

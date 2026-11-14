@@ -11,6 +11,8 @@ Follow the user's configured operating guide once per session, including its req
 
 Read the project router, relevant domain/data role and existing glossary, central concept, contract or decision record. Use their actual locations; do not impose a new glossary or ADR directory. Identify whether the current discussion changes meaning or only asks for an explanation.
 
+Use available agents on your own initiative when this method calls for separate work or when bounded independent work or review would improve the result; no explicit user request is needed. Follow the routed delegation rules. Give each worker the relevant source, question, allowed actions, owned objects and expected evidence; keep one writer per shared object and verify the combined result in the parent. Use the actual host capabilities and model/fork rules. If agents are unavailable, continue supported work without claiming an independent review.
+
 ## 2. Separate concepts using evidence
 
 List the terms causing ambiguity and their current definitions. Distinguish entity identity, display name, source identifier, ordering, representation and lifecycle. Verify statements about implemented behavior against code or data. Mark discrepancies between intended and implemented behavior without silently choosing either as the approved design.
@@ -25,7 +27,7 @@ Record a separate decision only when alternatives and the reason for choosing ma
 
 ## 4. Check use across boundaries
 
-Trace one example through source, normalized model, storage and display as relevant. Check cardinality, units, absent/unknown/error states, identity stability and compatibility. Link any implementation mismatch as a separate follow-up rather than claiming the written model is deployed.
+Trace one example through source, normalized model, storage and display as relevant. Check cardinality, units, absent/unknown/error states, identity stability and compatibility. Keep domain meaning here; use design-interfaces for a separate caller-contract decision about inputs, errors, retries or compatibility. Link implementation mismatches as follow-up rather than claiming the written model is deployed.
 
 Finish with resolved terms, remaining decision if any and concrete proof cases. Load only roles needed for material risks.
 
