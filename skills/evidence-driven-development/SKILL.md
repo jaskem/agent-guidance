@@ -15,10 +15,13 @@ Locate the existing issue, plan or checkpoint before creating another. Write a c
 
 Complete this step when the target behavior and its owning source are identifiable. If a required source is unavailable, continue independent work and mark the dependent claim unverified.
 
+Use available agents on your own initiative when this method calls for separate work or when bounded independent work or review would improve the result; no explicit user request is needed. Follow the routed delegation rules. Give each worker the relevant source, question, allowed actions, owned objects and expected evidence; keep one writer per shared object and verify the combined result in the parent. Use the actual host capabilities and model/fork rules. If agents are unavailable, continue supported work without claiming an independent review.
+
 ## 2. Choose the branch
 
 - **Reported bug or regression:** read [diagnosis](references/diagnosis.md), then reproduce the reported symptom before claiming a cause or a fix.
-- **Feature or refactor:** choose one usable slice through the relevant public interface. Retain existing domain terms and interfaces unless changing them is part of the request. Compare simpler alternatives when the interface or dependency direction changes. Keep detailed internals behind a small understandable interface.
+- **Feature or refactor:** choose one usable slice through the relevant public interface. Retain domain terms and interfaces unless their change is authorized. Use [engineering techniques](references/engineering-techniques.md) for behavior-preserving simplification, migrations, CI and UI work; load only the relevant section. Keep complexity behind an understandable interface.
+- **Distinct assessment:** use design-interfaces for an unresolved caller contract, review-security for a bounded security assessment, optimize-performance for a measured performance investigation and test-user-flows for real user-route evidence. They contribute their specific result; this method retains ownership of an authorized code change.
 - **Review only:** load the `code-review` method and follow its review-only route; do not start implementation.
 
 ## 3. Implement and observe

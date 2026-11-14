@@ -1,0 +1,7 @@
+interface:
+  display_name: "Release voorbereiden"
+  short_description: "Controleer distributie, acceptatie en herstel"
+  default_prompt: "Gebruik $prepare-release om deze release en de herstelroute controleerbaar voor te bereiden."
+
+policy:
+  allow_implicit_invocation: true

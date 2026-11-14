@@ -1,0 +1,7 @@
+interface:
+  display_name: "Teksten uitwerken"
+  short_description: "Werk materiaal uit tot een passend tekstconcept"
+  default_prompt: "Gebruik $write-content om dit materiaal tot de gevraagde tekst uit te werken."
+
+policy:
+  allow_implicit_invocation: true

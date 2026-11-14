@@ -7,15 +7,17 @@ description: Audit an existing interface from screenshots, a running app or UI s
 
 ## 1. Fix the target and evidence
 
-Read the applicable project instructions and existing task owner. Establish the audience, product job, accepted scope and two or three important tasks from supplied context. Preserve unresolved questions; proceed with supported inspection when answers are unavailable.
+Follow the configured operating guide once per session and its active tool-call version. Read the relevant project instructions and existing task owner; reuse verified context and refresh only material changes. Establish the audience, product job, accepted scope and important tasks from supplied context. Preserve unresolved questions and continue independently supported inspection when a source is inaccessible.
 
 Inventory actual screenshots, running surface and source separately. Record version/commit, state, viewport, scale when known and whether data is representative or synthetic. Historical screenshots support a dated baseline, not current behavior. Finish with a bounded target, task list and evidence inventory.
+
+Use available agents on your own initiative when this method calls for separate work or when bounded independent work or review would improve the result; no explicit user request is needed. Follow the routed delegation rules. Give each worker the relevant source, question, allowed actions, owned objects and expected evidence; keep one writer per shared object and verify the combined result in the parent. Use the actual host capabilities and model/fork rules. If agents are unavailable, continue supported work without claiming an independent review.
 
 ## 2. Inspect the interface
 
 Open the images or running views, rather than inferring their content from filenames. Inspect an overview and readable detail for each selected state. Compare empty, representative and dense/error states when available. Apply [review criteria](references/criteria.md) to the target tasks.
 
-For screenshots, record visible observations and usability hypotheses. For source, cite exact locations. For interaction claims, exercise the control when available and record starting state, action and observed result. Classify inaccessible checks as untested. A passing code check, static image or independent reviewer does not establish user validation.
+For screenshots, record visible observations and usability hypotheses. For source, cite exact locations. For interaction claims, exercise the control and record starting state, action and observed result; use test-user-flows for a distinct runtime journey. Classify inaccessible checks as untested and continue independent views. A passing code check, static image or independent reviewer does not establish user validation.
 
 Finish when each selected view has a recorded observation or coverage gap. Retain working patterns that proposed changes should preserve.
 
@@ -36,4 +38,3 @@ Summarize strengths, priority findings and untested coverage at the existing pro
 Finish with a reviewable audit and next checks. For visual proposals use design-ui-improvements when available; for implementation plans use the existing planning method and tracker. This audit itself makes no production changes.
 
 For provenance or updates, read [sources](references/sources.md).
-

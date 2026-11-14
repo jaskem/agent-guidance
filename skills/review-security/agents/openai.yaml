@@ -1,0 +1,7 @@
+interface:
+  display_name: "Beveiliging beoordelen"
+  short_description: "Beoordeel concrete risico’s en hun echte bewijs"
+  default_prompt: "Gebruik $review-security om de beveiligingsrisico’s in deze wijziging te beoordelen."
+
+policy:
+  allow_implicit_invocation: true

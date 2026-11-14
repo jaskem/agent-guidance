@@ -1,6 +1,6 @@
 # Skill workflow
 
-This document owns packaging and distribution of this repository's optional skills. Consumer workflows and the shared-guidance contract retain their existing authority.
+This document owns packaging and distribution of the coherent 24-method skillset in skills/catalog.json. Consumer workflows and the shared-guidance contract retain their existing authority.
 
 ## Sources and destinations
 
@@ -13,7 +13,7 @@ This document owns packaging and distribution of this repository's optional skil
 | Installable engineering methods | `skills/<name>/` and `skills/catalog.json` here | Host personal-skill installations and private Notion Skill distributions |
 | Context and documents without a repository owner | Existing private document/memory destinations | Avoid independently maintained copies |
 
-For these repository-owned skills, GitHub is the source and Notion is a distribution. This exception prevents a second editable master. A separate personal skill can have Notion as its owner; record that choice before creating copies.
+For these repository-owned skills, GitHub is the source and Notion is a distribution. This exception prevents a second editable master. The catalog now includes the former independently managed grill-me. Future unrelated personal skills may have another explicit owner, but they do not enter this collection implicitly.
 
 ## Selecting a method
 
@@ -25,7 +25,7 @@ Start with the configured context route in [METHOD-ROUTING.md](METHOD-ROUTING.md
 - Ordinary explanation or small editorial change: use repository instructions; do not initiate a development ceremony.
 - Planning-only: retain the user's planning boundary. A skill never supplies implementation, merge, deployment or scheduling permission.
 
-Packages permit implicit selection when their descriptions match. The host may cache its skill list. Being present in GitHub, installed, enabled and actually loaded are distinct states. If the same name is available from a personal installation and Notion, use one source for the task, not both. Check recorded revision/hash if they disagree; do not automatically prefer the more recently edited copy.
+Packages permit implicit selection when their descriptions match, except grill-me which remains explicitly requested. Select agents autonomously when useful or required by the method; no separate user request for subagents is needed. Preserve scoped authority and verify their integration. The host may cache its skill list. Being present in GitHub, installed, enabled and actually loaded are distinct states. If the same name is available from a personal installation and Notion, use one source for the task, not both. Check recorded revision/hash if they disagree; do not automatically prefer the more recently edited copy.
 
 ## Authoring and updating
 
@@ -38,6 +38,8 @@ Packages permit implicit selection when their descriptions match. The host may c
 7. For Notion, create real Skills, including every supporting file. Enable and read back them. A plain document or database row is not a skill installation. Use the same package bytes; place installation provenance in the distribution record rather than modifying the packaged method separately.
 
 An upstream update is a candidate for review, never a silent replacement. Preserve user changes, compare to the last imported version and resolve material conflicts. Stop only the blocked operation if tools or sources are unavailable; report the actual limitation. Do not broaden scheduled maintenance to GitHub or skill upgrades without a separate schedule authorization.
+
+Reconcile the complete active Notion Skills database against the catalog, not only the enabled list. Reuse existing member pages, import complete packages and enable matching automatic/connected-agent settings. Disable or archive a non-member only when identified, preserving recoverable source history and unrelated content. Provider originals remain outside the active catalog; removing their apps requires an explicit removal request.
 
 Readback must account for host serialization: Notion exports may add a page ID and use block-style YAML scalars; personal-skill hosts may regenerate UI metadata and icons. Compare method bodies, parsed name/description and supporting references against the canonical package, and record host-owned differences separately. Put literal filenames in inline code so rich-text imports do not turn them into unintended web links.
 

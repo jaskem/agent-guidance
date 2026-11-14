@@ -2,5 +2,6 @@ interface:
   display_name: "Prototype"
   short_description: "Test a design question with a small demo"
   default_prompt: "Use $prototype to compare this interaction before building it."
+
 policy:
   allow_implicit_invocation: true

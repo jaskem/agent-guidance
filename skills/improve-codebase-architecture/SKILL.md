@@ -13,6 +13,8 @@ Identify the maintenance problem, actual source revision, relevant contracts and
 
 Finish with an inspected area, a concrete change scenario and preserved constraints. An architecture investigation does not authorize implementing its proposals.
 
+Use available agents on your own initiative when this method calls for separate work or when bounded independent work or review would improve the result; no explicit user request is needed. Follow the routed delegation rules. Give each worker the relevant source, question, allowed actions, owned objects and expected evidence; keep one writer per shared object and verify the combined result in the parent. Use the actual host capabilities and model/fork rules. If agents are unavailable, continue supported work without claiming an independent review.
+
 ## 2. Trace the cost of change
 
 Follow representative callers, data/state ownership, dependencies and failure/recovery paths. Locate where one change must be repeated, where callers must know implementation details and where useful tests cannot exercise the real path. Cite files and the inspected revision. Use [design criteria](references/design-criteria.md) to distinguish useful encapsulation from extra indirection.
@@ -23,7 +25,7 @@ Separate observed coupling or duplication from an untested maintenance hypothesi
 
 Compare retaining the current design with the smallest useful change. For a consequential unresolved interface, explore materially different alternatives only when they could change the recommendation. Include caller knowledge, dependency direction, state/error ownership, compatibility, migration and verification cost. Consider simpler functions or clearer names before new layers, adapters or languages.
 
-Draw inspectable before/after relationships using the supported diagram or document format; inspect rendered artifacts when producing a file. Mark proposed structures separately from actual code. Retain existing domain vocabulary and load domain-modeling only for unresolved meaning. Finish with a recommendation, counterarguments and evidence needed to decide.
+Draw inspectable before/after relationships using the supported diagram or document format; inspect rendered artifacts when producing a file. Mark proposals separately from actual code. Retain domain vocabulary; use domain-modeling only for unresolved meaning and design-interfaces for a distinct unresolved caller contract. Finish with a recommendation, counterarguments and evidence needed to decide.
 
 ## 4. Close the investigation
 

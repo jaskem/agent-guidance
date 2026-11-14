@@ -13,6 +13,8 @@ Read the current request, applicable `AGENTS.md` and referenced workflow. Invent
 
 Load an existing instruction-feedback playbook when routed. Reuse its observation record and owner rules. Do not start a competing maintenance backlog.
 
+Use available agents on your own initiative when this method calls for separate work or when bounded independent work or review would improve the result; no explicit user request is needed. Follow the routed delegation rules. Give each worker the relevant source, question, allowed actions, owned objects and expected evidence; keep one writer per shared object and verify the combined result in the parent. Use the actual host capabilities and model/fork rules. If agents are unavailable, continue supported work without claiming an independent review.
+
 ## 2. Diagnose useful changes
 
 For each material issue, record observed effect, exact source, responsible owner, minimal repair and a concrete case that would reveal recurrence. Distinguish observed defects from untested improvement hypotheses. Use [design criteria](references/design-criteria.md) to assess triggering, steps, completion, context cost and overlap.
@@ -33,7 +35,7 @@ Use the host's skill-authoring and installation workflow. When GitHub owns the s
 
 Run the existing repository and host checks for the touched surface. Check descriptions, local references, package completeness and invocation metadata. Exercise representative positive, negative and missing-input cases. For substantial revisions use fresh-context forward tests when delegation is available and authorized, following the selected delegation playbook. Without that playbook, keep the trial read-only with a bounded task and raw artifacts, no expected answer, and verify the returned evidence. Without an independent run, label the check a walkthrough.
 
-Structure checks prove structure, not reasoning reliability. Record behavioral observations separately. Resolve findings before installation and verify the saved remote package and enabled state before claiming availability. On uncertain writes, inspect the target before retrying.
+Structure checks prove structure, not reasoning reliability. Read [behavioral checks](references/behavioral-checks.md) for baseline, missing-input and negative cases when method behavior changes. Resolve material findings before installation. Verify the saved complete package, invocation policy and current catalog against the published owner; enabling a name alone is not proof of current content. On uncertain writes, inspect the target before retrying.
 
 ## 5. Report and hand off
 

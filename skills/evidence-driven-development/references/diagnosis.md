@@ -6,3 +6,7 @@
 4. Change one relevant variable per probe. For performance use before/after measurements under comparable conditions. Keep credentials and private payloads out of logs and reports.
 5. Fix the supported cause and exercise both the reduced case and original scenario. Add a durable regression check at the real boundary if one is available. If the environment cannot reproduce the bug, report exactly what is missing; do not claim causal certainty or successful repair. Continue independent inspection or a clearly labelled provisional change only within authorized scope.
 6. Remove temporary instrumentation. Record any missing test boundary as a concrete limitation, not as proof that the symptom is fixed.
+
+When an intermittent or asynchronous symptom depends on readiness, wait for the actual observable condition with a bounded timeout; do not “fix” it by merely increasing a delay. Trace incorrect values backward to the first boundary that supplied them, then check the entrypoint and environment that made the state possible.
+
+Choose diagnostics from the unresolved question. Correlate related operations with a safe run/request/object identifier, record the relevant phase and result, and bound log volume/cardinality. Local desktop logs can be sufficient; a service log platform is not mandatory. Preserve privacy and remove temporary probes after the useful evidence is retained.

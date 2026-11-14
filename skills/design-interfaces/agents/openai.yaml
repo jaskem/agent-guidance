@@ -1,0 +1,7 @@
+interface:
+  display_name: "Interfaces ontwerpen"
+  short_description: "Maak duidelijke en controleerbare callercontracten"
+  default_prompt: "Gebruik $design-interfaces om dit callercontract met concrete gevallen uit te werken."
+
+policy:
+  allow_implicit_invocation: true

@@ -17,13 +17,13 @@ Read the applicable router and originating requirements, accepted decisions and 
 
 Use [review axes](references/axes.md). Requirements review checks missing, incorrect and unrequested behavior. Quality review checks correctness, maintainability and applicable repository rules. Inspect the real call paths and existing tests; passing tests are evidence for their cases, not proof the requirements are met.
 
-Use a separate fresh-context reviewer when material risk or an independent question justifies it and delegation is available and authorized; change size alone is insufficient. Follow the selected delegation playbook. If unavailable, give the reviewer a bounded read-only question, exact base/head, relevant requirements and raw evidence; verify its findings before integration. Assess both axes even with one reviewer. Distinguish self-review, separate-agent review with shared context and fresh-context review; loading this skill alone establishes none of that independence.
+Use available agents on your own initiative when this method calls for separate work or when bounded independent work or review would improve the result; no explicit user request is needed. Follow the routed delegation rules. Give each worker the relevant source, question, allowed actions, owned objects and expected evidence; keep one writer per shared object and verify the combined result in the parent. Use the actual host capabilities and model/fork rules. If agents are unavailable, continue supported work without claiming an independent review. Choose a separate fresh-context review for an important independent question, not merely because a diff is large. Supply raw evidence rather than expected findings. Assess both review axes even with one reviewer; distinguish self-review, shared-context agent review and a genuinely fresh-context review.
 
 ## 3. Substantiate findings
 
 For each material finding cite the changed location, relevant requirement or rule, concrete failure scenario and impact. Distinguish observed failures, code-supported risks and unverified hypotheses. Check whether a proposed finding is already handled elsewhere before reporting it. Treat design heuristics as judgments, not automatic violations. Prefer executable checks for mechanically detectable defects.
 
-Do not edit code during a review-only request. When fixes are authorized, preserve the review baseline, apply bounded fixes through the execution workflow, then recheck affected findings and changed head. Do not approve a different revision using earlier evidence.
+Do not edit code during a review-only request. Use [review feedback](references/review-feedback.md) when assessing comments or proposed fixes. When fixes are authorized, preserve the review baseline, apply bounded fixes through the execution workflow, then recheck affected findings and changed head. Do not approve a different revision using earlier evidence.
 
 ## 4. Report actionable results
 

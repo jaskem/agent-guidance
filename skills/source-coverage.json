@@ -1,0 +1,899 @@
+{
+  "schema_version": 1,
+  "reviewed_date": "2026-11-14",
+  "mode": "original-adaptation",
+  "sources": [
+    {
+      "provider": "agent-skills",
+      "installed_version": "0.6.10",
+      "installed_main_count": 25,
+      "repository": "https://github.com/addyosmani/agent-skills",
+      "license": "MIT",
+      "copyright": "2025 Addy Osmani",
+      "license_sha256": "6f202f8bd568cd730dbb2b0d1f8e243bc74c2fa1f64dbce9b2c7ea08bd5c9fd7",
+      "plugin_manifest_sha256": "0a834d5f52e7fafae8bd596593b5ed5333b563ee2c6fc04f5093b12840f46ec1",
+      "reviewed_upstream_commit": "6ca0cd7db39b41b1c37e26d335c507ee92382c6d",
+      "pin_evidence": "reviewed tree declared by Engineering Suite lock; installed main files differ",
+      "installed_tree_manifest_sha256": "707ea6f840c27721b19eac20c2a8ed35dca25a2635d641839184af3c1ab8f9eb"
+    },
+    {
+      "provider": "mattpocock-skills",
+      "installed_version": "1.2.3",
+      "installed_main_count": 35,
+      "repository": "https://github.com/mattpocock/skills",
+      "license": "MIT",
+      "copyright": "2026 Matt Pocock",
+      "license_sha256": "0e7ac423bf2c6e223b7c5b156f8cf72da49d748e56a1641402c31f22ad07dbb5",
+      "plugin_manifest_sha256": "fe36cdb66408a6db4b08c3bbb5f5541bf708e51e52807cb0bcb23d52870bcb63",
+      "reviewed_upstream_commit": "3cca18b368ae95cdbdebbff572ccafa662551015",
+      "pin_evidence": "reviewed tree declared by Engineering Suite lock; installed main files differ",
+      "installed_tree_manifest_sha256": "c499f8cb110a5f91c47b3b78dee7914ead52b3e9f9ec39e439a8d9f6e07325d7"
+    },
+    {
+      "provider": "engineering-suite-ponytail",
+      "installed_version": "2.0.0",
+      "installed_main_count": 8,
+      "repository": "https://github.com/DietrichGebert/ponytail",
+      "license": "MIT",
+      "copyright": "2026 DietrichGebert; 2026 Engineering Suite contributors",
+      "license_sha256": "cf528a33542cc035fc8063e7e924505d4b8464f4361d9ef18f6728918594254f",
+      "plugin_manifest_sha256": "a10c8ade62558486c5356827235484ebf31fddf8e0f0e6081f1241dc6113f6ef",
+      "reviewed_upstream_commit": "356918eba965ee1eac64bd3a7f0dd02108350de5",
+      "pin_evidence": "reviewed tree declared by this package lock; installed six Ponytail main files differ",
+      "installed_tree_manifest_sha256": "beb848823e4a944c9dc3646b071b35429e8e80272f26fdbf9f0449f279c45e2c"
+    },
+    {
+      "provider": "superpowers",
+      "installed_version": "7.0.1",
+      "installed_main_count": 15,
+      "repository": "https://github.com/obra/superpowers",
+      "license": "MIT",
+      "copyright": "2025 Jesse Vincent",
+      "license_sha256": "a37e0e9697144819e1d965176ac4ae5bc3fa02d11e7812036bbcadf6dafe2400",
+      "plugin_manifest_sha256": "1a8ddab7b9b6d8c5077a3a4b3a3b4efb8e4fc50e3b60430f5ea7e662b7974577",
+      "reviewed_upstream_commit": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
+      "pin_evidence": "verified v7.0.1 tag; all 15 installed main files byte-identical Git blob hashes",
+      "installed_tree_manifest_sha256": "cc99756896a6c3e8232e51c94f37d6395209d255472e63a0ce4491e580822f9e"
+    }
+  ],
+  "expected_source_counts": {
+    "agent-skills": 25,
+    "mattpocock-skills": 35,
+    "engineering-suite-ponytail": 8,
+    "superpowers": 15
+  },
+  "previous_personal_count": 18,
+  "active_collection_count": 24,
+  "mapping": [
+    {
+      "source": "agent-skills:api-and-interface-design",
+      "destination": "design-interfaces",
+      "resource": "references/contract-cases.md",
+      "mode": "integrate",
+      "reason": "Afzonderlijk publiek callercontract; errors, mutaties, idempotentie en compatibiliteit.",
+      "installed_version": "0.6.10",
+      "main_sha256": "e4aad34c78d7f582e380e79583af72ec151f7e6c680e70771421b52ad7c55a56",
+      "evidence_path": "skills/design-interfaces/references/contract-cases.md"
+    },
+    {
+      "source": "agent-skills:browser-testing-with-devtools",
+      "destination": "test-user-flows",
+      "resource": "references/flow-evidence.md",
+      "mode": "integrate",
+      "reason": "Echte gebruikershandelingen, DOM/console/netwerk/focus met beschikbare tools; geen aangenomen DevTools-service.",
+      "installed_version": "0.6.10",
+      "main_sha256": "adf18a884c3ad8c83d5fdfce48e77cc38f98fdc90cb8af0521a868e6e4ea0123",
+      "evidence_path": "skills/test-user-flows/references/flow-evidence.md"
+    },
+    {
+      "source": "agent-skills:ci-cd-and-automation",
+      "destination": "evidence-driven-development",
+      "resource": "references/engineering-techniques.md",
+      "mode": "integrate",
+      "reason": "Bestaande repo-pipeline veilig wijzigen of herstellen binnen de geautoriseerde wijziging.",
+      "installed_version": "0.6.10",
+      "main_sha256": "1c687b34cee3f4c619e8a3b651fc5b33a79268192f7e3abc9be9c4d906966087",
+      "evidence_path": "skills/evidence-driven-development/references/engineering-techniques.md"
+    },
+    {
+      "source": "agent-skills:code-review-and-quality",
+      "destination": "code-review",
+      "resource": "references/axes.md",
+      "mode": "integrate",
+      "reason": "Eén revieweigenaar met vaste vergelijking en geldende kwaliteitseisen.",
+      "installed_version": "0.6.10",
+      "main_sha256": "cc444bb3f584debfc1a3f4aa5f006ae8c4dce1ccb684b42862e3c9e891436fe5",
+      "evidence_path": "skills/code-review/references/axes.md"
+    },
+    {
+      "source": "agent-skills:code-simplification",
+      "destination": "improve-codebase-architecture",
+      "resource": "references/design-criteria.md",
+      "mode": "integrate",
+      "reason": "Complexiteit aantoonbaar verminderen met behoud van caller-, fout- en datagedrag; uitvoering pas indien geautoriseerd.",
+      "installed_version": "0.6.10",
+      "main_sha256": "18fb13840092191979179abd31b1b9b26e51fabd35e3c534bcac2b16ceb0650b",
+      "evidence_path": "skills/improve-codebase-architecture/references/design-criteria.md"
+    },
+    {
+      "source": "agent-skills:constraint-driven-development",
+      "destination": "code-review",
+      "resource": "references/axes.md",
+      "mode": "integrate",
+      "reason": "Bestaande projectgrenzen bewaken; geen leveranciersgetallen of ongeteste floor-guard overnemen.",
+      "installed_version": "0.6.10",
+      "main_sha256": "2d7617580887353d3da657101382cae610bb40d3d4b54aaafa96bed205c89d08",
+      "evidence_path": "skills/code-review/references/axes.md"
+    },
+    {
+      "source": "agent-skills:context-engineering",
+      "destination": "maintain-agent-instructions",
+      "resource": "references/design-criteria.md",
+      "mode": "integrate",
+      "reason": "Bestaande entrypoints herstellen in plaats van parallelle regels of verplichte sessie-inventarissen.",
+      "installed_version": "0.6.10",
+      "main_sha256": "2ed560e1054e266d75542f60d7b1e75726a4128a56577de1b5d616abda387eea",
+      "evidence_path": "skills/maintain-agent-instructions/references/design-criteria.md"
+    },
+    {
+      "source": "agent-skills:debugging-and-error-recovery",
+      "destination": "evidence-driven-development",
+      "resource": "references/diagnosis.md",
+      "mode": "integrate",
+      "reason": "Reproductie, hypothesen, oorzaak en herstel; één diagnoseproces.",
+      "installed_version": "0.6.10",
+      "main_sha256": "09d9d349985359789c31ee9ebaff30c92843531b861342313d4a722759879364",
+      "evidence_path": "skills/evidence-driven-development/references/diagnosis.md"
+    },
+    {
+      "source": "agent-skills:deprecation-and-migration",
+      "destination": "evidence-driven-development",
+      "resource": "references/engineering-techniques.md",
+      "mode": "integrate",
+      "reason": "Werkelijke consumers, compatibiliteit en herstel; omgeving bepaalt uitrolvorm.",
+      "installed_version": "0.6.10",
+      "main_sha256": "4ee7db005e1517216945ef3d1c638ea8a7ed6e8d9a9150b159ec1b00e7539f1e",
+      "evidence_path": "skills/evidence-driven-development/references/engineering-techniques.md"
+    },
+    {
+      "source": "agent-skills:documentation-and-adrs",
+      "destination": "plan-work",
+      "resource": "references/records.md",
+      "mode": "integrate",
+      "reason": "Behoud compacte besluitregistratie bij bestaande bron; gebruik als naslag van actieve taak, niet als extra planfase.",
+      "installed_version": "0.6.10",
+      "main_sha256": "08abbaf9ff6453cff730056576f8a16e93bd2a94280c81385bedf01f92765a69",
+      "evidence_path": "skills/plan-work/references/records.md"
+    },
+    {
+      "source": "agent-skills:doubt-driven-development",
+      "destination": "code-review",
+      "resource": "references/axes.md",
+      "mode": "integrate",
+      "reason": "Gerichte onafhankelijke tegenspraak op een consequentiale claim; geen verplicht kruis-modelritueel.",
+      "installed_version": "0.6.10",
+      "main_sha256": "156bd9d433a91ff77a13fd482a140a2ea5fa03de8a9b93eb7d4d3d62a256a967",
+      "evidence_path": "skills/code-review/references/axes.md"
+    },
+    {
+      "source": "agent-skills:frontend-ui-engineering",
+      "destination": "evidence-driven-development",
+      "resource": "references/engineering-techniques.md",
+      "mode": "integrate",
+      "reason": "UI uitvoeren met huidige identiteit, states, semantiek en toegankelijkheid; geen generiek framework opleggen.",
+      "installed_version": "0.6.10",
+      "main_sha256": "789475d42b87d20d7b035abdb817bddf9cd76170356d0b992d6879b2d62dc42f",
+      "evidence_path": "skills/evidence-driven-development/references/engineering-techniques.md"
+    },
+    {
+      "source": "agent-skills:git-workflow-and-versioning",
+      "destination": "evidence-driven-development",
+      "resource": "references/engineering-techniques.md",
+      "mode": "integrate",
+      "reason": "Werkelijke beginstaat, eigen scope en oorspronkelijke wijzigingen behouden; geen stage-all of hard reset.",
+      "installed_version": "0.6.10",
+      "main_sha256": "eb3b8d01715c31a0d78b6b8a921932e943dc19e66e85a5cf1b90457674a699c0",
+      "evidence_path": "skills/evidence-driven-development/references/engineering-techniques.md"
+    },
+    {
+      "source": "agent-skills:idea-refine",
+      "destination": "plan-work",
+      "resource": "references/records.md",
+      "mode": "integrate",
+      "reason": "Nog onduidelijk idee begrenzen en echte alternatieven vergelijken; bestaande besluiten hergebruiken.",
+      "installed_version": "0.6.10",
+      "main_sha256": "1f9b24c25883ed0cce6317aaf28c6cd768d3062496a89bbd893596094c562d08",
+      "evidence_path": "skills/plan-work/references/records.md"
+    },
+    {
+      "source": "agent-skills:incremental-implementation",
+      "destination": "implement-spec",
+      "resource": "references/task-state.md",
+      "mode": "integrate",
+      "reason": "Werkelijke taakafhankelijkheden en bruikbare slices; bestaande tracker blijft eigenaar.",
+      "installed_version": "0.6.10",
+      "main_sha256": "c4730a840ef5f6aaeb5b7b8fbd9062e1ed28cfef5422d121b59e195503e4ed13",
+      "evidence_path": "skills/implement-spec/references/task-state.md"
+    },
+    {
+      "source": "agent-skills:interview-me",
+      "destination": "grill-me",
+      "resource": "references/rounds.md",
+      "mode": "integrate",
+      "reason": "Interviewtechnieken voor expliciet gevraagd grillen; normale ontbrekende beslisvragen blijven bij de actieve methode.",
+      "installed_version": "0.6.10",
+      "main_sha256": "19986cec813083dbb37261f10b976f4de6f2c1a9aeebeeb2f207aca728d84cb1",
+      "evidence_path": "skills/grill-me/references/rounds.md"
+    },
+    {
+      "source": "agent-skills:observability-and-instrumentation",
+      "destination": "evidence-driven-development",
+      "resource": "references/diagnosis.md",
+      "mode": "integrate",
+      "reason": "Vertrek van diagnostische vragen en minimale signalen; lokale logs kunnen volstaan.",
+      "installed_version": "0.6.10",
+      "main_sha256": "89efd8d422a1de7e411646089d7e6f931e87328b9482de543fbef3f01afa4469",
+      "evidence_path": "skills/evidence-driven-development/references/diagnosis.md"
+    },
+    {
+      "source": "agent-skills:performance-optimization",
+      "destination": "optimize-performance",
+      "resource": "references/measurement.md",
+      "mode": "integrate",
+      "reason": "Meetbare baseline, representatieve belasting, spreiding, profilering en effect plus regressierisico.",
+      "installed_version": "0.6.10",
+      "main_sha256": "af26d6e86e8c7dd509095ae0b23c82186128b41a5436df7e82fb2e18b485d326",
+      "evidence_path": "skills/optimize-performance/references/measurement.md"
+    },
+    {
+      "source": "agent-skills:planning-and-task-breakdown",
+      "destination": "plan-work",
+      "resource": "references/records.md",
+      "mode": "integrate",
+      "reason": "Eén plan- en taakeigenaar, toetsbare resultaten en echte afhankelijkheden.",
+      "installed_version": "0.6.10",
+      "main_sha256": "f4896186864358598850f334cf3d4edbf251bd51b22d2a827c0a80b2c17073c3",
+      "evidence_path": "skills/plan-work/references/records.md"
+    },
+    {
+      "source": "agent-skills:security-and-hardening",
+      "destination": "review-security",
+      "resource": "references/threat-cases.md",
+      "mode": "integrate",
+      "reason": "Dreigingen en grenzen van werkelijke lokale/web/integratiesystemen afgebakend beoordelen.",
+      "installed_version": "0.6.10",
+      "main_sha256": "b2d680123e2a70faafc559bbaecc9568e9d94255ab33b012e53938c969206125",
+      "evidence_path": "skills/review-security/references/threat-cases.md"
+    },
+    {
+      "source": "agent-skills:shipping-and-launch",
+      "destination": "prepare-release",
+      "resource": "references/readiness.md",
+      "mode": "integrate",
+      "reason": "Werkelijke runtime, packaging, distributie en terugval; geen verplichte service-infrastructuur.",
+      "installed_version": "0.6.10",
+      "main_sha256": "5bb5c4a7f895cf59c014bcb91623daec9342209fc3485acb57b97ee74011e770",
+      "evidence_path": "skills/prepare-release/references/readiness.md"
+    },
+    {
+      "source": "agent-skills:source-driven-development",
+      "destination": "research",
+      "resource": "references/evidence-record.md",
+      "mode": "integrate",
+      "reason": "Versiegebonden primaire bronnen en geldigheidsgrens; gerichte naslag voor de actieve taak.",
+      "installed_version": "0.6.10",
+      "main_sha256": "a21c317ac41ccb015af7ad47c6cdad38f7f06f86974bf1ec96bd61875d0dee95",
+      "evidence_path": "skills/research/references/evidence-record.md"
+    },
+    {
+      "source": "agent-skills:spec-driven-development",
+      "destination": "plan-work",
+      "resource": "references/records.md",
+      "mode": "integrate",
+      "reason": "Bestaande geldige specificaties meetellen; alleen ontbrekende materiële scope uitwerken.",
+      "installed_version": "0.6.10",
+      "main_sha256": "08f1082660bf88af995995fd0c1672e08e11102be6d74cb275f462e390162853",
+      "evidence_path": "skills/plan-work/references/records.md"
+    },
+    {
+      "source": "agent-skills:test-driven-development",
+      "destination": "evidence-driven-development",
+      "resource": "references/engineering-techniques.md",
+      "mode": "integrate",
+      "reason": "Onderscheidende gedrags-/regressietests waar nodig; geen vaste pyramid/coveragequota.",
+      "installed_version": "0.6.10",
+      "main_sha256": "ea64de59c80d8cfe12b7acdfcaa73b1ab4fbd46a4a1b9800b7ce2a7f0cabf7ea",
+      "evidence_path": "skills/evidence-driven-development/references/engineering-techniques.md"
+    },
+    {
+      "source": "agent-skills:using-agent-skills",
+      "destination": "central-router",
+      "resource": "docs/METHOD-ROUTING.md",
+      "mode": "replace-wrapper",
+      "reason": "Dubbele altijd-aan procesrouter vervalt; één catalogus en huidige Guide selecteren de taak.",
+      "installed_version": "0.6.10",
+      "main_sha256": "58ca7a7ffecd5f5b97a31171243c7d3e14a3fc9ebbf19e80cefb0f7a49637f4e",
+      "evidence_path": "docs/METHOD-ROUTING.md"
+    },
+    {
+      "source": "mattpocock-skills:ask-matt",
+      "destination": "central-router",
+      "resource": "docs/METHOD-ROUTING.md",
+      "mode": "replace-wrapper",
+      "reason": "Keuzelogica vervalt als apart verplicht pakket; gewone intentie kiest één procedure. Expliciete Matt-pluginvraag kan nog naar geïnstalleerde vendorrouter binnen diens echte voorwaarden.",
+      "installed_version": "1.2.3",
+      "main_sha256": "305c8766eed0438586ceeb75723c4dbe3a349baec1393f8b8736c192372609d6",
+      "evidence_path": "docs/METHOD-ROUTING.md"
+    },
+    {
+      "source": "mattpocock-skills:claude-handoff",
+      "destination": "handoff",
+      "resource": "references/record.md",
+      "mode": "integrate",
+      "reason": "Behoud overdrachtscontract en werkelijke middelen; geen Claude-CLI of backgroundwerk veronderstellen.",
+      "installed_version": "1.2.3",
+      "main_sha256": "385effaec30c966e939435e08b2343b22c6d19f1015703a189d0ba9ae40684c8",
+      "evidence_path": "skills/handoff/references/record.md"
+    },
+    {
+      "source": "mattpocock-skills:code-review",
+      "destination": "code-review",
+      "resource": "references/axes.md",
+      "mode": "integrate",
+      "reason": "Vaste volledige taakvergelijking en afzonderlijke requirements/kwaliteit; geen review alleen tot HEAD als werk niet gecommit is.",
+      "installed_version": "1.2.3",
+      "main_sha256": "f8ed47235bf549f054ffc790f475a292ee8f9b1151691d104e05136d0b5fa187",
+      "evidence_path": "skills/code-review/references/axes.md"
+    },
+    {
+      "source": "mattpocock-skills:codebase-design",
+      "destination": "improve-codebase-architecture",
+      "resource": "references/design-criteria.md",
+      "mode": "integrate",
+      "reason": "Diepe modules, minimale callerkennis en begrijpelijke grenzen.",
+      "installed_version": "1.2.3",
+      "main_sha256": "719b98188a9f45b238d2824a49dfe17a952f79cf2b69ca6b4d1827c41be2c3ba",
+      "evidence_path": "skills/improve-codebase-architecture/references/design-criteria.md"
+    },
+    {
+      "source": "mattpocock-skills:diagnosing-bugs",
+      "destination": "evidence-driven-development",
+      "resource": "references/diagnosis.md",
+      "mode": "integrate",
+      "reason": "Reproductie en oorzaakevidence in de bestaande ontwikkelmethode.",
+      "installed_version": "1.2.3",
+      "main_sha256": "4c725f494cd2fe5c4574f8028e3057ae0401efbf6ebdb0deb4850e8378917c17",
+      "evidence_path": "skills/evidence-driven-development/references/diagnosis.md"
+    },
+    {
+      "source": "mattpocock-skills:domain-modeling",
+      "destination": "domain-modeling",
+      "resource": "references/semantic-records.md",
+      "mode": "integrate",
+      "reason": "Identiteit, begrippen en invarianten bij bestaande domeineigenaar.",
+      "installed_version": "1.2.3",
+      "main_sha256": "b46423f91d806d5957d1c9e2a532880776bfebc10af8824a70b1ca6d8b4c215f",
+      "evidence_path": "skills/domain-modeling/references/semantic-records.md"
+    },
+    {
+      "source": "mattpocock-skills:git-guardrails-claude-code",
+      "destination": "evidence-driven-development",
+      "resource": "references/engineering-techniques.md",
+      "mode": "integrate",
+      "reason": "Alleen een werkelijk gevraagde passende hooksetup; huidige host en projectbeleid vooraf vaststellen.",
+      "installed_version": "1.2.3",
+      "main_sha256": "55c6b6191660c50754e845c8f04a9e85fa25495a714a64cc8821727c4b4267fa",
+      "evidence_path": "skills/evidence-driven-development/references/engineering-techniques.md"
+    },
+    {
+      "source": "mattpocock-skills:grill-me",
+      "destination": "grill-me",
+      "resource": "SKILL.md",
+      "mode": "integrate",
+      "reason": "Eén expliciet interview met afhankelijkheidsgerichte vragen; geen tweede pakket.",
+      "installed_version": "1.2.3",
+      "main_sha256": "508d1055acd8ee9b64a046d23b78f0c7a814b2adbee8abd368061bcb8de1c93f",
+      "evidence_path": "skills/grill-me/SKILL.md"
+    },
+    {
+      "source": "mattpocock-skills:grill-with-docs",
+      "destination": "grill-me",
+      "resource": "references/rounds.md",
+      "mode": "integrate",
+      "reason": "Voeg alleen nuttige bestaande besluit-/begrippenregistratie toe aan een gevraagd interview.",
+      "installed_version": "1.2.3",
+      "main_sha256": "b1f692da38218aa54b966b54205719c0fbae076be9d38247afe4422972c9a688",
+      "evidence_path": "skills/grill-me/references/rounds.md"
+    },
+    {
+      "source": "mattpocock-skills:grilling",
+      "destination": "grill-me",
+      "resource": "references/rounds.md",
+      "mode": "integrate",
+      "reason": "Gerichte tegenspraak en heldere keuzen; bewaarde antwoorden tellen mee.",
+      "installed_version": "1.2.3",
+      "main_sha256": "01846ae7527af6873aafc706d7319df2ae40139e1ff0c8d6dd6941c234c3f9ca",
+      "evidence_path": "skills/grill-me/references/rounds.md"
+    },
+    {
+      "source": "mattpocock-skills:handoff",
+      "destination": "handoff",
+      "resource": "references/record.md",
+      "mode": "integrate",
+      "reason": "Geverifieerde actuele staat, onzekerheden en eerste onbewezen actie op duurzame bestaande bestemming.",
+      "installed_version": "1.2.3",
+      "main_sha256": "358495b6d7713622e39863f979622caa14c50f7d5c3224a2047859f984986c5a",
+      "evidence_path": "skills/handoff/references/record.md"
+    },
+    {
+      "source": "mattpocock-skills:implement",
+      "destination": "implement-spec",
+      "resource": "references/task-state.md",
+      "mode": "integrate",
+      "reason": "Geautoriseerde taakgraph uitvoeren en integreren, geen tweede uitvoeringssysteem.",
+      "installed_version": "1.2.3",
+      "main_sha256": "a39e524d18a6825898b7b5117d8663dee48996f491d06206f909ea74ebdc5f1e",
+      "evidence_path": "skills/implement-spec/references/task-state.md"
+    },
+    {
+      "source": "mattpocock-skills:improve-codebase-architecture",
+      "destination": "improve-codebase-architecture",
+      "resource": "references/design-criteria.md",
+      "mode": "integrate",
+      "reason": "Bestaande frictie traceerbaar onderzoeken met beperkte alternatieven.",
+      "installed_version": "1.2.3",
+      "main_sha256": "3237458c477e833fd43572e29a74d95bcb1b33369b37c427e70bf664f42f2a00",
+      "evidence_path": "skills/improve-codebase-architecture/references/design-criteria.md"
+    },
+    {
+      "source": "mattpocock-skills:loop-me",
+      "destination": "plan-work",
+      "resource": "references/records.md",
+      "mode": "integrate",
+      "reason": "Een terugkerend proces specificeren met inputs/trigger/resultaat/herstel; geen schema automatisch activeren.",
+      "installed_version": "1.2.3",
+      "main_sha256": "2c57961736e077aa249b626054c10c0fa8fa522865d5cc6ccd37cd20c6fa8dbf",
+      "evidence_path": "skills/plan-work/references/records.md"
+    },
+    {
+      "source": "mattpocock-skills:migrate-to-shoehorn",
+      "destination": "evidence-driven-development",
+      "resource": "references/engineering-techniques.md",
+      "mode": "integrate",
+      "reason": "Conditioneel TypeScript-testdatarecept, alleen bij werkelijke stack en geautoriseerde migratie.",
+      "installed_version": "1.2.3",
+      "main_sha256": "3127f808ff7fc277cce6b99bffe9a8d50c02f1e79f78ef1acd188d83ea3253db",
+      "evidence_path": "skills/evidence-driven-development/references/engineering-techniques.md"
+    },
+    {
+      "source": "mattpocock-skills:prototype",
+      "destination": "prototype",
+      "resource": "references/logic.md",
+      "mode": "integrate",
+      "reason": "Eén onzekere interactie/state/modelvraag concreet beantwoorden zonder productieclaim.",
+      "installed_version": "1.2.3",
+      "main_sha256": "8ed7c9fa82395864bb49246427b54f2416d7176afefcc0012a52e81c79418820",
+      "evidence_path": "skills/prototype/references/logic.md"
+    },
+    {
+      "source": "mattpocock-skills:research",
+      "destination": "research",
+      "resource": "references/evidence-record.md",
+      "mode": "integrate",
+      "reason": "Eén gedateerde brongebonden conclusie, passende primaire bronnen.",
+      "installed_version": "1.2.3",
+      "main_sha256": "88399c5beeac5c285e091bbc4c7e030c993fd8704af0314a2f23ba93bf5693a6",
+      "evidence_path": "skills/research/references/evidence-record.md"
+    },
+    {
+      "source": "mattpocock-skills:resolving-merge-conflicts",
+      "destination": "evidence-driven-development",
+      "resource": "references/engineering-techniques.md",
+      "mode": "integrate",
+      "reason": "Intenties van beide zijden reconstrueren en huidige conflict-/userstaat bewaren; geen ongerelateerd stage-all.",
+      "installed_version": "1.2.3",
+      "main_sha256": "760b5a8134645615153948f6e7567d65e12035f4bf35555298d666240f7e8861",
+      "evidence_path": "skills/evidence-driven-development/references/engineering-techniques.md"
+    },
+    {
+      "source": "mattpocock-skills:scaffold-exercises",
+      "destination": "teach",
+      "resource": "references/learning-records.md",
+      "mode": "integrate",
+      "reason": "Oefening met begrijpelijk doel en passend niveau; structuur alleen bij werkelijke cursuscontext.",
+      "installed_version": "1.2.3",
+      "main_sha256": "aa1def9c8346b1cfd4679cd5ed99cc6bf706e0505dfd7a327b39bf334c831af1",
+      "evidence_path": "skills/teach/references/learning-records.md"
+    },
+    {
+      "source": "mattpocock-skills:setup-matt-pocock-skills",
+      "destination": "maintain-agent-instructions",
+      "resource": "references/design-criteria.md",
+      "mode": "integrate",
+      "reason": "Gevraagde skill-/routerinrichting bij canonieke eigenaar en bestaande tracker; geen automatische lifecycle.",
+      "installed_version": "1.2.3",
+      "main_sha256": "b11bf41059e5d58d33a61a0e15af4d8b160b4f9d44bb2cfe66b06475fe755de5",
+      "evidence_path": "skills/maintain-agent-instructions/references/design-criteria.md"
+    },
+    {
+      "source": "mattpocock-skills:setup-pre-commit",
+      "destination": "evidence-driven-development",
+      "resource": "references/engineering-techniques.md",
+      "mode": "integrate",
+      "reason": "Bestaande package manager/checks ontdekken en alleen gevraagde hooks toevoegen.",
+      "installed_version": "1.2.3",
+      "main_sha256": "5687c610c4df360ecb6530a166b3c8e627c653a675bde2d4435d933c63b38357",
+      "evidence_path": "skills/evidence-driven-development/references/engineering-techniques.md"
+    },
+    {
+      "source": "mattpocock-skills:setup-ts-deep-modules",
+      "destination": "evidence-driven-development",
+      "resource": "references/engineering-techniques.md",
+      "mode": "integrate",
+      "reason": "Conditionele boundary-checksetup met werkelijke configuratie en getelde regels; geen TS opleggen.",
+      "installed_version": "1.2.3",
+      "main_sha256": "4cc665ecad38e8ee93aa95301ad7212cd995e1a19f257c4b7a19a1476e774714",
+      "evidence_path": "skills/evidence-driven-development/references/engineering-techniques.md"
+    },
+    {
+      "source": "mattpocock-skills:tdd",
+      "destination": "evidence-driven-development",
+      "resource": "references/engineering-techniques.md",
+      "mode": "integrate",
+      "reason": "Publiek waarneembaar gedrag en red-green waar onderscheidend; geen interne-testdogma.",
+      "installed_version": "1.2.3",
+      "main_sha256": "ce9e9b14ed46187c97bb07dd4d6a5a89882f7c0225c7c343c11c1510ee15aca4",
+      "evidence_path": "skills/evidence-driven-development/references/engineering-techniques.md"
+    },
+    {
+      "source": "mattpocock-skills:teach",
+      "destination": "teach",
+      "resource": "references/learning-records.md",
+      "mode": "integrate",
+      "reason": "Eén afgebakend concept vanuit actuele bronnen en oefening.",
+      "installed_version": "1.2.3",
+      "main_sha256": "312aefe30b9e426ca938b560045ca0b4c36cfea4d56f0c8e63cd760420439b80",
+      "evidence_path": "skills/teach/references/learning-records.md"
+    },
+    {
+      "source": "mattpocock-skills:to-questionnaire",
+      "destination": "to-questionnaire",
+      "resource": "references/questionnaire.md",
+      "mode": "integrate",
+      "reason": "Beslisgerichte vragen voor feitelijke kennisdrager; concept niet automatisch verzenden.",
+      "installed_version": "1.2.3",
+      "main_sha256": "f3ba575f7f4ee0a311ec5c212ad5a11f74939f2da921caac4c7e69954f5157ad",
+      "evidence_path": "skills/to-questionnaire/references/questionnaire.md"
+    },
+    {
+      "source": "mattpocock-skills:to-spec",
+      "destination": "plan-work",
+      "resource": "references/records.md",
+      "mode": "integrate",
+      "reason": "Bestaande gespreksevidence naar minimale specificatie; geen tweede discoveryinterview.",
+      "installed_version": "1.2.3",
+      "main_sha256": "c1c95f8aea974dba540387a1a52a120e8a98ef8c390e27791d9878cde630c9e5",
+      "evidence_path": "skills/plan-work/references/records.md"
+    },
+    {
+      "source": "mattpocock-skills:to-tickets",
+      "destination": "plan-work",
+      "resource": "references/records.md",
+      "mode": "integrate",
+      "reason": "Traceerbare resultaatgerichte taken op bestaande tracker met echte afhankelijkheden.",
+      "installed_version": "1.2.3",
+      "main_sha256": "36aed4adb6b99f161776fa6e3fc750f284007e0b3a36ba4d87928f62a0276d06",
+      "evidence_path": "skills/plan-work/references/records.md"
+    },
+    {
+      "source": "mattpocock-skills:triage",
+      "destination": "triage",
+      "resource": "references/intake-record.md",
+      "mode": "integrate",
+      "reason": "Alle aangeleverde meldingen aan bron/taak/missing evidence verbinden.",
+      "installed_version": "1.2.3",
+      "main_sha256": "b3f0dc899abf1e5b8b7149bb04c123aaf964f59c30ff57b22c541a569fb1658c",
+      "evidence_path": "skills/triage/references/intake-record.md"
+    },
+    {
+      "source": "mattpocock-skills:wait-what",
+      "destination": "teach",
+      "resource": "references/learning-records.md",
+      "mode": "integrate",
+      "reason": "Uitleg herformuleren met ander concreet voorbeeld; eenvoudige herformulering blijft gewone chat.",
+      "installed_version": "1.2.3",
+      "main_sha256": "e8a3400ff915ffbabf9466236b60c1d2e9bbad4030cb97f3d0da3f6f079e5fe2",
+      "evidence_path": "skills/teach/references/learning-records.md"
+    },
+    {
+      "source": "mattpocock-skills:wayfinder",
+      "destination": "wayfinder",
+      "resource": "references/decision-map.md",
+      "mode": "integrate",
+      "reason": "Onzekere richting via echte beslisafhankelijkheden verhelderen zonder één-ticket-per-sessiegrens.",
+      "installed_version": "1.2.3",
+      "main_sha256": "464438a2b143b9fe836c9e2e044524479f9e848319de228428604a9dc1f4ab94",
+      "evidence_path": "skills/wayfinder/references/decision-map.md"
+    },
+    {
+      "source": "mattpocock-skills:wizard",
+      "destination": "evidence-driven-development",
+      "resource": "references/engineering-techniques.md",
+      "mode": "integrate",
+      "reason": "Passende setupstappen met feitelijke tools en toegangsgrenzen; geen impliciete credentials/CLI-installatie.",
+      "installed_version": "1.2.3",
+      "main_sha256": "9b7db954f1c5e578f74348ef9a6f0e6b05e44ae3fadeb70de2d5e4a9a69f8b83",
+      "evidence_path": "skills/evidence-driven-development/references/engineering-techniques.md"
+    },
+    {
+      "source": "mattpocock-skills:writing-beats",
+      "destination": "write-content",
+      "resource": "references/writing-phases.md",
+      "mode": "integrate",
+      "reason": "Schrijfmateriaal naar een passende samenhangende lijn vormen; geen verplichte vervolgfase.",
+      "installed_version": "1.2.3",
+      "main_sha256": "bbf815bfcf231f39d82e358e592197d8ca009753959ecbec8864afbbc208c37e",
+      "evidence_path": "skills/write-content/references/writing-phases.md"
+    },
+    {
+      "source": "mattpocock-skills:writing-for-agents",
+      "destination": "maintain-agent-instructions",
+      "resource": "references/design-criteria.md",
+      "mode": "integrate",
+      "reason": "Afgebakende aanleiding, korte werkstappen en controleerbare uitkomst bij bronhouder.",
+      "installed_version": "1.2.3",
+      "main_sha256": "0a80d1ef536e64cf957979c1c618912d5ea1dc0fef07126d561f9d752648320c",
+      "evidence_path": "skills/maintain-agent-instructions/references/design-criteria.md"
+    },
+    {
+      "source": "mattpocock-skills:writing-fragments",
+      "destination": "write-content",
+      "resource": "references/writing-phases.md",
+      "mode": "integrate",
+      "reason": "Los materiaal en invalshoeken eerst onderzoeken zonder ongewenste structuur.",
+      "installed_version": "1.2.3",
+      "main_sha256": "ddaf9f8d0f8e44337a4ab6e3a847891afd470d07f9cbaa77fe8875f9122ecf87",
+      "evidence_path": "skills/write-content/references/writing-phases.md"
+    },
+    {
+      "source": "mattpocock-skills:writing-shape",
+      "destination": "write-content",
+      "resource": "references/writing-phases.md",
+      "mode": "integrate",
+      "reason": "Bestaand materiaal uitwerken tot passend concept met bron- en taalcontrole.",
+      "installed_version": "1.2.3",
+      "main_sha256": "411eb97be37b402dd901217fa7705e1d6b8cbca705c21b8f15f9f352e276fb10",
+      "evidence_path": "skills/write-content/references/writing-phases.md"
+    },
+    {
+      "source": "engineering-suite-ponytail:code-simplification",
+      "destination": "improve-codebase-architecture",
+      "resource": "references/design-criteria.md",
+      "mode": "integrate",
+      "reason": "Gedragbehoudende leesbaarheid; fouttiming, types en representatie controleren.",
+      "installed_version": "2.0.0",
+      "main_sha256": "bd78ae65195fee4a03ae407d31ace2d8f1cf44e83b40e3df4fb0429c8cb0c7b4",
+      "evidence_path": "skills/improve-codebase-architecture/references/design-criteria.md"
+    },
+    {
+      "source": "engineering-suite-ponytail:entry-ponytail",
+      "destination": "central-router",
+      "resource": "docs/METHOD-ROUTING.md",
+      "mode": "replace-wrapper",
+      "reason": "Vendor-entrywrapper is geen extra canonieke taakmethode.",
+      "installed_version": "2.0.0",
+      "main_sha256": "fee9e0ce8e9bc0eb93af29b452acc0ff86373c2934a875e208956a6d2f095aeb",
+      "evidence_path": "docs/METHOD-ROUTING.md"
+    },
+    {
+      "source": "engineering-suite-ponytail:ponytail",
+      "destination": "improve-codebase-architecture",
+      "resource": "references/design-criteria.md",
+      "mode": "integrate",
+      "reason": "YAGNI en bestaande standaardvoorzieningen als technieken; kortste code is geen kwaliteitdoel.",
+      "installed_version": "2.0.0",
+      "main_sha256": "3d413849a55a3bdd8b01c860b5ae4a2f2b0cacfe1bfc0c97439ecc05e92219d7",
+      "evidence_path": "skills/improve-codebase-architecture/references/design-criteria.md"
+    },
+    {
+      "source": "engineering-suite-ponytail:ponytail-audit",
+      "destination": "improve-codebase-architecture",
+      "resource": "references/design-criteria.md",
+      "mode": "integrate",
+      "reason": "Overbodige complexiteit in afgesproken gebied onderzoeken en bronbewijs geven.",
+      "installed_version": "2.0.0",
+      "main_sha256": "1e7348762f289ddae0fd785dccb66212ae127debdd3c0c6dc39691866ff5fe1d",
+      "evidence_path": "skills/improve-codebase-architecture/references/design-criteria.md"
+    },
+    {
+      "source": "engineering-suite-ponytail:ponytail-debt",
+      "destination": "triage",
+      "resource": "references/intake-record.md",
+      "mode": "integrate",
+      "reason": "Werkelijke markers naar bestaande taken dedupliceren; geen markers betekent geen bewezen afwezigheid van schuld.",
+      "installed_version": "2.0.0",
+      "main_sha256": "616e72782c3b7968888430fd8314899c175ea79ec16073d638fa582b4d6140b2",
+      "evidence_path": "skills/triage/references/intake-record.md"
+    },
+    {
+      "source": "engineering-suite-ponytail:ponytail-gain",
+      "destination": "research",
+      "resource": "references/evidence-record.md",
+      "mode": "exclude-benchmark-utility",
+      "reason": "Alleen een gerichte claimcontrole van leveranciersmetingen; geen eigen projectwinst en geen actieve prestatiemethode.",
+      "installed_version": "2.0.0",
+      "main_sha256": "eecde3e21a9ce7c94300a288cce1a5e5251f4913c0abefdd99ee279b96a313d8",
+      "evidence_path": "skills/research/references/evidence-record.md"
+    },
+    {
+      "source": "engineering-suite-ponytail:ponytail-help",
+      "destination": "provider-only",
+      "resource": "docs/OPTIONAL-SKILL-SUITES.md",
+      "mode": "exclude-utility",
+      "reason": "Hulp over leveranciersplugin is geen werkprocedure van de persoonlijke set; op expliciete pluginvraag blijft bron beschikbaar.",
+      "installed_version": "2.0.0",
+      "main_sha256": "ed807f06935af6637896d2a91d9184bd0445d773bdeda2983d622d6d8d0ac2de",
+      "evidence_path": "docs/OPTIONAL-SKILL-SUITES.md"
+    },
+    {
+      "source": "engineering-suite-ponytail:ponytail-review",
+      "destination": "code-review",
+      "resource": "references/axes.md",
+      "mode": "integrate",
+      "reason": "Afgebakende complexiteitslens in dezelfde volledige vergelijking; vervangt geen correctheid/security/performance.",
+      "installed_version": "2.0.0",
+      "main_sha256": "5e0fd5dc55adba28f503645c3492a2d566d9521f28bece92db5d25ebbfb9f173",
+      "evidence_path": "skills/code-review/references/axes.md"
+    },
+    {
+      "source": "superpowers:brainstorming",
+      "destination": "plan-work",
+      "resource": "references/records.md",
+      "mode": "integrate",
+      "reason": "Nuttige opties/aannames bij werkelijke open ontwerpvraag; geaccepteerde scope niet opnieuw laten goedkeuren.",
+      "installed_version": "7.0.1",
+      "main_sha256": "61a7ef918652108c76a3fd01e02dd92d39996c6b46d4cb2819cbd03f6c45e46a",
+      "evidence_path": "skills/plan-work/references/records.md"
+    },
+    {
+      "source": "superpowers:diagnosing-superpowers",
+      "destination": "maintain-agent-instructions",
+      "resource": "references/design-criteria.md",
+      "mode": "integrate",
+      "reason": "Gericht waargenomen workflowprobleem reconstrueren; geen verplichte zevenanalisten/transcriptexport of verbod op gevraagde reparatie.",
+      "installed_version": "7.0.1",
+      "main_sha256": "3143de8695c5a2d63e8b1675f33837578076f464deb127c2ebdd0b46fceef886",
+      "evidence_path": "skills/maintain-agent-instructions/references/design-criteria.md"
+    },
+    {
+      "source": "superpowers:dispatching-parallel-agents",
+      "destination": "implement-spec",
+      "resource": "references/delivery-techniques.md",
+      "mode": "integrate",
+      "reason": "Zelfstandig nuttige onafhankelijke opdrachten kiezen met duidelijk objecteigenaarschap; geen expliciete usertrigger nodig.",
+      "installed_version": "7.0.1",
+      "main_sha256": "1968923066f3b707eb01d1992cdf4c42284c3855f70253b9cd5000ff45fca13c",
+      "evidence_path": "skills/implement-spec/references/delivery-techniques.md"
+    },
+    {
+      "source": "superpowers:executing-plans",
+      "destination": "implement-spec",
+      "resource": "references/task-state.md",
+      "mode": "integrate",
+      "reason": "Bestaande geautoriseerde planuitvoering, werkelijke blokkades en volledige acceptatie.",
+      "installed_version": "7.0.1",
+      "main_sha256": "e4649e59880ef2643d1da128e3d607e87e3f969410d72095a5bf65811b6036dc",
+      "evidence_path": "skills/implement-spec/references/task-state.md"
+    },
+    {
+      "source": "superpowers:finishing-a-development-branch",
+      "destination": "prepare-release",
+      "resource": "references/readiness.md",
+      "mode": "integrate",
+      "reason": "Integratie-/cleanupbesluit op werkelijk eigendom en bevoegdheid, geen onnodig menu of mapnaambewijs.",
+      "installed_version": "7.0.1",
+      "main_sha256": "8db5a922b242dd4e1bf824cb91c13b3e8d8e8a86d6ceaf7f0774eb9cce909d65",
+      "evidence_path": "skills/prepare-release/references/readiness.md"
+    },
+    {
+      "source": "superpowers:receiving-code-review",
+      "destination": "code-review",
+      "resource": "references/review-feedback.md",
+      "mode": "integrate",
+      "reason": "Opmerking eerst inhoudelijk toetsen; één onzeker punt blokkeert geen onafhankelijk geautoriseerd werk.",
+      "installed_version": "7.0.1",
+      "main_sha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438",
+      "evidence_path": "skills/code-review/references/review-feedback.md"
+    },
+    {
+      "source": "superpowers:requesting-code-review",
+      "destination": "code-review",
+      "resource": "references/axes.md",
+      "mode": "integrate",
+      "reason": "Doel/eisen/hele base-head helder briefen; geen HEAD~1 voor meercommittaken.",
+      "installed_version": "7.0.1",
+      "main_sha256": "2180e14a448e9410bec88e6646a2d1f0ce7fdd58de27388c1e052e929679d2bc",
+      "evidence_path": "skills/code-review/references/axes.md"
+    },
+    {
+      "source": "superpowers:subagent-driven-development",
+      "destination": "implement-spec",
+      "resource": "references/delivery-techniques.md",
+      "mode": "integrate",
+      "reason": "Begrensde briefing, review en integratie als nuttige techniek; één schrijver per object en geen tweede ledger.",
+      "installed_version": "7.0.1",
+      "main_sha256": "ba41f697136cba88a7962d60c8e2f97488ba04a8688b1d0fbeb27f6953808e75",
+      "evidence_path": "skills/implement-spec/references/delivery-techniques.md"
+    },
+    {
+      "source": "superpowers:systematic-debugging",
+      "destination": "evidence-driven-development",
+      "resource": "references/diagnosis.md",
+      "mode": "integrate",
+      "reason": "Hypothesen testen, oorzaak achterwaarts traceren en op toestand wachten in plaats van slaaptijd.",
+      "installed_version": "7.0.1",
+      "main_sha256": "51c6435d98c83c42c96ba7c35725a0b2c376cd487fb1a4e6bd0ddbe7e33ef202",
+      "evidence_path": "skills/evidence-driven-development/references/diagnosis.md"
+    },
+    {
+      "source": "superpowers:test-driven-development",
+      "destination": "evidence-driven-development",
+      "resource": "references/engineering-techniques.md",
+      "mode": "integrate",
+      "reason": "Verwachting onafhankelijk afleiden, echte defecten onderscheiden; geen triviale broncode-/tautologietests.",
+      "installed_version": "7.0.1",
+      "main_sha256": "64b03fce4aee5a97a93160cea8111f3ba13a17b7c001db4bd5836d67fd10705d",
+      "evidence_path": "skills/evidence-driven-development/references/engineering-techniques.md"
+    },
+    {
+      "source": "superpowers:using-git-worktrees",
+      "destination": "evidence-driven-development",
+      "resource": "references/engineering-techniques.md",
+      "mode": "integrate",
+      "reason": "Werkelijke isolatie ontdekken, gekozen map en eigendom controleren, geen blind npm install.",
+      "installed_version": "7.0.1",
+      "main_sha256": "8cfb86f121269e8f7f12361e6795c4f6738828340e28964c9229d365666c9edd",
+      "evidence_path": "skills/evidence-driven-development/references/engineering-techniques.md"
+    },
+    {
+      "source": "superpowers:using-superpowers",
+      "destination": "central-router",
+      "resource": "docs/METHOD-ROUTING.md",
+      "mode": "replace-wrapper",
+      "reason": "Altijd-aan 1%-invocation en verplichte vendorlevenscyclus vervallen in één set; Guide en intentierouter leiden.",
+      "installed_version": "7.0.1",
+      "main_sha256": "82c5c8866ad7f5dd4440ce66bd7806ba48a2f13771beae5cf112e53f08fe36ba",
+      "evidence_path": "docs/METHOD-ROUTING.md"
+    },
+    {
+      "source": "superpowers:verification-before-completion",
+      "destination": "code-review",
+      "resource": "references/axes.md",
+      "mode": "integrate",
+      "reason": "Claims aan werkelijk passende current-revisionevidence binden; geen onnodige commandoherhaling.",
+      "installed_version": "7.0.1",
+      "main_sha256": "2befe7fc55bcadaa3d97dd9e8efeb633d2561c0ebe74c5a8b17c4d9e7e4520b3",
+      "evidence_path": "skills/code-review/references/axes.md"
+    },
+    {
+      "source": "superpowers:writing-plans",
+      "destination": "plan-work",
+      "resource": "references/records.md",
+      "mode": "integrate",
+      "reason": "Eisen en taakinterfaces volledig genoeg voor eerste veilige uitvoering, bestaande bestemming behouden.",
+      "installed_version": "7.0.1",
+      "main_sha256": "a6c67c1900064347c2a329990dd3c555657c51c3ec53b259a08aa01a2c26139a",
+      "evidence_path": "skills/plan-work/references/records.md"
+    },
+    {
+      "source": "superpowers:writing-skills",
+      "destination": "maintain-agent-instructions",
+      "resource": "references/design-criteria.md",
+      "mode": "integrate",
+      "reason": "Baseline, forward cases en ontbrekende-inputgevallen; bestaande authoring/installatiehouder blijft leidend.",
+      "installed_version": "7.0.1",
+      "main_sha256": "8cb3ac68c6d8c4bb46886b998b09af7989643cab8bd0e46ee86dd62e64546bbe",
+      "evidence_path": "skills/maintain-agent-instructions/references/design-criteria.md"
+    }
+  ]
+}

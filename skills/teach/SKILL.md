@@ -9,13 +9,15 @@ description: Teach a bounded concept through verified examples, especially the u
 
 Follow the user's configured operating guide once per session, including its required tool-call version. Reuse verified context; load project and task owners only when relevant, refreshing them after a project/scope change or material new evidence. Use the routed context-entry playbook when available. If required context is inaccessible, disclose the gap and continue only independent work.
 
-Use the user's question and known preferences to identify one practical outcome, such as explaining a data flow to IT. Read any existing technical guide, learning goal and relevant current source. Do not start a course or interview when the question already supplies the goal.
+Use available agents without waiting for an explicit user request when this method calls for independent fact-finding or when a bounded parallel task or separate check would improve the result. Follow the routed delegation procedure; give each worker a source/revision, scope, allowed actions and expected evidence. Keep one writer per shared object, use the current host capabilities and let the parent verify and integrate the result. If delegation is unavailable, continue supported work and state any required independence that remains unproven.
+
+Use the user's question and known preferences to identify one practical outcome, such as explaining a data flow to IT. Read any existing technical guide, learning goal and relevant current source. Do not start a course or interview when the question already supplies the goal. Use write-content for a standalone substantial text deliverable rather than treating every drafting request as teaching.
 
 For project explanations, trace actual files and behavior. State when code or evidence is unavailable; use a labelled generic example rather than implying it describes the project. Check current technical facts with primary sources as appropriate.
 
 ## 2. Explain one useful unit
 
-Use the user's language, short sentences and familiar domain concepts. Start with what the component accomplishes, then follow one concrete input through the important transformations to its output. Connect code names to their responsibility. Distinguish intended design, implemented behavior and untested interpretation.
+Use the user's language, short sentences and familiar domain concepts. Start with what the component accomplishes, then follow one concrete input through the important transformations to its output. If an earlier explanation did not land, recover the missing context and re-explain that unit using familiar terms and a simpler example; do not restart a whole lesson. Connect code names to their responsibility. Distinguish intended design, implemented behavior and untested interpretation.
 
 Choose prose, a small table, a diagram or an interactive example based on what makes the concept easier to grasp. Use existing supported artifact tools when needed; a simple explanation does not require an HTML lesson, new framework or repository changes.
 
