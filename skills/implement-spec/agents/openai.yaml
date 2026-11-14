@@ -1,0 +1,6 @@
+interface:
+  display_name: "Implement specification"
+  short_description: "Voer een goedgekeurd plan afhankelijkheidsgericht uit"
+  default_prompt: "Use $implement-spec for this task."
+policy:
+  allow_implicit_invocation: true

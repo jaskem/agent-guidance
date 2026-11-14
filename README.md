@@ -22,7 +22,7 @@ Use [the skill workflow](docs/SKILL-WORKFLOW.md) for source ownership, installat
 - [evidence-driven-development](skills/evidence-driven-development/SKILL.md): implement a substantive change with behavior evidence and delegate review to its dedicated owner.
 - [maintain-agent-instructions](skills/maintain-agent-instructions/SKILL.md): diagnose and repair instruction routing or skills at their canonical owner.
 
-Use the [method router](docs/METHOD-ROUTING.md) to select planning, domain, prototype, review, handoff and teaching methods and the relevant existing roles.
+Use the [method router](docs/METHOD-ROUTING.md) to select planning, domain, prototype, review, handoff, teaching, UI audit/design, project context, architecture investigation, task-graph execution, intake triage, research, questionnaires and decision discovery. The [skill catalog](skills/catalog.json) records all 17 repository-owned packages and their versions; independently owned personal skills are not counted here.
 
 These are original adaptations informed by a pinned review of Matt Pocock's skills, not a bulk import. See the [audit](docs/SKILLS-AUDIT-2026-11-12.md). Installing one is separate from migrating a consumer's vendored guidance. The shared catalog and lock contract remain unchanged.
 
