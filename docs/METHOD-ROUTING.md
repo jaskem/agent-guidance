@@ -30,6 +30,8 @@ Follow the user's configured operating guide at the start of a session, then the
 
 Small factual questions and editorial changes need no full workflow. A clear implementation task does not first require an interview. A planning-only request remains planning-only. A large authorized implementation continues through its work packages; neither a new session nor creating an issue is a reason to stop by itself.
 
+When installed specialist suites are relevant, follow [optional skill composition](OPTIONAL-SKILL-SUITES.md). It maps technical depth and explicitly selected provider workflows onto these existing owners, handles duplicate names and preserves project/tool authority. It does not make every suite phase mandatory or replace the configured context entry.
+
 Select by the requested result. `wayfinder` resolves a direction that is not yet clear; `plan-work` turns a sufficiently clear direction into executable scope; `implement-spec` sequences an already authorized task graph; `evidence-driven-development` executes one substantive change. `triage` owns intake coverage and delegates bounded diagnosis rather than duplicating it. `research` supplies a decision brief using the existing research-verification criteria. `to-questionnaire` prepares a draft, never sends it by implication. Architecture proposals remain proposals until implementation is authorized.
 
 The six additional packages permit implicit selection for these discriminating descriptions. This is permission to choose a relevant method within the request, not to start unrelated scans or background work. Existing project and tracker owners remain authoritative. Personal/Notion registration and saved package verification are separate from this router; current client registries can be cached.

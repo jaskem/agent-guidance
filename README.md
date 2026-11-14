@@ -26,6 +26,8 @@ Use the [method router](docs/METHOD-ROUTING.md) to select planning, domain, prot
 
 These are original adaptations informed by a pinned review of Matt Pocock's skills, not a bulk import. See the [audit](docs/SKILLS-AUDIT-2026-11-12.md). Installing one is separate from migrating a consumer's vendored guidance. The shared catalog and lock contract remain unchanged.
 
+Installed third-party suites can add selected technical depth without another mandatory workflow. See [optional skill composition](docs/OPTIONAL-SKILL-SUITES.md) for namespace selection, capability checks, overlap and conflict handling. The user's distribution record tracks available bundle versions separately from repository-owned packages.
+
 ## Shared source
 
 - `guidance/KERNEL.md` — small always-on cross-repository senior-collaborator behavior.
