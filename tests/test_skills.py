@@ -15,10 +15,42 @@ class SkillPackageTests(unittest.TestCase):
         self.addCleanup(self.temp.cleanup)
         self.root = Path(self.temp.name)
         shutil.copytree(ROOT / 'skills', self.root / 'skills')
+        shutil.copytree(ROOT / 'docs', self.root / 'docs')
         self.package = self.root / 'skills/evidence-driven-development'
 
     def test_complete_packages(self):
         self.assertEqual(check(self.root), [])
+
+    def change_coverage(self, change):
+        path = self.root / 'skills/source-coverage.json'
+        coverage = json.loads(path.read_text())
+        change(coverage)
+        path.write_text(json.dumps(coverage))
+
+    def test_missing_coverage_record_is_rejected(self):
+        (self.root / 'skills/source-coverage.json').unlink()
+        self.assertTrue(any('coverage' in e for e in check(self.root)))
+
+    def test_duplicate_provider_entry_is_rejected(self):
+        self.change_coverage(lambda c: c['mapping'].append(c['mapping'][0]))
+        self.assertTrue(any('duplicate coverage source' in e for e in check(self.root)))
+
+    def test_incomplete_provider_coverage_is_rejected(self):
+        self.change_coverage(lambda c: c['mapping'].pop())
+        self.assertTrue(any('coverage source counts' in e for e in check(self.root)))
+
+    def test_coverage_target_must_be_in_collection(self):
+        self.change_coverage(lambda c: c['mapping'][0].update(destination='missing-method'))
+        self.assertTrue(any('unknown coverage destination' in e for e in check(self.root)))
+
+    def test_missing_coverage_evidence_is_rejected(self):
+        self.change_coverage(lambda c: c['mapping'][0].update(evidence_path='skills/missing.md'))
+        self.assertTrue(any('missing coverage evidence' in e for e in check(self.root)))
+
+    def test_coverage_evidence_stays_in_owning_package(self):
+        self.change_coverage(lambda c: c['mapping'][0].update(
+            evidence_path='skills/code-review/references/axes.md'))
+        self.assertTrue(any('coverage evidence disagrees' in e for e in check(self.root)))
 
     def test_unknown_dependency_is_rejected(self):
         p = self.root / 'skills/catalog.json'
