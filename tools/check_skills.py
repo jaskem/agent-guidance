@@ -6,6 +6,7 @@ import json
 from pathlib import Path
 import re
 import sys
+from collections import Counter
 from urllib.parse import unquote, urlsplit
 
 
@@ -40,6 +41,67 @@ def read_metadata(text: str) -> dict[str, dict]:
     if set(result.get('policy', {})) != {'allow_implicit_invocation'}:
         raise ValueError('missing invocation policy')
     return result
+
+
+def check_coverage(root: Path, catalog: dict, names: set[str]) -> list[str]:
+    """Check the declared consolidation evidence, not its editorial conclusions."""
+    errors = []
+    try:
+        relative = catalog['coverage_record']
+        if not isinstance(relative, str) or not relative:
+            raise ValueError('coverage_record must name a repository file')
+        path = (root / relative).resolve()
+        if not path.is_relative_to(root.resolve()):
+            raise ValueError('coverage_record escapes repository')
+        coverage = json.loads(path.read_text(encoding='utf-8'))
+        counts = coverage['expected_source_counts']
+        mapping = coverage['mapping']
+        if (coverage['schema_version'] != 1 or not isinstance(mapping, list)
+                or not isinstance(counts, dict) or not counts
+                or any(not isinstance(k, str) or type(v) is not int or v < 1
+                       for k, v in counts.items())):
+            raise ValueError('expected schema 1, source counts and mapping array')
+        if coverage['active_collection_count'] != len(names):
+            errors.append('coverage collection count disagrees with catalog')
+    except (OSError, ValueError, KeyError, TypeError) as exc:
+        return [f'invalid coverage record: {exc}']
+
+    sources = set()
+    actual_counts = Counter()
+    for item in mapping:
+        if not isinstance(item, dict) or not isinstance(item.get('source'), str):
+            errors.append('invalid coverage mapping entry')
+            continue
+        source = item['source']
+        if source in sources:
+            errors.append(f'duplicate coverage source: {source}')
+        sources.add(source)
+        provider, separator, method = source.partition(':')
+        if not separator or not method:
+            errors.append(f'invalid coverage source: {source}')
+        actual_counts[provider] += 1
+        destination = item.get('destination')
+        if not isinstance(destination, str):
+            errors.append(f'unknown coverage destination: {destination}')
+            continue
+        if destination not in names and destination not in ('central-router', 'provider-only'):
+            errors.append(f'unknown coverage destination: {destination}')
+        evidence = item.get('evidence_path')
+        resource = item.get('resource')
+        if not isinstance(evidence, str) or not isinstance(resource, str):
+            errors.append(f'missing coverage evidence: {source}')
+            continue
+        expected = f'skills/{destination}/{resource}' if destination in names else resource
+        if evidence != expected:
+            errors.append(f'coverage evidence disagrees with destination/resource: {source}')
+        path = (root / evidence).resolve()
+        if not path.is_relative_to(root.resolve()) or not path.is_file():
+            errors.append(f'missing coverage evidence: {source}: {evidence}')
+        elif destination in names and not path.is_relative_to((root / 'skills' / destination).resolve()):
+            errors.append(f'coverage evidence disagrees with owning package: {source}')
+    if dict(actual_counts) != counts:
+        errors.append('coverage source counts disagree with complete mapping')
+    return errors
 
 
 def check(root: Path) -> list[str]:
@@ -155,6 +217,7 @@ def check(root: Path) -> list[str]:
     actual = set((root / 'skills').glob('*/SKILL.md'))
     if actual != listed:
         errors.append('catalog/package mismatch: ' + str(sorted(str(p) for p in actual ^ listed)))
+    errors.extend(check_coverage(root, catalog, seen))
     return errors
 
 
@@ -164,4 +227,4 @@ if __name__ == '__main__':
         print(f'ERROR: {failure}', file=sys.stderr)
     if failures:
         raise SystemExit(1)
-    print('skill packages OK: catalog, metadata and local references')
+    print('skill packages OK: catalog, metadata, local references and source coverage')
