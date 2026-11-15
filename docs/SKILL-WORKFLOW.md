@@ -41,6 +41,8 @@ An upstream update is a candidate for review, never a silent replacement. Preser
 
 Reconcile the complete active Notion Skills database against the catalog, not only the enabled list. Reuse existing member pages, import complete packages and enable matching automatic/connected-agent settings. Disable or archive a non-member only when identified, preserving recoverable source history and unrelated content. Provider originals remain outside the active catalog; removing their apps requires an explicit removal request.
 
+Before replacing a Notion package, retain its current attachment Folder IDs; after import compare the live `Bestanden` references and exported package. If superseded native Folders remain searchable, preserve their IDs/files and mark them historical only after proving they are outside the current package; never infer missing backlinks from an unsupported API. A metadata-only change can alter the host's export version ID: recheck the affected full exports, record the new IDs and keep prior provenance without bumping the unchanged package version.
+
 Readback must account for host serialization: Notion exports may add a page ID and use block-style YAML scalars; personal-skill hosts may regenerate UI metadata and icons. Compare method bodies, parsed name/description and supporting references against the canonical package, and record host-owned differences separately. Put literal filenames in inline code so rich-text imports do not turn them into unintended web links.
 
 ## Verification limits
