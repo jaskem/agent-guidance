@@ -2,7 +2,7 @@
 
 The active procedure owner is now the [coherent skillset](SKILLSET.md), selected by [METHOD-ROUTING.md](METHOD-ROUTING.md). The former arrangement of 18 personal methods plus four optional competing suites has been superseded.
 
-Useful techniques from the 83 reviewed provider entries are integrated into the 24 owned packages or their conditional references. The [coverage record](../skills/source-coverage.json) records every retained, replaced or excluded source entry and its reason. It is provenance, not another workflow. No provider package is required to execute an owned method.
+Useful techniques from the original 83 reviewed provider entries are integrated into the owned packages or their conditional references. Four independent outcomes from the additional Addy 0.6.16 review extend the active collection to 28. The [coverage record](../skills/source-coverage.json) preserves the original baseline and the new review/disposition. It is provenance, not another workflow. No provider package is required to execute an owned method.
 
 Installed provider originals remain provider-owned and can still be explicitly selected by the user. Do not edit their files, silently invoke an explicit-only wrapper, change plugin permissions or remove an app as part of normal routing. The canonical set owns default execution; a vendor meta-router does not add a mandatory lifecycle, task tracker or approval round.
 

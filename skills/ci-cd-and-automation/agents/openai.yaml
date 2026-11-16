@@ -1,0 +1,6 @@
+interface:
+  display_name: "CI CD and automation"
+  short_description: "Verify build delivery and pipeline enforcement"
+  default_prompt: "Use $ci-cd-and-automation to make the build and delivery pipeline reproducible and verifiable."
+policy:
+  allow_implicit_invocation: true

@@ -1,8 +1,8 @@
 # Coherent skillset
 
-The [catalog](../skills/catalog.json) is the single membership and package-version owner for 24 active procedures. The [method router](METHOD-ROUTING.md) selects by the requested result. Keep a single primary procedure; use only materially relevant techniques or specialist sub-results.
+The [catalog](../skills/catalog.json) is the single membership and package-version owner for 28 active procedures. The [method router](METHOD-ROUTING.md) selects by the requested result. The [general work cycle](../guidance/playbooks/work-cycle.md) owns authorized execution, proportionate evidence and closure for all work. Keep a single primary procedure and only necessary specialist sub-results or host capabilities.
 
-The 18 former personal methods are retained by name and updated in place. The former Notion-owned grill-me now shares this canonical owner. Six distinct missing outcomes are added: design-interfaces, review-security, optimize-performance, prepare-release, write-content and test-user-flows. Useful content from the 83 reviewed provider entries is adapted into these bodies and their conditional references. The [coverage record](../skills/source-coverage.json) records every source disposition. The original provider wrappers do not run behind these methods.
+The 18 former personal methods and six additions retain their names and owner. Four further Addy-inspired methods now own distinct results: constraint-driven-development, observability-and-instrumentation, deprecation-and-migration and ci-cd-and-automation. Their compact adaptations use project-specific requirements and actual capabilities, with no compulsory cloud tools, supplier thresholds or provider lifecycle. The [coverage record](../skills/source-coverage.json) retains the original 83-entry consolidation and records the new pinned review. The provider wrappers do not run behind these methods.
 
 ## Selection and composition
 
@@ -13,6 +13,8 @@ The 18 former personal methods are retained by name and updated in place. The fo
 - Experience: audit-ui-ux finds evidence-backed usability issues, design-ui-improvements proposes concrete changes, prototype answers an unresolved question. Preserve the established design system and user density.
 - Knowledge: research supplies source-backed conclusions, teach supports understanding, write-content develops the requested writing phase and to-questionnaire prepares decision questions. Drafting never implies sending.
 - Continuity: handoff resumes verified work; maintain-project-context maintains source navigation; triage owns incoming reports; maintain-agent-instructions repairs the actual instruction owner.
+- Quality controls: constraint-driven-development establishes or proves the applicable requirements; ci-cd-and-automation configures and verifies their actual event/runner enforcement. Neither is required merely to run existing checks.
+- Operations and transitions: observability-and-instrumentation proves lasting detection and diagnosis; deprecation-and-migration owns compatibility, transition, recovery and justified retirement across real consumers. Diagnosis and private refactoring retain their ordinary routes.
 
 A short factual answer or minor wording change needs no full procedure. Host-required document, spreadsheet, presentation, image and service capabilities remain available as execution tools; do not duplicate their packages into this catalog.
 

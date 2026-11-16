@@ -10,3 +10,5 @@
 When an intermittent or asynchronous symptom depends on readiness, wait for the actual observable condition with a bounded timeout; do not “fix” it by merely increasing a delay. Trace incorrect values backward to the first boundary that supplied them, then check the entrypoint and environment that made the state possible.
 
 Choose diagnostics from the unresolved question. Correlate related operations with a safe run/request/object identifier, record the relevant phase and result, and bound log volume/cardinality. Local desktop logs can be sufficient; a service log platform is not mandatory. Preserve privacy and remove temporary probes after the useful evidence is retained.
+
+When lasting detection and diagnosis is itself the requested result, use observability-and-instrumentation to design and prove those signals. This diagnosis procedure still owns the current symptom and temporary probes; adding a logging platform is not a prerequisite for every bug.

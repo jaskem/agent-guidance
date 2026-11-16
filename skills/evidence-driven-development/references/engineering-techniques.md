@@ -14,11 +14,11 @@ Understand callers, state ownership, error paths and the historical reason befor
 
 ## Migrations and uncertain writes
 
-Find real consumers and supported old/new data versions. Plan compatible reads, idempotent transforms, backup/recovery and an observable transition. Expand/contract fits some services; a local JSON app instead needs its actual file-format, interruption and shared-folder checks. Inspect a write's destination before retrying an uncertain result. Never infer permission to drop a format or consumer from a generic migration recipe.
+Preserve supported consumers and data versions during an ordinary change. When the requested result is a supported contract/data transition or retirement, use deprecation-and-migration for compatibility, transition and recovery evidence; this method implements its bounded software changes. Inspect a write's destination before retrying an uncertain result. A migration recipe does not authorize dropping a format or consumer.
 
 ## Git and CI
 
-Inspect the actual baseline, index and unrelated work. Stage only owned paths or hunks. Use isolation when needed, checking the actual chosen path and ownership before cleanup; a directory name proves neither. Follow the existing package manager, lockfile and scripts policy. Read configured checks and preserve accepted quality floors; do not install an unchecked gate helper or weaken a check to get green. An authorized CI change uses the actual runner and project checks, not a mandatory web-stack example.
+Inspect the actual baseline, index and unrelated work. Stage only owned paths or hunks. Use isolation when needed, checking the actual chosen path and ownership before cleanup; a directory name proves neither. Follow the existing package manager, lockfile and scripts policy. Run relevant configured checks and preserve accepted quality requirements; do not weaken a check to get green. For a distinct requested result, constraint-driven-development defines or proves the quality controls and ci-cd-and-automation establishes their event/runner enforcement. Running an existing check needs neither extra workflow. Load a specialist only for the bounded missing result, using the accepted catalog and distribution.
 
 ## UI implementation
 

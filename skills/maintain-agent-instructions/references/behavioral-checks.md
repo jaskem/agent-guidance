@@ -4,6 +4,8 @@ Use raw tasks, inputs and outputs to exercise the method's intended result. Comp
 
 Include a normal request, a request outside the skill's scope and a missing-input or inaccessible-tool case. For selection changes, include nearby skills with similar names and a simple chat that needs no full workflow. Check whether existing consent, task ownership and product acceptance survive the route.
 
+Reconcile the full active catalog with the canonical routing entries, actual packages and accepted invocation policies. Exercise content, phase and timing separately in composed requests, including standalone documents/data, a requested external mutation and actual future scheduling. A metadata/link check proves discoverability structure; inspect fresh task-local selections and loaded methods before claiming behavioral coverage. Keep raw requests separate from expected outcomes so evaluators cannot infer the intended route from the answer key.
+
 For substantial changes, assign a fresh task-local agent the skill plus a realistic request and raw artifacts. Do not provide the intended answer, suspected defect or prior analysis. Distinguish a true fresh-context run from an agent inheriting the author's diagnosis. Observe the returned result and evidence; a worker saying “passed” is insufficient.
 
 Check autonomous delegation without requiring a user to say “use subagents”: a useful independent task should receive a bounded assignment; a tightly coupled trivial task should not acquire a ceremonial team. Check missing agent capability and shared-object ownership as separate cases.

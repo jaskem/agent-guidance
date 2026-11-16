@@ -1,0 +1,7 @@
+interface:
+  display_name: "Observability and instrumentation"
+  short_description: "Verify lasting detection and diagnosis"
+  default_prompt: "Use $observability-and-instrumentation to add and verify the signals needed to detect and diagnose failures."
+
+policy:
+  allow_implicit_invocation: true

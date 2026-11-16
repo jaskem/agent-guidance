@@ -1,13 +1,13 @@
 ---
 name: research
-description: Investigate a substantive technical or comparison question and deliver a dated source-backed conclusion with decision implications. Use for uncertain facts, technology choices and conflicting evidence; exclude simple stable factual answers, implementation and project-wide scans.
+description: Investigate a substantive question, comparison or consequential recommendation and deliver a dated source-backed conclusion. Use for uncertain facts, conflicting evidence and technical or everyday decisions; exclude simple stable answers, implementation and unrelated project scans.
 ---
 
 # Research a decision
 
 ## 1. Define the question and finish
 
-Follow the user's configured operating guide once per session and its active tool-call version. Reuse verified context; load the relevant project, current task and source owners, refreshing affected sources after material changes or uncertain writes. If required context is inaccessible, name the gap and continue only independently supported work. Use the routed context-entry playbook when available.
+Follow the user's configured operating guide once per session and its active tool-call version. Resolve the standalone question/document or relevant project and its actual source owners without manufacturing a project. Reuse verified context, refreshing affected sources after material changes or uncertain writes. If required context is inaccessible, name the gap and continue only independently supported work. Use the routed context-entry playbook when available.
 
 Use available agents without waiting for an explicit user request when this method calls for independent fact-finding or when a bounded parallel task or separate check would improve the result. Follow the routed delegation procedure; give each worker a source/revision, scope, allowed actions and expected evidence. Keep one writer per shared object, use the current host capabilities and let the parent verify and integrate the result. If delegation is unavailable, continue supported work and state any required independence that remains unproven.
 

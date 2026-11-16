@@ -20,7 +20,7 @@ Retain concrete behavior checks, caller-focused boundaries, bounded diagnosis, u
 
 ## Coherent skillset provenance
 
-This package is an original task-scoped synthesis in the coherent 24-method collection. The canonical source-coverage record identifies all reviewed installed source versions and main-text SHA-256 values. Installed packages are distinct from a declared upstream pin; no other provider package must be invoked. Current package version: 2.0.0.
+This package is an original task-scoped synthesis in the coherent collection whose current membership is owned by the catalog. The canonical source-coverage record identifies all reviewed installed source versions and main-text SHA-256 values. Installed packages are distinct from a declared upstream pin; no other provider package must be invoked. Current package version: 2.1.0.
 
 ## agent-skills
 
@@ -125,3 +125,7 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+## General workflow update — 2026-11-17
+
+Check complete routing coverage and separate structural checks from fresh selection evidence. Package 2.1.0 retains the preceding source notices and ownership; it is an original adaptation, not a provider-plugin upgrade.

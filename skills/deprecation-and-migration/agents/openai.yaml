@@ -1,0 +1,7 @@
+interface:
+  display_name: "Deprecation and migration"
+  short_description: "Move consumers and data with verified recovery"
+  default_prompt: "Use $deprecation-and-migration to plan or execute a compatible and verifiable transition."
+
+policy:
+  allow_implicit_invocation: true

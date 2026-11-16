@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed_date": "2026-11-14",
+  "reviewed_date": "2026-11-17",
   "mode": "original-adaptation",
   "sources": [
     {
@@ -63,7 +63,7 @@
     "superpowers": 15
   },
   "previous_personal_count": 18,
-  "active_collection_count": 24,
+  "active_collection_count": 28,
   "mapping": [
     {
       "source": "agent-skills:api-and-interface-design",
@@ -87,13 +87,17 @@
     },
     {
       "source": "agent-skills:ci-cd-and-automation",
-      "destination": "evidence-driven-development",
-      "resource": "references/engineering-techniques.md",
+      "destination": "ci-cd-and-automation",
+      "resource": "SKILL.md",
       "mode": "integrate",
-      "reason": "Bestaande repo-pipeline veilig wijzigen of herstellen binnen de geautoriseerde wijziging.",
+      "reason": "Separate outcome for actual pipeline events, jobs, artifacts and independently verified enforcement; ordinary reminders stay with host scheduling.",
       "installed_version": "0.6.10",
       "main_sha256": "1c687b34cee3f4c619e8a3b651fc5b33a79268192f7e3abc9be9c4d906966087",
-      "evidence_path": "skills/evidence-driven-development/references/engineering-techniques.md"
+      "evidence_path": "skills/ci-cd-and-automation/SKILL.md",
+      "previous_destination": "evidence-driven-development",
+      "reviewed_upstream_commit": "39b723ceebf81474d0557c1fecd01eddab585563",
+      "reviewed_source_version": "0.6.16",
+      "reviewed_main_sha256": "5e0e55c059670a7838dc9d58dc20a3a645c0d43c974416490112af7de522df95"
     },
     {
       "source": "agent-skills:code-review-and-quality",
@@ -117,13 +121,17 @@
     },
     {
       "source": "agent-skills:constraint-driven-development",
-      "destination": "code-review",
-      "resource": "references/axes.md",
+      "destination": "constraint-driven-development",
+      "resource": "SKILL.md",
       "mode": "integrate",
-      "reason": "Bestaande projectgrenzen bewaken; geen leveranciersgetallen of ongeteste floor-guard overnemen.",
+      "reason": "Separate outcome for establishing quality rules and proving clean, violation and unavailable-control behavior; no supplier thresholds or unchecked helpers.",
       "installed_version": "0.6.10",
       "main_sha256": "2d7617580887353d3da657101382cae610bb40d3d4b54aaafa96bed205c89d08",
-      "evidence_path": "skills/code-review/references/axes.md"
+      "evidence_path": "skills/constraint-driven-development/SKILL.md",
+      "previous_destination": "code-review",
+      "reviewed_upstream_commit": "39b723ceebf81474d0557c1fecd01eddab585563",
+      "reviewed_source_version": "0.6.16",
+      "reviewed_main_sha256": "4b8934e4026745ae663dbe80150230f2bbcdbb3dec49a6fbcaef23e07f34b22a"
     },
     {
       "source": "agent-skills:context-engineering",
@@ -147,13 +155,17 @@
     },
     {
       "source": "agent-skills:deprecation-and-migration",
-      "destination": "evidence-driven-development",
-      "resource": "references/engineering-techniques.md",
+      "destination": "deprecation-and-migration",
+      "resource": "SKILL.md",
       "mode": "integrate",
-      "reason": "Werkelijke consumers, compatibiliteit en herstel; omgeving bepaalt uitrolvorm.",
+      "reason": "Separate outcome for real consumer/data transitions, interruption/retry/recovery and evidence-based retirement.",
       "installed_version": "0.6.10",
       "main_sha256": "4ee7db005e1517216945ef3d1c638ea8a7ed6e8d9a9150b159ec1b00e7539f1e",
-      "evidence_path": "skills/evidence-driven-development/references/engineering-techniques.md"
+      "evidence_path": "skills/deprecation-and-migration/SKILL.md",
+      "previous_destination": "evidence-driven-development",
+      "reviewed_upstream_commit": "39b723ceebf81474d0557c1fecd01eddab585563",
+      "reviewed_source_version": "0.6.16",
+      "reviewed_main_sha256": "1896d7db836fc067e2856739664db9ff5bb642526fdff2126d08ec0d588da4b7"
     },
     {
       "source": "agent-skills:documentation-and-adrs",
@@ -227,13 +239,17 @@
     },
     {
       "source": "agent-skills:observability-and-instrumentation",
-      "destination": "evidence-driven-development",
-      "resource": "references/diagnosis.md",
+      "destination": "observability-and-instrumentation",
+      "resource": "SKILL.md",
       "mode": "integrate",
-      "reason": "Vertrek van diagnostische vragen en minimale signalen; lokale logs kunnen volstaan.",
+      "reason": "Separate outcome for lasting, privacy-aware detection and diagnosis verified on actual signal paths.",
       "installed_version": "0.6.10",
       "main_sha256": "89efd8d422a1de7e411646089d7e6f931e87328b9482de543fbef3f01afa4469",
-      "evidence_path": "skills/evidence-driven-development/references/diagnosis.md"
+      "evidence_path": "skills/observability-and-instrumentation/SKILL.md",
+      "previous_destination": "evidence-driven-development",
+      "reviewed_upstream_commit": "39b723ceebf81474d0557c1fecd01eddab585563",
+      "reviewed_source_version": "0.6.16",
+      "reviewed_main_sha256": "e7fcb0820306d46268de9594d676ad98e35040858926c412b7000faa52a61f87"
     },
     {
       "source": "agent-skills:performance-optimization",
@@ -895,5 +911,20 @@
       "main_sha256": "8cb3ac68c6d8c4bb46886b998b09af7989643cab8bd0e46ee86dd62e64546bbe",
       "evidence_path": "skills/maintain-agent-instructions/references/design-criteria.md"
     }
-  ]
+  ],
+  "additional_reviews": [
+    {
+      "repository": "mattpocock/skills",
+      "commit": "5863806dd4e15c63174bee4e7515a4256792ecfa",
+      "version": "1.3.2",
+      "date": "2026-11-16"
+    },
+    {
+      "repository": "addyosmani/agent-skills",
+      "commit": "39b723ceebf81474d0557c1fecd01eddab585563",
+      "version": "0.6.16",
+      "date": "2026-11-16"
+    }
+  ],
+  "baseline_note": "Original installed provider versions and main_sha256 fields are historical evidence for the 2026-11-14 consolidation; reviewed_* fields identify later adapted primary sources, not provider-plugin upgrades."
 }
