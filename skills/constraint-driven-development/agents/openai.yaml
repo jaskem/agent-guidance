@@ -1,0 +1,6 @@
+interface:
+  display_name: "Constraint-driven development"
+  short_description: "Define and prove enforceable quality requirements"
+  default_prompt: "Use $constraint-driven-development to establish and verify the applicable quality constraints."
+policy:
+  allow_implicit_invocation: true

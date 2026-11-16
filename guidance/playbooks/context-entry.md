@@ -1,20 +1,26 @@
 # Context entry
 
-Use this when the user has configured an operating guide, project index or durable context source. Follow its actual location and permitted access; do not invent an integration, account or project. This procedure routes context and preserves ownership, rather than creating another task tracker.
+Use this when the user has configured an operating guide, work index or durable context source. This procedure owns context selection, identity and freshness. General execution and closure belong to the selected `work-cycle` playbook. Follow actual locations and permitted access; do not invent an integration, account, project or tracker.
 
 ## 1. Establish the session context
 
 At the start of a new chat/session, read the configured operating guide and its active version once, unless that current read is already established in the session. Apply the user's configured scope, destinations and exclusions. Use the recorded version when the service requires it; do not silently adopt new setup instructions or infer permission from a newer document.
 
+Follow the guide's accepted links to workflow, source navigation and distribution records. Keep one configured entrypoint; do not cache subordinate project/index locations in every instruction file. A shared procedure must not embed a particular user's private locations or grant another user access to them.
+
 Read only context relevant to the request. A general question still follows a user-required guide but does not require searching every project, creating records or invoking a full project workflow. A skill being installed or a page being listed is not evidence that its content was read.
 
 Finish with the applicable guide/version and context boundary, or an explicit unavailable source. If access fails, state what was not read, continue independent supported work, and pause only actions whose correctness or authorization depends on the missing context. Do not reconstruct current instructions or task status from memory as though fetched.
 
-## 2. Resolve the project and task owners
+## 2. Resolve the work and its owners
 
-For a new project or materially new assignment, open the relevant project home or index entry, current task/checkpoint, and the instructions and sources they identify. Match exact source IDs/URLs before treating names as aliases. Discover missing locations through authorized connected sources before asking the user.
+For standalone work, start from the request, supplied sources or files and intended destination. Do not manufacture a project registration or task. For project work, follow the configured index to the relevant home, current task/checkpoint and identified local instructions. Match exact source IDs/URLs, workspace/account and verified aliases; equal names alone do not establish identity. Discover missing locations through authorized sources before asking the user. An absent home or incomplete search does not prove a project is new or the inventory complete.
 
-Resolve code, product contracts, decisions, task status and durable context separately. Their owners can differ: a document service may own tasks while a repository owns code. Follow the established mapping; do not move ownership merely because one tool is convenient. An absent home or incomplete search does not prove a project is new or the inventory complete.
+Resolve source material, code/data, product contracts, decisions, task status and output/durable context destinations separately. Their owners can differ: a document service may own tasks while a repository owns code. Follow the established mapping; do not move ownership merely because one tool is convenient. Preserve workspace, access and sharing boundaries.
+
+Within host and tool constraints, the current user instruction determines scope and authority. The configured guide supplies personal defaults and navigation; actual source owners supply content and applicable local requirements. Resolve conflicting claims from their authoritative source and accepted decisions, not from a navigation summary or the newest edit date. Ask only for a remaining material conflict that available evidence cannot settle.
+
+Use the applicable consumer pin for shared guidance and the accepted catalog/distribution record for installed methods. Availability, installation and actual reading are distinct. An upstream revision or central link never overrides a consumer pin or authorizes an upgrade. If copies disagree, establish the accepted version and bound the affected claim before relying on either.
 
 Finish when the next action has its actual owner, accepted scope and applicable evidence, or a named missing fact. Ask only when that fact changes the action and cannot be recovered from available sources.
 
@@ -28,8 +34,8 @@ For delegation, pass verified context pointers, versions and limits with the ass
 
 Finish with sufficient current context for the action, without claiming broader coverage or automatic synchronization.
 
-## 4. Close at the existing destination
+## 4. Pass usable context to the work
 
-Update outcomes, decisions and task status at their established owners when the work changes them. Update only the relevant navigation summary afterward, retaining source/revision, observation date, evidence limits and the next action. Save durable preferences only within the user's permitted scope; do not persist full chats, secrets or transient progress by default.
+Supply the actual owner references, applicable guide/version, accepted scope and material evidence limits to the selected method or `work-cycle`. No extra context report is required for a simple answer. The work cycle owns result verification, status updates and delivery.
 
-Check an uncertain write at the exact target before repeating it. Report unresolved access or save failures and distinguish source updated, summary updated and unchecked state. A configured route improves consistency but cannot guarantee that an unsupported host loads it or that unavailable services were consulted.
+When closure changes navigation, retain source/revision, observation date and evidence limits; link the authoritative record rather than replacing it with a summary. Save durable preferences only within the user's permitted scope; do not persist full chats, secrets or transient progress by default. A configured route cannot guarantee that an unsupported host loads it or that an unavailable service was consulted.

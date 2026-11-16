@@ -31,6 +31,39 @@ class SkillPackageTests(unittest.TestCase):
         (self.root / 'skills/source-coverage.json').unlink()
         self.assertTrue(any('coverage' in e for e in check(self.root)))
 
+    def change_router(self, change):
+        path = self.root / 'docs/METHOD-ROUTING.md'
+        path.write_text(change(path.read_text()))
+
+    def test_catalog_method_missing_from_routing_is_rejected(self):
+        self.change_router(lambda text: '\n'.join(
+            line for line in text.splitlines()
+            if '| [teach](' not in line))
+        self.assertTrue(any('no selection entry: teach' in e for e in check(self.root)))
+
+    def test_unknown_routed_method_is_rejected(self):
+        self.change_router(lambda text: text.replace(
+            '../skills/teach/SKILL.md', '../skills/unknown-method/SKILL.md'))
+        self.assertTrue(any('unknown method: unknown-method' in e for e in check(self.root)))
+
+    def test_duplicate_route_is_rejected(self):
+        def duplicate(text):
+            line = next(line for line in text.splitlines() if '| [teach](' in line)
+            return text.replace(line, line + '\n' + line)
+        self.change_router(duplicate)
+        self.assertTrue(any('duplicate method entry: teach' in e for e in check(self.root)))
+
+    def test_route_without_observable_finish_is_rejected(self):
+        def remove_finish(text):
+            line = next(line for line in text.splitlines() if '| [teach](' in line)
+            return text.replace(line, '|'.join(line.split('|')[:3]) + ' |')
+        self.change_router(remove_finish)
+        self.assertTrue(any('request and observable finish' in e for e in check(self.root)))
+
+    def test_unreadable_router_is_not_success(self):
+        (self.root / 'docs/METHOD-ROUTING.md').unlink()
+        self.assertTrue(any('routing: missing' in e for e in check(self.root)))
+
     def test_duplicate_provider_entry_is_rejected(self):
         self.change_coverage(lambda c: c['mapping'].append(c['mapping'][0]))
         self.assertTrue(any('duplicate coverage source' in e for e in check(self.root)))
@@ -71,6 +104,15 @@ class SkillPackageTests(unittest.TestCase):
     def test_missing_disclosed_reference_is_rejected(self):
         (self.package / 'references/diagnosis.md').unlink()
         self.assertTrue(any('missing reference' in e for e in check(self.root)))
+
+    def test_stale_bundled_package_version_is_rejected(self):
+        path = self.package / 'references/sources.md'
+        original = path.read_text()
+        for declaration in ('Current package version: 2.0.0.',
+                            'Package version: 2.0.0.', 'Package version 2.0.0.'):
+            with self.subTest(declaration=declaration):
+                path.write_text(original.replace('Current package version: 2.1.0.', declaration))
+                self.assertTrue(any('bundled package version disagrees' in e for e in check(self.root)))
 
     def test_reference_cannot_depend_on_host_files(self):
         p = self.package / 'SKILL.md'

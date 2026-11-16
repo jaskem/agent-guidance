@@ -104,6 +104,39 @@ def check_coverage(root: Path, catalog: dict, names: set[str]) -> list[str]:
     return errors
 
 
+def check_routing(root: Path, names: set[str]) -> list[str]:
+    """Require every catalog method to have a selectable result and finish.
+
+    This checks the route table contract, not an agent's semantic choice.
+    """
+    try:
+        text = (root / 'docs/METHOD-ROUTING.md').read_text(encoding='utf-8')
+        table = text.split('## Select the work\n', 1)[1].split('\n## ', 1)[0]
+    except (OSError, IndexError):
+        return ['routing: missing canonical selection table']
+    errors = []
+    routes = []
+    for line in table.splitlines():
+        if not line.startswith('|'):
+            continue
+        targets = re.findall(r'\]\(\.\./skills/([^/]+)/SKILL\.md\)', line)
+        if not targets:
+            continue
+        cells = [cell.strip() for cell in line.strip().strip('|').split('|')]
+        if len(targets) != 1 or len(cells) != 3 or not cells[0] or not cells[2]:
+            errors.append('routing: each method needs one request and observable finish')
+        routes.extend(targets)
+    counts = Counter(routes)
+    for name in sorted(names - counts.keys()):
+        errors.append(f'routing: catalog method has no selection entry: {name}')
+    for name in sorted(counts.keys() - names):
+        errors.append(f'routing: unknown method: {name}')
+    for name, count in sorted(counts.items()):
+        if count != 1:
+            errors.append(f'routing: duplicate method entry: {name}')
+    return errors
+
+
 def check(root: Path) -> list[str]:
     errors: list[str] = []
     catalog_path = root / 'skills/catalog.json'
@@ -168,6 +201,11 @@ def check(root: Path) -> list[str]:
             if not file.is_file() or file.suffix != '.md':
                 continue
             body = file.read_text(encoding='utf-8')
+            if file.relative_to(package).as_posix() == 'references/sources.md':
+                declared = re.findall(
+                    r'(?:Current package version|Package version):?\s+(\d+\.\d+\.\d+)', body)
+                if any(version != entry['version'] for version in declared):
+                    errors.append(f'{name}: bundled package version disagrees with catalog')
             if '[TODO:' in body:
                 errors.append(f'{name}: unfinished template in {file.name}')
             for target in re.findall(r'\[[^\]]*\]\(([^\s)]+)\)', body):
@@ -218,6 +256,7 @@ def check(root: Path) -> list[str]:
     if actual != listed:
         errors.append('catalog/package mismatch: ' + str(sorted(str(p) for p in actual ^ listed)))
     errors.extend(check_coverage(root, catalog, seen))
+    errors.extend(check_routing(root, seen))
     return errors
 
 

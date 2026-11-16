@@ -11,7 +11,7 @@
     {
       "name": "evidence-driven-development",
       "path": "skills/evidence-driven-development",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "allow_implicit_invocation": true,
       "dependencies": [
         "code-review"
@@ -20,7 +20,7 @@
     {
       "name": "maintain-agent-instructions",
       "path": "skills/maintain-agent-instructions",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "allow_implicit_invocation": true
     },
     {
@@ -44,7 +44,7 @@
     {
       "name": "code-review",
       "path": "skills/code-review",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "allow_implicit_invocation": true
     },
     {
@@ -102,7 +102,7 @@
     {
       "name": "research",
       "path": "skills/research",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "allow_implicit_invocation": true
     },
     {
@@ -158,8 +158,46 @@
       "path": "skills/test-user-flows",
       "version": "1.0.0",
       "allow_implicit_invocation": true
+    },
+    {
+      "name": "constraint-driven-development",
+      "path": "skills/constraint-driven-development",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true
+    },
+    {
+      "name": "observability-and-instrumentation",
+      "path": "skills/observability-and-instrumentation",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true
+    },
+    {
+      "name": "deprecation-and-migration",
+      "path": "skills/deprecation-and-migration",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true
+    },
+    {
+      "name": "ci-cd-and-automation",
+      "path": "skills/ci-cd-and-automation",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true
     }
   ],
-  "collection_version": "1.0.0",
-  "coverage_record": "skills/source-coverage.json"
+  "collection_version": "1.1.0",
+  "coverage_record": "skills/source-coverage.json",
+  "reviewed_sources": [
+    {
+      "repository": "mattpocock/skills",
+      "commit": "5863806dd4e15c63174bee4e7515a4256792ecfa",
+      "version": "1.3.2",
+      "date": "2026-11-16"
+    },
+    {
+      "repository": "addyosmani/agent-skills",
+      "commit": "39b723ceebf81474d0557c1fecd01eddab585563",
+      "version": "0.6.16",
+      "date": "2026-11-16"
+    }
+  ]
 }

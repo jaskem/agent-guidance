@@ -1,6 +1,6 @@
 # Skill workflow
 
-This document owns packaging and distribution of the coherent 24-method skillset in skills/catalog.json. Consumer workflows and the shared-guidance contract retain their existing authority.
+This document owns packaging and distribution of the coherent 28-method skillset in skills/catalog.json. Consumer workflows and the shared-guidance contract retain their existing authority.
 
 ## Sources and destinations
 
@@ -17,7 +17,7 @@ For these repository-owned skills, GitHub is the source and Notion is a distribu
 
 ## Selecting a method
 
-Start with the configured context route in [METHOD-ROUTING.md](METHOD-ROUTING.md), reusing this session's verified guide and fetching only relevant project/task context. Skill availability does not prove that a host read the guide or applied the method.
+Start with the configured context route in [METHOD-ROUTING.md](METHOD-ROUTING.md), reusing this session's verified guide and fetching only the relevant standalone object or project/task context. The general [work cycle](../guidance/playbooks/work-cycle.md) owns execution and closure across result types. Skill availability does not prove that a host read the guide or applied the method.
 
 - Substantive authorized feature or bug fix: [evidence-driven-development](../skills/evidence-driven-development/SKILL.md).
 - Explicit instruction-system review or a recurring instruction defect: [maintain-agent-instructions](../skills/maintain-agent-instructions/SKILL.md).
@@ -31,7 +31,7 @@ Packages permit implicit selection when their descriptions match, except grill-m
 
 1. Read the current source and exact reviewed upstream material. Keep one responsibility per package; use direct relative links for optional branches. Inspect all referenced files before import. Retain license and attribution for copied material.
 2. Make a bounded source change. Use the host's mandated authoring workspace when needed, then copy the verified package to this canonical repository for review. Until publication it is a candidate, not a released source.
-3. Run `python tools/check_skills.py`, foundation checks and the full unittest suite from a clean committed checkout. Run the host's package validator in the actual installation workspace as well. The portable checker intentionally accepts only our simple two-field frontmatter format; it is not a general YAML parser or a security boundary.
+3. Run `python tools/check_skills.py`, foundation checks and the full unittest suite from a clean committed checkout. Every catalog method needs one route with a discriminating request and observable finish. The check rejects absent, duplicate and unknown routes; it does not prove semantic selection. Run the host's package validator in the actual installation workspace as well. The portable checker intentionally accepts only our simple two-field frontmatter format; it is not a general YAML parser or a security boundary.
 4. Exercise a normal request, an excluded request and missing-input behavior. Use fresh-context tests for substantial changes where supported. Save concrete observations in the existing audit/work record, not a fabricated pass percentage.
 5. Review requirements and implementation quality separately. Follow normal branch/PR checks. Publish the source before marking its installation as the current canonical release. Version a changed skill independently; keep shared `VERSION` unchanged when `guidance/` is unchanged.
 6. Install each complete package through the host's supported workflow. Save exact source commit, package version and content hashes in the private distribution record. Verify the remote package after reconciliation; a local file is not installation proof.

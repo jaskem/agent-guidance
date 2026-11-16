@@ -1,5 +1,5 @@
 {
-  "guidance_version": "0.5.0",
+  "guidance_version": "0.6.0",
   "modules": [
     {
       "id": "kernel",
@@ -137,6 +137,11 @@
       "id": "resource-product-ux-assumptions",
       "kind": "reference",
       "path": "guidance/resources/product-ux-assumptions.md"
+    },
+    {
+      "id": "work-cycle",
+      "kind": "playbook",
+      "path": "guidance/playbooks/work-cycle.md"
     }
   ],
   "schema_version": 1,
