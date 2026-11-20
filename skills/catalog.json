@@ -102,7 +102,7 @@
     {
       "name": "design-ui-improvements",
       "path": "skills/design-ui-improvements",
-      "version": "2.2.0",
+      "version": "2.2.1",
       "allow_implicit_invocation": true,
       "conditional_routes": [
         {
@@ -308,7 +308,7 @@
       ]
     }
   ],
-  "collection_version": "1.3.0",
+  "collection_version": "1.3.1",
   "coverage_record": "skills/source-coverage.json",
   "reviewed_sources": [
     {

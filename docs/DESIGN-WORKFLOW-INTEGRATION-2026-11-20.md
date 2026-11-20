@@ -4,7 +4,7 @@
 
 The user requested a thorough review of five further design sources, integration of missing useful methods into the existing main workflow and skillset, better conditional routing, earlier useful subagent work, and visual checks through the relevant available Remote Desktop rather than a reflex cloud-browser fallback.
 
-Baseline: published `jaskem/agent-guidance@12d698190450d6077016d8c62ff94d86376d25b5`, guidance 0.6.0, collection 1.2.0, 30 owned methods and the separately owned personal logo method. This batch changes the shared source to guidance **0.7.0** (29 modules) and collection **1.3.0** (**32 owned methods**, plus the declared external logo-design extension). Notion setup instructions remain **0.0.6**. This is a source/distribution batch, not a silent migration of project repository pins.
+Baseline: published `jaskem/agent-guidance@12d698190450d6077016d8c62ff94d86376d25b5`, guidance 0.6.0, collection 1.2.0, 30 owned methods and the separately owned personal logo method. This batch changes the shared source to guidance **0.7.0** (29 modules) and collection **1.3.1** (**32 owned methods**, plus the declared external logo-design extension). Notion setup instructions remain **0.0.6**. This is a source/distribution batch, not a silent migration of project repository pins.
 
 The actual loaded primary procedure was maintain-agent-instructions with its design/behavior references, the work-cycle, delegation and instruction-feedback owners, skill authoring/distribution requirements, and code-review for source closure. Independent source reviews were assigned before parent integration. One owner writes each package or shared external destination; the parent integrates and verifies the result.
 
@@ -27,7 +27,7 @@ The reports pin exact source revisions and explain omissions. Retrieved files ar
 | design-brand-system | 1.0.0, new | Reusable cross-medium identity, evidence-based diagnosis, fixed/flexible rules, asset ownership and collateral-family stress tests |
 | motion-design | 1.0.0, new | Trigger/state/response, spatial continuity, interruption/reversal, lifecycle, reduced motion and actual runtime evidence |
 | audit-ui-ux | 2.2.0 | Correct observation surface and optional independent exploratory evidence |
-| design-ui-improvements | 2.2.0 | Reference translation, screenshot scale, fair before/after comparisons and conditional brand/motion routes |
+| design-ui-improvements | 2.2.1 | Reference translation, screenshot scale, fair before/after comparisons and conditional brand/motion routes |
 | image-art-direction | 1.1.0 | Reusable asset families, varied-subject tests, provenance and final-container inspection |
 | visual-storytelling | 1.1.0 | Product films, specialized narrative formats, real timing/data and honest export/QC evidence |
 | test-user-flows | 1.1.0 | Preferred target runtime, fallback limits, repeated input and exploratory/acceptance separation |
@@ -62,3 +62,7 @@ The new visual-verification playbook owns target identification, preferred envir
 - Complete personal reconciliation and full Notion exports must be read back against the published package before claiming installation. Host-owned metadata serialization is recorded separately from method body/reference integrity.
 
 Existing consumer pins, project acceptance and team-workspace access retain their boundaries. These improvements do not prove a native app audit, an MP4 export, installation in an inaccessible workspace or automatic use in every future chat. Final publication and distribution status belongs to the existing private instruction/skills record, linked from the main Guide.
+
+## Distribution formatting correction
+
+Full Notion readback of the 1.3.0 distribution exposed an unintended autolink on the literal DESIGN.md filename in design-ui-improvements. Package 2.2.1 quotes it as inline code; collection 1.3.1 records the corrected source. The substantive method and guidance 0.7.0 are unchanged. Exact readback remains required; no comparison was weakened to hide the mismatch.
