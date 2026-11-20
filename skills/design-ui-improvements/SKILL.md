@@ -19,7 +19,7 @@ Use available agents on your own initiative when this method calls for separate 
 
 Map each priority finding to a concrete change. Reuse product vocabulary and established visual language. Change hierarchy, grouping, disclosure or feedback to support the task. Preserve necessary expert controls and data.
 
-Use [art direction](references/art-direction.md) when visual language, density, motion, assets or identity fidelity needs a consequential choice. Load [reference translation](references/reference-translation.md) when using screenshots, another product or a DESIGN.md collection. Use design-brand-system for a distinct reusable identity system and motion-design for substantial interactive motion; a settled token or simple transition needs no extra workflow. Make those choices affect the proposal; an already-decided repair needs no separate style exercise.
+Use [art direction](references/art-direction.md) when visual language, density, motion, assets or identity fidelity needs a consequential choice. Load [reference translation](references/reference-translation.md) when using screenshots, another product or a `DESIGN.md` collection. Use design-brand-system for a distinct reusable identity system and motion-design for substantial interactive motion; a settled token or simple transition needs no extra workflow. Make those choices affect the proposal; an already-decided repair needs no separate style exercise.
 
 For a consequential unresolved choice, compare meaningful alternatives and trade-offs. Recommend with reasons; leave domain decisions needing input open while completing independent proposals. Use an existing prototype method only when interaction or state uncertainty needs an executable experiment.
 
