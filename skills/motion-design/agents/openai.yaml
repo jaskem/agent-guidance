@@ -1,0 +1,7 @@
+interface:
+  display_name: "Motion design"
+  short_description: "Ontwerp en toets betekenisvolle UI-animatie"
+  default_prompt: "Gebruik $motion-design voor doelgerichte animatie en controleer de echte interactiestaten."
+
+policy:
+  allow_implicit_invocation: true

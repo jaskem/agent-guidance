@@ -20,7 +20,7 @@ Retain concrete behavior checks, caller-focused boundaries, bounded diagnosis, u
 
 ## Coherent skillset provenance
 
-This package is an original task-scoped synthesis in the coherent collection whose current membership is owned by the catalog. The canonical source-coverage record identifies all reviewed installed source versions and main-text SHA-256 values. Installed packages are distinct from a declared upstream pin; no other provider package must be invoked. Current package version: 2.1.0.
+This package is an original task-scoped synthesis in the coherent collection whose current membership is owned by the catalog. The canonical source-coverage record identifies all reviewed installed source versions and main-text SHA-256 values. Installed packages are distinct from a declared upstream pin; no other provider package must be invoked. Current package version: 2.2.0.
 
 ## agent-skills
 
@@ -129,3 +129,7 @@ SOFTWARE.
 ## General workflow update — 2026-11-17
 
 Route distinct controls, instrumentation, migration and pipeline outcomes to their new owners. Package 2.1.0 retains the preceding source notices and ownership; it is an original adaptation, not a provider-plugin upgrade.
+
+## Routing and design extension — 2026-11-20
+
+Original integration of the configured work-cycle route, early useful delegation and target-specific visual evidence. Installation and structural routing checks do not guarantee future invocation. Preserve existing scope and source ownership.

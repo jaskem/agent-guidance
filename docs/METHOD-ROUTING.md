@@ -8,6 +8,8 @@ Start from the user's single configured operating guide once per session. Follow
 
 Select from the [catalog](../skills/catalog.json), resolve the accepted distribution/version, and actually load the selected method plus necessary references. Installed, enabled, read, applied and verified are distinct states. If installed copies disagree, compare the canonical source, accepted pin and distribution evidence; modification time alone does not decide precedence. Pause only work dependent on an unresolved source or access gap.
 
+For substantive work, establish the work-cycle route before execution: result, actually loaded primary method/source, triggered conditional methods, intended observation surface and useful independent assignments. Follow the catalog's conditional routes only when their trigger is present, loading the target procedure before its dependent action. When work changes, re-evaluate the affected route. At closure, reconcile applied methods, decisions/checks, integrated agents and observed evidence at the existing work owner. A missing required branch remains an explicit gap; a checked box is not proof of application.
+
 ## Select the work
 
 Choose by the promised outcome and current uncertainty, not a keyword or available package. Respect an explicitly requested provider and its invocation policy. Otherwise use these canonical methods. A clear authorized request proceeds without restarting discovery.
@@ -23,6 +25,8 @@ Choose by the promised outcome and current uncertainty, not a keyword or availab
 | Propose a bounded interface or improve its visual design | [design-ui-improvements](../skills/design-ui-improvements/SKILL.md) | Inspectable proposals grounded in findings or supplied requirements, preserving useful behavior and density |
 | Direct a complex image composition, campaign series or storyboard | [image-art-direction](../skills/image-art-direction/SKILL.md) | Actual inspected visuals with explicit reference roles, continuity and factual limits |
 | Build an editorial HTML narrative, step-driven web story or motion film | [visual-storytelling](../skills/visual-storytelling/SKILL.md) | Requested rendered narrative and appropriate interaction/export evidence |
+| Diagnose or define a reusable cross-medium identity system | [design-brand-system](../skills/design-brand-system/SKILL.md) | Inspectable identity rules, applications, asset ownership and tested reuse limits |
+| Design or repair substantial interactive animation | [motion-design](../skills/motion-design/SKILL.md) | Purposeful observed state transitions, interruption/reversal and reduced-motion evidence |
 | Review code, a branch or a PR | [code-review](../skills/code-review/SKILL.md) | Requirements and quality assessed against the complete relevant change |
 | Repair source ownership or project navigation | [maintain-project-context](../skills/maintain-project-context/SKILL.md) | Verified owners, current links and explicit coverage gaps |
 | Resume or hand off interrupted work | [handoff](../skills/handoff/SKILL.md) | Proven state and first unproven authorized action identified |
@@ -54,11 +58,15 @@ Choose by the promised outcome and current uncertainty, not a keyword or availab
 5. Keep distinct owners: constraints establish what must hold; CI/CD establishes where checks run and whether failures block; code-review assesses the actual change; prepare-release verifies delivery. Existing checks can simply run without any new constraint or pipeline project.
 6. Use observability for lasting signals, not every bug diagnosis; use migration for supported consumers/data transitions, not every refactor. Their software changes still use the applicable implementation and review procedure.
 
-All catalog methods permit implicit relevant selection except grill-me, which remains explicit. Design output uses the relevant owner: UI proposals use design-ui-improvements; existing-interface assessment uses audit-ui-ux; complex raster series use image-art-direction; designed HTML/web/video narratives use visual-storytelling. Simple image requests use the native image capability directly, and native documents/slides keep their format capability. A separately accepted logo-design installation owns logo identity. None of these changes the source of product facts.
+All catalog methods permit implicit relevant selection except grill-me, which remains explicit. Design output uses the relevant owner: UI proposals use design-ui-improvements; existing-interface assessment uses audit-ui-ux; complex raster series use image-art-direction; designed HTML/web/video narratives use visual-storytelling; reusable identity systems use design-brand-system; interactive transitions use motion-design. Simple image requests use the native image capability directly, and native documents/slides keep their format capability. None of these changes the source of product facts.
+
+The accepted external method `logo-design` owns logo identity, concepts, mark construction and logo kits. Resolve its personal extension and accepted distribution from the configured guide; do not substitute the upstream package and overwrite custom work. It is registered separately in the catalog because this repository does not own its source. A settled logo applied to a brand system or film needs its approved asset, not another logo-design lifecycle. Missing logo access blocks only that dependent result.
 
 An unrelated installed provider is not a second default lifecycle. A provider explicitly requested by the user remains available within its real scope. Provider files are not rewritten.
 
 evidence-driven-development requires code-review; implement-spec requires both, as declared in the catalog. Resolve unavailable dependencies against the accepted canonical release. If that source is inaccessible, name the dependent gap and continue independent work. Other methods are conditional sub-results rather than a mandatory chain.
+
+The package validator checks required dependencies and declared conditional targets for valid names, triggers and disclosure in the owning package. It also checks every primary selection entry. These checks can reject structural drift in CI; they cannot observe whether a host loaded a method or an agent followed it. Actual route evidence and behavioral trials address those separate questions.
 
 ## Use the appropriate host capability
 
@@ -76,6 +84,8 @@ The method catalog is not a list of every tool. Use the host's required artifact
 | Simple explanation or learning | Direct explanation; teach for a useful bounded lesson, without forcing a quiz or code context |
 
 A scheduler request is not CI/CD merely because both mention automation. Explicit publication or sending can be part of the authorized goal; drafting alone does not authorize either. A status question during work receives a brief answer and the authorized objective continues.
+
+For visual or interactive acceptance, follow the selected [visual-verification playbook](../guidance/playbooks/visual-verification.md). Discover the actual target and configured environment before choosing a cloud browser. Prefer a relevant accessible user-selected remote desktop; preserve the tool's interaction rules and record the reason and evidence boundary of a fallback. One failed local browser launch is not proof that all rendering paths are unavailable.
 
 ## Select specialist perspectives
 

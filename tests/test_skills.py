@@ -21,6 +21,23 @@ class SkillPackageTests(unittest.TestCase):
     def test_complete_packages(self):
         self.assertEqual(check(self.root), [])
 
+    def change_catalog(self, change):
+        path = self.root / 'skills/catalog.json'
+        catalog = json.loads(path.read_text())
+        change(catalog)
+        path.write_text(json.dumps(catalog))
+
+    def set_conditional_routes(self, name, routes):
+        def change(catalog):
+            entry = next(entry for entry in catalog['skills'] if entry['name'] == name)
+            entry['conditional_routes'] = routes
+        self.change_catalog(change)
+
+    def disclose_methods(self, name, *targets):
+        path = self.root / f'skills/{name}/SKILL.md'
+        path.write_text(path.read_text() + '\nConditional methods: '
+                        + ', '.join(f'`{target}`' for target in targets) + '.\n')
+
     def change_coverage(self, change):
         path = self.root / 'skills/source-coverage.json'
         coverage = json.loads(path.read_text())
@@ -101,17 +118,110 @@ class SkillPackageTests(unittest.TestCase):
         p.write_text(json.dumps(catalog))
         self.assertTrue(any('cyclic skill dependency' in e for e in check(self.root)))
 
+    def test_dependency_must_be_disclosed_in_owning_skill(self):
+        path = self.package / 'SKILL.md'
+        path.write_text(path.read_text().replace('code-review', 'a separate review method'))
+        self.assertTrue(any('dependency not disclosed in SKILL.md: code-review' in e
+                            for e in check(self.root)))
+
+    def test_conditional_routes_allow_distinct_triggers_and_task_composition_cycles(self):
+        self.set_conditional_routes('plan-work', [
+            {'to': 'research', 'when': 'Evidence is missing'},
+            {'to': 'research', 'when': 'Sources conflict'},
+        ])
+        self.set_conditional_routes('research', [
+            {'to': 'plan-work', 'when': 'Findings need an implementation sequence'},
+        ])
+        self.disclose_methods('plan-work', 'research')
+        self.disclose_methods('research', 'plan-work')
+        self.assertEqual(check(self.root), [])
+
+    def test_unknown_conditional_route_target_is_rejected(self):
+        self.set_conditional_routes('plan-work', [
+            {'to': 'missing-method', 'when': 'Evidence is missing'},
+        ])
+        self.assertTrue(any('unknown conditional route target: missing-method' in e
+                            for e in check(self.root)))
+
+    def test_missing_conditional_route_target_is_rejected(self):
+        self.set_conditional_routes('plan-work', [{'when': 'Evidence is missing'}])
+        self.assertTrue(any('unknown conditional route target' in e for e in check(self.root)))
+
+    def test_conditional_route_requires_nonempty_trigger(self):
+        self.disclose_methods('plan-work', 'research')
+        for trigger in ('', ' \n\t ', None, 3):
+            with self.subTest(trigger=trigger):
+                self.set_conditional_routes('plan-work', [{'to': 'research', 'when': trigger}])
+                self.assertTrue(any('non-empty trigger' in e for e in check(self.root)))
+
+    def test_duplicate_conditional_route_is_rejected(self):
+        self.disclose_methods('plan-work', 'research')
+        self.set_conditional_routes('plan-work', [
+            {'to': 'research', 'when': 'Evidence is missing'},
+            {'to': 'research', 'when': 'Evidence is missing'},
+        ])
+        self.assertTrue(any('duplicate conditional route' in e for e in check(self.root)))
+
+    def test_conditional_route_cannot_target_itself(self):
+        self.set_conditional_routes('plan-work', [
+            {'to': 'plan-work', 'when': 'The plan needs refinement'},
+        ])
+        self.assertTrue(any('conditional route cannot target itself' in e
+                            for e in check(self.root)))
+
+    def test_conditional_route_must_be_disclosed_in_owning_skill(self):
+        path = self.root / 'skills/plan-work/SKILL.md'
+        # A supporting reference or a longer method name is not main-text disclosure.
+        path.write_text(path.read_text().replace('research', 'evidence gathering')
+                        + '\nThe research-methodology example is supplementary.\n')
+        reference = self.root / 'skills/plan-work/references/sources.md'
+        reference.write_text(reference.read_text() + '\nUse research when evidence is missing.\n')
+        self.set_conditional_routes('plan-work', [
+            {'to': 'research', 'when': 'Evidence is missing'},
+        ])
+        self.assertTrue(any('conditional route not disclosed in SKILL.md: research' in e
+                            for e in check(self.root)))
+
+    def test_conditional_routes_require_array_of_objects(self):
+        for routes in (None, {}, 'research', [None], ['research']):
+            with self.subTest(routes=routes):
+                self.set_conditional_routes('plan-work', routes)
+                self.assertTrue(any('conditional' in e and 'must be' in e
+                                    for e in check(self.root)))
+
     def test_missing_disclosed_reference_is_rejected(self):
         (self.package / 'references/diagnosis.md').unlink()
         self.assertTrue(any('missing reference' in e for e in check(self.root)))
 
+    def test_external_method_cannot_mask_local_or_duplicate_owner(self):
+        self.change_catalog(lambda c: c['external_methods'].append(c['external_methods'][0].copy()))
+        self.assertTrue(any('duplicate or locally owned external method' in e for e in check(self.root)))
+        self.change_catalog(lambda c: c['external_methods'][0].update(name='teach'))
+        self.assertTrue(any('locally owned external method: teach' in e for e in check(self.root)))
+
+    def test_external_method_requires_an_explicit_route(self):
+        self.change_router(lambda text: text.replace('`logo-design`', 'the separate logo method'))
+        self.assertTrue(any('external method has no explicit route: logo-design' in e for e in check(self.root)))
+
+    def test_external_method_requires_owner_and_destination(self):
+        self.change_catalog(lambda c: c['external_methods'][0].update(owner='', distribution_targets=[]))
+        failures = check(self.root)
+        self.assertTrue(any('external method needs owner' in e for e in failures))
+        self.assertTrue(any('external method needs distribution_targets' in e for e in failures))
+
     def test_stale_bundled_package_version_is_rejected(self):
         path = self.package / 'references/sources.md'
         original = path.read_text()
-        for declaration in ('Current package version: 2.0.0.',
-                            'Package version: 2.0.0.', 'Package version 2.0.0.'):
+        catalog = json.loads((self.root / 'skills/catalog.json').read_text())
+        current = next(entry['version'] for entry in catalog['skills']
+                       if entry['name'] == self.package.name)
+        original_declaration = f'Current package version: {current}.'
+        self.assertIn(original_declaration, original)
+        mismatched = '0.0.0' if current != '0.0.0' else '0.0.1'
+        for declaration in (f'Current package version: {mismatched}.',
+                            f'Package version: {mismatched}.', f'Package version {mismatched}.'):
             with self.subTest(declaration=declaration):
-                path.write_text(original.replace('Current package version: 2.1.0.', declaration))
+                path.write_text(original.replace(original_declaration, declaration))
                 self.assertTrue(any('bundled package version disagrees' in e for e in check(self.root)))
 
     def test_reference_cannot_depend_on_host_files(self):

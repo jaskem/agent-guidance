@@ -1,0 +1,6 @@
+interface:
+  display_name: "Design Brand System"
+  short_description: "Build a coherent identity across formats"
+  default_prompt: "Use $design-brand-system to turn this brand brief and existing assets into a reusable visual system."
+policy:
+  allow_implicit_invocation: true
