@@ -193,6 +193,21 @@ class SkillPackageTests(unittest.TestCase):
         (self.package / 'references/diagnosis.md').unlink()
         self.assertTrue(any('missing reference' in e for e in check(self.root)))
 
+    def test_external_reference_supplements_are_validated(self):
+        self.assertEqual(check(self.root), [])
+        self.change_catalog(lambda c: c['external_methods'][-1].update(supplements=['missing-method']))
+        self.assertTrue(any('invalid external supplement targets' in e for e in check(self.root)))
+
+    def test_external_reference_supplement_requires_trigger_and_owner(self):
+        self.change_catalog(lambda c: c['external_methods'][-1].update(when='', selection_owner='elsewhere.md'))
+        errors = check(self.root)
+        self.assertTrue(any('external supplement requires a trigger' in e for e in errors))
+        self.assertTrue(any('external supplement must use the central router' in e for e in errors))
+
+    def test_external_reference_supplement_rejects_duplicate_targets(self):
+        self.change_catalog(lambda c: c['external_methods'][-1].update(supplements=['teach', 'teach']))
+        self.assertTrue(any('duplicate external supplement target' in e for e in check(self.root)))
+
     def test_external_method_cannot_mask_local_or_duplicate_owner(self):
         self.change_catalog(lambda c: c['external_methods'].append(c['external_methods'][0].copy()))
         self.assertTrue(any('duplicate or locally owned external method' in e for e in check(self.root)))

@@ -175,6 +175,20 @@ def check_external_methods(root: Path, catalog: dict, local_names: set[str]) -> 
             errors.append(f'{name}: external method needs distribution_targets')
         if f'`{name}`' not in router:
             errors.append(f'external method has no explicit route: {name}')
+        # Optional shared reference supplements belong to the central router,
+        # not to ten independently versioned task-procedure packages.
+        if 'supplements' in entry:
+            targets = entry['supplements']
+            if (not isinstance(targets, list) or not targets
+                    or any(not isinstance(target, str) or target not in local_names
+                           for target in targets)):
+                errors.append(f'{name}: invalid external supplement targets')
+            elif len(targets) != len(set(targets)):
+                errors.append(f'{name}: duplicate external supplement target')
+            if not isinstance(entry.get('when'), str) or not entry['when'].strip():
+                errors.append(f'{name}: external supplement requires a trigger')
+            if entry.get('selection_owner') != 'docs/METHOD-ROUTING.md':
+                errors.append(f'{name}: external supplement must use the central router')
     return errors
 
 

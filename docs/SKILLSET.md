@@ -1,12 +1,14 @@
 # Coherent skillset
 
-The [catalog](../skills/catalog.json) is the single membership and package-version owner for 32 repository-owned procedures plus the separately owned logo-design extension. The [method router](METHOD-ROUTING.md) selects by the requested result. The [general work cycle](../guidance/playbooks/work-cycle.md) owns authorized execution, proportionate evidence and closure for all work. Keep a single primary procedure and only necessary specialist sub-results or host capabilities.
+The [catalog](../skills/catalog.json) is the single membership and package-version owner for 32 repository-owned procedures plus the separately owned logo-design and modern-web-guidance extensions. The [method router](METHOD-ROUTING.md) selects by the requested result. The [general work cycle](../guidance/playbooks/work-cycle.md) owns authorized execution, proportionate evidence and closure for all work. Keep a single primary procedure and only necessary specialist sub-results or host capabilities.
 
 The 18 former personal methods and six additions retain their names and owner. Four further Addy-inspired methods now own distinct results: constraint-driven-development, observability-and-instrumentation, deprecation-and-migration and ci-cd-and-automation. Their compact adaptations use project-specific requirements and actual capabilities, with no compulsory cloud tools, supplier thresholds or provider lifecycle. The [coverage record](../skills/source-coverage.json) retains the original 83-entry consolidation and records the new pinned review. The provider wrappers do not run behind these methods.
 
 The design integration of 20 November adds image-art-direction and visual-storytelling, with targeted improvements to the two existing UI methods. [The Garden review](GARDEN-DESIGN-REVIEW-2026-11-20.md) records overlap, adaptations and evidence limits. General image tooling, native document/presentation capabilities and the separately accepted logo-design skill retain their boundaries.
 
 The second design batch adds design-brand-system and motion-design, with conditional routing into existing UI, image, narrative and implementation methods. See the [integration record](DESIGN-WORKFLOW-INTEGRATION-2026-11-20.md) and its five source reviews. The separate logo-design extension retains its personal owner and custom improvements; it is an accepted routed extension, not a public source copy of its reference-logo library.
+
+The GoogleChrome integration adds a pinned web-platform reference branch, not another primary workflow. The central router declares one shared reference trigger for ten relevant methods; implementation plans reach it through evidence-driven-development. The 32 existing method packages retain their versions and content. See [source, installation and verification boundaries](MODERN-WEB-GUIDANCE-2026-11-21.md). Backend/native-only and editorial work remain outside this branch.
 
 ## Selection and composition
 
