@@ -1,6 +1,6 @@
 # Sources and adaptations
 
-Canonical owner: jaskem/agent-guidance, skills/motion-design. Package version: 1.0.0. Personal and Notion packages are distributions.
+Canonical owner: jaskem/agent-guidance, skills/motion-design. Package version: 1.1.0. Personal and Notion packages are distributions.
 
 Original synthesis of reviewed procedures, inspected on 2026-11-20. No upstream code, runtime scaffolds, installers, private router APIs or complete libraries are bundled.
 
@@ -85,3 +85,5 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+Web-platform route update (1.1.0, 21 November 2026): conditionally load the separately accepted modern-web-guidance extension before relevant technical decisions. This package owns task procedure; GoogleChrome owns its guide corpus.

@@ -285,6 +285,11 @@ def check(root: Path) -> list[str]:
                 errors.append(f'{name}: dependency not disclosed in SKILL.md: {dependency}')
         dependencies[name] = required
 
+    external_entries = catalog.get('external_methods', [])
+    external_names = {entry['name'] for entry in external_entries
+                      if isinstance(entry, dict) and isinstance(entry.get('name'), str)} if isinstance(external_entries, list) else set()
+    conditional_targets = seen | external_names
+
     # Conditional routes are not mandatory load dependencies; legitimate task
     # composition can return to an earlier method, so only dependencies form a DAG.
     for entry in entries:
@@ -302,7 +307,7 @@ def check(root: Path) -> list[str]:
                 errors.append(f'{name}: conditional route must be an object')
                 continue
             target, trigger = route.get('to'), route.get('when')
-            if not isinstance(target, str) or target not in seen:
+            if not isinstance(target, str) or target not in conditional_targets:
                 errors.append(f'{name}: unknown conditional route target: {target}')
             elif target == name:
                 errors.append(f'{name}: conditional route cannot target itself')

@@ -62,6 +62,18 @@ All catalog methods permit implicit relevant selection except grill-me, which re
 
 The accepted external method `logo-design` owns logo identity, concepts, mark construction and logo kits. Resolve its personal extension and accepted distribution from the configured guide; do not substitute the upstream package and overwrite custom work. It is registered separately in the catalog because this repository does not own its source. A settled logo applied to a brand system or film needs its approved asset, not another logo-design lifecycle. Missing logo access blocks only that dependent result.
 
+The accepted external method `modern-web-guidance` supplies GoogleChrome web-platform guidance for HTML, CSS, browser APIs and client-side JavaScript. Resolve the pinned complete Notion documentation package from the configured distribution record and load it before the dependent technical decision. Search focused capabilities, read relevant guides, apply the actual browser/runtime policy, and check resulting choices. It supplements the selected task method; it is not another design/development lifecycle. The [integration record](MODERN-WEB-GUIDANCE-2026-11-21.md) records provenance, intentional adaptations and evidence limits.
+
+| Branch | When to load modern-web-guidance | Existing owner retained |
+| --- | --- | --- |
+| Implementation, bug diagnosis or prototype | HTML/CSS/browser APIs/client-side behavior is changed | evidence-driven-development or prototype; implement-spec reaches it through its implementation dependency |
+| UI design, audit, web narrative or motion | Technical web patterns or browser fallbacks affect the result | design-ui-improvements, audit-ui-ux, visual-storytelling or motion-design |
+| Review, security or performance | Actual browser semantics, security or measured web bottlenecks are assessed | code-review, review-security or optimize-performance |
+| User-flow verification | Browser semantics or compatibility criteria need clarification | test-user-flows and the selected visual-verification environment |
+| Backend/native-only work, CI, wording or static brand/image work | Do not load for these alone | Original direct/task route |
+
+Do not perform a broad legacy scan for a bounded UI change. Preserve compactness, established design, supported browser fallbacks and actual target-runtime checks. Guide retrieval is source evidence, not visual or interaction acceptance. The documentation edition uses host file search and read capabilities, with primary-documentation fallback when unavailable; it does not include the upstream CLI or authorize installing Node on a user's machine. No automatic package update, additional approval round or mandatory skill footer is introduced.
+
 An unrelated installed provider is not a second default lifecycle. A provider explicitly requested by the user remains available within its real scope. Provider files are not rewritten.
 
 evidence-driven-development requires code-review; implement-spec requires both, as declared in the catalog. Resolve unavailable dependencies against the accepted canonical release. If that source is inaccessible, name the dependent gap and continue independent work. Other methods are conditional sub-results rather than a mandatory chain.

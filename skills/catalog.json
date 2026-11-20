@@ -11,7 +11,7 @@
     {
       "name": "evidence-driven-development",
       "path": "skills/evidence-driven-development",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "allow_implicit_invocation": true,
       "dependencies": [
         "code-review"
@@ -32,6 +32,10 @@
         {
           "to": "test-user-flows",
           "when": "Real user-route acceptance is required"
+        },
+        {
+          "to": "modern-web-guidance",
+          "when": "The change implements or diagnoses HTML, CSS, browser APIs or client-side JavaScript"
         }
       ]
     },
@@ -56,14 +60,26 @@
     {
       "name": "prototype",
       "path": "skills/prototype",
-      "version": "2.0.0",
-      "allow_implicit_invocation": true
+      "version": "2.1.0",
+      "allow_implicit_invocation": true,
+      "conditional_routes": [
+        {
+          "to": "modern-web-guidance",
+          "when": "The experiment implements HTML, CSS or client-side browser behavior"
+        }
+      ]
     },
     {
       "name": "code-review",
       "path": "skills/code-review",
-      "version": "2.1.0",
-      "allow_implicit_invocation": true
+      "version": "2.2.0",
+      "allow_implicit_invocation": true,
+      "conditional_routes": [
+        {
+          "to": "modern-web-guidance",
+          "when": "The reviewed change makes substantive web-platform or browser-compatibility choices"
+        }
+      ]
     },
     {
       "name": "handoff",
@@ -86,7 +102,7 @@
     {
       "name": "audit-ui-ux",
       "path": "skills/audit-ui-ux",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "allow_implicit_invocation": true,
       "conditional_routes": [
         {
@@ -96,13 +112,17 @@
         {
           "to": "design-ui-improvements",
           "when": "The requested next result is an inspectable visual proposal"
+        },
+        {
+          "to": "modern-web-guidance",
+          "when": "The web-interface audit needs technical HTML/CSS/browser guidance rather than visual observation alone"
         }
       ]
     },
     {
       "name": "design-ui-improvements",
       "path": "skills/design-ui-improvements",
-      "version": "2.2.1",
+      "version": "2.3.0",
       "allow_implicit_invocation": true,
       "conditional_routes": [
         {
@@ -120,6 +140,10 @@
         {
           "to": "test-user-flows",
           "when": "Actual implemented interactions need acceptance"
+        },
+        {
+          "to": "modern-web-guidance",
+          "when": "A web proposal makes HTML/CSS/browser implementation or compatibility choices"
         }
       ]
     },
@@ -178,14 +202,26 @@
     {
       "name": "review-security",
       "path": "skills/review-security",
-      "version": "1.0.0",
-      "allow_implicit_invocation": true
+      "version": "1.1.0",
+      "allow_implicit_invocation": true,
+      "conditional_routes": [
+        {
+          "to": "modern-web-guidance",
+          "when": "The assessment concerns browser APIs, client-side sanitization or other web-platform security"
+        }
+      ]
     },
     {
       "name": "optimize-performance",
       "path": "skills/optimize-performance",
-      "version": "1.0.0",
-      "allow_implicit_invocation": true
+      "version": "1.1.0",
+      "allow_implicit_invocation": true,
+      "conditional_routes": [
+        {
+          "to": "modern-web-guidance",
+          "when": "The measured bottleneck concerns browser rendering, interaction or web loading"
+        }
+      ]
     },
     {
       "name": "prepare-release",
@@ -202,7 +238,7 @@
     {
       "name": "test-user-flows",
       "path": "skills/test-user-flows",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "allow_implicit_invocation": true,
       "conditional_routes": [
         {
@@ -212,6 +248,10 @@
         {
           "to": "motion-design",
           "when": "A substantive animation design or correction is requested"
+        },
+        {
+          "to": "modern-web-guidance",
+          "when": "A web journey needs technical browser semantics or compatibility criteria"
         }
       ]
     },
@@ -254,7 +294,7 @@
     {
       "name": "visual-storytelling",
       "path": "skills/visual-storytelling",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "allow_implicit_invocation": true,
       "conditional_routes": [
         {
@@ -268,6 +308,10 @@
         {
           "to": "image-art-direction",
           "when": "A complex image-series sub-result is needed"
+        },
+        {
+          "to": "modern-web-guidance",
+          "when": "The output implements an interactive HTML/web narrative"
         }
       ]
     },
@@ -290,7 +334,7 @@
     {
       "name": "motion-design",
       "path": "skills/motion-design",
-      "version": "1.0.0",
+      "version": "1.1.0",
       "allow_implicit_invocation": true,
       "conditional_routes": [
         {
@@ -304,11 +348,15 @@
         {
           "to": "test-user-flows",
           "when": "A distinct real interaction journey needs verification"
+        },
+        {
+          "to": "modern-web-guidance",
+          "when": "The motion uses CSS, browser animation APIs or client-side JavaScript"
         }
       ]
     }
   ],
-  "collection_version": "1.3.1",
+  "collection_version": "1.4.0",
   "coverage_record": "skills/source-coverage.json",
   "reviewed_sources": [
     {
@@ -353,6 +401,14 @@
       "repository": "VoltAgent/awesome-design-md",
       "commit": "fcc70284932276d085f01ef9f83edde90b1258cb",
       "date": "2026-11-20"
+    },
+    {
+      "repository": "GoogleChrome/modern-web-guidance-src",
+      "commit": "6971ebbec2b127d57aaa24ba63bab7b9de9e656b",
+      "version": "1.0.1",
+      "date": "2026-11-21",
+      "distribution_repository": "GoogleChrome/modern-web-guidance",
+      "distribution_commit": "64a6d708f5a43f2cd3fde5d4d7db3905ba1bdf65"
     }
   ],
   "external_methods": [
@@ -365,6 +421,18 @@
       "upstream_commit": "e9eaddc07895575253d6663320354a708f53e955",
       "distribution_targets": [
         "personal"
+      ]
+    },
+    {
+      "name": "modern-web-guidance",
+      "owner": "GoogleChrome owns released guides; proposed private Notion Skill owns the documentation adapter after successful import",
+      "version": "1.0.0",
+      "upstream_version": "1.0.1",
+      "distribution": "Candidate documentation edition with all 210 released guides and 209-entry upstream catalog. Not installed: personal safety checks rejected save and Notion archive upload was blocked by automatic approval review. Do not adopt this route until the complete Notion package is saved, enabled and verified.",
+      "upstream_repository": "GoogleChrome/modern-web-guidance-src",
+      "upstream_commit": "6971ebbec2b127d57aaa24ba63bab7b9de9e656b",
+      "distribution_targets": [
+        "notion-primary"
       ]
     }
   ]

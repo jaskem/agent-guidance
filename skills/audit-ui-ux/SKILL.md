@@ -5,6 +5,8 @@ description: Audit an existing interface from screenshots, a running app or UI s
 
 # Audit UI/UX
 
+For the web-platform branch, load modern-web-guidance before the dependent technical decision when the web-interface audit needs technical HTML/CSS/browser guidance rather than visual observation alone. Use its accepted package and relevant guides; retain this method's outcome, project browser policy and real visual/runtime checks. Backend-only, native-only and purely editorial work do not trigger that branch.
+
 ## 1. Fix the target and evidence
 
 Follow the configured operating guide once per session and its active tool-call version. Read the relevant project instructions and existing task owner; reuse verified context and refresh only material changes. Establish the audience, product job, accepted scope and important tasks from supplied context. Preserve unresolved questions and continue independently supported inspection when a source is inaccessible.

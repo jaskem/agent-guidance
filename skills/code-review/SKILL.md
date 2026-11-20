@@ -5,6 +5,8 @@ description: Review a code change against its originating requirements and repos
 
 # Code review
 
+For the web-platform branch, load modern-web-guidance before the dependent technical decision when the reviewed change makes substantive web-platform or browser-compatibility choices. Use its accepted package and relevant guides; retain this method's outcome, project browser policy and real visual/runtime checks. Backend-only, native-only and purely editorial work do not trigger that branch.
+
 ## 1. Fix the review scope
 
 Follow the user's configured operating guide once per session, including its required tool-call version. Reuse verified context; load project and task owners only when relevant, refreshing them after a project/scope change or material new evidence. Use the routed context-entry playbook when available. If required context is inaccessible, disclose the gap and continue only independent work.

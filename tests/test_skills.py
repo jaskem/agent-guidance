@@ -193,6 +193,24 @@ class SkillPackageTests(unittest.TestCase):
         (self.package / 'references/diagnosis.md').unlink()
         self.assertTrue(any('missing reference' in e for e in check(self.root)))
 
+    def test_declared_external_conditional_route_is_supported(self):
+        self.set_conditional_routes('plan-work', [
+            {'to': 'modern-web-guidance', 'when': 'A web-platform decision is needed'}])
+        self.disclose_methods('plan-work', 'modern-web-guidance')
+        self.assertEqual(check(self.root), [])
+
+    def test_removed_external_owner_invalidates_conditional_route(self):
+        self.change_catalog(lambda c: c.update(external_methods=[
+            e for e in c['external_methods'] if e['name'] != 'modern-web-guidance']))
+        self.assertTrue(any('unknown conditional route target: modern-web-guidance' in e
+                            for e in check(self.root)))
+
+    def test_external_conditional_route_still_requires_skill_disclosure(self):
+        self.set_conditional_routes('plan-work', [
+            {'to': 'modern-web-guidance', 'when': 'A web-platform decision is needed'}])
+        self.assertTrue(any('conditional route not disclosed in SKILL.md: modern-web-guidance' in e
+                            for e in check(self.root)))
+
     def test_external_method_cannot_mask_local_or_duplicate_owner(self):
         self.change_catalog(lambda c: c['external_methods'].append(c['external_methods'][0].copy()))
         self.assertTrue(any('duplicate or locally owned external method' in e for e in check(self.root)))

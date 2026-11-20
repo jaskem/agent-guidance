@@ -5,6 +5,8 @@ description: Verify concrete user journeys in the actual browser or native appli
 
 # Test user flows
 
+For the web-platform branch, load modern-web-guidance before the dependent technical decision when a web journey needs technical browser semantics or compatibility criteria. Use its accepted package and relevant guides; retain this method's outcome, project browser policy and real visual/runtime checks. Backend-only, native-only and purely editorial work do not trigger that branch.
+
 ## 1. Pin the intended behavior
 
 Follow the configured operating guide once per session and reuse verified context. Resolve only the relevant project, work object and existing source/task owner; a standalone request needs no project scan. Identify the app/build, authorized environment, input and acceptance source. Turn the request into a small set of user actions and expected observable outcomes, including material error and recovery paths.

@@ -8,7 +8,7 @@ These hashes identify the inspected installed copies. An installed version is no
 
 ## Coherent skillset provenance
 
-This package is an original task-scoped synthesis in the coherent 24-method collection. The canonical source-coverage record identifies all reviewed installed source versions and main-text SHA-256 values. Installed packages are distinct from a declared upstream pin; no other provider package must be invoked. Current package version: 1.0.0.
+This package is an original task-scoped synthesis in the coherent 24-method collection. The canonical source-coverage record identifies all reviewed installed source versions and main-text SHA-256 values. Installed packages are distinct from a declared upstream pin; no other provider package must be invoked. Current package version: 1.1.0.
 
 ## agent-skills
 
@@ -113,3 +113,5 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+Web-platform route update (1.1.0, 21 November 2026): conditionally load the separately accepted modern-web-guidance extension before relevant technical decisions. This package owns task procedure; GoogleChrome owns its guide corpus.
