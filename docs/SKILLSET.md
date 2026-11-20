@@ -1,8 +1,10 @@
 # Coherent skillset
 
-The [catalog](../skills/catalog.json) is the single membership and package-version owner for 28 active procedures. The [method router](METHOD-ROUTING.md) selects by the requested result. The [general work cycle](../guidance/playbooks/work-cycle.md) owns authorized execution, proportionate evidence and closure for all work. Keep a single primary procedure and only necessary specialist sub-results or host capabilities.
+The [catalog](../skills/catalog.json) is the single membership and package-version owner for 30 active procedures. The [method router](METHOD-ROUTING.md) selects by the requested result. The [general work cycle](../guidance/playbooks/work-cycle.md) owns authorized execution, proportionate evidence and closure for all work. Keep a single primary procedure and only necessary specialist sub-results or host capabilities.
 
 The 18 former personal methods and six additions retain their names and owner. Four further Addy-inspired methods now own distinct results: constraint-driven-development, observability-and-instrumentation, deprecation-and-migration and ci-cd-and-automation. Their compact adaptations use project-specific requirements and actual capabilities, with no compulsory cloud tools, supplier thresholds or provider lifecycle. The [coverage record](../skills/source-coverage.json) retains the original 83-entry consolidation and records the new pinned review. The provider wrappers do not run behind these methods.
+
+The design integration of 20 November adds image-art-direction and visual-storytelling, with targeted improvements to the two existing UI methods. [The Garden review](GARDEN-DESIGN-REVIEW-2026-11-20.md) records overlap, adaptations and evidence limits. General image tooling, native document/presentation capabilities and the separately accepted logo-design skill retain their boundaries.
 
 ## Selection and composition
 

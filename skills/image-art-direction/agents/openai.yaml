@@ -1,0 +1,7 @@
+interface:
+  display_name: "Image Art Direction"
+  short_description: "Direct complex visual compositions and coherent series"
+  default_prompt: "Use $image-art-direction to turn this brief into a coherent visual composition or series."
+
+policy:
+  allow_implicit_invocation: true

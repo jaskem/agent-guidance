@@ -20,7 +20,9 @@ Choose by the promised outcome and current uncertainty, not a keyword or availab
 | Domain meaning, identity or invariants | [domain-modeling](../skills/domain-modeling/SKILL.md) | Concrete cases reconciled with authoritative domain source |
 | An unresolved design question needs concrete evidence | [prototype](../skills/prototype/SKILL.md) | Inspectable experiment answers the question; production status explicit |
 | Audit existing interface usability | [audit-ui-ux](../skills/audit-ui-ux/SKILL.md) | Observed findings tied to user tasks and evidence limits |
-| Propose visual/interface improvements | [design-ui-improvements](../skills/design-ui-improvements/SKILL.md) | Inspectable proposals preserving accepted identity and useful density |
+| Propose a bounded interface or improve its visual design | [design-ui-improvements](../skills/design-ui-improvements/SKILL.md) | Inspectable proposals grounded in findings or supplied requirements, preserving useful behavior and density |
+| Direct a complex image composition, campaign series or storyboard | [image-art-direction](../skills/image-art-direction/SKILL.md) | Actual inspected visuals with explicit reference roles, continuity and factual limits |
+| Build an editorial HTML narrative, step-driven web story or motion film | [visual-storytelling](../skills/visual-storytelling/SKILL.md) | Requested rendered narrative and appropriate interaction/export evidence |
 | Review code, a branch or a PR | [code-review](../skills/code-review/SKILL.md) | Requirements and quality assessed against the complete relevant change |
 | Repair source ownership or project navigation | [maintain-project-context](../skills/maintain-project-context/SKILL.md) | Verified owners, current links and explicit coverage gaps |
 | Resume or hand off interrupted work | [handoff](../skills/handoff/SKILL.md) | Proven state and first unproven authorized action identified |
@@ -52,7 +54,9 @@ Choose by the promised outcome and current uncertainty, not a keyword or availab
 5. Keep distinct owners: constraints establish what must hold; CI/CD establishes where checks run and whether failures block; code-review assesses the actual change; prepare-release verifies delivery. Existing checks can simply run without any new constraint or pipeline project.
 6. Use observability for lasting signals, not every bug diagnosis; use migration for supported consumers/data transitions, not every refactor. Their software changes still use the applicable implementation and review procedure.
 
-All catalog methods permit implicit relevant selection except grill-me, which remains explicit. An unrelated installed provider is not a second default lifecycle. A provider explicitly requested by the user remains available within its real scope. Provider files are not rewritten.
+All catalog methods permit implicit relevant selection except grill-me, which remains explicit. Design output uses the relevant owner: UI proposals use design-ui-improvements; existing-interface assessment uses audit-ui-ux; complex raster series use image-art-direction; designed HTML/web/video narratives use visual-storytelling. Simple image requests use the native image capability directly, and native documents/slides keep their format capability. A separately accepted logo-design installation owns logo identity. None of these changes the source of product facts.
+
+An unrelated installed provider is not a second default lifecycle. A provider explicitly requested by the user remains available within its real scope. Provider files are not rewritten.
 
 evidence-driven-development requires code-review; implement-spec requires both, as declared in the catalog. Resolve unavailable dependencies against the accepted canonical release. If that source is inaccessible, name the dependent gap and continue independent work. Other methods are conditional sub-results rather than a mandatory chain.
 

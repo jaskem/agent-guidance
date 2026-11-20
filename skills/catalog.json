@@ -68,13 +68,13 @@
     {
       "name": "audit-ui-ux",
       "path": "skills/audit-ui-ux",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "allow_implicit_invocation": true
     },
     {
       "name": "design-ui-improvements",
       "path": "skills/design-ui-improvements",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "allow_implicit_invocation": true
     },
     {
@@ -182,9 +182,21 @@
       "path": "skills/ci-cd-and-automation",
       "version": "1.0.0",
       "allow_implicit_invocation": true
+    },
+    {
+      "name": "image-art-direction",
+      "path": "skills/image-art-direction",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true
+    },
+    {
+      "name": "visual-storytelling",
+      "path": "skills/visual-storytelling",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true
     }
   ],
-  "collection_version": "1.1.0",
+  "collection_version": "1.2.0",
   "coverage_record": "skills/source-coverage.json",
   "reviewed_sources": [
     {
@@ -198,6 +210,12 @@
       "commit": "39b723ceebf81474d0557c1fecd01eddab585563",
       "version": "0.6.16",
       "date": "2026-11-16"
+    },
+    {
+      "repository": "ConardLi/garden-skills",
+      "commit": "f2d7adeaf53dcce3d0eb19cbffe8c04f4c636c2a",
+      "date": "2026-11-20",
+      "scope": "Five design-related skills; kb-retriever excluded"
     }
   ]
 }
