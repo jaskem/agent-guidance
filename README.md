@@ -17,7 +17,7 @@ Shared guidance is **vendored, not remotely imported at runtime**. Consumers pin
 
 ## Installable skills
 
-Use the [single coherent skillset](docs/SKILLSET.md) and [method router](docs/METHOD-ROUTING.md) to select 28 task-scoped procedures or the appropriate host capability. The [catalog](skills/catalog.json) owns names, package versions, invocation policy and required dependencies. The [general work cycle](guidance/playbooks/work-cycle.md) connects context, authorized execution, result-specific evidence and closure. Four adapted Addy methods extend the prior 24 for quality constraints, lasting instrumentation, migrations and CI/CD.
+Use the [single coherent skillset](docs/SKILLSET.md) and [method router](docs/METHOD-ROUTING.md) to select 30 task-scoped procedures or the appropriate host capability. The [catalog](skills/catalog.json) owns names, package versions, invocation policy and required dependencies. The [general work cycle](guidance/playbooks/work-cycle.md) connects context, authorized execution, result-specific evidence and closure. Four adapted Addy methods cover quality constraints, lasting instrumentation, migrations and CI/CD. Two Garden-inspired methods cover complex image art direction and designed visual narratives; the existing UI methods retain UI ownership.
 
 The set integrates useful techniques from Matt Pocock, Agent Skills, Ponytail and Superpowers into the actual packages. Their [source coverage](skills/source-coverage.json) records the 83 reviewed provider entries; [provider consolidation](docs/OPTIONAL-SKILL-SUITES.md) explains compatibility. It does not create a second mandatory lifecycle.
 

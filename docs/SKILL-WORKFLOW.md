@@ -1,6 +1,6 @@
 # Skill workflow
 
-This document owns packaging and distribution of the coherent 28-method skillset in skills/catalog.json. Consumer workflows and the shared-guidance contract retain their existing authority.
+This document owns packaging and distribution of the coherent 30-method skillset in skills/catalog.json. Consumer workflows and the shared-guidance contract retain their existing authority.
 
 ## Sources and destinations
 

@@ -9,13 +9,15 @@ description: Audit an existing interface from screenshots, a running app or UI s
 
 Follow the configured operating guide once per session and its active tool-call version. Read the relevant project instructions and existing task owner; reuse verified context and refresh only material changes. Establish the audience, product job, accepted scope and important tasks from supplied context. Preserve unresolved questions and continue independently supported inspection when a source is inaccessible.
 
-Inventory actual screenshots, running surface and source separately. Record version/commit, state, viewport, scale when known and whether data is representative or synthetic. Historical screenshots support a dated baseline, not current behavior. Finish with a bounded target, task list and evidence inventory.
+Inventory actual screenshots, running surface and source separately. Record version/commit, state, viewport, scale when known and whether data is representative or synthetic. Historical screenshots support a dated baseline, not current behavior. Identify intentionally static fixtures and mockups; absent implementation in such an artifact is an interaction coverage gap, not by itself a defect in the actual product. Finish with a bounded target, task list and evidence inventory.
 
 Use available agents on your own initiative when this method calls for separate work or when bounded independent work or review would improve the result; no explicit user request is needed. Follow the routed delegation rules. Give each worker the relevant source, question, allowed actions, owned objects and expected evidence; keep one writer per shared object and verify the combined result in the parent. Use the actual host capabilities and model/fork rules. If agents are unavailable, continue supported work without claiming an independent review.
 
 ## 2. Inspect the interface
 
 Open the images or running views, rather than inferring their content from filenames. Inspect an overview and readable detail for each selected state. Compare empty, representative and dense/error states when available. Apply [review criteria](references/criteria.md) to the target tasks.
+
+Inspect content fit and space use explicitly: table columns, row heights, oversized headers, stretched objects, wrapping and accidental voids. Assess visual craft as well as task behavior, using the actual rendered interface and representative content.
 
 For screenshots, record visible observations and usability hypotheses. For source, cite exact locations. For interaction claims, exercise the control and record starting state, action and observed result; use test-user-flows for a distinct runtime journey. Classify inaccessible checks as untested and continue independent views. A passing code check, static image or independent reviewer does not establish user validation.
 
