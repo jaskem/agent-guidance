@@ -14,6 +14,10 @@ Follow `context-entry` for the relevant sources, owners, versions and current st
 
 Use the configured method router to select one primary procedure when needed. Direct answers and host-capability-only operations are valid routes. Load the selected method and only relevant roles/references; names or installation alone do not establish use. Use the supported artifact, app, data or scheduling capability for the requested output. Do not route non-software work through development merely to give it a method.
 
+Before substantive execution, establish a compact route in the existing work record or working context: requested result, primary method and accepted source/version actually read, triggered subprocedures, observation environment, and useful independent work. Follow each triggered subprocedure before its dependent action; a mention or a catalog entry does not satisfy loading it. Resolve unavailable content from its accepted owner, or leave only the dependent claim open. Revisit the route when scope or evidence changes, not at every tool call.
+
+Assess delegation before serial investigation consumes work that could usefully run independently. Dispatch a bounded research, execution or review assignment when supported, authorized and beneficial; otherwise retain the work with the parent. Use the selected delegation procedure for ownership and integration. Do not manufacture agents for a simple answer or tightly coupled change.
+
 For a decisive uncertainty, perform a bounded investigation, diagnosis or prototype, then return to the requested outcome. For multiple results, order genuine dependencies and retain one coherent assignment. Finish when the next action, evidence needed and permitted effects are clear; complete discovery of every possible later choice is unnecessary.
 
 ## 3. Execute ready work
@@ -29,6 +33,8 @@ External writes, publication and irreversible effects follow the actual task aut
 ## 4. Verify and repair the result
 
 Check both requested acceptance and applicable quality: factual support, preserved content and user choices, usable output, and relevant failure/recovery behavior. Match evidence to the claim and exact resulting state, including unsaved or uncommitted changes when relevant. Use independent review when it materially improves assurance, not as a universal gate. Read findings, repair valid issues within scope and repeat checks affected by the repair or new evidence.
+
+For rendered or interactive acceptance, load the selected visual-verification playbook when available. Identify the actual target runtime and the user's preferred available environment before choosing a surface. A convenient cloud preview cannot establish behavior on a different native runtime. If one runner fails, check the supported relevant alternatives before declaring visual work blocked.
 
 | Result | Evidence needed for the claim |
 | --- | --- |
@@ -46,6 +52,8 @@ Structural checks, simulations, runtime observations, rendered inspection and pu
 ## 5. Deliver and reconcile the existing owners
 
 Provide the usable result or its actual link. Verify required saves and external effects before claiming them. Update changed outcomes, decisions and task status at their established owners, then only affected navigation summaries under `context-entry`. Map meaning to existing statuses; do not create another tracker, ledger or status scheme. Mark the whole assignment complete only when all requested acceptance is supported; partial results can be complete while their parent remains blocked.
+
+Before closing substantive work, reconcile the chosen route with execution: which loaded method changed a decision or check, which conditional branches ran, what delegated results were integrated, and what environment supplied the claimed evidence. Repair an omitted necessary branch or disclose its exact limit. Record this compactly at the existing owner; do not turn a filled record into proof of correct reasoning or promise host-wide enforcement.
 
 For repository changes, additionally follow applicable repository closure and the selected `change-closure` playbook for change-induced residue. Follow actual merge, release or distribution requirements only when relevant and authorized. A draft, saved file, reviewed change, installation, publication and successful run are distinct outcomes.
 

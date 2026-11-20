@@ -8,6 +8,8 @@ Keep small or tightly coupled work with one agent. Delegate only a bounded task 
 
 Finish with a concrete benefit and separable result, or continue without delegation. Risk and useful independence matter more than task size or a fixed reviewer count.
 
+Make this choice early, before the parent performs every separable investigation. Typical useful splits are independent source reviews, implementation in disjoint modules, acceptance evidence analysis and a fresh requirements review. Keep a dependency-critical decision with the parent and dispatch other ready work immediately. After a blocker clears or the task changes, check whether a newly independent assignment is ready. Do not delegate merely to repeat completed parent work unless the repetition supplies distinct verification.
+
 ## 2. Assign an explicit boundary
 
 Give each worker the minimum relevant source material and a compact assignment:
@@ -21,6 +23,8 @@ Give each worker the minimum relevant source material and a compact assignment:
 The parent can pass already verified context with its source, revision/version and observation time. Workers read missing or materially changed context; they need not repeat a whole workspace scan. Do not pass expected findings to an independent reviewer: provide raw requirements, source, diff and artifacts instead.
 
 Assign one writer to a shared resource at a time. Files, branches, task records, document pages, browser tabs and desktops can all collide. Separate code worktrees when appropriate; a separate worktree does not isolate an external page or desktop. Prefer read-only work if ownership cannot be separated. Use existing claims/locks where supported; an assignment is not an enforced lock.
+
+For visual work, assign one live-surface operator. Other agents can independently inspect the same captured evidence, requirements or source without competing for desktop/browser input. Pass the target build and evidence limits with captures; an image reviewer cannot infer unobserved interactions. Keep final external writes and status reconciliation with the designated integrating owner unless explicitly delegated.
 
 Finish when the worker can identify what it may change, what it must preserve and what result to return. A worker may delegate further only if authorized, within the same scope and resource ownership; it reports the resulting task tree to its parent rather than expanding work silently.
 

@@ -17,7 +17,7 @@ Finish with a bounded visual objective and the actual source inputs. If a requir
 
 ## 2. Make the composition explicit
 
-Read [composition recipes](references/composition-recipes.md) for the matching branch: product visual, campaign series, storyboard or multi-region board. Load only useful detail.
+Read [composition recipes](references/composition-recipes.md) for the matching branch: product visual, campaign series, storyboard or multi-region board. Load only useful detail. For reusable photography, illustration, icon or texture families, also read [asset families](references/asset-families.md). A distinct cross-medium identity system belongs to design-brand-system; this method owns its actual image assets.
 
 Write a short visual specification containing:
 

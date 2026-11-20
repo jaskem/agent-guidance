@@ -19,7 +19,7 @@ Use available agents on your own initiative when this method calls for separate 
 
 Map each priority finding to a concrete change. Reuse product vocabulary and established visual language. Change hierarchy, grouping, disclosure or feedback to support the task. Preserve necessary expert controls and data.
 
-Use [art direction](references/art-direction.md) when visual language, density, motion, assets or identity fidelity needs a consequential choice. Make those choices affect the proposal; an already-decided repair needs no separate style exercise.
+Use [art direction](references/art-direction.md) when visual language, density, motion, assets or identity fidelity needs a consequential choice. Load [reference translation](references/reference-translation.md) when using screenshots, another product or a DESIGN.md collection. Use design-brand-system for a distinct reusable identity system and motion-design for substantial interactive motion; a settled token or simple transition needs no extra workflow. Make those choices affect the proposal; an already-decided repair needs no separate style exercise.
 
 For a consequential unresolved choice, compare meaningful alternatives and trade-offs. Recommend with reasons; leave domain decisions needing input open while completing independent proposals. Use an existing prototype method only when interaction or state uncertainty needs an executable experiment.
 
@@ -29,7 +29,7 @@ Finish when every proposed change addresses an input finding or supplied require
 
 Use [visual handoff](references/visual-handoff.md) for before/after views, component details and tokens. Work at a stated viewport and representative density. Keep observations, annotations and proposed interfaces visibly distinct.
 
-Show surrounding app context to judge hierarchy, plus readable details where needed. Exact geometry belongs in HTML/SVG or document drawing tools. Inspect rendered output and correct clipping, tiny labels, missing assets and inconsistent state cues. If rendering is unavailable, label the artifact an unverified draft and retain the rendering check.
+Show surrounding app context to judge hierarchy, plus readable details where needed. Follow the configured visual-verification playbook when available. Discover the actual target runtime and the user's preferred accessible environment before selecting a capture or interaction tool. Prefer the relevant authorized remote desktop for a native/user-machine target; use a cloud browser only for its intended web target or a documented fallback. A failed local browser runner does not establish that visual checks are impossible. Record what the chosen surface proves and which target-specific claims remain untested. Exact geometry belongs in HTML/SVG or document drawing tools. Inspect rendered output and correct clipping, tiny labels, missing assets and inconsistent state cues. If rendering is unavailable, label the artifact an unverified draft and retain the rendering check.
 
 Finish with a viewable artifact or explicit rendering limit, not a prose promise of a redesign.
 

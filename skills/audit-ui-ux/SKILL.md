@@ -15,6 +15,8 @@ Use available agents on your own initiative when this method calls for separate 
 
 ## 2. Inspect the interface
 
+Follow the configured visual-verification playbook when available. Discover the actual target runtime and the user's preferred accessible environment before selecting a capture or interaction tool. Prefer the relevant authorized remote desktop for a native/user-machine target; use a cloud browser only for its intended web target or a documented fallback. A failed local browser runner does not establish that visual checks are impossible. Record what the chosen surface proves and which target-specific claims remain untested.
+
 Open the images or running views, rather than inferring their content from filenames. Inspect an overview and readable detail for each selected state. Compare empty, representative and dense/error states when available. Apply [review criteria](references/criteria.md) to the target tasks.
 
 Inspect content fit and space use explicitly: table columns, row heights, oversized headers, stretched objects, wrapping and accidental voids. Assess visual craft as well as task behavior, using the actual rendered interface and representative content.
@@ -25,7 +27,7 @@ Finish when each selected view has a recorded observation or coverage gap. Retai
 
 ## 3. Challenge and prioritize findings
 
-Write each material finding using [the finding record](references/findings.md). Separate the observed condition from its possible user effect and proposed remedy. Seek counterevidence: context menus, shortcuts or deliberate expert density may explain an apparent problem.
+Write each material finding using [the finding record](references/findings.md). Separate the observed condition from its possible user effect and proposed remedy. Seek counterevidence: context menus, shortcuts or deliberate expert density may explain an apparent problem. For an independent exploratory pass, supply the artifact and task context without leaking the intended route or expected findings. Record the actual inferred task, route, hesitation and recovery; keep agent observations separate from human user-research evidence.
 
 Rank by task impact, recurrence and recovery cost. Keep confidence separate from severity. Reserve blocking severity for demonstrated blocked work; a plausible risk becomes a validation task. Prefer a short supported list over exhaustive speculative defects.
 

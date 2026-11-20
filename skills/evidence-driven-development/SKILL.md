@@ -19,6 +19,8 @@ Use available agents on your own initiative when this method calls for separate 
 
 ## 2. Choose the branch
 
+Before executing the selected branch, actually load its method or reference and note its decisive check in the existing work context. Dispatch useful separable investigation early through the configured delegation procedure. For a changed interface, use audit-ui-ux for a distinct assessment, design-ui-improvements for unresolved visual proposals, motion-design for substantial interactive animation and test-user-flows for live acceptance. These are conditional results, not a mandatory design cascade. Follow the configured visual-verification procedure for the relevant runtime; a cloud preview does not prove native user-machine behavior.
+
 - **Reported bug or regression:** read [diagnosis](references/diagnosis.md), then reproduce the reported symptom before claiming a cause or a fix.
 - **Feature or refactor:** choose one usable slice through the relevant public interface. Retain domain terms and interfaces unless their change is authorized. Use [engineering techniques](references/engineering-techniques.md) for behavior-preserving simplification, migrations, CI and UI work; load only the relevant section. Keep complexity behind an understandable interface.
 - **Distinct assessment:** use design-interfaces for an unresolved caller contract, review-security for a bounded security assessment, optimize-performance for a measured performance investigation and test-user-flows for real user-route evidence. They contribute their specific result; this method retains ownership of an authorized code change.

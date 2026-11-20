@@ -1,6 +1,6 @@
 # Sources and adaptation
 
-Canonical source: jaskem/agent-guidance, skills/image-art-direction. Package version: 1.0.0. Personal and Notion copies are distributions of this source.
+Canonical source: jaskem/agent-guidance, skills/image-art-direction. Package version: 1.1.0. Personal and Notion copies are distributions of this source.
 
 This is an original, provider-neutral synthesis for complex raster-image art direction. It is not an unchanged installation of Garden gpt-image-2, and it does not include or require Garden's runners or complete template library. The native image-generation capability owns execution and its current tool contract.
 
@@ -45,3 +45,9 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
+
+## Routing and design extension — 2026-11-20
+
+Original integration of the configured work-cycle route, early useful delegation and target-specific visual evidence. Installation and structural routing checks do not guarantee future invocation. Preserve existing scope and source ownership.
+
+Reviewed [zstvns/design-skills](https://github.com/zstvns/design-skills/tree/771fdf3c90c6877d5c193cbc80dae23b5590c037): optional reusable asset families, identity-system boundary and product-film fidelity. Original synthesis; no upstream code, mandatory brand cascade or approval gates imported.

@@ -17,7 +17,7 @@ Use available agents on your own initiative when this method calls for separate 
 
 ## 2. Diagnose useful changes
 
-For each material issue, record observed effect, exact source, responsible owner, minimal repair and a concrete case that would reveal recurrence. Distinguish observed defects from untested improvement hypotheses. Use [design criteria](references/design-criteria.md) to assess triggering, steps, completion, context cost and overlap.
+For each material issue, record observed effect, exact source, responsible owner, minimal repair and a concrete case that would reveal recurrence. Trace both main selection and conditional subroutes, including actual content loading, early useful delegation, observation-surface choice and closure evidence. Check a remote/native target with an available remote environment and a failed local browser as a distinct route case. Do not describe prose or a static catalog check as host-wide enforcement. Distinguish observed defects from untested improvement hypotheses. Use [design criteria](references/design-criteria.md) to assess triggering, steps, completion, context cost and overlap.
 
 Classify material by responsibility: personal preferences/context, repository routing, product contracts, reusable procedure, reference, or mechanically enforceable check. Keep one normative owner. Check canonical source and pinned consumers before editing a generated or installed copy.
 

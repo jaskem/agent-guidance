@@ -17,11 +17,13 @@ Shared guidance is **vendored, not remotely imported at runtime**. Consumers pin
 
 ## Installable skills
 
-Use the [single coherent skillset](docs/SKILLSET.md) and [method router](docs/METHOD-ROUTING.md) to select 30 task-scoped procedures or the appropriate host capability. The [catalog](skills/catalog.json) owns names, package versions, invocation policy and required dependencies. The [general work cycle](guidance/playbooks/work-cycle.md) connects context, authorized execution, result-specific evidence and closure. Four adapted Addy methods cover quality constraints, lasting instrumentation, migrations and CI/CD. Two Garden-inspired methods cover complex image art direction and designed visual narratives; the existing UI methods retain UI ownership.
+Use the [single coherent skillset](docs/SKILLSET.md) and [method router](docs/METHOD-ROUTING.md) to select 32 task-scoped procedures or the appropriate host capability. The [catalog](skills/catalog.json) owns names, package versions, invocation policy and required dependencies. The [general work cycle](guidance/playbooks/work-cycle.md) connects context, authorized execution, result-specific evidence and closure. Four adapted Addy methods cover quality constraints, lasting instrumentation, migrations and CI/CD. Two Garden-inspired methods cover complex image art direction and designed visual narratives; the existing UI methods retain UI ownership.
 
-The set integrates useful techniques from Matt Pocock, Agent Skills, Ponytail and Superpowers into the actual packages. Their [source coverage](skills/source-coverage.json) records the 83 reviewed provider entries; [provider consolidation](docs/OPTIONAL-SKILL-SUITES.md) explains compatibility. It does not create a second mandatory lifecycle.
+The set integrates useful techniques from Matt Pocock, Agent Skills, Ponytail and Superpowers into the actual packages. Their [source coverage](skills/source-coverage.json) retains the original 83 provider entries and five Garden design entries; [provider consolidation](docs/OPTIONAL-SKILL-SUITES.md) explains compatibility. It does not create a second mandatory lifecycle.
 
 Follow the [skill workflow](docs/SKILL-WORKFLOW.md) for complete personal and Notion installation, validation and readback. Choose agents autonomously when a method requires them or bounded independent work/verification is useful, preserving task authority, one writer per object and parent integration. Shared guidance and consumer pins remain independent of package versions.
+
+The further [design/workflow integration](docs/DESIGN-WORKFLOW-INTEGRATION-2026-11-20.md) adds reusable brand systems and interactive motion, targeted improvements to existing methods, early useful delegation and explicit visual-runtime selection. The catalog declares conditional method routes and the separately managed logo-design extension. Structural CI checks detect missing/disclosed routes; they do not guarantee host invocation.
 
 ## Shared source
 
