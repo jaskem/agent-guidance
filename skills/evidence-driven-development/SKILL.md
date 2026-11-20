@@ -5,8 +5,6 @@ description: Execute an authorized software change or diagnose a reported bug wi
 
 # Evidence-driven development
 
-For the web-platform branch, load modern-web-guidance before the dependent technical decision when the change implements or diagnoses HTML, CSS, browser APIs or client-side JavaScript. Use its accepted package and relevant guides; retain this method's outcome, project browser policy and real visual/runtime checks. Backend-only, native-only and purely editorial work do not trigger that branch.
-
 ## 1. Establish the work
 
 Follow the user's configured operating guide once per session, including its required tool-call version. Reuse verified context; load project and task owners only when relevant, refreshing them after a project/scope change or material new evidence. Use the routed context-entry playbook when available. If required context is inaccessible, disclose the gap and continue only independent work.

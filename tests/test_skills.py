@@ -193,23 +193,20 @@ class SkillPackageTests(unittest.TestCase):
         (self.package / 'references/diagnosis.md').unlink()
         self.assertTrue(any('missing reference' in e for e in check(self.root)))
 
-    def test_declared_external_conditional_route_is_supported(self):
-        self.set_conditional_routes('plan-work', [
-            {'to': 'modern-web-guidance', 'when': 'A web-platform decision is needed'}])
-        self.disclose_methods('plan-work', 'modern-web-guidance')
+    def test_external_reference_supplements_are_validated(self):
         self.assertEqual(check(self.root), [])
+        self.change_catalog(lambda c: c['external_methods'][-1].update(supplements=['missing-method']))
+        self.assertTrue(any('invalid external supplement targets' in e for e in check(self.root)))
 
-    def test_removed_external_owner_invalidates_conditional_route(self):
-        self.change_catalog(lambda c: c.update(external_methods=[
-            e for e in c['external_methods'] if e['name'] != 'modern-web-guidance']))
-        self.assertTrue(any('unknown conditional route target: modern-web-guidance' in e
-                            for e in check(self.root)))
+    def test_external_reference_supplement_requires_trigger_and_owner(self):
+        self.change_catalog(lambda c: c['external_methods'][-1].update(when='', selection_owner='elsewhere.md'))
+        errors = check(self.root)
+        self.assertTrue(any('external supplement requires a trigger' in e for e in errors))
+        self.assertTrue(any('external supplement must use the central router' in e for e in errors))
 
-    def test_external_conditional_route_still_requires_skill_disclosure(self):
-        self.set_conditional_routes('plan-work', [
-            {'to': 'modern-web-guidance', 'when': 'A web-platform decision is needed'}])
-        self.assertTrue(any('conditional route not disclosed in SKILL.md: modern-web-guidance' in e
-                            for e in check(self.root)))
+    def test_external_reference_supplement_rejects_duplicate_targets(self):
+        self.change_catalog(lambda c: c['external_methods'][-1].update(supplements=['teach', 'teach']))
+        self.assertTrue(any('duplicate external supplement target' in e for e in check(self.root)))
 
     def test_external_method_cannot_mask_local_or_duplicate_owner(self):
         self.change_catalog(lambda c: c['external_methods'].append(c['external_methods'][0].copy()))

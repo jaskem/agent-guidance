@@ -5,8 +5,6 @@ description: Design, implement when authorized and verify purposeful interactive
 
 # Design motion that follows user intent
 
-For the web-platform branch, load modern-web-guidance before the dependent technical decision when the motion uses CSS, browser animation APIs or client-side JavaScript. Use its accepted package and relevant guides; retain this method's outcome, project browser policy and real visual/runtime checks. Backend-only, native-only and purely editorial work do not trigger that branch.
-
 ## 1. Pin the behavior and visual job
 
 Follow the configured operating guide once per session, accepted method route and existing product/task owner. Reuse the actual build, design system, accepted choices and supplied examples. Identify whether the request is a proposal, prototype or authorized product change; a motion brief alone grants no implementation or publication authority.

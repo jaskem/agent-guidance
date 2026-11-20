@@ -5,8 +5,6 @@ description: Turn interface audit findings, a bounded UI problem or supplied req
 
 # Design UI improvements
 
-For the web-platform branch, load modern-web-guidance before the dependent technical decision when a web proposal makes HTML/CSS/browser implementation or compatibility choices. Use its accepted package and relevant guides; retain this method's outcome, project browser policy and real visual/runtime checks. Backend-only, native-only and purely editorial work do not trigger that branch.
-
 ## 1. Ground the proposal
 
 Follow the configured operating guide once per session and its active tool-call version. Read the relevant project/task owner and supplied findings; reuse verified context and refresh material changes. Identify the affected task, actual baseline, product constraints and design system. Carry evidence limits forward; a missing source limits only dependent claims. Without a baseline, use supplied requirements for an explicitly proposed design and record the missing comparison; route an unknown-interface audit to audit-ui-ux.

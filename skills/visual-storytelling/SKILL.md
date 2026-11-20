@@ -5,8 +5,6 @@ description: Turn verified source material into a designed visual narrative deli
 
 # Build a visual narrative
 
-For the web-platform branch, load modern-web-guidance before the dependent technical decision when the output implements an interactive HTML/web narrative. Use its accepted package and relevant guides; retain this method's outcome, project browser policy and real visual/runtime checks. Backend-only, native-only and purely editorial work do not trigger that branch.
-
 ## 1. Establish the material and destination
 
 Follow the configured operating guide once per session and reuse accepted context, permissions and the existing source/task owner. Resolve audience, message, required facts, visual identity and requested output. Read the actual source; preserve units, uncertainty, quotations and asset provenance. Record extraction gaps instead of inventing missing evidence. A script may shape cadence; it must not become a substitute factual source.

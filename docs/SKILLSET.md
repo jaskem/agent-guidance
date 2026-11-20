@@ -8,7 +8,7 @@ The design integration of 20 November adds image-art-direction and visual-storyt
 
 The second design batch adds design-brand-system and motion-design, with conditional routing into existing UI, image, narrative and implementation methods. See the [integration record](DESIGN-WORKFLOW-INTEGRATION-2026-11-20.md) and its five source reviews. The separate logo-design extension retains its personal owner and custom improvements; it is an accepted routed extension, not a public source copy of its reference-logo library.
 
-The GoogleChrome integration adds a pinned web-platform reference branch, not another primary workflow. Ten relevant methods disclose conditional routes; implementation plans reach it through evidence-driven-development. See [source, installation and verification boundaries](MODERN-WEB-GUIDANCE-2026-11-21.md). Backend/native-only and editorial work remain outside this branch.
+The GoogleChrome integration adds a pinned web-platform reference branch, not another primary workflow. The central router declares one shared reference trigger for ten relevant methods; implementation plans reach it through evidence-driven-development. The 32 existing method packages retain their versions and content. See [source, installation and verification boundaries](MODERN-WEB-GUIDANCE-2026-11-21.md). Backend/native-only and editorial work remain outside this branch.
 
 ## Selection and composition
 

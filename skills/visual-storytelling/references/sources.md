@@ -1,6 +1,6 @@
 # Sources and adaptations
 
-Canonical source: jaskem/agent-guidance, skills/visual-storytelling. Package version: 1.2.0. Keep personal and Notion installations as traceable distributions of the accepted package.
+Canonical source: jaskem/agent-guidance, skills/visual-storytelling. Package version: 1.1.0. Keep personal and Notion installations as traceable distributions of the accepted package.
 
 Reviewed on 2026-11-20: [ConardLi/garden-skills](https://github.com/ConardLi/garden-skills/tree/f2d7adeaf53dcce3d0eb19cbffe8c04f4c636c2a), exact revision f2d7adeaf53dcce3d0eb19cbffe8c04f4c636c2a.
 
@@ -84,5 +84,3 @@ LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
 ```
-
-Web-platform route update (1.2.0, 21 November 2026): conditionally load the separately accepted modern-web-guidance extension before relevant technical decisions. This package owns task procedure; GoogleChrome owns its guide corpus.

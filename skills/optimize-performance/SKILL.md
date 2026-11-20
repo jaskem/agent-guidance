@@ -5,8 +5,6 @@ description: Investigate a reported slowdown, performance regression or explicit
 
 # Optimize performance
 
-For the web-platform branch, load modern-web-guidance before the dependent technical decision when the measured bottleneck concerns browser rendering, interaction or web loading. Use its accepted package and relevant guides; retain this method's outcome, project browser policy and real visual/runtime checks. Backend-only, native-only and purely editorial work do not trigger that branch.
-
 ## 1. Define the user-visible symptom
 
 Follow the configured operating guide once per session and reuse verified context. Resolve only the relevant project, work object and existing source/task owner; a standalone request needs no project scan. Identify the operation, representative input, runtime and accepted performance target. Read prior attempts and the current implementation before proposing a change.

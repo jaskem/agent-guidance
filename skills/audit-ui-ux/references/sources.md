@@ -1,6 +1,6 @@
 # Sources and adaptation
 
-Canonical owner: jaskem/agent-guidance, skills/ matching this package name. Package version 2.3.0. The private distribution record pins the released commit and hashes.
+Canonical owner: jaskem/agent-guidance, skills/ matching this package name. Package version 2.2.0. The private distribution record pins the released commit and hashes.
 
 Reviewed 2026-11-13. These are original methods; external links are provenance, not runtime instructions.
 
@@ -44,7 +44,7 @@ Retain concrete behavior checks, caller-focused boundaries, bounded diagnosis, u
 
 ## Coherent skillset provenance
 
-This package is an original task-scoped synthesis in the coherent collection whose membership is owned by the catalog. The canonical source-coverage record identifies all reviewed installed source versions and main-text SHA-256 values. Installed packages are distinct from a declared upstream pin; no other provider package must be invoked. Current package version: 2.3.0.
+This package is an original task-scoped synthesis in the coherent collection whose membership is owned by the catalog. The canonical source-coverage record identifies all reviewed installed source versions and main-text SHA-256 values. Installed packages are distinct from a declared upstream pin; no other provider package must be invoked. Current package version: 2.2.0.
 
 ## agent-skills
 
@@ -152,7 +152,7 @@ SOFTWARE.
 
 ## Garden design integration — 2026-11-20
 
-Package version: 2.3.0. Original adaptation of ConardLi/garden-skills at f2d7adeaf53dcce3d0eb19cbffe8c04f4c636c2a. Reviewed web-design-engineer main text, design-calibration, redesign-protocol, design-directions, failure-patterns, critique-guide, browser-acceptance and advanced-patterns. Recipe index and Linear/Bloomberg/Tufte examples were inspected; all 25 recipes were not individually audited or bundled.
+Package version: 2.2.0. Original adaptation of ConardLi/garden-skills at f2d7adeaf53dcce3d0eb19cbffe8c04f4c636c2a. Reviewed web-design-engineer main text, design-calibration, redesign-protocol, design-directions, failure-patterns, critique-guide, browser-acceptance and advanced-patterns. Recipe index and Linear/Bloomberg/Tufte examples were inspected; all 25 recipes were not individually audited or bundled.
 
 Retain explicit design mode, consequential direction choices and concrete visual/density critique. Reject compulsory approvals, variant quotas, generic whitespace/type/spacing thresholds and explicit-QA-only browser verification. Real rendering and interaction evidence remain required when relevant. Named style recipes are interpretations, not official design tokens. No upstream scripts, vendor runtime or provider lifecycle is installed.
 
@@ -189,5 +189,3 @@ SOFTWARE.
 Original integration of the configured work-cycle route, early useful delegation and target-specific visual evidence. Installation and structural routing checks do not guarantee future invocation. Preserve existing scope and source ownership.
 
 Reviewed [Oil UI](https://github.com/oil-oil/oil-ui/tree/81f2657f41410f04ae47ba77f902fcc0567eaab2): reference evidence, comparable proposals, screenshot scale and exploratory paths adapted in original wording. No source code, templates or fixed design quotas imported. The existing compact-product context governs density and testing.
-
-Web-platform route update (2.3.0, 21 November 2026): conditionally load the separately accepted modern-web-guidance extension before relevant technical decisions. This package owns task procedure; GoogleChrome owns its guide corpus.

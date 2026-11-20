@@ -5,8 +5,6 @@ description: Assess a bounded security risk in code, local file operations, auth
 
 # Review security
 
-For the web-platform branch, load modern-web-guidance before the dependent technical decision when the assessment concerns browser APIs, client-side sanitization or other web-platform security. Use its accepted package and relevant guides; retain this method's outcome, project browser policy and real visual/runtime checks. Backend-only, native-only and purely editorial work do not trigger that branch.
-
 ## 1. Bound the review
 
 Follow the configured operating guide once per session and reuse verified context. Resolve only the relevant project, work object and existing source/task owner; a standalone request needs no project scan. Fix the reviewed revision, changed surface, runtime and authorization. Identify assets, input authors and trust boundaries before selecting checks.

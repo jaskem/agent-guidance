@@ -1,43 +1,39 @@
 # Modern Web Guidance integration — 21 November 2026
 
-## Publication gate
+## Result and ownership
 
-Status: reviewed candidate, not installed or active. Both personal package saves were rejected by the host safety check. The private Notion upload was blocked by automatic approval review, including after rechecking the user's recorded standing permission and exact workspace/destination. No further alternate upload path was attempted. The Notion Skill shell exists but is empty and disabled. Keep this PR in draft; do not merge, update active guide pins or distribute the ten changed methods until the full Notion package is authorized, saved, enabled and read back.
-
-## Scope and ownership
-
-The request is to install GoogleChrome's modern-web-guidance-src and implement it in the existing workflow. The source repository is the authoring/evaluation system; the usable published package is modern-web-guidance. Use its complete reviewed guide corpus plus a small documentation adapter, rather than its development dependencies or another lifecycle.
+Modern Web Guidance supplies selective technical reference lookup within the existing workflow. The self-contained online adapter is stored as a private Notion Skill and distributed as a personal skill. It retrieves relevant full guides from their official pinned source when a technical web decision requires them. No complete-corpus context load, additional lifecycle, offline bundle or npm CLI is introduced.
 
 - Canonical workflow baseline: `66b4239bc97ff80497d3091f0bf062e63cf2fae2`, tree `da3c5253b4f9bb957296cf1f1fcb6ee4db084ef7`.
-- Upstream npm release: 1.0.1, source commit `6971ebbec2b127d57aaa24ba63bab7b9de9e656b`; [distribution commit](https://github.com/GoogleChrome/modern-web-guidance/tree/64a6d708f5a43f2cd3fde5d4d7db3905ba1bdf65).
-- npm archive SHA256: `713d3d344d6fad5c9267fb1ed8daff5dd72df4634e9ad6b2bd3b0ca17f8438a3`; SHA512 compared with registry integrity before extraction.
-- GoogleChrome owns its runtime and guide corpus. The proposed private Notion modern-web-guidance adapter 1.0.0 would own its entrypoint (documentation edition) after successful import. This repository owns catalog/routing and the ten changed task methods. Exact installation IDs and file hashes belong in the existing private distribution record.
-- Collection becomes 1.4.0; guidance remains 0.7.0 and Notion setup remains 0.0.6. No consumer pins or product code are changed.
+- Adapter version: 1.0.0; private Notion source owns its instructions. This repository owns catalog/routing and the shared reference trigger. Exact installation IDs, versions and content hashes live in the existing private distribution record.
+- GoogleChrome reference release: modern-web-guidance 1.0.1, [distribution commit](https://github.com/GoogleChrome/modern-web-guidance/tree/64a6d708f5a43f2cd3fde5d4d7db3905ba1bdf65). Source-authoring release: modern-web-guidance-src commit `6971ebbec2b127d57aaa24ba63bab7b9de9e656b`.
+- The 32 method packages retain their existing versions and supporting files. The central method router and catalog own the supplemental trigger, avoiding a duplicated trigger in ten package bodies.
+- Collection 1.4.0; shared guidance 0.7.0 and Notion setup 0.0.6 retain their versions. Product code and consumer pins are outside this batch.
 
-## Material inspected and retained
+## Selective lookup
 
-Independent source/package inspection covered release/package metadata, complete file inventory, primary SKILL, CLI command paths, telemetry gate, local search data/runtime, scanner boundaries and licenses. The npm package has no runtime dependencies and requires Node >=22. Its GitHub distribution alone lacks executable bundles, so a Markdown-only copy would not establish CLI installation.
+The central router declares one shared trigger for ten existing methods: evidence-driven-development, prototype, code-review, audit-ui-ux, design-ui-improvements, motion-design, visual-storytelling, optimize-performance, review-security and test-user-flows. implement-spec reaches the branch through its existing implementation dependency. Direct web requests retain proportionate handling.
 
-The initial complete runtime candidate was tested successfully but its personal-skill save was rejected by the host safety check without a specific reason. A materially smaller documentation-only candidate also failed that personal save. These candidates are not installed personal skills. Preserve the evidence; do not weaken the safety boundary or claim a working CLI installation.
+1. Identify the concrete HTML/CSS/browser/client-JavaScript decision. Backend-only, native-only, CI/tooling, pure copy and static brand/image work retain their ordinary route.
+2. Search relevant names/descriptions in the official pinned README or repository tree, then read only the selected full guides. Preserve the commit when README links point to main. Rephrase weak searches once; do not invent IDs. No fixed guide quota or corpus-wide checklist applies.
+3. Adapt examples to project browser policy, semantics, framework and product needs. Preserve compactness and required fallbacks; a mobile-cards example is not by itself a reason to replace a dense comparison table. Verify materially uncertain current support with primary documentation.
+4. Keep real visual, keyboard, touch, reduced-motion and measured-performance checks with their existing owner and intended runtime. Record the consulted IDs, relevant decision/fallback and evidence boundary in the existing work record.
 
-The final Notion documentation edition retains all 210 original Markdown guides, the 209-entry upstream catalog, LICENSE, THIRD_PARTY_NOTICES and an exact file/source hash manifest. The additional prompt-api.md exists upstream but is absent from its catalog; it remains in the complete corpus, not invented as a catalog record. Search/read uses host file tools; no Node, executable vendor code, binary model, watchdog, installer, telemetry or npm dependency is included. The original `.mwgrc` interpretation and automated legacy scan are not provided. Code is Apache-2.0 and guides are CC-BY-4.0 with retained attribution. The guides have not all been semantically reviewed or exercised.
+Upstream npx snippets are cross-references, not instructions to install or execute a CLI. A proposal remains a proposal unless implementation was authorized. No compulsory disclosure footer, extra approval round or silent upgrade is added.
 
-## Deliberate adaptations
+## Sources and packaging
 
-1. The installed entrypoint supplements the existing task method. It applies before technical HTML/CSS/browser/client-JavaScript choices, including framework web code. Backend-only, native-only, CI/tooling, pure copy and static identity/image tasks are excluded.
-2. Ten owning packages expose conditional routes: evidence-driven-development, prototype, code-review, audit-ui-ux, design-ui-improvements, motion-design, visual-storytelling, optimize-performance, review-security and test-user-flows. implement-spec reaches it through its existing implementation dependency. The router also covers direct web requests without manufacturing another lifecycle.
-3. Use the pinned guide corpus and catalog with host file search/read tools. Do not run an upstream installer or silently switch to @latest. The documentation edition has no telemetry or Node requirement. No global environment or personal-computer software is changed.
-4. Search one focused capability, retrieve relevant guides in full, preserve explicit browser policy and verify uncertain current API support from primary sources. Do not infer project browser requirements. Use bundled files directly and current official documentation when the bundle is inaccessible; disclose the evidence boundary.
-5. Guides do not override product constraints, compactness, required fallbacks, actual visual checks or permission boundaries. Automated legacy scan is not installed; broad modernization remains an explicitly requested separate task.
-6. Remove upstream's compulsory skill footer/quotation and advance permission ritual. Existing user communication and actual tool policy remain authoritative. No automatic upgrades or new schedule are created.
+The reviewed release has 210 guide Markdown files, including one not listed in its 209-entry npm catalog. The GitHub distribution also contains all 210 guides and an index in its README. All selected content remains at GoogleChrome; source retrieval was checked at the exact accepted commit. Code is Apache-2.0 and guide content is CC-BY-4.0; this adapter links original sources rather than copying their corpus.
+
+The initial offline candidates could not be saved: personal-package safety checks rejected them, and automatic approval review blocked the complete archive upload. The adopted online adapter is materially smaller and transfers none of that corpus. Its Notion content is saved directly, enabled and exported for comparison. The personal adapter is saved and checked after reconciliation. These outcomes do not establish installation of the rejected CLI or offline package.
 
 ## Verification and limits
 
-- Local upstream integrity and retained-file hashes checked. Host format validation passed in the actual personal-skills checkout, but remote save was rejected; these are separate outcomes.
-- Rejected runtime candidate only: version, two searches, list, retrieve, invalid guide, denied install/update and a read-only scan fixture passed. These results establish candidate behavior, not final installation.
-- Final documentation route: index IDs/paths and retained-file hashes checked; fresh-context trials cover the table proposal, backend-only exclusion and direct-file reading without Node. No browser rendering or product performance is claimed.
-- Added checker cases for allowed declared external conditional targets, rejected missing owners and required disclosure. Existing checks retain local dependency constraints; external routing is not proof of installation.
-- Full foundation/skill checks and clean-commit unittest results, independent source review and fresh-context task trials are recorded with final publication/distribution evidence at the existing work owner.
-- Structural routing checks do not establish reliable selection in every host. Readback/install evidence does not prove all guides correct, upstream benchmark outcomes, Windows runtime support or product UI acceptance. Other workspaces and pinned consumer migrations remain separate work.
+- Foundation/package checks and the unittest suite cover the shared external-reference trigger, valid supplement targets and its selection owner. These are structural checks, not proof of future agent selection.
+- Independent source inspection covered release metadata, runtime/search design, telemetry, scanner boundaries, file inventory and licenses. The final central route and online adapter receive requirements/quality review against the accepted selective-reference result.
+- Positive table proposals and Python-only exclusion are exercised as bounded trials; inaccessible-source handling is a reasoned walkthrough, not a simulated outage. Final online retrieval is checked without Node, installer or bundled corpus; document-candidate/runtime tests remain historical candidate evidence.
+- Notion readback compares name, description and full body, accounting for host YAML serialization. Literal filenames use inline code to avoid accidental hyperlinks. Personal readback distinguishes host-owned display metadata.
+- Online lookup requires a source-retrieval capability. When the pinned source is unavailable, current official Chrome/web.dev/MDN documentation is an explicit fallback. When both are missing, the dependent claim stays unverified while independent work continues.
+- No all-guide correctness, product UI, Windows behavior, upstream benchmark or universal future invocation claim is made. Other workspaces and pinned consumer upgrades retain their separate owners.
 
-Next technical step: obtain explicit approval for the prepared complete documentation package upload to the user's private Notion Skills destination; import, enable and read back before merging and updating active distributions. No CLI installation or project-wide scan is pending.
+Next technical step after publication: use the accepted branch on the next relevant web task and retain its guide/decision/runtime evidence at the existing work owner.
