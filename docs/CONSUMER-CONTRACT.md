@@ -19,10 +19,10 @@ A migrated consumer has:
 
 The lock must contain:
 
-- `schema_version`;
+- `schema_version` with numeric value `1` (not a boolean);
 - canonical `repository`;
 - exact lowercase 40-character `commit` SHA;
-- optional human-readable `version`/tag;
+- required human-readable `source.version`/tag matching the version pattern in `schemas/consumer-lock.schema.json`, such as `v1.2.3`, `v1.2.3-rc.1`, or `v1.2.3+build.4`;
 - destination root;
 - selected module IDs, canonical source paths, consumer destination paths, and SHA-256 hashes;
 - vendored verifier path/hash.
