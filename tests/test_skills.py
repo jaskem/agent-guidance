@@ -119,10 +119,23 @@ class SkillPackageTests(unittest.TestCase):
         self.assertTrue(any('cyclic skill dependency' in e for e in check(self.root)))
 
     def test_dependency_must_be_disclosed_in_owning_skill(self):
-        path = self.package / 'SKILL.md'
+        path = self.root / 'skills/implement-spec/SKILL.md'
         path.write_text(path.read_text().replace('code-review', 'a separate review method'))
         self.assertTrue(any('dependency not disclosed in SKILL.md: code-review' in e
                             for e in check(self.root)))
+
+    def test_development_requires_change_review_only_conditionally(self):
+        catalog = json.loads((self.root / 'skills/catalog.json').read_text())
+        methods = {entry['name']: entry for entry in catalog['skills']}
+        development = methods['evidence-driven-development']
+        self.assertNotIn('code-review', development.get('dependencies', []))
+        review_routes = [route for route in development.get('conditional_routes', [])
+                         if route['to'] == 'code-review']
+        self.assertEqual(len(review_routes), 1)
+        self.assertTrue(review_routes[0]['when'].strip())
+        # Implementing an accepted plan still requires implementation and review.
+        self.assertCountEqual(methods['implement-spec']['dependencies'],
+                              ['evidence-driven-development', 'code-review'])
 
     def test_conditional_routes_allow_distinct_triggers_and_task_composition_cycles(self):
         self.set_conditional_routes('plan-work', [

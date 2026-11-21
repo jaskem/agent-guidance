@@ -36,9 +36,11 @@ Keep code, plans, task status and decisions with their verified owners. A reposi
 
 ## 4. Load the review owner
 
-Load the separately installed `code-review` method for the actual change. Its package owns requirements and implementation-quality review; use the repository's applicable roles and acceptance sources through that method. An available name is not proof that its instructions were read.
+When an actual code change is made, load the separately installed `code-review` method for that change. Its package owns requirements and implementation-quality review; use the repository's applicable roles and acceptance sources through that method. An available name is not proof that its instructions were read.
 
 If the method is unavailable, resolve its exact canonical source from the current distribution record and read that revision. If the source cannot be reached, continue independent repository checks and report the shared review as incomplete; do not silently replace it with a second review procedure. Fix material findings within the authorized implementation scope, then rerun affected checks. A review-only request does not authorize applying its findings.
+
+For diagnosis without a code change, verify the observed symptom, probes and supported conclusion through the applicable verification route. Independent assessment of diagnosis evidence remains available when useful; it does not require `code-review`. Do not invent a diff or comparison baseline. If diagnosis leads to an authorized code change, load `code-review` for that actual change before closure.
 
 ## 5. Close the actual change
 

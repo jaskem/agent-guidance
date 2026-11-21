@@ -11,12 +11,13 @@
     {
       "name": "evidence-driven-development",
       "path": "skills/evidence-driven-development",
-      "version": "2.2.0",
+      "version": "2.2.1",
       "allow_implicit_invocation": true,
-      "dependencies": [
-        "code-review"
-      ],
       "conditional_routes": [
+        {
+          "to": "code-review",
+          "when": "An actual code change is made"
+        },
         {
           "to": "audit-ui-ux",
           "when": "A distinct assessment of an existing interface is needed"
@@ -308,7 +309,7 @@
       ]
     }
   ],
-  "collection_version": "1.4.1",
+  "collection_version": "1.4.2",
   "coverage_record": "skills/source-coverage.json",
   "reviewed_sources": [
     {
