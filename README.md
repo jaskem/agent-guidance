@@ -25,6 +25,10 @@ Follow the [skill workflow](docs/SKILL-WORKFLOW.md) for complete personal and No
 
 The further [design/workflow integration](docs/DESIGN-WORKFLOW-INTEGRATION-2026-11-20.md) adds reusable brand systems and interactive motion, targeted improvements to existing methods, early useful delegation and explicit visual-runtime selection. The catalog declares conditional method routes and the separately managed logo-design extension. Structural CI checks detect missing/disclosed routes; they do not guarantee host invocation.
 
+## Controlled continuous improvement
+
+The [instruction feedback loop](guidance/playbooks/instruction-feedback-loop.md) handles real reusable failures and explicitly authorized periodic maintenance through one owner: capture, diagnose, candidate, compare, review, bounded activation and verified recovery. The [implementation record](docs/LEARNING-WORKFLOW-2026-11-21.md) explains the evidence checker and limits. A maintenance grant does not enlarge itself, override consumer pins or turn an upstream discovery into a trusted installation.
+
 ## Shared source
 
 - `guidance/KERNEL.md` — small always-on cross-repository senior-collaborator behavior.

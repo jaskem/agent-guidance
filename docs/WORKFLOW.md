@@ -37,6 +37,10 @@ python -m unittest discover -s tests -v
 
 The checks prove structure, catalog/version consistency, repository-neutral shared guidance, deterministic lock generation, and local drift detection. They do not prove consumer-specific routing; that belongs to each migration batch.
 
+## Authorized continuous improvement
+
+Use the existing instruction-feedback-loop for scheduled or event-driven maintenance within the configured standing grant. Validate the candidate evidence record with `python tools/check_learning_change.py <record.json>` before automatic activation and inspect its references. The checker is preflight, not a permission or truth oracle. Its tests run in the existing unittest job. Preserve source/distribution rollback references and distinguish a registered schedule from executed improvement.
+
 ## Checkpoint
 
 For changes under `skills/`, its catalog or package tooling, also run `python tools/check_skills.py` and the tests above. Follow `docs/SKILL-WORKFLOW.md` for behavior trials and distribution. These packages have their own versions; shared-guidance `VERSION` changes only when shared guidance changes.

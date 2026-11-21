@@ -308,7 +308,7 @@
       ]
     }
   ],
-  "collection_version": "1.4.0",
+  "collection_version": "1.4.1",
   "coverage_record": "skills/source-coverage.json",
   "reviewed_sources": [
     {
@@ -378,7 +378,7 @@
     {
       "name": "modern-web-guidance",
       "owner": "Private Notion source owns the self-contained online reference adapter; GoogleChrome owns the original guide corpus",
-      "version": "1.0.0",
+      "version": "1.0.1",
       "upstream_version": "1.0.1",
       "distribution": "Verified Notion Skill and complete personal adapter distribution. Selected official guides are retrieved on demand at the accepted upstream commit; no offline corpus or npm CLI is installed. Exact identities, content hashes and verification are in the configured distribution record.",
       "upstream_repository": "GoogleChrome/modern-web-guidance-src",
