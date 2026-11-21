@@ -16,7 +16,7 @@ Choose by the promised outcome and current uncertainty, not a keyword or availab
 
 | Request | Method | Observable finish |
 | --- | --- | --- |
-| Substantive software change or reported bug | [evidence-driven-development](../skills/evidence-driven-development/SKILL.md) | Requested behavior and applicable checks observed |
+| Substantive software change or reported-bug diagnosis | [evidence-driven-development](../skills/evidence-driven-development/SKILL.md) | Requested behavior or bounded diagnosis supported by observed checks |
 | Instruction, routing or skill maintenance | [maintain-agent-instructions](../skills/maintain-agent-instructions/SKILL.md) | Correct owner repaired and recurrence checked |
 | Bounded plan or specification | [plan-work](../skills/plan-work/SKILL.md) | Known decisions, open choices and executable scope at existing owner |
 | Domain meaning, identity or invariants | [domain-modeling](../skills/domain-modeling/SKILL.md) | Concrete cases reconciled with authoritative domain source |
@@ -76,7 +76,7 @@ Do not perform a broad legacy scan for a bounded UI change. Preserve compactness
 
 An unrelated installed provider is not a second default lifecycle. A provider explicitly requested by the user remains available within its real scope. Provider files are not rewritten.
 
-evidence-driven-development requires code-review; implement-spec requires both, as declared in the catalog. Resolve unavailable dependencies against the accepted canonical release. If that source is inaccessible, name the dependent gap and continue independent work. Other methods are conditional sub-results rather than a mandatory chain.
+evidence-driven-development routes to code-review when an actual code change is made. Diagnosis without a code change has no change-review dependency: verify its evidence through the work cycle, with independent assessment when useful, without inventing a diff or comparison baseline. implement-spec retains both required dependencies for actual implementation, as declared in the catalog. Resolve unavailable dependencies against the accepted canonical release. If that source is inaccessible, name the dependent gap and continue independent work. Other methods are conditional sub-results rather than a mandatory chain.
 
 The package validator checks required dependencies and declared conditional targets for valid names, triggers and disclosure in the owning package. It also checks every primary selection entry. These checks can reject structural drift in CI; they cannot observe whether a host loaded a method or an agent followed it. Actual route evidence and behavioral trials address those separate questions.
 
