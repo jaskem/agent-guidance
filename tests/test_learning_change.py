@@ -24,7 +24,8 @@ def valid_record(kind='guidance_patch'):
         'observation': {'effect': 'Wrong route selected', 'evidence': ['trial:before']},
         'baseline': {'ref': 'trial:before', 'outcome': 'fail'},
         'candidate': {'ref': 'trial:after', 'outcome': 'pass'},
-        'checks': dict.fromkeys(('positive', 'excluded', 'missing_input', 'regression'), True),
+        'checks': dict.fromkeys(('positive', 'adjacent_valid', 'excluded',
+                                'missing_input', 'regression'), True),
         'review': {'independent': True, 'findings_resolved': True,
                    'evidence': ['review:resolved']},
         'rollback': {'ref': 'revision:previous', 'restore_procedure': 'Restore pinned revision'},
@@ -128,13 +129,23 @@ class LearningChangeTests(unittest.TestCase):
                     self.assert_decision(record, 'blocked')
 
     def test_checks_and_review_require_actual_true(self):
-        for path in ('checks.positive', 'checks.excluded', 'checks.missing_input',
-                     'checks.regression', 'review.independent', 'review.findings_resolved'):
+        for path in ('checks.positive', 'checks.adjacent_valid', 'checks.excluded',
+                     'checks.missing_input', 'checks.regression', 'review.independent',
+                     'review.findings_resolved'):
             for value in (False, 1, 'true', None):
                 with self.subTest(path=path, value=value):
                     record = valid_record()
                     change(record, path, value)
                     self.assert_decision(record, 'blocked')
+
+    def test_adjacent_valid_is_required_for_every_change_kind(self):
+        for kind in ('guidance_patch', 'skill_patch', 'upstream_refresh', 'new_skill', 'rollback'):
+            record = valid_record(kind)
+            del record['checks']['adjacent_valid']
+            with self.subTest(kind=kind):
+                result = evaluate(record)
+                self.assertEqual(result['decision'], 'blocked', result)
+                self.assertIn('checks.adjacent_valid must be true', result['reasons'])
 
     def test_failed_or_unknown_candidate_is_never_eligible(self):
         for path, value in [('candidate.outcome', 'fail'), ('candidate.outcome', None),
@@ -243,6 +254,22 @@ class LearningChangeCliTests(unittest.TestCase):
                                        capture_output=True, text=True, check=False)
         self.assertEqual(completed.stderr, '')
         return completed.returncode, json.loads(completed.stdout)
+
+    def test_adjacent_valid_declaration_controls_cli_decision(self):
+        for case in ('missing', 'false', 'true'):
+            with self.subTest(case=case):
+                record = valid_record()
+                if case == 'missing':
+                    del record['checks']['adjacent_valid']
+                else:
+                    record['checks']['adjacent_valid'] = case == 'true'
+                code, result = self.run_cli(json.dumps(record))
+                if case == 'true':
+                    self.assertEqual((code, result), (0, {'decision': 'eligible', 'reasons': []}))
+                else:
+                    self.assertEqual(code, 1)
+                    self.assertEqual(result['decision'], 'blocked')
+                    self.assertIn('checks.adjacent_valid must be true', result['reasons'])
 
     def test_output_and_exit_codes_match_decisions(self):
         for decision, status, update in (
