@@ -82,6 +82,73 @@ class VendorContractTests(unittest.TestCase):
             self.assertNotEqual(verify.returncode, 0)
             self.assertIn("unexpected file under shared destination", verify.stderr)
 
+    def test_verifier_validates_schema_version(self) -> None:
+        cases = (
+            (1, True),
+            (1.0, True),
+            (True, False),
+            (False, False),
+            (2, False),
+            ("1", False),
+            (None, False),
+        )
+        with tempfile.TemporaryDirectory() as td:
+            consumer = Path(td) / "consumer"
+            result = self.vendor(consumer)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            lock = consumer / ".agent-guidance.lock.json"
+            data = json.loads(lock.read_text(encoding="utf-8"))
+            for schema_version, valid in cases:
+                with self.subTest(schema_version=schema_version):
+                    data["schema_version"] = schema_version
+                    lock.write_text(json.dumps(data), encoding="utf-8")
+                    verify = run(
+                        sys.executable, str(consumer / "tools/verify_agent_guidance.py"), "--root", str(consumer)
+                    )
+                    self.assertEqual(verify.returncode, 0 if valid else 1, verify.stderr)
+                    if not valid:
+                        self.assertIn("schema_version", verify.stderr)
+
+    def test_verifier_validates_required_version_tag(self) -> None:
+        missing = object()
+        cases = (
+            ("v1.2.3", True),
+            ("v1.2.3-rc.1", True),
+            ("v1.2.3+build.4", True),
+            ("v01.002.0003", True),
+            (missing, False),
+            (None, False),
+            (True, False),
+            (1, False),
+            ("", False),
+            ("vgarbage", False),
+            ("v1", False),
+            ("v1.2", False),
+            ("1.2.3", False),
+            ("v1.2.3-", False),
+            ("v1.2.3+", False),
+            ("v1.2.3-rc.1+build.4", False),
+        )
+        with tempfile.TemporaryDirectory() as td:
+            consumer = Path(td) / "consumer"
+            result = self.vendor(consumer)
+            self.assertEqual(result.returncode, 0, result.stderr)
+            lock = consumer / ".agent-guidance.lock.json"
+            data = json.loads(lock.read_text(encoding="utf-8"))
+            for version, valid in cases:
+                with self.subTest(version="missing" if version is missing else version):
+                    if version is missing:
+                        data["source"].pop("version", None)
+                    else:
+                        data["source"]["version"] = version
+                    lock.write_text(json.dumps(data), encoding="utf-8")
+                    verify = run(
+                        sys.executable, str(consumer / "tools/verify_agent_guidance.py"), "--root", str(consumer)
+                    )
+                    self.assertEqual(verify.returncode, 0 if valid else 1, verify.stderr)
+                    if not valid:
+                        self.assertIn("source.version", verify.stderr)
+
     def test_vendor_rejects_wrong_commit_pin(self) -> None:
         with tempfile.TemporaryDirectory() as td:
             consumer = Path(td) / "consumer"
