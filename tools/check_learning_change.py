@@ -117,7 +117,8 @@ def evaluate(record: dict) -> dict:
                 errors.append('benefit must show a strict improvement')
 
     checks = section('checks')
-    required_true(checks, 'checks.', ('positive', 'excluded', 'missing_input', 'regression'))
+    required_true(checks, 'checks.', ('positive', 'adjacent_valid', 'excluded',
+                                     'missing_input', 'regression'))
     review = section('review')
     required_true(review, 'review.', ('independent', 'findings_resolved'))
     evidence(review, 'review.')

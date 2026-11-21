@@ -18,9 +18,11 @@ Source baseline: workflow commit `cb16682b0c38e59de3fbf1c59626d6f3120930c0`, tre
 
 ## Evidence contract
 
-A record supplied to the checker includes identity/kind, true owner and authorization reference; observed effect/evidence; exact base/candidate references and outcomes; positive, excluded, missing-input and regression checks; independent resolved review; risks; and a restore reference/procedure. A pass-to-pass change additionally needs a finite measured benefit with the expected direction. New or refreshed external content needs exact source revision, license and complete content review; a new skill also needs a demonstrated distinct outcome and comparison with existing routes.
+A record supplied to the checker includes identity/kind, true owner and authorization reference; observed effect/evidence; exact base/candidate references and outcomes; positive, adjacent-valid, excluded, missing-input and regression checks; independent resolved review; risks; and a restore reference/procedure. A pass-to-pass change additionally needs a finite measured benefit with the expected direction. New or refreshed external content needs exact source revision, license and complete content review; a new skill also needs a demonstrated distinct outcome and comparison with existing routes.
 
 The exact field shape is exercised by `valid_record` in `tests/test_learning_change.py`; its synthetic references are test fixtures, not actual evidence or authorization. Run `python tools/check_learning_change.py <record.json>` from the canonical checkout. Exit 0 means the record meets preflight requirements, 2 means an actual decision/authority boundary remains, and 1 means required evidence is invalid/missing or prohibited. Referenced proof must still be inspected. The existing work record remains the durable owner; JSON input/output is a verification artifact, not a competing registry.
+
+Contract correction on 21 November 2026: the already-required adjacent valid case now has an explicit `checks.adjacent_valid` declaration, which must be the JSON boolean `true` for every supported change kind. A missing, false or non-boolean declaration blocks preflight. `schema_version` stays 1; this repairs validation of the existing procedure rather than introducing a new maintenance policy. Previously accepted records without this field no longer pass the corrected checker. Revalidate them only from actual case evidence when needed; do not infer or backfill a pass. Earlier verdicts describe the checker revision used at that time.
 
 ## Initial pilot and acceptance
 
