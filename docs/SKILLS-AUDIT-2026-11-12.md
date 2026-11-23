@@ -4,18 +4,9 @@
 
 Requested outcome: a reliable instruction/skill workflow, assessment of existing GitHub material, and implemented improvements informed by Matt Pocock's skills. This batch adds optional reusable methods and their checks; it does not change product semantics or migrate pinned consumers.
 
-The connected account exposed six repositories. Complete default-branch trees were read (`truncated: false`); none contained a file named `SKILL.md` before this batch. This proves absence of that package entrypoint in those trees, not absence in other branches, other accounts or the user's computer. The host personal-skill checkout and enabled Notion skill list were also empty at inspection.
+This is a historical source-design audit, not a recipient setup inventory. Account-linked consumer names, source revisions, local routing details and per-project measurements were removed during the portability revision. The public record no longer reproduces that private enumeration; it does not establish absence of skills or current installation in another account.
 
-| Repository / inspected revision | Retain | Assessment and action |
-| --- | --- | --- |
-| [agent-guidance](https://github.com/jaskem/agent-guidance/tree/92b9aa78a95134c0e81f61f1e3047bc87fde6f77) | Kernel, 15 roles, four playbooks, optional resources, hash-pinned vendoring | Strong central ownership and reusable methods. Add actual installable packages alongside guidance; preserve IDs and lock contract. |
-| [taskline](https://github.com/jaskem/taskline/tree/3f7b3f2363688549d084525144d26090d8700c0b) | Local router, canonical ownership, exact guidance lock | Already pins agent-guidance `92b9aa78...`, v0.4.0. Avoid a redundant migration for this additive skill-only change. |
-| [project_data_pipeline](https://github.com/jaskem/project_data_pipeline/tree/89782c36b1f2d1fa76fc6a762d8929938ca76eba) | Root and four scoped AGENTS files, Copilot pointer, BASELINE routing | Good local separation of product contracts, process and generated status. Generic skills must route into this system, not generate another plan or test policy. |
-| [DXF-viewer](https://github.com/jaskem/DXF-viewer/tree/3b6b45dfdcda0bd7d5bd91dd9e66fa4807222420) | Compact entrypoint, central concept, reproducibility route | Keep the existing product-plan owner and explicit publication boundary. Installable methods add execution discipline without replacing recognition contracts. |
-| [landscape-core](https://github.com/jaskem/landscape-core/tree/4ed144dde82390b085f9b94b9b33558033e2dd97) | Semantic boundary, durable evidence, exact-SHA recovery | Long entrypoint repeats general evidence, strategy and closure themes. Candidate for a separately verified pinned-guidance migration; preserve Core-specific constraints and roadmap authority. |
-| [landscape-platform](https://github.com/jaskem/landscape-platform/tree/6f1df6b8b415dd8a9963b952b5f387ad1962aadd) | Core/platform separation, recovery and execution constraints | Similar repeated general process themes. Same migration candidate; this audit does not establish equivalence of a replacement. |
-
-Read in depth: the six root entrypoints, all scoped Flowcraft instructions and BASELINE, Taskline's lock, central workflow/consumer contract/kernel/catalog/tooling/tests, relevant roles and playbooks. This is an instruction-system audit, not a fresh validation of each product's entire roadmap or runtime. Root entrypoint sizes (13/73/44/13/158/168 lines respectively for guidance/Taskline/Flowcraft/DXF/Core/Platform) are context-cost indicators, not defect scores.
+The public source baseline was [agent-guidance at 92b9aa78](https://github.com/jaskem/agent-guidance/tree/92b9aa78a95134c0e81f61f1e3047bc87fde6f77). Its kernel, reusable roles/playbooks, catalog, vendoring tools, lock contract and tests were reviewed. The general conclusion retained here is that reusable methods must preserve consumer-owned product contracts, tasks and local routing. Exact historical consumer observations are not republished or replaced with invented anonymous measurements.
 
 ## Matt Pocock comparison
 

@@ -194,24 +194,48 @@ def _catalog(files: dict[str, bytes]) -> dict:
     return catalog
 
 
-def skill_archive(
+def _skill_archive_entries(
     name: str, files: dict[str, bytes], *, source_path: str | None = None, modes: dict[str, int] | None = None
-) -> bytes:
+) -> dict[str, tuple[str, bytes, int, bool]]:
     safe_name(name)
     if "/" in name:
         raise ValueError(f"Invalid skill archive root: {name}")
     prefix = safe_name(source_path or "skills/" + name) + "/"
+    if not files.get("LICENSE"):
+        raise ValueError("Snapshot root LICENSE is required for standalone skill archives")
+    entries = {
+        safe_name(name + "/" + path[len(prefix):]): (path, data, (modes or {}).get(path, 0o644), False)
+        for path, data in files.items() if path.startswith(prefix)
+    }
+    notice = "LICENSE"
+    suffix = 1
+    existing = {path.casefold() for path in entries}
+    while any(path == (name + "/" + notice).casefold() or path.startswith((name + "/" + notice + "/").casefold())
+              for path in existing):
+        notice = "AGENT-GUIDANCE-LICENSE" + ("" if suffix == 1 else "-" + str(suffix))
+        suffix += 1
+    entries[name + "/" + notice] = ("LICENSE", files["LICENSE"], (modes or {}).get("LICENSE", 0o644), True)
+    return entries
+
+
+def _tar_gz(entries: dict[str, tuple[str, bytes, int, bool]]) -> bytes:
     stream = io.BytesIO()
     with gzip.GzipFile(fileobj=stream, filename="", mode="wb", compresslevel=9, mtime=0) as compressed:
         with tarfile.open(fileobj=compressed, mode="w", format=tarfile.PAX_FORMAT) as archive:
-            for path, data in sorted(files.items()):
-                if path.startswith(prefix):
-                    entry = tarfile.TarInfo(safe_name(name + "/" + path[len(prefix):]))
-                    entry.size = len(data)
-                    entry.mtime = 0
-                    entry.mode = (modes or {}).get(path, 0o644)
-                    archive.addfile(entry, io.BytesIO(data))
+            for path, (_, data, mode, _) in sorted(entries.items()):
+                entry = tarfile.TarInfo(safe_name(path))
+                entry.size = len(data)
+                entry.mtime = 0
+                entry.mode = mode
+                archive.addfile(entry, io.BytesIO(data))
     return stream.getvalue()
+
+
+def skill_archive(
+    name: str, files: dict[str, bytes], *, source_path: str | None = None, modes: dict[str, int] | None = None
+) -> bytes:
+    """Compose complete canonical files plus the exact original-work license notice."""
+    return _tar_gz(_skill_archive_entries(name, files, source_path=source_path, modes=modes))
 
 
 def build_files(source_ref: str = "HEAD", *, repo: Path = REPO) -> dict[str, bytes]:
@@ -268,10 +292,22 @@ def build_files(source_ref: str = "HEAD", *, repo: Path = REPO) -> dict[str, byt
             raise ValueError(f"Source collides with generated skill archive: {archive_path}")
         content = {path: {"sha256": digest(data), "bytes": len(data), "mode": origins[path]["source_mode"]}
                    for path, data in sorted(snapshot_files.items()) if path.startswith(skill["path"] + "/")}
-        archive = skill_archive(skill["name"], snapshot_files, source_path=skill["path"], modes=modes)
+        entries = _skill_archive_entries(skill["name"], snapshot_files, source_path=skill["path"], modes=modes)
+        archive_files = {
+            path: {"source_path": source_path, "sha256": digest(data), "bytes": len(data),
+                   "mode": origins[source_path]["source_mode"], "packaging_addition": added}
+            for path, (source_path, data, _, added) in sorted(entries.items())
+        }
+        additions = {
+            path: {**metadata, "source_sha256": origins[metadata["source_path"]]["source_sha256"],
+                   "reason": "Retain the original-work notice in standalone installations"}
+            for path, metadata in archive_files.items() if metadata["packaging_addition"]
+        }
+        archive = _tar_gz(entries)
         files[archive_path] = archive
         skills.append({**skill, "archive": archive_path, "archive_sha256": digest(archive),
-                       "archive_bytes": len(archive), "files": content, "distribution_variant": "unchanged"})
+                       "archive_bytes": len(archive), "files": content, "archive_files": archive_files,
+                       "packaging_additions": additions, "distribution_variant": "license-notice-added"})
     external = [{**method, "optional": True, "bundled": False,
                  "bundle_status": "Not bundled; requires its separate accepted source and installation"}
                 for method in catalog.get("external_methods", [])]
@@ -283,6 +319,7 @@ def build_files(source_ref: str = "HEAD", *, repo: Path = REPO) -> dict[str, byt
         "all_source_bytes_unchanged": True,
         "base_methods": len(skills),
         "unchanged_method_main_texts": len(skills),
+        "skill_archives_with_original_work_notice": len(skills),
         "implicit_methods": sum(skill["allow_implicit_invocation"] for skill in skills),
         "explicit_only": [skill["name"] for skill in skills if not skill["allow_implicit_invocation"]],
         "documented_provenance_redactions": 0,

@@ -12,7 +12,7 @@ Ask an AI agent with access to this repository:
 
 Agents start at [AGENTS.md](AGENTS.md), which routes installation requests to [INSTALL.md](INSTALL.md). Choose durable files/Git, your own Notion workspace, a supported native skill host, or a repository consumer. Notion, a paid service and access to the author's accounts are not requirements. The installer reconciles existing owners and local changes; it does not import someone else's context or permissions.
 
-The [catalog](skills/catalog.json) supplies the complete current base collection and invocation settings. Optional external methods require their own accessible, reviewed installation. A read-only explanation does not install anything. [MIT](LICENSE) permits reuse of original repository material; retained third-party notices continue to apply.
+The [catalog](skills/catalog.json) supplies the complete current base collection and invocation settings. Optional external methods require their own accessible, reviewed installation. A read-only explanation does not install anything. [MIT](LICENSE) permits reuse of original repository material; retained [third-party notices](docs/THIRD-PARTY-NOTICES.md) continue to apply.
 
 ## Consumer model
 
@@ -78,7 +78,4 @@ This repository does not own:
 
 During `0.x`, any materially behavioral change should be treated as migration-worthy even when represented by a minor bump.
 
-## Bootstrap
-
-The first durable commit should be tagged `v0.1.0` after foundation verification. Consumer migration happens in separate repository-specific batches.
 

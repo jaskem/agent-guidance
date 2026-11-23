@@ -1,6 +1,8 @@
 from pathlib import Path
 import json
+import shutil
 import subprocess
+import sys
 import tempfile
 import unittest
 
@@ -54,6 +56,23 @@ class PortableInstallationTests(unittest.TestCase):
         errors = check(self.root)
         self.assertTrue(any("AGENTS.md" in e for e in errors))
         self.assertTrue(any("private-default" in e for e in errors))
+
+    def test_foundation_rejects_private_sources_and_consumer_workflow_paths(self):
+        source = Path(__file__).resolve().parents[1]
+        clone = self.root / "source"
+        shutil.copytree(source, clone, ignore=shutil.ignore_patterns(".git", "__pycache__"))
+        kernel = clone / "guidance/KERNEL.md"
+        original = kernel.read_text(encoding="utf-8")
+        for forbidden in ("docs/EXAMPLE-WORKFLOW.md", "https://app.notion.com/p/" + "b" * 32):
+            with self.subTest(forbidden=forbidden):
+                kernel.write_text(original + "\n" + forbidden, encoding="utf-8")
+                result = subprocess.run([sys.executable, str(clone / "tools/check_foundation.py")],
+                                        capture_output=True, text=True)
+                self.assertNotEqual(result.returncode, 0)
+        kernel.write_text(original, encoding="utf-8")
+        result = subprocess.run([sys.executable, str(clone / "tools/check_foundation.py")],
+                                capture_output=True, text=True)
+        self.assertEqual(result.returncode, 0, result.stderr)
 
 
 if __name__ == "__main__":

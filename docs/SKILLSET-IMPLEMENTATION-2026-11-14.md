@@ -20,6 +20,6 @@ Earlier routing exercises from the preceding audit are historical evidence, not 
 
 ## Rollout boundary
 
-Publish canonical source before marking personal/Notion distributions current. The five known repository entrypoints require targeted method-router/catalog updates; their selected shared guidance 0.5.0 and product owners remain unchanged. Native Pulse requires its actual file route and Notion project context, not an assumed GitHub consumer. Each consumer follows its own process checks. Personal installation, Notion imports/settings and consumer publication are verified independently and recorded in the private distribution record.
+Publish canonical source before marking personal/Notion distributions current. The five known repository entrypoints require targeted method-router/catalog updates; their selected shared guidance 0.5.0 and product owners remain unchanged. A native application requires its actual source and task routes, rather than an assumed GitHub consumer. Historical account-specific project names are withheld from this public record. Each consumer follows its own process checks. Personal installation, Notion imports/settings and consumer publication are verified independently and recorded in the private distribution record.
 
 No product task, browser/native feature, file-share/hardware acceptance or new automation is completed by this instruction change. A blocked write or incomplete deployment is reported exactly at its boundary.

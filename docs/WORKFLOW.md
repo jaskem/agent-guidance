@@ -35,7 +35,7 @@ python tools/check_foundation.py
 python -m unittest discover -s tests -v
 ```
 
-The checks prove structure, catalog/version consistency, repository-neutral shared guidance, deterministic lock generation, and local drift detection. They do not prove consumer-specific routing; that belongs to each migration batch.
+The checks prove structure, catalog/version consistency, detectable private/source-path exclusions, deterministic lock generation and local drift detection. Semantic repository neutrality additionally requires the source-ownership review; a vocabulary blacklist cannot establish it. They do not prove consumer-specific routing; that belongs to each migration batch.
 
 ## Authorized continuous improvement
 

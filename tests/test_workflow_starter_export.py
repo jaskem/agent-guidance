@@ -44,6 +44,9 @@ class GitFixture:
             "external_methods": [{"name": "online-reference", "version": "3.1.0", "owner": "separate source"}],
         }
         self.write("README.md", b"Portable workflow\n")
+        self.write("LICENSE", b"MIT License\n\nCopyright (c) Fixture original-work contributors\n\n"
+                   b"The above copyright notice and this permission notice shall be included in all "
+                   b"copies or substantial portions of the Software.\n")
         self.write("INSTALL.md", b"Use tools/vendor_guidance.py and complete packages.\n")
         self.write("AGENTS.md", b"Use the recipient's configured guide.\n")
         self.write("VERSION", b"1.2.3\n")
@@ -63,6 +66,7 @@ class GitFixture:
         self.write(".github/workflows/test.yml", excluded)
         self.add_skill("alpha", "1.2.0", True)
         self.add_skill("beta", "2.3.1", False)
+        self.write("skills/beta/LICENSE", b"An existing package-specific license must remain unchanged.\n")
         self.write_catalog()
         self.first_commit = self.commit("First complete collection", day=2)
 
@@ -147,6 +151,7 @@ class WorkflowStarterExportTests(unittest.TestCase):
         report = json.loads(files["VERIFICATIE.json"])
         self.assertEqual(report["base_methods"], len(self.fixture.catalog["skills"]))
         self.assertEqual(report["unchanged_method_main_texts"], len(self.fixture.catalog["skills"]))
+        self.assertEqual(report["skill_archives_with_original_work_notice"], len(self.fixture.catalog["skills"]))
         self.assertEqual(report["explicit_only"], ["beta"])
         self.assertEqual(report["documented_provenance_redactions"], 0)
         self.assertNotIn("source_tree_matches_verified_remote", report)
@@ -206,6 +211,15 @@ class WorkflowStarterExportTests(unittest.TestCase):
             prefix = skill["path"] + "/"
             expected = {skill["name"] + "/" + path[len(prefix):]: data
                         for path, data in files.items() if path.startswith(prefix)}
+            self.assertEqual(len(skill["packaging_additions"]), 1)
+            notice_path, notice = next(iter(skill["packaging_additions"].items()))
+            expected_notice_path = skill["name"] + "/" + ("AGENT-GUIDANCE-LICENSE" if skill["name"] == "beta" else "LICENSE")
+            self.assertEqual(notice_path, expected_notice_path)
+            self.assertEqual(notice["source_path"], "LICENSE")
+            self.assertEqual(notice["source_sha256"], EXPORT.digest(files["LICENSE"]))
+            self.assertEqual(notice["sha256"], EXPORT.digest(files["LICENSE"]))
+            self.assertTrue(notice["packaging_addition"])
+            expected[notice_path] = files["LICENSE"]
             package = files[skill["archive"]]
             self.assertEqual(skill["archive_sha256"], EXPORT.digest(package))
             self.assertEqual(skill["archive_bytes"], len(package))
@@ -220,6 +234,16 @@ class WorkflowStarterExportTests(unittest.TestCase):
                     actual[member.name] = archive.extractfile(member).read()
                 self.assertEqual(expected, actual)
                 self.assertIn(b"MIT License", actual[skill["name"] + "/references/sources.md"])
+                self.assertEqual(actual[notice_path], files["LICENSE"])
+                self.assertIn(b"Copyright (c) Fixture original-work contributors", actual[notice_path])
+                self.assertEqual(set(skill["archive_files"]), set(actual))
+                for path, metadata in skill["archive_files"].items():
+                    self.assertEqual(metadata["sha256"], EXPORT.digest(actual[path]))
+                    self.assertEqual(metadata["bytes"], len(actual[path]))
+                    self.assertEqual(actual[path], files[metadata["source_path"]])
+                    self.assertEqual(metadata["packaging_addition"], path == notice_path)
+                if skill["name"] == "beta":
+                    self.assertEqual(actual["beta/LICENSE"], files["skills/beta/LICENSE"])
         first, second = self.fixture.root / "first.zip", self.fixture.root / "second.zip"
         EXPORT.write_zip(first, files)
         EXPORT.write_zip(second, files)
@@ -229,6 +253,30 @@ class WorkflowStarterExportTests(unittest.TestCase):
             self.assertEqual({EXPORT.ARCHIVE_ROOT + "/" + path for path in files}, set(archive.namelist()))
             self.assertEqual(files, {name.split("/", 1)[1]: archive.read(name) for name in archive.namelist()})
             self.assertEqual(archive.getinfo(EXPORT.ARCHIVE_ROOT + "/tools/vendor_guidance.py").external_attr >> 16, 0o100755)
+
+    def test_license_notice_addition_never_overwrites_existing_package_licenses(self):
+        self.fixture.write("skills/beta/AGENT-GUIDANCE-LICENSE", b"Existing alternate notice\n")
+        self.fixture.write("skills/beta/AGENT-GUIDANCE-LICENSE-2", b"Another existing notice\n")
+        self.fixture.commit("Existing license names must survive")
+        files = EXPORT.build_files(repo=self.fixture.root)
+        skill = next(skill for skill in json.loads(files["BRONNEN.json"])["skills"] if skill["name"] == "beta")
+        self.assertEqual(set(skill["packaging_additions"]), {"beta/AGENT-GUIDANCE-LICENSE-3"})
+        self.assertEqual(set(skill["files"]), {path for path in files if path.startswith("skills/beta/")})
+        self.assertNotIn("skills/beta/AGENT-GUIDANCE-LICENSE-3", files)
+        with tarfile.open(fileobj=io.BytesIO(files[skill["archive"]]), mode="r:gz") as archive:
+            for name in ("LICENSE", "AGENT-GUIDANCE-LICENSE", "AGENT-GUIDANCE-LICENSE-2"):
+                self.assertEqual(archive.extractfile("beta/" + name).read(), files["skills/beta/" + name])
+            self.assertEqual(archive.extractfile("beta/AGENT-GUIDANCE-LICENSE-3").read(), files["LICENSE"])
+
+    def test_standalone_packages_require_a_nonempty_committed_root_notice(self):
+        self.fixture.write("LICENSE", b"")
+        self.fixture.commit("Empty root notice")
+        with self.assertRaisesRegex(ValueError, "root LICENSE is required"):
+            EXPORT.build_files(repo=self.fixture.root)
+        self.fixture.run("rm", "LICENSE")
+        self.fixture.commit("Missing root notice")
+        with self.assertRaisesRegex(ValueError, "root LICENSE is required"):
+            EXPORT.build_files(repo=self.fixture.root)
 
     def test_privacy_rejects_concrete_locations_and_allows_docs_placeholders_and_patterns(self):
         private_locations = [
