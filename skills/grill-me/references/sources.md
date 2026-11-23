@@ -1,6 +1,6 @@
 # Sources and adaptation
 
-Canonical source after this consolidation is jaskem/agent-guidance, with released revision and package version recorded by the distribution owner. Earlier host adaptation owner: [private Notion grill-me](https://app.notion.com/p/417f70dd64e68120b6d5d60c83aa0e1a). This ownership migration follows the user's consolidation request; the old page remains a distribution, not a second editable master.
+Canonical source is this repository, `skills/grill-me`, with released revision and package version recorded by each recipient's distribution owner. Earlier host adaptations are historical provenance, not another editable master or a private dependency. No particular user account is needed to use this method.
 
 This package preserves the dependency-aware interview idea from Matt Pocock, reviewed at `5863806dd4e15c63174bee4e7515a4256792ecfa`:
 
@@ -39,7 +39,7 @@ SOFTWARE.
 
 ## Coherent skillset provenance
 
-This package is an original task-scoped synthesis in the coherent 24-method collection. The canonical source-coverage record identifies all reviewed installed source versions and main-text SHA-256 values. Installed packages are distinct from a declared upstream pin; no other provider package must be invoked. Current package version: 2.0.0.
+This package is an original task-scoped synthesis in the coherent 24-method collection. The canonical source-coverage record identifies all reviewed installed source versions and main-text SHA-256 values. Installed packages are distinct from a declared upstream pin; no other provider package must be invoked. Current package version: 2.0.1.
 
 ## agent-skills
 

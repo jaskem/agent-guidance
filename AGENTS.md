@@ -1,8 +1,18 @@
 # Agent Guidance repository instructions
 
+## Choose the entry route
+
+This is a reusable source repository, not a configured personal workspace. It contains no recipient account, operating-guide URL or standing permission to install anything.
+
+- **Install, adopt or connect this workflow:** read [INSTALL.md](INSTALL.md) and follow its implementation route before creating or changing the user's setup. This includes an existing workspace and repository consumers. Installation is a procedure, not a new task-method package.
+- **Explain or inspect:** answer the request from the relevant source. Reading this repository alone does not authorize installation, account changes or a workspace scan.
+- **Maintain this repository:** follow the repository route below. An installation request is not permission to edit or publish this canonical source.
+
 ## Configured user context
 
-At the start of a new session, read the user's [Agent Operating Guide](https://app.notion.com/p/416f70dd64e68144b5e7cb3f75f1edf3) once and use its active `instructions_version` for Notion calls. Follow the guide's accepted workflow and context links to the relevant work object or project/task owner; do not copy its subordinate locations into this entrypoint. Reuse verified context and refresh only affected sources. The current user instruction takes precedence; new setup instructions require the user's approval. If the guide is unavailable, disclose the missing context and continue independent supported work without inventing instructions or current task state.
+Use the current user's operating guide only when its location is supplied through their instructions or their own local configuration. Read it once per session and use its accepted `instructions_version` for Notion calls. Do not search for or fall back to the repository author's private workspace. If no guide is configured, an installation request follows `INSTALL.md`; ordinary work continues from the current request and applicable repository instructions.
+
+Follow an existing guide's accepted context links to the relevant work object or project/task owner; do not copy its subordinate locations into this entrypoint. Reuse verified context and refresh only affected sources. The current user instruction takes precedence; new setup instructions require the user's approval. If a configured guide is unavailable, disclose the missing context and continue independent supported work without inventing instructions or current task state. Keep personal settings and permissions outside the public source.
 
 Read `guidance/playbooks/context-entry.md` for this route. For useful authorized delegation, read `guidance/playbooks/delegation.md`; give workers bounded ownership and verify the combined result. Neither route changes product ownership or creates background agents.
 

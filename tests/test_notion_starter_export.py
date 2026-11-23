@@ -1,55 +1,55 @@
-import importlib.util
-import io
 import json
 from pathlib import Path
-import tarfile
+import subprocess
+import sys
 import unittest
+from unittest import mock
 
-SPEC = importlib.util.spec_from_file_location("export_notion_starter", Path(__file__).resolve().parents[1] / "tools" / "export_notion_starter.py")
-EXPORT = importlib.util.module_from_spec(SPEC)
-SPEC.loader.exec_module(EXPORT)
+from test_workflow_starter_export import EXPORT, GitFixture, load_exporter
+
+LEGACY_SCRIPT = Path(__file__).resolve().parents[1] / "tools" / "export_notion_starter.py"
+LEGACY = load_exporter(LEGACY_SCRIPT, "legacy_notion_export_under_test")
 
 
-class NotionStarterExportTests(unittest.TestCase):
-    @classmethod
-    def setUpClass(cls):
-        cls.files = EXPORT.build_files()
-        cls.manifest = json.loads(cls.files["BRONNEN.json"])
+class NotionStarterCompatibilityTests(unittest.TestCase):
+    def setUp(self):
+        self.fixture = GitFixture()
+        self.addCleanup(self.fixture.close)
 
-    def test_all_payload_hashes_and_complete_method_archives(self):
-        self.assertEqual(set(self.files) - {"BRONNEN.json"}, set(self.manifest["files"]))
-        for path, metadata in self.manifest["files"].items():
-            self.assertEqual(EXPORT.digest(self.files[path]), metadata["sha256"], path)
-        for skill in self.manifest["skills"]:
-            name = skill["name"]
-            prefix = skill["path"] + "/"
-            expected = {name + "/" + p[len(prefix):]: b for p, b in self.files.items() if p.startswith(prefix)}
-            with tarfile.open(fileobj=io.BytesIO(self.files[skill["archive"]]), mode="r:gz") as archive:
-                actual = {m.name: archive.extractfile(m).read() for m in archive.getmembers()}
-            self.assertEqual(expected, actual, name)
-
-    def test_private_locations_fail_closed(self):
-        for text in ("https://app.notion.com/p/" + "a" * 32, "https://notion.so/private-" + "b" * 32, "https://private.notion.site/Home", "/workspace/scratch/example", "C:\\Users\\Example"):
-            with self.assertRaises(ValueError):
-                EXPORT.privacy_check("candidate.md", text.encode())
-        EXPORT.privacy_check("help.md", b"https://www.notion.com/help/category/databases")
-
-    def test_privacy_variant_is_limited_and_licensed(self):
-        changes = [p for p, v in self.manifest["source_files"].items() if v["source_sha256"] != v["bundled_sha256"]]
-        self.assertEqual(changes, ["skills/grill-me/references/sources.md"])
-        self.assertIn(b"MIT License", self.files[changes[0]])
-        for path, data in self.files.items():
-            if not path.endswith(".tar.gz"):
-                EXPORT.privacy_check(path, data)
-
-    def test_source_shape_change_requires_review(self):
+    def test_legacy_default_and_deprecated_revision_select_the_same_snapshot(self):
+        expected = EXPORT.build_files(repo=self.fixture.root)
+        self.assertEqual(expected, LEGACY.build_files(repo=self.fixture.root))
+        self.assertEqual(expected, LEGACY.build_files(self.fixture.first_commit, repo=self.fixture.root))
+        self.assertEqual(expected, LEGACY.build_files(source_ref=self.fixture.first_commit, repo=self.fixture.root))
+        with self.assertRaisesRegex(ValueError, "conflicting"):
+            LEGACY.build_files("older-ref", source_ref="other-ref", repo=self.fixture.root)
         with self.assertRaises(ValueError):
-            EXPORT.filter_provenance("skills/grill-me/references/sources.md", b"Unexpected new source")
+            LEGACY.build_files("", repo=self.fixture.root)
 
-    def test_archive_path_safety(self):
-        for name in ("../outside", "/absolute", "x/../../outside", "x\\outside"):
-            with self.assertRaises(ValueError):
-                EXPORT.safe_name(name)
+    def test_legacy_cli_is_byte_identical_and_rejects_a_second_revision(self):
+        expected_target = self.fixture.root / "generic.zip"
+        EXPORT.write_zip(expected_target, EXPORT.build_files(repo=self.fixture.root))
+        target = self.fixture.root / "legacy.zip"
+        result = subprocess.run([sys.executable, str(LEGACY_SCRIPT), "--repo", str(self.fixture.root),
+                                 "--exporter-revision", self.fixture.first_commit, "--output", str(target)],
+                                stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        self.assertEqual(result.returncode, 0, result.stderr.decode())
+        self.assertEqual(target.read_bytes(), expected_target.read_bytes())
+        self.assertEqual(json.loads(result.stdout)["source_commit"], self.fixture.first_commit)
+        invalid = self.fixture.root / "conflicting.zip"
+        result = subprocess.run([sys.executable, str(LEGACY_SCRIPT), "--repo", str(self.fixture.root),
+                                 "--source-ref", "HEAD", "--exporter-revision", "different-ref",
+                                 "--output", str(invalid)], stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+        self.assertNotEqual(result.returncode, 0)
+        self.assertIn(b"conflicting", result.stderr)
+        self.assertFalse(invalid.exists())
+
+    def test_compatibility_import_is_safe_and_helpers_use_the_shared_core(self):
+        with mock.patch("subprocess.run", side_effect=AssertionError("No process during import")):
+            module = load_exporter(LEGACY_SCRIPT, "legacy_notion_import_safety")
+        self.assertIs(module.main, module._CORE.main)
+        self.assertIs(module.write_zip, module._CORE.write_zip)
+        self.assertIs(module.privacy_check, module._CORE.privacy_check)
 
 
 if __name__ == "__main__":

@@ -35,3 +35,5 @@ Claim-to-evidence map, focused verification/validation, failures, residual risk,
 
 ## Optional reference
 When intermittent browser-test failure, waiting, or isolation obscures the behavior being proved, consult `resource-playwright-diagnosis` if selected and locally available. The optional `resource-index` describes availability; neither module is required merely because this role is active.
+
+When metered CI repetition or a proposed optimization could change required evidence, consult `resource-ci-efficiency` if selected and locally available. It covers cost evidence, valid reuse, filters, artifacts, retries and retention without reducing acceptance requirements.

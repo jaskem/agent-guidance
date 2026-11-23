@@ -1,0 +1,48 @@
+{
+  "schema_version": 1,
+  "id": "CI-EFFICIENCY-2026-11-23",
+  "owner": "Canonical repository instruction-maintenance owner",
+  "authorization_ref": "Historical task authorization intentionally redacted; this record is not a current maintenance grant.",
+  "scope": "instructions_only",
+  "kind": "guidance_patch",
+  "risk_flags": [],
+  "observation": {
+    "effect": "Explicit metered-CI planning and its decision reference were absent from the baseline. Account-linked runtime observations have been redacted; the retained files establish neither billed monthly cause nor measured savings.",
+    "evidence": [
+      "docs/CI-EFFICIENCY-2026-11-23.md",
+      "docs/evidence/ci-job-sample-2026-11-23.json"
+    ]
+  },
+  "baseline": {
+    "ref": "ebd5025d136a57daf0aea5395cb86f0cb0bcad90; fail means missing newly requested explicit source control, not measured task failure",
+    "outcome": "fail"
+  },
+  "candidate": {
+    "ref": "2aa709b; behavior/routing source plus separately saved review evidence; version release follows without behavior edits",
+    "outcome": "pass"
+  },
+  "checks": {
+    "positive": true,
+    "adjacent_valid": true,
+    "excluded": true,
+    "missing_input": true,
+    "regression": true
+  },
+  "review": {
+    "independent": true,
+    "findings_resolved": true,
+    "evidence": [
+      "docs/evidence/ci-efficiency-review-2026-11-23.md",
+      "docs/evidence/ci-efficiency-cases-2026-11-23.json"
+    ]
+  },
+  "rollback": {
+    "ref": "ebd5025d136a57daf0aea5395cb86f0cb0bcad90",
+    "restore_procedure": "Revert only the original batch in canonical source and run affected checks. Restore only affected configured distribution pointers within actual current authority, with readback. Do not reset product repositories or pins or restore redacted personal evidence to public source."
+  },
+  "privacy_redaction": {
+    "scope": "Account-specific owner, authorization, usage report and related sample details omitted from the public copy.",
+    "evidence_limit": "Source revisions, historical review/check declarations and evidence paths are retained. The sample path is now an explicit redaction record; no new execution or verification of removed measurements is claimed.",
+    "authorization_limit": "Preserved declarations and a structurally eligible checker result do not establish current permission to act."
+  }
+}

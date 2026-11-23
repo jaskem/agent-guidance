@@ -137,6 +137,61 @@ def check_routing(root: Path, names: set[str]) -> list[str]:
     return errors
 
 
+def mentions_method(text: str, name: str) -> bool:
+    """Match a complete method name, not a prefix of another method's name."""
+    return re.search(rf'(?<![\w-]){re.escape(name)}(?![\w-])', text) is not None
+
+
+def check_external_methods(root: Path, catalog: dict, local_names: set[str]) -> list[str]:
+    """Check declared external ownership/routing, not remote installation."""
+    errors = []
+    entries = catalog.get('external_methods', [])
+    if not isinstance(entries, list):
+        return ['external_methods must be a list']
+    try:
+        router = (root / 'docs/METHOD-ROUTING.md').read_text(encoding='utf-8')
+    except OSError:
+        router = ''
+    seen = set()
+    for entry in entries:
+        if not isinstance(entry, dict):
+            errors.append('external method must be an object')
+            continue
+        name = entry.get('name')
+        if not isinstance(name, str) or not re.fullmatch(r'[a-z0-9]+(?:-[a-z0-9]+)*', name):
+            errors.append('invalid external method name')
+            continue
+        if name in seen or name in local_names:
+            errors.append(f'duplicate or locally owned external method: {name}')
+        seen.add(name)
+        if not re.fullmatch(r'\d+\.\d+\.\d+', str(entry.get('version', ''))):
+            errors.append(f'{name}: external method needs a semantic version')
+        for field in ('owner', 'distribution'):
+            if not isinstance(entry.get(field), str) or not entry[field].strip():
+                errors.append(f'{name}: external method needs {field}')
+        targets = entry.get('distribution_targets')
+        if (not isinstance(targets, list) or not targets
+                or any(not isinstance(target, str) or not target.strip() for target in targets)):
+            errors.append(f'{name}: external method needs distribution_targets')
+        if f'`{name}`' not in router:
+            errors.append(f'external method has no explicit route: {name}')
+        # Optional shared reference supplements belong to the central router,
+        # not to ten independently versioned task-procedure packages.
+        if 'supplements' in entry:
+            targets = entry['supplements']
+            if (not isinstance(targets, list) or not targets
+                    or any(not isinstance(target, str) or target not in local_names
+                           for target in targets)):
+                errors.append(f'{name}: invalid external supplement targets')
+            elif len(targets) != len(set(targets)):
+                errors.append(f'{name}: duplicate external supplement target')
+            if not isinstance(entry.get('when'), str) or not entry['when'].strip():
+                errors.append(f'{name}: external supplement requires a trigger')
+            if entry.get('selection_owner') != 'docs/METHOD-ROUTING.md':
+                errors.append(f'{name}: external supplement must use the central router')
+    return errors
+
+
 def check(root: Path) -> list[str]:
     errors: list[str] = []
     catalog_path = root / 'skills/catalog.json'
@@ -152,6 +207,7 @@ def check(root: Path) -> list[str]:
 
     seen: set[str] = set()
     listed: set[Path] = set()
+    skill_texts: dict[str, str] = {}
     for entry in entries:
         if not isinstance(entry, dict):
             errors.append('skill entry must be an object')
@@ -181,6 +237,7 @@ def check(root: Path) -> list[str]:
         except OSError as exc:
             errors.append(f'{name}: missing package file: {exc.filename}')
             continue
+        skill_texts[name] = text
         # Our authoring format intentionally uses only two plain, one-line fields.
         header = re.match(r'\A---\nname: ([^\n]+)\ndescription: ([^\n]+)\n---\n', text)
         if (not header or header[1] != name or not header[2].strip()
@@ -221,6 +278,8 @@ def check(root: Path) -> list[str]:
                 elif not destination.is_file():
                     errors.append(f'{name}: missing reference: {target}')
 
+    # Name presence is structural disclosure only: it does not establish a
+    # sensible trigger, actual invocation, or correct semantic route selection.
     dependencies = {}
     for entry in entries:
         if (not isinstance(entry, dict) or not isinstance(entry.get('name'), str)
@@ -236,7 +295,43 @@ def check(root: Path) -> list[str]:
         for dependency in required:
             if dependency not in seen:
                 errors.append(f'{name}: unknown dependency: {dependency}')
+            elif name in skill_texts and not mentions_method(skill_texts[name], dependency):
+                errors.append(f'{name}: dependency not disclosed in SKILL.md: {dependency}')
         dependencies[name] = required
+
+    # Conditional routes are not mandatory load dependencies; legitimate task
+    # composition can return to an earlier method, so only dependencies form a DAG.
+    for entry in entries:
+        if (not isinstance(entry, dict) or not isinstance(entry.get('name'), str)
+                or entry['name'] not in seen):
+            continue
+        name = entry['name']
+        routes = entry.get('conditional_routes', [])
+        if not isinstance(routes, list):
+            errors.append(f'{name}: conditional_routes must be a list of objects')
+            continue
+        pairs = set()
+        for route in routes:
+            if not isinstance(route, dict):
+                errors.append(f'{name}: conditional route must be an object')
+                continue
+            target, trigger = route.get('to'), route.get('when')
+            if not isinstance(target, str) or target not in seen:
+                errors.append(f'{name}: unknown conditional route target: {target}')
+            elif target == name:
+                errors.append(f'{name}: conditional route cannot target itself')
+            elif name in skill_texts and not mentions_method(skill_texts[name], target):
+                errors.append(f'{name}: conditional route not disclosed in SKILL.md: {target}')
+            if not isinstance(trigger, str) or not trigger.strip():
+                errors.append(f'{name}: conditional route requires a non-empty trigger')
+                continue
+            if isinstance(target, str):
+                # Ignore surrounding padding; do not infer semantic equivalence.
+                pair = (target, trigger.strip())
+                if pair in pairs:
+                    errors.append(f'{name}: duplicate conditional route: {target}: {trigger.strip()}')
+                pairs.add(pair)
+
     visited, active = set(), set()
     def visit(name):
         if name in active:
@@ -257,6 +352,7 @@ def check(root: Path) -> list[str]:
         errors.append('catalog/package mismatch: ' + str(sorted(str(p) for p in actual ^ listed)))
     errors.extend(check_coverage(root, catalog, seen))
     errors.extend(check_routing(root, seen))
+    errors.extend(check_external_methods(root, catalog, seen))
     return errors
 
 
@@ -266,4 +362,4 @@ if __name__ == '__main__':
         print(f'ERROR: {failure}', file=sys.stderr)
     if failures:
         raise SystemExit(1)
-    print('skill packages OK: catalog, metadata, local references and source coverage')
+    print('skill packages OK: catalog, metadata, method composition, local references and source coverage')

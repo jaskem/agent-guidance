@@ -1,5 +1,5 @@
 {
-  "guidance_version": "0.6.0",
+  "guidance_version": "0.9.0",
   "modules": [
     {
       "id": "kernel",
@@ -142,6 +142,16 @@
       "id": "work-cycle",
       "kind": "playbook",
       "path": "guidance/playbooks/work-cycle.md"
+    },
+    {
+      "id": "visual-verification",
+      "kind": "playbook",
+      "path": "guidance/playbooks/visual-verification.md"
+    },
+    {
+      "id": "resource-ci-efficiency",
+      "kind": "reference",
+      "path": "guidance/resources/ci-efficiency.md"
     }
   ],
   "schema_version": 1,

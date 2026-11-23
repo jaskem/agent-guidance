@@ -1,0 +1,10 @@
+{
+  "observed_date": "2026-11-23",
+  "record_type": "redacted_historical_evidence",
+  "redacted": true,
+  "redaction_scope": "Account-linked repository identities, run/job identifiers and URLs, labels, timestamps, measurements and account/access details are omitted.",
+  "source": "Historical job-readback sample; original account-linked content intentionally removed from this public evidence copy.",
+  "units": "Original observations concerned completed job elapsed seconds, not billed amounts or monthly savings.",
+  "runs": [],
+  "verification_limit": "The retained files cannot independently reproduce the removed measurements. This redaction is not an empty-run observation, a new collection, a new trial or proof of savings."
+}

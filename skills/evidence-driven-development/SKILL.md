@@ -19,6 +19,8 @@ Use available agents on your own initiative when this method calls for separate 
 
 ## 2. Choose the branch
 
+Before executing the selected branch, actually load its method or reference and note its decisive check in the existing work context. Dispatch useful separable investigation early through the configured delegation procedure. For a changed interface, use audit-ui-ux for a distinct assessment, design-ui-improvements for unresolved visual proposals, motion-design for substantial interactive animation and test-user-flows for live acceptance. These are conditional results, not a mandatory design cascade. Follow the configured visual-verification procedure for the relevant runtime; a cloud preview does not prove native user-machine behavior.
+
 - **Reported bug or regression:** read [diagnosis](references/diagnosis.md), then reproduce the reported symptom before claiming a cause or a fix.
 - **Feature or refactor:** choose one usable slice through the relevant public interface. Retain domain terms and interfaces unless their change is authorized. Use [engineering techniques](references/engineering-techniques.md) for behavior-preserving simplification, migrations, CI and UI work; load only the relevant section. Keep complexity behind an understandable interface.
 - **Distinct assessment:** use design-interfaces for an unresolved caller contract, review-security for a bounded security assessment, optimize-performance for a measured performance investigation and test-user-flows for real user-route evidence. They contribute their specific result; this method retains ownership of an authorized code change.
@@ -34,9 +36,11 @@ Keep code, plans, task status and decisions with their verified owners. A reposi
 
 ## 4. Load the review owner
 
-Load the separately installed `code-review` method for the actual change. Its package owns requirements and implementation-quality review; use the repository's applicable roles and acceptance sources through that method. An available name is not proof that its instructions were read.
+When an actual code change is made, load the separately installed `code-review` method for that change. Its package owns requirements and implementation-quality review; use the repository's applicable roles and acceptance sources through that method. An available name is not proof that its instructions were read.
 
 If the method is unavailable, resolve its exact canonical source from the current distribution record and read that revision. If the source cannot be reached, continue independent repository checks and report the shared review as incomplete; do not silently replace it with a second review procedure. Fix material findings within the authorized implementation scope, then rerun affected checks. A review-only request does not authorize applying its findings.
+
+For diagnosis without a code change, verify the observed symptom, probes and supported conclusion through the applicable verification route. Independent assessment of diagnosis evidence remains available when useful; it does not require `code-review`. Do not invent a diff or comparison baseline. If diagnosis leads to an authorized code change, load `code-review` for that actual change before closure.
 
 ## 5. Close the actual change
 

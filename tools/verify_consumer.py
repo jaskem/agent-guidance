@@ -10,6 +10,7 @@ from pathlib import Path, PurePosixPath
 
 SHA40 = re.compile(r"^[0-9a-f]{40}$")
 SHA256 = re.compile(r"^[0-9a-f]{64}$")
+VERSION_TAG = re.compile(r"^v[0-9]+\.[0-9]+\.[0-9]+(?:[-+][0-9A-Za-z.-]+)?$")
 
 
 def sha256_file(path: Path) -> str:
@@ -46,7 +47,8 @@ def verify(root: Path, lock_path: Path) -> list[str]:
     except ValueError as exc:
         return [str(exc)]
 
-    if lock.get("schema_version") != 1:
+    schema_version = lock.get("schema_version")
+    if isinstance(schema_version, bool) or schema_version != 1:
         errors.append("schema_version must equal 1")
 
     source = lock.get("source")
@@ -59,8 +61,8 @@ def verify(root: Path, lock_path: Path) -> list[str]:
     if not isinstance(commit, str) or not SHA40.fullmatch(commit):
         errors.append("source.commit must be a lowercase 40-character SHA")
     version = source.get("version")
-    if not isinstance(version, str) or not version.startswith("v"):
-        errors.append("source.version must be a version/tag string beginning with 'v'")
+    if not isinstance(version, str) or not VERSION_TAG.fullmatch(version):
+        errors.append("source.version must match vMAJOR.MINOR.PATCH with an optional '-' or '+' suffix")
 
     try:
         destination_root_rel = safe_relative(lock.get("destination_root", ""), "destination_root")

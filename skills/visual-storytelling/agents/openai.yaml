@@ -1,0 +1,7 @@
+interface:
+  display_name: "Visual Storytelling"
+  short_description: "Create source-based visual narratives in HTML or video"
+  default_prompt: "Use $visual-storytelling to turn this source into a designed visual narrative in the requested format."
+
+policy:
+  allow_implicit_invocation: true

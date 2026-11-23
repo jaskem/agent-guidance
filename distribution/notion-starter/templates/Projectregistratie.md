@@ -1,6 +1,6 @@
 # Projectregistratie — leeg sjabloon
 
-Gebruik bestaande equivalente velden en pagina's; dit sjabloon maakt geen nieuwe taakbron.
+Dit vult het [algemene werkoverzicht](../../workflow-starter/templates/Work-index.md) alleen voor een gekozen Notion-bestemming aan. Gebruik bestaande equivalente velden en pagina's; dit sjabloon maakt geen nieuwe taakbron.
 
 - Project-ID en naam:
 - Bekende aliassen:

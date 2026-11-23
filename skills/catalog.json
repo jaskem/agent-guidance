@@ -11,16 +11,35 @@
     {
       "name": "evidence-driven-development",
       "path": "skills/evidence-driven-development",
-      "version": "2.1.0",
+      "version": "2.2.1",
       "allow_implicit_invocation": true,
-      "dependencies": [
-        "code-review"
+      "conditional_routes": [
+        {
+          "to": "code-review",
+          "when": "An actual code change is made"
+        },
+        {
+          "to": "audit-ui-ux",
+          "when": "A distinct assessment of an existing interface is needed"
+        },
+        {
+          "to": "design-ui-improvements",
+          "when": "The visual proposal is unresolved"
+        },
+        {
+          "to": "motion-design",
+          "when": "Substantial interactive animation is changed"
+        },
+        {
+          "to": "test-user-flows",
+          "when": "Real user-route acceptance is required"
+        }
       ]
     },
     {
       "name": "maintain-agent-instructions",
       "path": "skills/maintain-agent-instructions",
-      "version": "2.1.0",
+      "version": "2.2.0",
       "allow_implicit_invocation": true
     },
     {
@@ -68,14 +87,42 @@
     {
       "name": "audit-ui-ux",
       "path": "skills/audit-ui-ux",
-      "version": "2.0.0",
-      "allow_implicit_invocation": true
+      "version": "2.2.0",
+      "allow_implicit_invocation": true,
+      "conditional_routes": [
+        {
+          "to": "test-user-flows",
+          "when": "A distinct real interaction journey must be exercised"
+        },
+        {
+          "to": "design-ui-improvements",
+          "when": "The requested next result is an inspectable visual proposal"
+        }
+      ]
     },
     {
       "name": "design-ui-improvements",
       "path": "skills/design-ui-improvements",
-      "version": "2.0.0",
-      "allow_implicit_invocation": true
+      "version": "2.2.1",
+      "allow_implicit_invocation": true,
+      "conditional_routes": [
+        {
+          "to": "audit-ui-ux",
+          "when": "An unknown existing interface needs assessment first"
+        },
+        {
+          "to": "design-brand-system",
+          "when": "A reusable cross-medium identity system is requested"
+        },
+        {
+          "to": "motion-design",
+          "when": "Interactive motion needs substantial design"
+        },
+        {
+          "to": "test-user-flows",
+          "when": "Actual implemented interactions need acceptance"
+        }
+      ]
     },
     {
       "name": "improve-codebase-architecture",
@@ -86,7 +133,7 @@
     {
       "name": "implement-spec",
       "path": "skills/implement-spec",
-      "version": "2.0.0",
+      "version": "2.1.0",
       "allow_implicit_invocation": true,
       "dependencies": [
         "evidence-driven-development",
@@ -120,7 +167,7 @@
     {
       "name": "grill-me",
       "path": "skills/grill-me",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "allow_implicit_invocation": false
     },
     {
@@ -156,8 +203,18 @@
     {
       "name": "test-user-flows",
       "path": "skills/test-user-flows",
-      "version": "1.0.0",
-      "allow_implicit_invocation": true
+      "version": "1.1.0",
+      "allow_implicit_invocation": true,
+      "conditional_routes": [
+        {
+          "to": "audit-ui-ux",
+          "when": "A distinct exploratory interface assessment is requested"
+        },
+        {
+          "to": "motion-design",
+          "when": "A substantive animation design or correction is requested"
+        }
+      ]
     },
     {
       "name": "constraint-driven-development",
@@ -182,9 +239,77 @@
       "path": "skills/ci-cd-and-automation",
       "version": "1.0.0",
       "allow_implicit_invocation": true
+    },
+    {
+      "name": "image-art-direction",
+      "path": "skills/image-art-direction",
+      "version": "1.1.0",
+      "allow_implicit_invocation": true,
+      "conditional_routes": [
+        {
+          "to": "design-brand-system",
+          "when": "The distinct result is a reusable cross-medium identity system"
+        }
+      ]
+    },
+    {
+      "name": "visual-storytelling",
+      "path": "skills/visual-storytelling",
+      "version": "1.1.0",
+      "allow_implicit_invocation": true,
+      "conditional_routes": [
+        {
+          "to": "motion-design",
+          "when": "The result is interactive product motion"
+        },
+        {
+          "to": "design-brand-system",
+          "when": "A reusable identity system is part of the request"
+        },
+        {
+          "to": "image-art-direction",
+          "when": "A complex image-series sub-result is needed"
+        }
+      ]
+    },
+    {
+      "name": "design-brand-system",
+      "path": "skills/design-brand-system",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true,
+      "conditional_routes": [
+        {
+          "to": "image-art-direction",
+          "when": "Complex image assets need production"
+        },
+        {
+          "to": "motion-design",
+          "when": "The reusable system requires a concrete UI motion result"
+        }
+      ]
+    },
+    {
+      "name": "motion-design",
+      "path": "skills/motion-design",
+      "version": "1.0.0",
+      "allow_implicit_invocation": true,
+      "conditional_routes": [
+        {
+          "to": "visual-storytelling",
+          "when": "A timed narrative or encoded film is the requested output"
+        },
+        {
+          "to": "evidence-driven-development",
+          "when": "A substantive product code change is authorized"
+        },
+        {
+          "to": "test-user-flows",
+          "when": "A distinct real interaction journey needs verification"
+        }
+      ]
     }
   ],
-  "collection_version": "1.1.0",
+  "collection_version": "1.4.3",
   "coverage_record": "skills/source-coverage.json",
   "reviewed_sources": [
     {
@@ -198,6 +323,92 @@
       "commit": "39b723ceebf81474d0557c1fecd01eddab585563",
       "version": "0.6.16",
       "date": "2026-11-16"
+    },
+    {
+      "repository": "ConardLi/garden-skills",
+      "commit": "f2d7adeaf53dcce3d0eb19cbffe8c04f4c636c2a",
+      "date": "2026-11-20",
+      "scope": "Five design-related skills; kb-retriever excluded"
+    },
+    {
+      "repository": "iart-ai/motion-skills",
+      "commit": "e8ba1f4eb2bcca3d1639d7545b9cd2bcfe4a3c6f",
+      "date": "2026-11-20"
+    },
+    {
+      "repository": "zstvns/design-skills",
+      "commit": "771fdf3c90c6877d5c193cbc80dae23b5590c037",
+      "date": "2026-11-20"
+    },
+    {
+      "repository": "oil-oil/oil-ui",
+      "commit": "81f2657f41410f04ae47ba77f902fcc0567eaab2",
+      "date": "2026-11-20"
+    },
+    {
+      "repository": "kaankiziltug/logo-design-skill",
+      "commit": "e9eaddc07895575253d6663320354a708f53e955",
+      "date": "2026-11-20"
+    },
+    {
+      "repository": "VoltAgent/awesome-design-md",
+      "commit": "fcc70284932276d085f01ef9f83edde90b1258cb",
+      "date": "2026-11-20"
+    },
+    {
+      "repository": "GoogleChrome/modern-web-guidance-src",
+      "commit": "6971ebbec2b127d57aaa24ba63bab7b9de9e656b",
+      "version": "1.0.1",
+      "date": "2026-11-21",
+      "distribution_repository": "GoogleChrome/modern-web-guidance",
+      "distribution_commit": "64a6d708f5a43f2cd3fde5d4d7db3905ba1bdf65"
+    }
+  ],
+  "external_methods": [
+    {
+      "name": "logo-design",
+      "owner": "Recipient-selected external package; public upstream retains its source ownership",
+      "version": "1.2.0",
+      "distribution": "Not bundled. Reuse an accepted recipient installation without overwriting local improvements; absence does not block the base workflow.",
+      "upstream_repository": "kaankiziltug/logo-design-skill",
+      "upstream_commit": "e9eaddc07895575253d6663320354a708f53e955",
+      "distribution_targets": [
+        "recipient-selected"
+      ],
+      "optional": true,
+      "bundled": false,
+      "version_scope": "Previously reviewed adapter; verify the recipient-selected package separately",
+      "fallback": "Use design-brand-system plus suitable host image/vector capabilities; disclose unavailable specialist techniques."
+    },
+    {
+      "name": "modern-web-guidance",
+      "owner": "Recipient-selected external package; public upstream retains its source ownership",
+      "version": "1.0.1",
+      "upstream_version": "1.0.1",
+      "distribution": "Not bundled. A recipient may configure an accepted online adapter; otherwise consult the public pinned guide source or current official platform documentation directly.",
+      "upstream_repository": "GoogleChrome/modern-web-guidance-src",
+      "upstream_commit": "6971ebbec2b127d57aaa24ba63bab7b9de9e656b",
+      "distribution_targets": [
+        "recipient-selected"
+      ],
+      "supplements": [
+        "evidence-driven-development",
+        "prototype",
+        "code-review",
+        "audit-ui-ux",
+        "design-ui-improvements",
+        "motion-design",
+        "visual-storytelling",
+        "optimize-performance",
+        "review-security",
+        "test-user-flows"
+      ],
+      "when": "An HTML, CSS, browser API or client-side JavaScript decision materially affects the requested result",
+      "selection_owner": "docs/METHOD-ROUTING.md",
+      "optional": true,
+      "bundled": false,
+      "version_scope": "Previously reviewed adapter; verify the recipient-selected package separately",
+      "fallback": "Retrieve focused full guides from the declared public upstream commit; disclose current official-documentation fallback and actual access limits."
     }
   ]
 }

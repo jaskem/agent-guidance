@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "reviewed_date": "2026-11-17",
+  "reviewed_date": "2026-11-20",
   "mode": "original-adaptation",
   "sources": [
     {
@@ -54,16 +54,29 @@
       "reviewed_upstream_commit": "2ce8aa15d05bd57213e6f746f953aafb7ded7a8b",
       "pin_evidence": "verified v7.0.1 tag; all 15 installed main files byte-identical Git blob hashes",
       "installed_tree_manifest_sha256": "cc99756896a6c3e8232e51c94f37d6395209d255472e63a0ce4491e580822f9e"
+    },
+    {
+      "provider": "garden-skills",
+      "repository": "https://github.com/ConardLi/garden-skills",
+      "reviewed_upstream_commit": "f2d7adeaf53dcce3d0eb19cbffe8c04f4c636c2a",
+      "license": "MIT",
+      "copyright": "2026",
+      "reviewed_design_main_count": 5,
+      "repository_skill_count": 6,
+      "mode": "original-adaptation",
+      "excluded": "kb-retriever is not design-related",
+      "inspection_limit": "All five main skills; selected relevant references and runners; not all templates, recipes or scaffold files"
     }
   ],
   "expected_source_counts": {
     "agent-skills": 25,
     "mattpocock-skills": 35,
     "engineering-suite-ponytail": 8,
-    "superpowers": 15
+    "superpowers": 15,
+    "garden-skills": 5
   },
   "previous_personal_count": 18,
-  "active_collection_count": 28,
+  "active_collection_count": 32,
   "mapping": [
     {
       "source": "agent-skills:api-and-interface-design",
@@ -104,7 +117,7 @@
       "destination": "code-review",
       "resource": "references/axes.md",
       "mode": "integrate",
-      "reason": "Eén revieweigenaar met vaste vergelijking en geldende kwaliteitseisen.",
+      "reason": "E\u00e9n revieweigenaar met vaste vergelijking en geldende kwaliteitseisen.",
       "installed_version": "0.6.10",
       "main_sha256": "cc444bb3f584debfc1a3f4aa5f006ae8c4dce1ccb684b42862e3c9e891436fe5",
       "evidence_path": "skills/code-review/references/axes.md"
@@ -148,7 +161,7 @@
       "destination": "evidence-driven-development",
       "resource": "references/diagnosis.md",
       "mode": "integrate",
-      "reason": "Reproductie, hypothesen, oorzaak en herstel; één diagnoseproces.",
+      "reason": "Reproductie, hypothesen, oorzaak en herstel; \u00e9\u00e9n diagnoseproces.",
       "installed_version": "0.6.10",
       "main_sha256": "09d9d349985359789c31ee9ebaff30c92843531b861342313d4a722759879364",
       "evidence_path": "skills/evidence-driven-development/references/diagnosis.md"
@@ -266,7 +279,7 @@
       "destination": "plan-work",
       "resource": "references/records.md",
       "mode": "integrate",
-      "reason": "Eén plan- en taakeigenaar, toetsbare resultaten en echte afhankelijkheden.",
+      "reason": "E\u00e9n plan- en taakeigenaar, toetsbare resultaten en echte afhankelijkheden.",
       "installed_version": "0.6.10",
       "main_sha256": "f4896186864358598850f334cf3d4edbf251bd51b22d2a827c0a80b2c17073c3",
       "evidence_path": "skills/plan-work/references/records.md"
@@ -306,7 +319,7 @@
       "destination": "plan-work",
       "resource": "references/records.md",
       "mode": "integrate",
-      "reason": "Bestaande geldige specificaties meetellen; alleen ontbrekende materiële scope uitwerken.",
+      "reason": "Bestaande geldige specificaties meetellen; alleen ontbrekende materi\u00eble scope uitwerken.",
       "installed_version": "0.6.10",
       "main_sha256": "08f1082660bf88af995995fd0c1672e08e11102be6d74cb275f462e390162853",
       "evidence_path": "skills/plan-work/references/records.md"
@@ -326,7 +339,7 @@
       "destination": "central-router",
       "resource": "docs/METHOD-ROUTING.md",
       "mode": "replace-wrapper",
-      "reason": "Dubbele altijd-aan procesrouter vervalt; één catalogus en huidige Guide selecteren de taak.",
+      "reason": "Dubbele altijd-aan procesrouter vervalt; \u00e9\u00e9n catalogus en huidige Guide selecteren de taak.",
       "installed_version": "0.6.10",
       "main_sha256": "58ca7a7ffecd5f5b97a31171243c7d3e14a3fc9ebbf19e80cefb0f7a49637f4e",
       "evidence_path": "docs/METHOD-ROUTING.md"
@@ -336,7 +349,7 @@
       "destination": "central-router",
       "resource": "docs/METHOD-ROUTING.md",
       "mode": "replace-wrapper",
-      "reason": "Keuzelogica vervalt als apart verplicht pakket; gewone intentie kiest één procedure. Expliciete Matt-pluginvraag kan nog naar geïnstalleerde vendorrouter binnen diens echte voorwaarden.",
+      "reason": "Keuzelogica vervalt als apart verplicht pakket; gewone intentie kiest \u00e9\u00e9n procedure. Expliciete Matt-pluginvraag kan nog naar ge\u00efnstalleerde vendorrouter binnen diens echte voorwaarden.",
       "installed_version": "1.2.3",
       "main_sha256": "305c8766eed0438586ceeb75723c4dbe3a349baec1393f8b8736c192372609d6",
       "evidence_path": "docs/METHOD-ROUTING.md"
@@ -406,7 +419,7 @@
       "destination": "grill-me",
       "resource": "SKILL.md",
       "mode": "integrate",
-      "reason": "Eén expliciet interview met afhankelijkheidsgerichte vragen; geen tweede pakket.",
+      "reason": "E\u00e9n expliciet interview met afhankelijkheidsgerichte vragen; geen tweede pakket.",
       "installed_version": "1.2.3",
       "main_sha256": "508d1055acd8ee9b64a046d23b78f0c7a814b2adbee8abd368061bcb8de1c93f",
       "evidence_path": "skills/grill-me/SKILL.md"
@@ -486,7 +499,7 @@
       "destination": "prototype",
       "resource": "references/logic.md",
       "mode": "integrate",
-      "reason": "Eén onzekere interactie/state/modelvraag concreet beantwoorden zonder productieclaim.",
+      "reason": "E\u00e9n onzekere interactie/state/modelvraag concreet beantwoorden zonder productieclaim.",
       "installed_version": "1.2.3",
       "main_sha256": "8ed7c9fa82395864bb49246427b54f2416d7176afefcc0012a52e81c79418820",
       "evidence_path": "skills/prototype/references/logic.md"
@@ -496,7 +509,7 @@
       "destination": "research",
       "resource": "references/evidence-record.md",
       "mode": "integrate",
-      "reason": "Eén gedateerde brongebonden conclusie, passende primaire bronnen.",
+      "reason": "E\u00e9n gedateerde brongebonden conclusie, passende primaire bronnen.",
       "installed_version": "1.2.3",
       "main_sha256": "88399c5beeac5c285e091bbc4c7e030c993fd8704af0314a2f23ba93bf5693a6",
       "evidence_path": "skills/research/references/evidence-record.md"
@@ -566,7 +579,7 @@
       "destination": "teach",
       "resource": "references/learning-records.md",
       "mode": "integrate",
-      "reason": "Eén afgebakend concept vanuit actuele bronnen en oefening.",
+      "reason": "E\u00e9n afgebakend concept vanuit actuele bronnen en oefening.",
       "installed_version": "1.2.3",
       "main_sha256": "312aefe30b9e426ca938b560045ca0b4c36cfea4d56f0c8e63cd760420439b80",
       "evidence_path": "skills/teach/references/learning-records.md"
@@ -626,7 +639,7 @@
       "destination": "wayfinder",
       "resource": "references/decision-map.md",
       "mode": "integrate",
-      "reason": "Onzekere richting via echte beslisafhankelijkheden verhelderen zonder één-ticket-per-sessiegrens.",
+      "reason": "Onzekere richting via echte beslisafhankelijkheden verhelderen zonder \u00e9\u00e9n-ticket-per-sessiegrens.",
       "installed_version": "1.2.3",
       "main_sha256": "464438a2b143b9fe836c9e2e044524479f9e848319de228428604a9dc1f4ab94",
       "evidence_path": "skills/wayfinder/references/decision-map.md"
@@ -816,7 +829,7 @@
       "destination": "code-review",
       "resource": "references/review-feedback.md",
       "mode": "integrate",
-      "reason": "Opmerking eerst inhoudelijk toetsen; één onzeker punt blokkeert geen onafhankelijk geautoriseerd werk.",
+      "reason": "Opmerking eerst inhoudelijk toetsen; \u00e9\u00e9n onzeker punt blokkeert geen onafhankelijk geautoriseerd werk.",
       "installed_version": "7.0.1",
       "main_sha256": "091df1629510af1b92fc4abd6f96732ebedb4cb2c0f3457e8f2740b0504a2438",
       "evidence_path": "skills/code-review/references/review-feedback.md"
@@ -836,7 +849,7 @@
       "destination": "implement-spec",
       "resource": "references/delivery-techniques.md",
       "mode": "integrate",
-      "reason": "Begrensde briefing, review en integratie als nuttige techniek; één schrijver per object en geen tweede ledger.",
+      "reason": "Begrensde briefing, review en integratie als nuttige techniek; \u00e9\u00e9n schrijver per object en geen tweede ledger.",
       "installed_version": "7.0.1",
       "main_sha256": "ba41f697136cba88a7962d60c8e2f97488ba04a8688b1d0fbeb27f6953808e75",
       "evidence_path": "skills/implement-spec/references/delivery-techniques.md"
@@ -876,7 +889,7 @@
       "destination": "central-router",
       "resource": "docs/METHOD-ROUTING.md",
       "mode": "replace-wrapper",
-      "reason": "Altijd-aan 1%-invocation en verplichte vendorlevenscyclus vervallen in één set; Guide en intentierouter leiden.",
+      "reason": "Altijd-aan 1%-invocation en verplichte vendorlevenscyclus vervallen in \u00e9\u00e9n set; Guide en intentierouter leiden.",
       "installed_version": "7.0.1",
       "main_sha256": "82c5c8866ad7f5dd4440ce66bd7806ba48a2f13771beae5cf112e53f08fe36ba",
       "evidence_path": "docs/METHOD-ROUTING.md"
@@ -910,6 +923,56 @@
       "installed_version": "7.0.1",
       "main_sha256": "8cb3ac68c6d8c4bb46886b998b09af7989643cab8bd0e46ee86dd62e64546bbe",
       "evidence_path": "skills/maintain-agent-instructions/references/design-criteria.md"
+    },
+    {
+      "source": "garden-skills:web-design-engineer",
+      "destination": "design-ui-improvements",
+      "resource": "references/art-direction.md",
+      "evidence_path": "skills/design-ui-improvements/references/art-direction.md",
+      "mode": "integrate",
+      "reason": "Preserve existing UI method ownership; add mode, direction and concrete audit criteria.",
+      "reviewed_commit": "f2d7adeaf53dcce3d0eb19cbffe8c04f4c636c2a",
+      "main_git_blob_sha": "0934e015adc4edc5afe2ce2c87b1eaf2527d8531"
+    },
+    {
+      "source": "garden-skills:gpt-image-2",
+      "destination": "image-art-direction",
+      "resource": "references/composition-recipes.md",
+      "evidence_path": "skills/image-art-direction/references/composition-recipes.md",
+      "mode": "integrate",
+      "reason": "Complex compositions and consistent image series with native image generation.",
+      "reviewed_commit": "f2d7adeaf53dcce3d0eb19cbffe8c04f4c636c2a",
+      "main_git_blob_sha": "6d14a11e7a8f619653ed1227adf926e38803f493"
+    },
+    {
+      "source": "garden-skills:beautiful-article",
+      "destination": "visual-storytelling",
+      "resource": "references/editorial-html.md",
+      "evidence_path": "skills/visual-storytelling/references/editorial-html.md",
+      "mode": "integrate",
+      "reason": "Source-faithful designed HTML publications.",
+      "reviewed_commit": "f2d7adeaf53dcce3d0eb19cbffe8c04f4c636c2a",
+      "main_git_blob_sha": "7a0400ce6621aa77a7fa2350a73c31df0da1084c"
+    },
+    {
+      "source": "garden-skills:web-video-presentation",
+      "destination": "visual-storytelling",
+      "resource": "references/web-presentation.md",
+      "evidence_path": "skills/visual-storytelling/references/web-presentation.md",
+      "mode": "integrate",
+      "reason": "Click-driven narrative and actual audio/step alignment.",
+      "reviewed_commit": "f2d7adeaf53dcce3d0eb19cbffe8c04f4c636c2a",
+      "main_git_blob_sha": "d4e0beca1b145fc2fc52efb49657296af0b22eca"
+    },
+    {
+      "source": "garden-skills:motion-showreel",
+      "destination": "visual-storytelling",
+      "resource": "references/motion-video.md",
+      "evidence_path": "skills/visual-storytelling/references/motion-video.md",
+      "mode": "integrate",
+      "reason": "Deterministic time-driven motion with real export and technical acceptance.",
+      "reviewed_commit": "f2d7adeaf53dcce3d0eb19cbffe8c04f4c636c2a",
+      "main_git_blob_sha": "2ad5ceeee55f41f2a55f32a0219f71e656ccc4af"
     }
   ],
   "additional_reviews": [
