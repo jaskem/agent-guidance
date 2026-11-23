@@ -7,6 +7,7 @@ Advisory reference material, not additional workflow authority. Consult a resour
 | Is an intermittent browser-test failure caused by the test, shared state, or the product? | `resource-playwright-diagnosis` / `guidance/resources/playwright-diagnosis.md` | `quality-release` |
 | What can be concluded after a write outcome becomes uncertain, and what makes retry safe? | `resource-data-recovery` / `guidance/resources/data-recovery.md` | `domain-data-contracts`, `local-first-sync-recovery`, `architecture-engineering` |
 | Which unsupported product or usability assumption could change the proposed solution? | `resource-product-ux-assumptions` / `guidance/resources/product-ux-assumptions.md` | `product-strategy-discovery`, `ux-research` |
+| How can metered CI be reduced while preserving required evidence? | `resource-ci-efficiency` / `guidance/resources/ci-efficiency.md` | `quality-release`, `developer-experience` |
 
 ## Availability and depth
 
@@ -16,4 +17,4 @@ Each page is self-contained for its bounded question. Follow external references
 
 ## Keep only useful material
 
-These three resources are an initial selection, not a proven improvement to agent performance. In an existing work record, note a material decision changed, a defect exposed, or a failed/misleading retrieval when that actually occurs. Do not add a report for every read or start a separate metrics system. During an explicitly scoped guidance review, retain, shorten, replace, or remove resources using those observations and the instruction-feedback-loop playbook. No automatic upstream updates or scheduled review is implied.
+These resources are a focused selection, not a proven improvement to agent performance. In an existing work record, note a material decision changed, a defect exposed, or a failed/misleading retrieval when that actually occurs. Do not add a report for every read or start a separate metrics system. During an explicitly scoped guidance review, retain, shorten, replace, or remove resources using those observations and the instruction-feedback-loop playbook. No automatic upstream updates or scheduled review is implied.

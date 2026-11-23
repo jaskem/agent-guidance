@@ -20,6 +20,8 @@ Assess delegation before serial investigation consumes work that could usefully 
 
 For a decisive uncertainty, perform a bounded investigation, diagnosis or prototype, then return to the requested outcome. For multiple results, order genuine dependencies and retain one coherent assignment. Finish when the next action, evidence needed and permitted effects are clear; complete discovery of every possible later choice is unnecessary.
 
+For software work that consumes metered CI, plan verification before triggering runs. Map changed risks to required checks, use suitable local preflight and batch coherent ready changes before pushing. Reuse successful evidence only while its relevant source, inputs, dependencies, environment and event remain valid; a different merge revision, native package or delivery target may require fresh proof. Unknown impact requires the full relevant checks. Preserve required statuses, security, regression and actual release acceptance; cost pressure never makes an omitted check pass. Prefer removing duplicate work over reducing coverage. When selecting CI optimizations, consult `resource-ci-efficiency` if selected and available; these safeguards do not depend on that optional reference.
+
 ## 3. Execute ready work
 
 Carry out all ready authorized work in usable steps. A new session, method, agent or status question does not revoke existing permission or end the assignment. Incorporate new instructions; answer status questions briefly and continue unless the user changes or stops the goal. A blocker pauses only dependent work; continue independent parts without prejudging the blocked decision.

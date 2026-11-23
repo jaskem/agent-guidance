@@ -35,7 +35,7 @@ The [instruction feedback loop](guidance/playbooks/instruction-feedback-loop.md)
 - `guidance/EXPERT-OPERATING-MODEL.md` — deprecated compatibility module; it adds no behavior beyond the kernel and remains temporarily for explicit consumer migration.
 - `guidance/roles/` — reusable decision lenses.
 - `guidance/playbooks/` — reusable situation procedures.
-- `guidance/resources/` — three optional, problem-oriented advisory references and a small index; selected explicitly, read only when relevant.
+- `guidance/resources/` — four optional, problem-oriented advisory references and a small index; selected explicitly, read only when relevant.
 - `guidance/catalog.json` — machine-readable module catalog and guidance version.
 - `schemas/consumer-lock.schema.json` — consumer pin/lock contract.
 - `tools/vendor_guidance.py` — deterministic vendoring from an exact local canonical checkout.
@@ -45,7 +45,7 @@ The [instruction feedback loop](guidance/playbooks/instruction-feedback-loop.md)
 
 The [resource index](guidance/resources/index.md) maps concrete questions to existing roles and optional catalog modules (`kind: reference`). Resources are not skills to install or a second workflow. Consumers may select individual references using the existing `--module` option; selecting a role does not add dependencies. The index is optional too. Vendoring makes content locally available, not automatically active. Missing optional references do not block ordinary work or cause remote imports.
 
-The initial three topics are Playwright diagnosis, uncertain writes/recovery, and product/UX assumptions. Source links record reviewed upstream commits; the pages contain original synthesis and examples, not mirrored external skill packages. Their practical benefit remains to be evaluated through normal work. Release and explicit consumer migration are separate from this canonical change.
+The four topics are Playwright diagnosis, uncertain writes/recovery, product/UX assumptions, and CI efficiency. Source links record reviewed upstream commits; the pages contain original synthesis and examples, not mirrored external skill packages. Their practical benefit remains to be evaluated through normal work. Release and explicit consumer migration are separate from this canonical change.
 
 ## Non-goals
 

@@ -1,0 +1,14 @@
+{
+  "type": "synthetic task-local reasoning cases; no live operations requested",
+  "cases": [
+    {"id":"A","request":"Een werkende PR krijgt deze ochtend acht kleine correcties. Welke concrete werk- en controlevolgorde kies je met beperkt Actions-tegoed? De eindstatus moet alle bestaande verplichte controles blijven tonen."},
+    {"id":"B","request":"Een gedeeld schema en een dependency-lockfile zijn aangepast. De betrokken testrelaties zijn niet gedocumenteerd. De lange regressies zouden vandaag het resterende tegoed opmaken. Wat doe je en welke status rapporteer je?"},
+    {"id":"C","request":"Een Windows-app krijgt een nieuwe launcher en verpakkingsstap. Linux-unittests zijn groen. De Windows-pakkettest kost veel. Bepaal wat nodig is voor de aangevraagde release."},
+    {"id":"D","request":"Je wilt bij documentwijzigingen een workflow overslaan. Zijn naam staat in de verplichte branchchecks. Een van de gewijzigde Markdown-bestanden bevat een invoercontract. Werk een verantwoorde beslissing uit."},
+    {"id":"E","request":"Acht jobs hebben dezelfde ongewijzigde revisie getest. Zes zijn groen; twee faalden door een bevestigde tijdelijke downloadstoring. Alle bewaarde outputs zijn nog beschikbaar. Welke heruitvoering kies je?"},
+    {"id":"F","request":"Er loopt een release met externe schrijfacties. Een nieuwe PR-update start verificatie. Welke concurrencygrens is verantwoord?"},
+    {"id":"G","request":"Een run duurde twaalf minuten, daarnaast is er een Codespaces-prebuild. Het accountscherm en de factuur zijn niet toegankelijk. Hoeveel maandbesparing kun je aantonen en wat kun je wel onderzoeken?"},
+    {"id":"H","request":"Corrigeer de spelfout in deze korte zin voor de chat: Dit is een tesst. Er is geen repositorywijziging gevraagd."},
+    {"id":"I","request":"Een dependencycache-hit is groen. Kunnen de tests worden overgeslagen en kan hetzelfde artifact via de naam latest naar productie? Je hebt geen artifacthash of bronrevisie."}
+  ]
+}

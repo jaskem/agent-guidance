@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "id": "CI-EFFICIENCY-2026-11-23",
+  "owner": "jaskem/agent-guidance; existing private maintenance record",
+  "authorization_ref": "User request 2026-11-23: standard workflow CI efficiency; WF-MAINT-2026-11-21 retained",
+  "scope": "instructions_only",
+  "kind": "guidance_patch",
+  "risk_flags": [],
+  "observation": {
+    "effect": "Explicit metered-CI planning and its decision reference were absent from the baseline. User reports allowance exhaustion; bounded run samples identify substantial work but not billed monthly cause.",
+    "evidence": [
+      "docs/CI-EFFICIENCY-2026-11-23.md",
+      "docs/evidence/ci-job-sample-2026-11-23.json"
+    ]
+  },
+  "baseline": {
+    "ref": "ebd5025d136a57daf0aea5395cb86f0cb0bcad90; fail means missing newly requested explicit source control, not measured task failure",
+    "outcome": "fail"
+  },
+  "candidate": {
+    "ref": "2aa709b; behavior/routing source plus separately saved review evidence; version release follows without behavior edits",
+    "outcome": "pass"
+  },
+  "checks": {
+    "positive": true,
+    "adjacent_valid": true,
+    "excluded": true,
+    "missing_input": true,
+    "regression": true
+  },
+  "review": {
+    "independent": true,
+    "findings_resolved": true,
+    "evidence": [
+      "docs/evidence/ci-efficiency-review-2026-11-23.md",
+      "docs/evidence/ci-efficiency-cases-2026-11-23.json"
+    ]
+  },
+  "rollback": {
+    "ref": "ebd5025d136a57daf0aea5395cb86f0cb0bcad90",
+    "restore_procedure": "Revert only this batch in canonical source, run affected checks, restore prior personal guide pointers with readback. Do not reset product repositories or pins."
+  }
+}
