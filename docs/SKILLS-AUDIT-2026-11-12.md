@@ -48,8 +48,8 @@ An independent diff review found that the initial checker accepted an invalid YA
 
 ## Remaining improvements with a concrete trigger
 
-- Core/Platform general-process duplication: perform a separately scoped equivalence review and consumer migration when either instruction router is next maintained; preserve their semantic boundaries and verify required process checks. Do not bulk-rewrite them from this audit.
-- Evaluate real skill usefulness on the next substantive DXF/Flowcraft change. Keep one observation in the existing work record if it changes a decision or misses a defect; avoid a new metrics system.
+- General-process duplication belongs to a separately scoped consumer equivalence review and migration; preserve each consumer's semantic boundaries and required process checks. Historical account-linked consumer identities are withheld.
+- Evaluate real skill usefulness on a subsequent substantive change at its existing work owner. Keep a relevant observation if it changes a decision or misses a defect; avoid another metrics system. Historical account-specific target projects are withheld.
 - Other branches and local-computer skill installations were not enumerated. Inspect them only if the user identifies additional sources or a later task reveals a duplicate/conflict.
 
 ## Batch record

@@ -31,8 +31,8 @@ Consumer routing changes are separate PRs and preserve local workflows. This sou
 | Planning-only CSV request without code | Produced three behavior slices, left duplicate policy explicitly undecided, did not invent technology or write files | Fresh-context case, not an implementation test |
 | Domain identifiers equal in a sample | Kept product identity separate from row ordering; used a labelled hypothetical reorder counterexample | No schema/code migration |
 | Review with green tests | Pinned fixture base `23dfe11` and head `ddb2135`; existing two tests passed, but reproduced 5000 giving 495 instead of required 0 and negative input giving 495 instead of ValueError | Correctly separated a pre-existing omitted requirement; no review-only edit |
-| Existing DXF route baseline | Found current main `3b6b45d` and open/unmerged PR #7; corrected unsupported live-publication note and proposed next code lesson | Existing route already handled this case; no superiority claim |
-| New handoff plus teaching on DXF | Corrected the same stale publication premise, traced client save through portable server/storage, distinguished JSON/D1 and untested two-PC operation; offered an exercise without claiming mastery | Read-only source-backed pilot; prompts differed, so not a controlled A/B study |
+| Historical consumer route baseline | Account-linked identity, source revision, pull request and project details withheld | Original bounded observation remains historical; not publicly reproducible from this redacted record |
+| Historical handoff and teaching pilot | Account-linked source and implementation details withheld | Original read-only pilot used differing prompts, not a controlled A/B study; this redaction supplies no new runtime or learning evidence |
 
 Additional exclusion/missing-input trials in the fresh-context worker returned a simple CSV explanation without planning ceremony, explained an established identifier without a domain-design workflow, and requested the missing repository/diff instead of inventing review findings.
 

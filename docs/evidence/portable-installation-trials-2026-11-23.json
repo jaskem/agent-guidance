@@ -24,7 +24,12 @@
       "result": "Existing Guide and index extended; local method and project/task files retained",
       "source_files_verified_by_parent": 242,
       "base_methods": 32,
-      "repeat_check": {"reuse": 259, "create": 0, "extend": 0, "conflict": 0},
+      "repeat_check": {
+        "reuse": 259,
+        "create": 0,
+        "extend": 0,
+        "conflict": 0
+      },
       "original_content_verified_by_parent": "Guide/index prefixes retained and all three independent original files byte-identical"
     }
   ],
@@ -36,5 +41,7 @@
     "No new-session automatic host loading proved; account text delivered rather than applied",
     "Normal/simple/missing-capability tasks were same-session walkthroughs, not independent host-invocation tests",
     "Source trust is relative to the selected repository, not an independent author-signature check"
-  ]
+  ],
+  "published_tree_equivalent_commit": "cd82998dd19faca49ffacd3077a6eed678650de2",
+  "publication_note": "The trial used the recorded local commit; the published equivalent has the identical Git tree and different commit metadata."
 }
