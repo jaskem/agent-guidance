@@ -2,8 +2,11 @@
 from __future__ import annotations
 
 import json
+import re
 import sys
 from pathlib import Path
+
+from export_workflow_starter import privacy_check
 
 ROOT = Path(__file__).resolve().parents[1]
 REQUIRED = [
@@ -19,15 +22,10 @@ REQUIRED = [
     "tools/vendor_guidance.py",
     "tools/verify_consumer.py",
 ]
-FORBIDDEN_SHARED_TERMS = [
-    "Taskline",
-    "Landscape Core",
-    "Landscape Platform",
-    "jaskem/taskline",
-    "jaskem/landscape-core",
-    "jaskem/landscape-platform",
-    "docs/TASKLINE-WORKFLOW.md",
-]
+# Detect concrete private dependencies and consumer workflow filenames without
+# publishing a particular recipient's project inventory as a denylist.
+CONSUMER_WORKFLOW_PATH = re.compile(r"\bdocs/[A-Za-z0-9_-]+-WORKFLOW\.md\b")
+
 
 
 def fail(message: str) -> None:
@@ -82,9 +80,15 @@ if shared_markdown != paths:
 
 for rel in sorted(shared_markdown):
     text = (ROOT / rel).read_text(encoding="utf-8")
-    for term in FORBIDDEN_SHARED_TERMS:
-        if term in text:
-            fail(f"repository-specific term {term!r} found in shared module {rel}")
+    try:
+        privacy_check(rel, text.encode("utf-8"))
+    except ValueError as exc:
+        fail(str(exc))
+    if CONSUMER_WORKFLOW_PATH.search(text):
+        fail(f"consumer-specific workflow path found in shared module {rel}")
+
+# Semantic repository neutrality still requires the ownership review in AGENTS.md;
+# a finite vocabulary blacklist cannot prove that an arbitrary rule is reusable.
 
 schema = json.loads((ROOT / "schemas/consumer-lock.schema.json").read_text(encoding="utf-8"))
 required = set(schema.get("required", []))

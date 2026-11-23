@@ -20,6 +20,8 @@ jobs:
         run: python tools/check_foundation.py
       - name: Check skill packages
         run: python tools/check_skills.py
+      - name: Check portable installation routes
+        run: python tools/check_portability.py
       - name: Test vendoring contract
         run: python -m unittest discover -s tests -v
 

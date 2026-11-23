@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "date": "2026-11-23",
+  "source_commit": "01d9bc017e54a4ab563c4b1c72261aa9eb91176a",
+  "source_tree": "58fd8a96678c97ea29fad9c8b28920bea74cc84e",
+  "environment": "Two isolated filesystem acceptance targets; no real user account",
+  "prompt_redaction": "Machine-specific paths replaced with descriptive placeholders; no recipient context imported",
+  "trials": [
+    {
+      "task": "Install the pinned repository workflow for a new user in {{NEW_TARGET}} using files only, without Notion, services or native skill installation; follow the repository entrypoint and report saved state and limits.",
+      "execution": "Separate agent with fresh task-local context; target-only writes",
+      "result": "Own Guide, index, local entrypoint, full pinned source layout, distribution/recovery record and ready account-entry text saved",
+      "source_files_verified_by_parent": 242,
+      "base_methods": 32,
+      "canonical_package_files": 144,
+      "required_links_checked_by_worker": 13,
+      "required_placeholders_unresolved": 0,
+      "repeat_check": "Read-only comparison preserved bytes, file inventory and modification times",
+      "recovery_check": "Bounded local simulation removed an unchanged installation addition while preserving modified and unrelated files"
+    },
+    {
+      "task": "Connect the pinned workflow to {{EXISTING_TARGET}} using files only, preserving the existing Guide, index, local method and project/task data; then repeat the installation comparison.",
+      "execution": "Separate agent with fresh task-local context; target-only writes",
+      "result": "Existing Guide and index extended; local method and project/task files retained",
+      "source_files_verified_by_parent": 242,
+      "base_methods": 32,
+      "repeat_check": {
+        "reuse": 259,
+        "create": 0,
+        "extend": 0,
+        "conflict": 0
+      },
+      "original_content_verified_by_parent": "Guide/index prefixes retained and all three independent original files byte-identical"
+    }
+  ],
+  "parent_verification": "Compared every saved source file in both targets with the selected commit's Git blob identity; no mixed working-tree source",
+  "later_corrections": "Historical source privacy and standalone license packaging were corrected after this trial pin; file-route behavior and method bodies were not changed by those corrections",
+  "limits": [
+    "Not an installation in a real recipient account or proof of durable external hosting",
+    "No native skill-host or live Notion installation tested",
+    "No new-session automatic host loading proved; account text delivered rather than applied",
+    "Normal/simple/missing-capability tasks were same-session walkthroughs, not independent host-invocation tests",
+    "Source trust is relative to the selected repository, not an independent author-signature check"
+  ],
+  "published_tree_equivalent_commit": "cd82998dd19faca49ffacd3077a6eed678650de2",
+  "publication_note": "The trial used the recorded local commit; the published equivalent has the identical Git tree and different commit metadata."
+}

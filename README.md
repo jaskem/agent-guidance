@@ -4,6 +4,16 @@ Canonical, repository-independent guidance for AI-assisted product and engineeri
 
 This repository owns only guidance that is genuinely reusable across consumers. Product semantics, architecture, workflow scenarios, roadmaps, release rules, and domain-specific expertise stay in their natural repositories.
 
+## Install for your own environment
+
+Ask an AI agent with access to this repository:
+
+> Install this workflow in my own environment. Follow INSTALL.md, inspect the relevant existing setup, preserve my content and settings, and complete and verify the authorized installation. Ask only for missing destination or scope decisions.
+
+Agents start at [AGENTS.md](AGENTS.md), which routes installation requests to [INSTALL.md](INSTALL.md). Choose durable files/Git, your own Notion workspace, a supported native skill host, or a repository consumer. Notion, a paid service and access to the author's accounts are not requirements. The installer reconciles existing owners and local changes; it does not import someone else's context or permissions.
+
+The [catalog](skills/catalog.json) supplies the complete current base collection and invocation settings. Optional external methods require their own accessible, reviewed installation. A read-only explanation does not install anything. [MIT](LICENSE) permits reuse of original repository material; retained [third-party notices](docs/THIRD-PARTY-NOTICES.md) continue to apply.
+
 ## Consumer model
 
 Each consumer repository keeps a small local `AGENTS.md` that:
@@ -17,11 +27,11 @@ Shared guidance is **vendored, not remotely imported at runtime**. Consumers pin
 
 ## Installable skills
 
-Use the [single coherent skillset](docs/SKILLSET.md) and [method router](docs/METHOD-ROUTING.md) to select 32 task-scoped procedures or the appropriate host capability. The [catalog](skills/catalog.json) owns names, package versions, invocation policy and required dependencies. The [general work cycle](guidance/playbooks/work-cycle.md) connects context, authorized execution, result-specific evidence and closure. Four adapted Addy methods cover quality constraints, lasting instrumentation, migrations and CI/CD. Two Garden-inspired methods cover complex image art direction and designed visual narratives; the existing UI methods retain UI ownership.
+Use the [single coherent skillset](docs/SKILLSET.md) and [method router](docs/METHOD-ROUTING.md) to select the catalogued task-scoped procedures or the appropriate host capability. The [catalog](skills/catalog.json) owns names, package versions, invocation policy and required dependencies. The [general work cycle](guidance/playbooks/work-cycle.md) connects context, authorized execution, result-specific evidence and closure. Specialist methods cover quality constraints, lasting instrumentation, migrations, CI/CD, image art direction and designed visual narratives; the UI methods retain UI ownership.
 
-The set integrates useful techniques from Matt Pocock, Agent Skills, Ponytail and Superpowers into the actual packages. Their [source coverage](skills/source-coverage.json) retains the original 83 provider entries and five Garden design entries; [provider consolidation](docs/OPTIONAL-SKILL-SUITES.md) explains compatibility. It does not create a second mandatory lifecycle.
+The set integrates useful techniques from the reviewed provider repositories into the actual packages. Their [source coverage](skills/source-coverage.json) retains the original review entries; [provider consolidation](docs/OPTIONAL-SKILL-SUITES.md) explains compatibility. It does not create a second mandatory lifecycle.
 
-Follow the [skill workflow](docs/SKILL-WORKFLOW.md) for complete personal and Notion installation, validation and readback. Choose agents autonomously when a method requires them or bounded independent work/verification is useful, preserving task authority, one writer per object and parent integration. Shared guidance and consumer pins remain independent of package versions.
+Follow the [skill workflow](docs/SKILL-WORKFLOW.md) for complete package installation, validation and readback in the chosen host. Use supported agents only within the current user's and host's authority when useful for independent work or verification, preserving one writer per object and parent integration. Shared guidance and consumer pins remain independent of package versions.
 
 The further [design/workflow integration](docs/DESIGN-WORKFLOW-INTEGRATION-2026-11-20.md) adds reusable brand systems and interactive motion, targeted improvements to existing methods, early useful delegation and explicit visual-runtime selection. The catalog declares conditional method routes and the separately managed logo-design extension. Structural CI checks detect missing/disclosed routes; they do not guarantee host invocation.
 
@@ -68,7 +78,4 @@ This repository does not own:
 
 During `0.x`, any materially behavioral change should be treated as migration-worthy even when represented by a minor bump.
 
-## Bootstrap
-
-The first durable commit should be tagged `v0.1.0` after foundation verification. Consumer migration happens in separate repository-specific batches.
 

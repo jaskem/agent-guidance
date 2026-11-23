@@ -167,7 +167,7 @@
     {
       "name": "grill-me",
       "path": "skills/grill-me",
-      "version": "2.0.0",
+      "version": "2.0.1",
       "allow_implicit_invocation": false
     },
     {
@@ -309,7 +309,7 @@
       ]
     }
   ],
-  "collection_version": "1.4.2",
+  "collection_version": "1.4.3",
   "coverage_record": "skills/source-coverage.json",
   "reviewed_sources": [
     {
@@ -367,26 +367,29 @@
   "external_methods": [
     {
       "name": "logo-design",
-      "owner": "separately-managed personal extension",
+      "owner": "Recipient-selected external package; public upstream retains its source ownership",
       "version": "1.2.0",
-      "distribution": "Complete personal source; Notion workflow routes to this accepted personal extension. The 1,470-file package exceeds Notion's 1,000-entry import limit and is not represented as a partial Notion skill.",
+      "distribution": "Not bundled. Reuse an accepted recipient installation without overwriting local improvements; absence does not block the base workflow.",
       "upstream_repository": "kaankiziltug/logo-design-skill",
       "upstream_commit": "e9eaddc07895575253d6663320354a708f53e955",
       "distribution_targets": [
-        "personal"
-      ]
+        "recipient-selected"
+      ],
+      "optional": true,
+      "bundled": false,
+      "version_scope": "Previously reviewed adapter; verify the recipient-selected package separately",
+      "fallback": "Use design-brand-system plus suitable host image/vector capabilities; disclose unavailable specialist techniques."
     },
     {
       "name": "modern-web-guidance",
-      "owner": "Private Notion source owns the self-contained online reference adapter; GoogleChrome owns the original guide corpus",
+      "owner": "Recipient-selected external package; public upstream retains its source ownership",
       "version": "1.0.1",
       "upstream_version": "1.0.1",
-      "distribution": "Verified Notion Skill and complete personal adapter distribution. Selected official guides are retrieved on demand at the accepted upstream commit; no offline corpus or npm CLI is installed. Exact identities, content hashes and verification are in the configured distribution record.",
+      "distribution": "Not bundled. A recipient may configure an accepted online adapter; otherwise consult the public pinned guide source or current official platform documentation directly.",
       "upstream_repository": "GoogleChrome/modern-web-guidance-src",
       "upstream_commit": "6971ebbec2b127d57aaa24ba63bab7b9de9e656b",
       "distribution_targets": [
-        "personal",
-        "notion-primary"
+        "recipient-selected"
       ],
       "supplements": [
         "evidence-driven-development",
@@ -401,7 +404,11 @@
         "test-user-flows"
       ],
       "when": "An HTML, CSS, browser API or client-side JavaScript decision materially affects the requested result",
-      "selection_owner": "docs/METHOD-ROUTING.md"
+      "selection_owner": "docs/METHOD-ROUTING.md",
+      "optional": true,
+      "bundled": false,
+      "version_scope": "Previously reviewed adapter; verify the recipient-selected package separately",
+      "fallback": "Retrieve focused full guides from the declared public upstream commit; disclose current official-documentation fallback and actual access limits."
     }
   ]
 }

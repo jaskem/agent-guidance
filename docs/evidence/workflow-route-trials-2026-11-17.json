@@ -343,18 +343,20 @@
     "request": "Maak uit de aangeleverde CSV een spreadsheet met gecontroleerde marges en grafieken.",
     "selected": "host",
     "loaded": [
-      "skill://flora-artifact-skills/home/agent/.codex/skills/builtins/spreadsheets/SKILL.md"
+      "Redacted historical spreadsheet instruction locator; original host-specific location omitted."
     ],
-    "first_action": "Open de aangeleverde CSV en broninstructies; controleer kolommen, typen, eenheden, rijaantal en de bedoelde definitie/noemer van marge voordat formules en grafieken worden opgebouwd."
+    "first_action": "Open de aangeleverde CSV en broninstructies; controleer kolommen, typen, eenheden, rijaantal en de bedoelde definitie/noemer van marge voordat formules en grafieken worden opgebouwd.",
+    "redaction_note": "Only the original host-specific instruction locator was redacted. The request, selected route and recorded first action remain historical selection observations; the underlying task was not executed and no new trial or successful installation is claimed."
   },
   {
     "id": "32",
     "request": "Ontwerp een illustratie van een houten kozijn voor deze brochure.",
     "selected": "host",
     "loaded": [
-      "skill://flora-system-skills/home/agent/.codex/skills/.system/imagegen/SKILL.md"
+      "Redacted historical image-generation instruction locator; original host-specific location omitted."
     ],
-    "first_action": "Gebruik de beschikbare brochure-/beeldreferenties om de illustratieopdracht te vormen en genereer een houten-kozijnillustratie met de ingebouwde image_gen-capability; ontbrekende niet-kritische creatieve details hoeven geen extra vraag te veroorzaken."
+    "first_action": "Gebruik de beschikbare brochure-/beeldreferenties om de illustratieopdracht te vormen en genereer een houten-kozijnillustratie met de ingebouwde image_gen-capability; ontbrekende niet-kritische creatieve details hoeven geen extra vraag te veroorzaken.",
+    "redaction_note": "Only the original host-specific instruction locator was redacted. The request, selected route and recorded first action remain historical selection observations; the underlying task was not executed and no new trial or successful installation is claimed."
   },
   {
     "id": "33",
