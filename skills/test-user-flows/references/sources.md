@@ -8,7 +8,7 @@ These hashes identify the inspected installed copies. An installed version is no
 
 ## Coherent skillset provenance
 
-This package is an original task-scoped synthesis in the coherent 24-method collection. The canonical source-coverage record identifies all reviewed installed source versions and main-text SHA-256 values. Installed packages are distinct from a declared upstream pin; no other provider package must be invoked. Current package version: 1.1.0.
+This package is an original task-scoped synthesis in the coherent 24-method collection. The canonical source-coverage record identifies all reviewed installed source versions and main-text SHA-256 values. Installed packages are distinct from a declared upstream pin; no other provider package must be invoked. Current package version: 1.2.0.
 
 ## agent-skills
 
@@ -119,3 +119,8 @@ SOFTWARE.
 Original integration of the configured work-cycle route, early useful delegation and target-specific visual evidence. Installation and structural routing checks do not guarantee future invocation. Preserve existing scope and source ownership.
 
 Reviewed [Oil UI](https://github.com/oil-oil/oil-ui/tree/81f2657f41410f04ae47ba77f902fcc0567eaab2): reference evidence, comparable proposals, screenshot scale and exploratory paths adapted in original wording. No source code, templates or fixed design quotas imported. The existing compact-product context governs density and testing.
+
+
+## UI baseline clarification — 2026-11-26
+
+Original refinement from a user-requested cross-project workflow correction: content-aware data layout, semantic alignment, concise task guidance, preservation of valid prior choices and renewed inspection after layout changes. Product-specific dimensions, palette, domain rules and implementation recipes remain with their product owner. No third-party material imported.

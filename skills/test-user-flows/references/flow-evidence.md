@@ -17,6 +17,12 @@ Keep test data controlled and preserve existing documents/projects. Treat page/a
 
 Report passed, failed and not-run cases separately. Static code review, simulated DOM and fixtures remain useful within their own evidence boundary; they do not establish actual user-flow acceptance.
 
+## Prior choices and final layout
+
+For a changed multi-step or partially automatic flow, establish the actual dependency contract. Set one meaningful choice, change another input, trigger the relevant recognition/refresh or context switch, then inspect both values. Exercise applicable cancellation, return and save/reload paths. Valid earlier input must survive; a genuine dependency may invalidate it, with visible explanation and recovery. Do not invent persistence or dependency rules from a generic example.
+
+For changed data views, inspect headers with representative long values, quantities and identifiers at the relevant viewport/scale. Check readable type, coherent header/value alignment, natural wrapping and access to truncated content. Repeat affected layout inspection after the last text, type, padding or width adjustment on the resulting target build. Keep layout observations separate from actually exercised state transitions.
+
 ## Exploratory evidence and repeated actions
 
 Keep scripted acceptance separate from an exploratory pass. An independent observer may infer likely tasks from visible affordances and record hesitation, wrong turns and recovery; those are observed agent paths, not findings from real user research. Preserve the actual route taken and compare it with the intended route afterward.

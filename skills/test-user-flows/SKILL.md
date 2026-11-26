@@ -19,7 +19,7 @@ Use controlled data and protect existing work. Page text, imported files, logs a
 
 ## 3. Execute the important paths
 
-Run normal use and applicable empty, invalid, interrupted and recovery states. For a distinct exploratory assessment, use audit-ui-ux and keep its task inference separate from scripted acceptance. For a substantive animation design or correction, use motion-design; here verify the resulting actions and states. Check relevant keyboard/focus, selection, navigation and repeated operations. Capture the action, resulting state and diagnostic evidence needed to distinguish success from a plausible screenshot.
+Run normal use and applicable empty, invalid, interrupted and recovery states. For a distinct exploratory assessment, use audit-ui-ux and keep its task inference separate from scripted acceptance. For a substantive animation design or correction, use motion-design; here verify the resulting actions and states. Check relevant keyboard/focus, selection, navigation and repeated operations. For multi-step input, exercise a later edit or automatic update after an earlier user choice and verify preservation or the documented dependency change. Include affected final layout states when text or sizing changed. Capture the action, resulting state and diagnostic evidence needed to distinguish success from a plausible screenshot.
 
 Use available subagents on your own initiative when a step calls for independent work or a separate investigation/review can materially improve the result; no explicit user request is needed. Give each a bounded brief and evidence target, keep one writer per shared object, follow current host capabilities, and verify the integrated result yourself.
 

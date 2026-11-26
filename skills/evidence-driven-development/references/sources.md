@@ -20,7 +20,7 @@ Retain concrete behavior checks, caller-focused boundaries, bounded diagnosis, u
 
 ## Coherent skillset provenance
 
-This package is an original task-scoped synthesis in the coherent collection whose current membership is owned by the catalog. The canonical source-coverage record identifies all reviewed installed source versions and main-text SHA-256 values. Installed packages are distinct from a declared upstream pin; no other provider package must be invoked. Current package version: 2.2.1.
+This package is an original task-scoped synthesis in the coherent collection whose current membership is owned by the catalog. The canonical source-coverage record identifies all reviewed installed source versions and main-text SHA-256 values. Installed packages are distinct from a declared upstream pin; no other provider package must be invoked. Current package version: 2.3.0.
 
 ## agent-skills
 
@@ -137,3 +137,8 @@ Original integration of the configured work-cycle route, early useful delegation
 ## Diagnosis review boundary — 2026-11-21
 
 Require the separate code-review method for an actual code change. A read-only diagnosis still needs evidence verification and may benefit from independent assessment, without an invented diff or review baseline. This is an original correction of route scope; existing source notices, authority and acceptance requirements remain in force.
+
+
+## UI baseline clarification — 2026-11-26
+
+Original refinement from a user-requested cross-project workflow correction: content-aware data layout, semantic alignment, concise task guidance, preservation of valid prior choices and renewed inspection after layout changes. Product-specific dimensions, palette, domain rules and implementation recipes remain with their product owner. No third-party material imported.

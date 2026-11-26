@@ -11,7 +11,7 @@
     {
       "name": "evidence-driven-development",
       "path": "skills/evidence-driven-development",
-      "version": "2.2.1",
+      "version": "2.3.0",
       "allow_implicit_invocation": true,
       "conditional_routes": [
         {
@@ -87,7 +87,7 @@
     {
       "name": "audit-ui-ux",
       "path": "skills/audit-ui-ux",
-      "version": "2.2.0",
+      "version": "2.3.0",
       "allow_implicit_invocation": true,
       "conditional_routes": [
         {
@@ -103,7 +103,7 @@
     {
       "name": "design-ui-improvements",
       "path": "skills/design-ui-improvements",
-      "version": "2.2.1",
+      "version": "2.3.0",
       "allow_implicit_invocation": true,
       "conditional_routes": [
         {
@@ -203,7 +203,7 @@
     {
       "name": "test-user-flows",
       "path": "skills/test-user-flows",
-      "version": "1.1.0",
+      "version": "1.2.0",
       "allow_implicit_invocation": true,
       "conditional_routes": [
         {
@@ -309,7 +309,7 @@
       ]
     }
   ],
-  "collection_version": "1.4.3",
+  "collection_version": "1.5.0",
   "coverage_record": "skills/source-coverage.json",
   "reviewed_sources": [
     {
