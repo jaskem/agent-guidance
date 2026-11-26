@@ -152,7 +152,7 @@ SOFTWARE.
 
 ## Garden design integration — 2026-11-20
 
-Package version: 2.2.1. Original adaptation of ConardLi/garden-skills at f2d7adeaf53dcce3d0eb19cbffe8c04f4c636c2a. Reviewed web-design-engineer main text, design-calibration, redesign-protocol, design-directions, failure-patterns, critique-guide, browser-acceptance and advanced-patterns. Recipe index and Linear/Bloomberg/Tufte examples were inspected; all 25 recipes were not individually audited or bundled.
+Integration reviewed in 2.2.1. Original adaptation of ConardLi/garden-skills at f2d7adeaf53dcce3d0eb19cbffe8c04f4c636c2a. Reviewed web-design-engineer main text, design-calibration, redesign-protocol, design-directions, failure-patterns, critique-guide, browser-acceptance and advanced-patterns. Recipe index and Linear/Bloomberg/Tufte examples were inspected; all 25 recipes were not individually audited or bundled.
 
 Retain explicit design mode, consequential direction choices and concrete visual/density critique. Reject compulsory approvals, variant quotas, generic whitespace/type/spacing thresholds and explicit-QA-only browser verification. Real rendering and interaction evidence remain required when relevant. Named style recipes are interpretations, not official design tokens. No upstream scripts, vendor runtime or provider lifecycle is installed.
 
