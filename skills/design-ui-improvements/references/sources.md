@@ -1,6 +1,6 @@
 # Sources and adaptation
 
-Canonical owner: jaskem/agent-guidance, skills/ matching this package name. Package version 2.2.1. The private distribution record pins the released commit and hashes.
+Canonical owner: jaskem/agent-guidance, skills/ matching this package name. Package version 2.3.0. The private distribution record pins the released commit and hashes.
 
 Reviewed 2026-11-13. These are original methods; external links are provenance, not runtime instructions.
 
@@ -44,7 +44,7 @@ Retain concrete behavior checks, caller-focused boundaries, bounded diagnosis, u
 
 ## Coherent skillset provenance
 
-This package is an original task-scoped synthesis in the coherent collection whose membership is owned by the catalog. The canonical source-coverage record identifies all reviewed installed source versions and main-text SHA-256 values. Installed packages are distinct from a declared upstream pin; no other provider package must be invoked. Current package version: 2.2.1.
+This package is an original task-scoped synthesis in the coherent collection whose membership is owned by the catalog. The canonical source-coverage record identifies all reviewed installed source versions and main-text SHA-256 values. Installed packages are distinct from a declared upstream pin; no other provider package must be invoked. Current package version: 2.3.0.
 
 ## agent-skills
 
@@ -195,3 +195,8 @@ Reviewed [zstvns/design-skills](https://github.com/zstvns/design-skills/tree/771
 Reviewed [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md/tree/fcc70284932276d085f01ef9f83edde90b1258cb) as a reference corpus, not a skill or official specification. No branded DESIGN.md files or assets copied into this package.
 
 Distribution correction 2.2.1: mark the literal DESIGN.md filename as inline code so Notion does not rewrite it as an unintended web link. Method behavior is unchanged.
+
+
+## UI baseline clarification — 2026-11-26
+
+Original refinement from a user-requested cross-project workflow correction: content-aware data layout, semantic alignment, concise task guidance, preservation of valid prior choices and renewed inspection after layout changes. Product-specific dimensions, palette, domain rules and implementation recipes remain with their product owner. No third-party material imported.

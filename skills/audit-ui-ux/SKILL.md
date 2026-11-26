@@ -17,7 +17,7 @@ Use available agents on your own initiative when this method calls for separate 
 
 Follow the configured visual-verification playbook when available. Discover the actual target runtime and the user's preferred accessible environment before selecting a capture or interaction tool. Prefer the relevant authorized remote desktop for a native/user-machine target; use a cloud browser only for its intended web target or a documented fallback. A failed local browser runner does not establish that visual checks are impossible. Record what the chosen surface proves and which target-specific claims remain untested.
 
-Open the images or running views, rather than inferring their content from filenames. Inspect an overview and readable detail for each selected state. Compare empty, representative and dense/error states when available. Apply [review criteria](references/criteria.md) to the target tasks.
+Open the images or running views, rather than inferring their content from filenames. Inspect an overview and readable detail for each selected state. Compare empty, representative and dense/error states when available. Apply [review criteria](references/criteria.md) to the target tasks, including header/value fit and semantic alignment in data views. Inspect instructions against the actual task sequence; unsupported interactions remain untested.
 
 Inspect content fit and space use explicitly: table columns, row heights, oversized headers, stretched objects, wrapping and accidental voids. Assess visual craft as well as task behavior, using the actual rendered interface and representative content.
 

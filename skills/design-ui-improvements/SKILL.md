@@ -27,7 +27,7 @@ Finish when every proposed change addresses an input finding or supplied require
 
 ## 3. Make the change inspectable
 
-Use [visual handoff](references/visual-handoff.md) for before/after views, component details and tokens. Work at a stated viewport and representative density. Keep observations, annotations and proposed interfaces visibly distinct.
+Use [visual handoff](references/visual-handoff.md) for before/after views, component details and tokens. Work at a stated viewport and representative density. Resolve affected column widths, semantic alignment, readable wrapping and overflow using real headers and values. Carry the preservation of prior valid choices into sequence acceptance when the workflow changes. Keep observations, annotations and proposed interfaces visibly distinct.
 
 Show surrounding app context to judge hierarchy, plus readable details where needed. Follow the configured visual-verification playbook when available. Discover the actual target runtime and the user's preferred accessible environment before selecting a capture or interaction tool. Prefer the relevant authorized remote desktop for a native/user-machine target; use a cloud browser only for its intended web target or a documented fallback. A failed local browser runner does not establish that visual checks are impossible. Record what the chosen surface proves and which target-specific claims remain untested. Exact geometry belongs in HTML/SVG or document drawing tools. Inspect rendered output and correct clipping, tiny labels, missing assets and inconsistent state cues. If rendering is unavailable, label the artifact an unverified draft and retain the rendering check.
 

@@ -19,6 +19,8 @@ Use token/state audits, component ownership mapping, representative exemplars be
 ## Decision criteria
 Prefer semantic tokens, cohesive ownership, composability, accessible defaults, and proven repetition. Delay abstraction when requirements are still diverging.
 
+Keep color meaning and component states consistent through shared semantic tokens and patterns. When a meaning changes, inspect its affected uses together; a local color override must not silently give the same state another meaning. Preserve non-color cues. The product owns the actual palette and warranted variants.
+
 ## Failure modes
 One-off values; god components; visual-only tokens hiding semantics; premature componentization; global rollout before exemplar proof; surface forks duplicating logic; system rules used to justify mediocre local UX.
 

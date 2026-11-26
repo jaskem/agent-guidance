@@ -26,10 +26,14 @@ Keep one active controller per live surface. Observe current state before input,
 
 Inspect overview and readable detail with representative content. Record viewport or window size and scale when known. Include states that could change the conclusion: dense tables, long labels, empty/error/loading states, selected/disabled controls, small windows, zoom or reduced motion as relevant. Check typography, contrast, alignment, column fit, clipping, wasted space and state consistency rather than judging from source alone.
 
+For structured data, inspect headers and values together, including the longest relevant labels and values, quantities, identifiers and available empty values. Check intended alignment and full-value access, natural word wrapping and whether fitting a column made the text unreadable. Evaluate relevant dense and constrained states at the same known scale.
+
 For interaction, capture starting state, actual action and resulting state. For motion, inspect intermediate and final states plus interruption/reversal or seeking where supported. A screenshot does not prove keyboard behavior, playback smoothness, audio, file writes, synchronization or hardware. Use the relevant task method for those claims; avoid extending a visual test into unrelated product mutation.
 
 ## 4. Preserve proportional evidence
 
 Keep build/artifact identity, surface, state/input, expected versus observed result and meaningful evidence at the existing task/artifact owner. Limit retained screenshots to relevant content. Distinguish capture availability, rendered inspection, exercised interactions and measured performance. Mark unrun checks explicitly and recheck only affected states after repairs. A fallback observation must retain its original environment label.
+
+Changes to labels, fonts, type size, padding, column widths or available space invalidate the affected layout evidence. Reinspect those states on the resulting artifact or delivered build; a screenshot from before the last adjustment cannot establish its fit. Reuse unaffected evidence and keep inaccessible target states explicitly unverified.
 
 Close when the requested claim is supported on the relevant surface or its remaining boundary is explicit. Successful capture proves a capture route; it does not certify every future app or a complete product journey.
